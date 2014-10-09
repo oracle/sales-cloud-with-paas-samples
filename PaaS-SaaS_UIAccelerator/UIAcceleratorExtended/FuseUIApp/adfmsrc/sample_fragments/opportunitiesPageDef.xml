@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.64.93" id="opportunitiesPageDef"
+                Package="sample_fragments">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="opportunitiessearchTF1"
+              taskFlowId="/WEB-INF/sample_taskflows/opportunities-searchTF.xml#opportunities-searchTF"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="opportunitiescreateTF1"
+              taskFlowId="/WEB-INF/sample_taskflows/opportunities-createTF.xml#opportunities-createTF"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="opportunitieseditTF1"
+              taskFlowId="/WEB-INF/sample_taskflows/opportunities-editTF.xml#opportunities-editTF"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings/>
+</pageDefinition>

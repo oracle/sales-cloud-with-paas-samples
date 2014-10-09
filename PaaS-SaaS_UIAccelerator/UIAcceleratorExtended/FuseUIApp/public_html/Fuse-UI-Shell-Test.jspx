@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1" title="Fuse" styleClass="application-container round">
+      <f:facet name="metaContainer">
+        <af:resource type="javascript" source="/faces/skins/js/fuse-ui.js"/>
+        <f:verbatim>
+          <meta name="apple-mobile-web-app-capable" content="yes"/>
+          <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+          <meta name="viewport" content="width=device-width,
+                               maximum-scale=1.0"/>
+        </f:verbatim>
+      </f:facet>
+      <af:clientListener type="load"
+                         method="objectNavigatorPropertyChangeListener_Helper"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/WEB-INF/_Templates/fuse-ui-shell.jspx"
+                         id="pt1">
+          <f:attribute name="application-logo"
+                       value="/images/fuse-brand-oracle-white.png"/>
+          <f:attribute name="card-1" value="Leads"/>
+          <f:attribute name="icon-1"
+                       value="/images/fuse-obj-nav-matte-leads.png"/>
+          <f:attribute name="card-2" value="Opportunities"/>
+          <f:attribute name="icon-2"
+                       value="/images/fuse-obj-nav-matte-opportunities.png"/>
+          <f:attribute name="card-3" value="Customer"/>
+          <f:attribute name="icon-3"
+                       value="/images/fuse-obj-nav-matte-customers.png"/>
+          <f:attribute name="card-4" value="Contact"/>
+          <f:attribute name="icon-4"
+                       value="/images/fuse-obj-nav-matte-customercontact.png"/>
+          <f:attribute name="card-5" value="Custom"/>
+          <f:attribute name="icon-5" value="/images/fuse-obj-nav-matte-watchlist.png"/>
+          <f:facet name="global-header-end">
+            <af:menuBar id="login-menu" styleClass="global-menu-bar">
+              <af:menu text="Lisa Jones" id="m1" styleClass="global-menu">
+                <af:commandMenuItem text="Sign Out" id="cmi5"
+                                    action="performLogout"/>
+              </af:menu>
+            </af:menuBar>
+          </f:facet>
+          <f:facet name="card-1-content">
+            <af:region value="#{bindings.leadsTF1.regionModel}" id="r2"/>
+          </f:facet>
+          <f:facet name="card-2-content">
+            <af:region value="#{bindings.opportunitiesTF1.regionModel}"
+                       id="r1"/>
+          </f:facet>
+          <f:facet name="card-3-content">
+            <af:region value="#{bindings.customerTF1.regionModel}" id="r3"/>
+          </f:facet>
+          <f:facet name="card-4-content">
+            <af:region value="#{bindings.contactTF1.regionModel}" id="r4"/>
+          </f:facet>
+          <f:facet name="card-5-content">
+            <af:region value="#{bindings.sampleOptyTF.regionModel}" id="r5"/>
+          </f:facet>
+          <f:facet name="announcement-content">
+            <af:panelGroupLayout id="pgl2" layout="vertical"
+                                 inlineStyle="padding: 10px;">
+              <af:outputText value="Welcome to the Simplified UI Starter Kit!
+" id="ot10" styleClass="large-text bold"/>
+              <af:spacer width="10" height="15" id="s1"/>
+              <af:outputText styleClass="medium-text" value="This kit is designed to help you get started building your own Simplified UI.  It includes:
+" id="outputText1"/>
+              <af:panelList id="pl1" styleClass="medium-text">
+                <af:outputText value="Skin files (javascript, css, images)"
+                               id="ot1"/>
+                <af:outputText value=" Page Templates for Simplified UI style pages"
+                               id="outputText2"/>
+                <af:outputText value=" A sample Simplified UI style launch page (with springboard and filmstrip)"
+                               id="outputText3"/>
+                <af:outputText value=" Sample task flows" id="outputText4"/>
+                <af:outputText value="  Sample page fragments for:"
+                               id="outputText5"/>
+              </af:panelList>
+              <af:panelList id="pl2" styleClass="medium-text"
+                            inlineStyle="margin-left: 50px;">
+                <af:outputText value="Landing Page" id="outputText6"/>
+                <af:outputText value="Create Page" id="outputText7"/>
+                <af:outputText value="Edit Page" id="outputText8"/>
+                <af:outputText value="Embedded List" id="outputText9"/>
+                <af:outputText value=" Search and Select Picker"
+                               id="outputText10"/>
+              </af:panelList>
+              <af:spacer width="10" height="15" id="s2"/>
+              <af:outputText styleClass="medium-text"
+                             value="For more information, please visit:"
+                             id="outputText11"/>
+              <af:commandLink styleClass="medium-text"
+                              text="Oracle.com/UsableApps" id="outputText12"/>
+            </af:panelGroupLayout>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

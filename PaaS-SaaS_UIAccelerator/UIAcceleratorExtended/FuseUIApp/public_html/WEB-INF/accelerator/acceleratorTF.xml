@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-template id="acceleratorTF">
+    <default-activity id="__1">loadFusionProperties</default-activity>
+    <task-flow-call id="validateUserTokenTF">
+      <task-flow-reference>
+        <document>/WEB-INF/validateUserTokenTF.xml</document>
+        <id>validateUserTokenTF</id>
+      </task-flow-reference>
+      <input-parameter id="__3">
+        <name>jwt</name>
+        <value>#{pageFlowScope.jwt}</value>
+      </input-parameter>
+      <input-parameter id="__10">
+        <name>fusionJWTTokenEndpoint</name>
+        <value>#{pageFlowScope.fusionJWTTokenEndpoint}</value>
+      </input-parameter>
+      <return-value id="__2">
+        <name>jwtUserContext</name>
+        <value>#{sessionScope.jwtUserContext}</value>
+      </return-value>
+    </task-flow-call>
+    <method-call id="loadFusionProperties">
+      <method>#{FusionConfigBean.loadFusionProperties}</method>
+      <outcome id="__9">
+        <fixed-outcome>goValidate</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__4">
+      <from-activity-id id="__5">loadFusionProperties</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome id="__8">goValidate</from-outcome>
+        <to-activity-id id="__7">validateUserTokenTF</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-template>
+</adfc-config>

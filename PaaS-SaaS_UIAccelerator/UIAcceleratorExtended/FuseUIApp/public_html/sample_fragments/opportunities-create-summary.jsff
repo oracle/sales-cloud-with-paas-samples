@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1" rows="2" maxColumns="2" labelWidth="200px">
+    <af:inputText label="Name" id="it1" required="true"
+                  value="Vision DB and Management Partners"/>
+    <af:inputComboboxListOfValues id="customernameId"
+                                  popupTitle="Search and Select: Sales Account"
+                                  label="Sales Account" autoSubmit="true"
+                                  searchDesc="Choose a name"
+                                  validator="#{LOVDataBean.validate}"
+                                  columns="18"/>
+    <af:inputComboboxListOfValues id="primarycontactnameId"
+                                  popupTitle="Search and Select: Contact"
+                                  label="Primary Contact"
+                                  partialTriggers="customernameId" columns="18"
+                                  createPopupId="p1"/>
+    <af:panelLabelAndMessage label="Primary Contact" id="plam2"
+                             rendered="false">
+      <af:panelGroupLayout id="pgl4" layout="horizontal">
+        <af:inputText id="it4" simple="true"/>
+        <af:commandButton text="Search" id="cb1" immediate="true">
+          <af:showPopupBehavior popupId="p1"/>
+        </af:commandButton>
+      </af:panelGroupLayout>
+    </af:panelLabelAndMessage>
+    <af:inputComboboxListOfValues id="ownerResourceName1Id"
+                                  popupTitle="Search and Select: Resource"
+                                  label="Owner" columns="18" rendered="true"/>
+    <af:inputText label="Win Probability(%)" columns="3" maximumLength="3"
+                  id="it2" value="10"/>
+    <af:selectOneChoice label="Include in Forecast" id="soc4"/>
+    <af:selectOneChoice label="Status" id="soc1" value="Open">
+      <af:selectItem label="Open" id="si2" value="Open"/>
+    </af:selectOneChoice>
+    <af:selectOneChoice label="Currency" id="soc2" value="USD">
+      <af:selectItem label="USD" id="si3" value="USD"/>
+    </af:selectOneChoice>
+    <af:panelLabelAndMessage label="Revenue" id="plam1">
+      <af:outputText partialTriggers="t1:it3" id="ot4" value="2,447,758.00"/>
+    </af:panelLabelAndMessage>
+    <af:inputDate label="Close Date" required="true" id="id2" value="5/28/09"/>
+    <af:selectOneChoice label="Sales Method" autoSubmit="true" id="soc6"
+                        value="Accelerated Sales Process">
+      <af:selectItem label="Accelerated Sales Process" id="si4"
+                     value="Accelerated Sales Process"/>
+    </af:selectOneChoice>
+    <af:selectOneChoice label="Sales Stage" id="soc5"
+                        value="01 - Qualification">
+      <af:selectItem label="01 - Qualification" id="si5" value="01 - Qualification"/>
+    </af:selectOneChoice>
+    <af:popup id="p1" contentDelivery="lazyUncached">
+      <af:panelWindow id="pw1" closeIconVisible="false" modal="true"
+                      styleClass="fuse-popup">
+        <af:region value="#{bindings.contactsearchselectTF1.regionModel}"
+                   id="r1"/>
+      </af:panelWindow>
+    </af:popup>
+  </af:panelFormLayout>
+  <af:panelBox text="Revenue Items" styleClass="" id="pb0"
+               showDisclosure="false">
+    <f:facet name="toolbar">
+      <af:commandButton text="Add Revenue Item" id="cb3"/>
+    </f:facet>
+    <af:table var="row" rowBandingInterval="0" id="t1" columnResizing="disabled"
+              columnStretching="multiple" fetchSize="5" autoHeightRows="0"
+              partialTriggers="::cb3" value="#{DataSourceBean.revenueItems}">
+      <af:column sortable="false" headerText="Type" id="c3" width="15%">
+        <af:selectOneChoice
+                            autoSubmit="true" immediate="true"
+                            id="soc7" value="Item">
+          <af:selectItem label="Item" id="si1" value="Item"/>
+        </af:selectOneChoice>
+      </af:column>
+      <af:column sortable="true" headerText="Product" id="c4" width="25%">
+        <af:panelGroupLayout id="pgl2">
+          <af:switcher id="s1" facetName="0">
+            <f:facet name="0">
+              <af:inputComboboxListOfValues id="prodGroupNameId"
+                                            popupTitle="Search and Select: Product">
+                <f:facet name="searchContent">
+                  <af:panelGroupLayout id="pgl3"/>
+                </f:facet>
+              </af:inputComboboxListOfValues>
+            </f:facet>
+            <f:facet name="1">
+              <af:inputComboboxListOfValues id="descriptionId"/>
+            </f:facet>
+          </af:switcher>
+        </af:panelGroupLayout>
+      </af:column>
+      <af:column sortable="false" headerText="UOM" id="c5" width="15%">
+        <af:selectOneChoice
+                            id="soc3"/>
+      </af:column>
+      <af:column sortable="false" headerText="Quantity" id="c1" width="15%">
+        <af:inputText autoSubmit="true"
+                      id="it9"/>
+      </af:column>
+      <af:column sortable="false" headerText="Estimated Price" id="c2"
+                 width="15%">
+        <af:inputText
+                      autoSubmit="true"
+                      id="it8" value="250,198.00"/>
+      </af:column>
+      <af:column sortable="false" headerText="Revenue" id="c6" width="14%">
+        <af:inputText
+                      partialTriggers="it8 it9"
+                      id="it3" value="920,035.00"/>
+      </af:column>
+      <af:column sortable="false" headerText="" id="c7" width="1%">
+        <af:commandImageLink text="" id="cil1"
+                             icon="/images/fuse-icon-delete.png"/>
+      </af:column>
+    </af:table>
+  </af:panelBox>
+  <af:panelBox text="Next Appointment" id="pb1" showDisclosure="false">
+    <f:facet name="toolbar"/>
+    <af:panelGroupLayout layout="vertical" id="pgl1">
+      <af:outputText value="There are no upcoming appointments."
+                     id="ot2"/>
+    </af:panelGroupLayout>
+  </af:panelBox>
+  <af:panelBox text="Next Task Due" id="pb2" showDisclosure="false">
+    <f:facet name="toolbar"/>
+    <af:panelGroupLayout layout="vertical" id="panelGroupLayout1">
+      <af:outputText value="There are no upcoming tasks."
+                     id="outputText1"/>
+    </af:panelGroupLayout>
+  </af:panelBox>
+</jsp:root>

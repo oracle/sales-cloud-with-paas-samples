@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">contact-search-select</property>
+      <property
+         name="page">/sample_fragments/contact-search-select.jsff</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>contact-search-select&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">335.79883</property>
+      <property
+         name="x">473.02344</property>
+      <property
+         name="pageFragment">true</property>
+   </View>
+   <ParentAction
+      id="ParentAction3">
+      <property
+         name="activityId">addContact</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>addContact&lt;/b>&lt;/p>&lt;p>Activity Type:  Parent Action&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">167.14355</property>
+      <property
+         name="x">370.0</property>
+   </ParentAction>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="ParentAction3">
+      <property
+         name="fromOutcome">OK_AddContact</property>
+      <property
+         name="sdm:polyPoints">T50,473.02344,281.44824,370.0,220.79297,B50</property>
+   </ControlFlowCase>
+</SDM>
