@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <af:pageTemplateDef var="attrs">
+    <af:panelStretchLayout id="fuse-popup-s1" bottomHeight="0px" endWidth="0px"
+                           startWidth="0px" dimensionsFrom="auto">
+      <f:facet name="top">
+        <af:panelStretchLayout id="fuse-popup-s2" startWidth="auto"
+                               endWidth="auto" topHeight="0" bottomHeight="0">
+          <f:facet name="start">
+            <af:panelGroupLayout id="pgl-header-s" layout="horizontal">
+              <af:facetRef facetName="header-start"/>
+            </af:panelGroupLayout>
+          </f:facet>
+          <f:facet name="end">
+            <af:panelGroupLayout id="pgl-header-e" layout="horizontal"
+                                 halign="start">
+              <af:facetRef facetName="header-end"/>
+            </af:panelGroupLayout>
+          </f:facet>
+        </af:panelStretchLayout>
+      </f:facet>
+      <f:facet name="center">
+        <af:panelGroupLayout id="body-pgl" valign="top"
+                             layout="#{(attrs['Full-Size'])?'scroll':'vertical'}"
+                             styleClass="#{(attrs['Full-Size'])?'fuse-popup-content':''}">
+          <af:panelGroupLayout id="wide-top-pgl" styleClass="AFStretchWidth"
+                               layout="vertical">
+            <af:facetRef facetName="wide column top"/>
+          </af:panelGroupLayout>
+          <af:panelStretchLayout id="body-ps2"
+                                 startWidth="#{attrs['Column-1-Width']}"
+                                 endWidth="#{attrs['Column-2-Width']}"
+                                 topHeight="0px"
+                                 bottomHeight="#{attrs['Wide-Column-Bottom-Height']}"
+                                 dimensionsFrom="auto">
+            <f:facet name="start">
+              <af:facetRef facetName="column 1"/>
+            </f:facet>
+            <f:facet name="center">
+              <af:spacer width="10px"/>
+            </f:facet>
+            <f:facet name="end">
+              <af:facetRef facetName="column 2"/>
+            </f:facet>
+          </af:panelStretchLayout>
+          <af:panelGroupLayout id="wide-bottom-pgl" styleClass="AFStretchWidth"
+                               layout="vertical">
+            <af:facetRef facetName="wide column bottom"/>
+          </af:panelGroupLayout>
+          <f:facet name="separator">
+            <af:spacer width="10" height="10" id="pt_s1"/>
+          </f:facet>
+        </af:panelGroupLayout>
+      </f:facet>
+      <f:facet name="bottom">
+        <af:facetRef facetName="hidden"/>
+      </f:facet>
+    </af:panelStretchLayout>
+    <af:xmlContent>
+      <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+        <display-name>Fuse Popup 2 Column</display-name>
+        <facet>
+          <description>Displays popup title and buttons.</description>
+          <facet-name>header-start</facet-name>
+        </facet>
+        <facet>
+          <description>Displays menus and buttons.</description>
+          <facet-name>header-end</facet-name>
+        </facet>
+        <facet>
+          <description>Displays content in column one.</description>
+          <facet-name>column 1</facet-name>
+        </facet>
+        <facet>
+          <description>Displays content in column two.</description>
+          <facet-name>column 2</facet-name>
+        </facet>
+        <facet>
+          <description>Displays content at top across 2 columns</description>
+          <facet-name>wide column top</facet-name>
+        </facet>
+        <facet>
+          <description>Displays content at bottom across 2 columns</description>
+          <facet-name>wide column bottom</facet-name>
+        </facet>
+        <facet>
+          <description>Stores secondary window content.</description>
+          <facet-name>hidden</facet-name>
+        </facet>
+        <attribute>
+          <attribute-name>Wide-Column-Top-Height</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>0px</default-value>
+        </attribute>
+        <attribute>
+          <attribute-name>Wide-Column-Bottom-Height</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>0px</default-value>
+        </attribute>
+        <attribute>
+          <attribute-name>Column-1-Width</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>49%</default-value>
+        </attribute>
+        <attribute>
+          <attribute-name>Column-2-Width</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>49%</default-value>
+        </attribute>
+        <attribute>
+        <attribute-name>Full-Size</attribute-name>
+        <attribute-class>java.lang.Boolean</attribute-class>
+        <default-value>true</default-value>
+        </attribute>
+      </component>
+    </af:xmlContent>
+  </af:pageTemplateDef>
+</jsp:root>

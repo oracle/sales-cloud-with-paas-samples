@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="MedicationView"
+  Version="11.1.1.65.92"
+  InheritPersonalization="true"
+  SelectList="Medication.MEDICATION_ID, 
+       Medication.NAME, 
+       Medication.NDC_CODE"
+  FromList="MEDICATION Medication"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="Medication"
+    Entity="com.oracle.ptsdemo.healthcare.model.eo.Medication"/>
+  <ViewAttribute
+    Name="MedicationId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="MedicationId"
+    EntityUsage="Medication"
+    AliasName="MEDICATION_ID"/>
+  <ViewAttribute
+    Name="Name"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Medication"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="NdcCode"
+    PrecisionRule="true"
+    EntityAttrName="NdcCode"
+    EntityUsage="Medication"
+    AliasName="NDC_CODE"/>
+  <ViewLinkAccessor
+    Name="PharmacyMedicationView"
+    ViewLink="com.oracle.ptsdemo.healthcare.model.vo.MedicationFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="PrescriptionMedicationView"
+    ViewLink="com.oracle.ptsdemo.healthcare.model.vo.MedicationFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

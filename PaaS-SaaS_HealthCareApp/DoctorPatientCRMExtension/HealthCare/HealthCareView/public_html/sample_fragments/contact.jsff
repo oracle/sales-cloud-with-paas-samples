@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:pageTemplate viewId="/WEB-INF/_Templates/fuse-page-1-column.jspx"
+                   id="pt1">
+    <f:facet name="header-start"/>
+    <f:facet name="header-end"/>
+    <f:facet name="body">
+      <af:outputText value="Contact" id="ot1"/>
+    </f:facet>
+    <f:facet name="footer-end"/>
+    <f:facet name="footer-start"/>
+    <f:facet name="hidden"/>
+    <f:facet name="side-panel"/>
+  </af:pageTemplate>
+</jsp:root>

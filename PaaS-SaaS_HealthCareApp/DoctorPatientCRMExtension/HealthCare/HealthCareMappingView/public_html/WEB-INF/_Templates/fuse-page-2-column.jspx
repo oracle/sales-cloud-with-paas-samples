@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <af:pageTemplateDef var="attrs">
+    <af:panelStretchLayout id="main-sl" bottomHeight="#{attrs['Footer-Height']}"
+                           endWidth="#{(attrs['Side-Panel'])?40:0}px"
+                           startWidth="0px"
+                           topHeight="#{attrs['Header-Height']}"
+                           styleClass="page-container AFStretchWidth">
+      <f:facet name="top">
+        <af:panelStretchLayout id="page-header-psl" styleClass="page-top"
+                               startWidth="auto" endWidth="auto">
+          <f:facet name="start">
+            <af:panelGroupLayout layout="horizontal" id="pgl-header-left"
+                                 valign="middle" halign="left">
+              <af:facetRef facetName="header-start"/>
+            </af:panelGroupLayout>
+          </f:facet>
+          <f:facet name="end">
+            <af:panelGroupLayout layout="horizontal" id="pgl-header-right"
+                                 valign="middle" halign="left">
+              <af:facetRef facetName="header-end"/>
+              <af:spacer width="#{(attrs['Side-Panel'])?40:0}px" id="pt_s1"/>
+            </af:panelGroupLayout>
+          </f:facet>
+        </af:panelStretchLayout>
+      </f:facet>
+      <f:facet name="center">
+        <af:panelGroupLayout layout="scroll" styleClass="page-body page"
+                             id="body-pgl" valign="top">
+          <af:panelGroupLayout id="wide-top-pgl" layout="vertical" valign="top">
+            <af:facetRef facetName="column wide top"/>
+          </af:panelGroupLayout>
+          <af:panelStretchLayout id="body-psl"
+                                 startWidth="#{attrs['Column-1-Width']}"
+                                 endWidth="#{attrs['Column-2-Width']}"
+                                 topHeight="0px" bottomHeight="0px"
+                                 dimensionsFrom="auto">
+            <f:facet name="start">
+              <af:facetRef facetName="column 1"/>
+            </f:facet>
+            <f:facet name="center">
+              <af:spacer width="10px"/>
+            </f:facet>
+            <f:facet name="end">
+              <af:facetRef facetName="column 2"/>
+            </f:facet>
+          </af:panelStretchLayout>
+          <af:panelGroupLayout id="wide-bottom-pgl" layout="vertical">
+            <af:facetRef facetName="column 3 wide"/>
+          </af:panelGroupLayout>
+          <f:facet name="separator">
+            <af:spacer width="10px" id="pt_s2" height="10px"/>
+          </f:facet>
+        </af:panelGroupLayout>
+      </f:facet>
+      <f:facet name="bottom">
+        <af:panelStretchLayout id="footer-psl"
+                               startWidth="#{attrs['Footer-Start-Width']}"
+                               topHeight="0px" bottomHeight="0px"
+                               dimensionsFrom="auto" styleClass="pinned-footer"
+                               endWidth="#{attrs['Footer-End-Width']}">
+          <f:facet name="start">
+            <af:facetRef facetName="footer-start"/>
+          </f:facet>
+          <f:facet name="end">
+            <af:panelGroupLayout styleClass="pinned-footer-column-divider"
+                                 id="pinned-footer-divider">
+              <af:facetRef facetName="footer-end"/>
+            </af:panelGroupLayout>
+          </f:facet>
+        </af:panelStretchLayout>
+      </f:facet>
+      <f:facet name="start">
+        <af:facetRef facetName="hidden"/>
+      </f:facet>
+      <f:facet name="end">
+        <af:panelGroupLayout inlineStyle="width:#{(attrs['Side-Panel'])?40:0}px;"
+                             id="side-panel-pgl">
+          <af:facetRef facetName="side-panel"/>
+        </af:panelGroupLayout>
+      </f:facet>
+    </af:panelStretchLayout>
+    <af:xmlContent>
+      <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+        <display-name>Fuse Page Two-column</display-name>
+        <facet>
+          <description>Displays page title and buttons.</description>
+          <facet-name>header-start</facet-name>
+        </facet>
+        <facet>
+          <description>Displays buttons opposite the page title.</description>
+          <facet-name>header-end</facet-name>
+        </facet>
+        <facet>
+          <description>Displays page content in column one.</description>
+          <facet-name>column 1</facet-name>
+        </facet>
+        <facet>
+          <description>Displays page content in column two.</description>
+          <facet-name>column 2</facet-name>
+        </facet>
+        <facet>
+          <facet-name>column 3 wide</facet-name>
+        </facet>
+        <facet>
+          <description>Displays a pinned footer on the 1st column</description>
+          <facet-name>footer-start</facet-name>
+        </facet>
+        <facet>
+          <description>Displays a pinned footer in the 2nd column</description>
+          <facet-name>footer-end</facet-name>
+        </facet>
+        <facet>
+          <description>Holds content that should be initially hidden such as
+                       popups.</description>
+          <facet-name>hidden</facet-name>
+        </facet>
+        <facet>
+          <facet-name>side-panel</facet-name>
+        </facet>
+        <facet>
+          <facet-name>column wide top</facet-name>
+        </facet>
+        <attribute>
+          <attribute-name>Footer-Height</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>0px</default-value>
+        </attribute>
+        <attribute>
+          <attribute-name>Column-1-Width</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>49%</default-value>
+        </attribute>
+        <attribute>
+          <attribute-name>Column-2-Width</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>49%</default-value>
+        </attribute>
+        <attribute>
+          <attribute-name>Header-Height</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>45px</default-value>
+        </attribute>
+        <attribute>
+          <attribute-name>Wide-Column-Height</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>0px</default-value>
+        </attribute>
+        <attribute>
+          <attribute-name>Side-Panel</attribute-name>
+          <attribute-class>java.lang.Boolean</attribute-class>
+          <default-value>false</default-value>
+        </attribute>
+        <attribute>
+          <attribute-name>Footer-Start-Width</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>50%</default-value>
+        </attribute>
+        <attribute>
+          <attribute-name>Footer-End-Width</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>50%</default-value>
+        </attribute>
+      </component>
+    </af:xmlContent>
+  </af:pageTemplateDef>
+</jsp:root>

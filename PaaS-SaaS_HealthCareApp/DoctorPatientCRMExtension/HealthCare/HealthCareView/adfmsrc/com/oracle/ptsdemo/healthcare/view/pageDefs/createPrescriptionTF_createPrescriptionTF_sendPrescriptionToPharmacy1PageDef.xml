@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57"
+                id="createPrescriptionTF_createPrescriptionTF_sendPrescriptionToPharmacy1PageDef"
+                Package="com.oracle.ptsdemo.healthcare.view.pageDefs"
+                SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <methodAction id="sendPrescriptionToPharmacy" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="sendPrescriptionToPharmacy"
+                  IsViewObjectMethod="false"
+                  DataControl="HealthCarePrescriptionModelAMDataControl"
+                  InstanceName="HealthCarePrescriptionModelAMDataControl.dataProvider">
+      <NamedData NDName="doctorName" NDValue="#{pageFlowScope.doctorName}"
+                 NDType="java.lang.String"/>
+      <NamedData NDName="jwtToken" NDValue="#{pageFlowScope.jwt}"
+                 NDType="java.lang.String"/>                 
+    </methodAction>
+  </bindings>
+</pageDefinition>

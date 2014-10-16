@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.92"
+                id="createPrescriptionTF_createPrescriptionTF_CommitPageDef"
+                Package="com.oracle.ptsdemo.healthcare.view.pageDefs"
+                SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="HealthCarePrescriptionModelAMDataControl"/>
+  </bindings>
+</pageDefinition>

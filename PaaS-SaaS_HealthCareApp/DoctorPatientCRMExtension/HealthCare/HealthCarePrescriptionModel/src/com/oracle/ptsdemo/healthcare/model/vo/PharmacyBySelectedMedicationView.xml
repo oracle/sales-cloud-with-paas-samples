@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PharmacyBySelectedMedicationView"
+  Version="11.1.1.65.92"
+  InheritPersonalization="true"
+  OrderBy='"NAME"'
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="com.oracle.ptsdemo.healthcare.model.vo.PharmacyBySelectedMedicationView_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <Variable
+    Name="p_medication_id"
+    Kind="where"
+    Type="java.lang.String"/>
+  <SQLQuery>
+    <![CDATA[SELECT DISTINCT
+    PHARMACY.PHARMACY_ID PHARMACY_ID, 
+    PHARMACY.NAME NAME, 
+    PHARMACY.WS_URL WS_URL
+FROM 
+    PHARMACY, 
+    PHARMACY_MEDICATION 
+WHERE
+    PHARMACY_MEDICATION.PHARMACY_ID = PHARMACY.PHARMACY_ID
+AND
+    PHARMACY_MEDICATION.IN_STOCK_FL = 'T'
+    AND PHARMACY_MEDICATION.MEDICATION_ID = :p_medication_id]]>
+  </SQLQuery>
+  <ViewAttribute
+    Name="PharmacyId"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="PHARMACY_ID"
+    Expression="PHARMACY_ID"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Name"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Precision="100"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="NAME"
+    Expression="NAME"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="WsUrl"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="200"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="WS_URL"
+    Expression="WS_URL"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.oracle.ptsdemo.healthcare.model.HealthCarePrescriptionModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

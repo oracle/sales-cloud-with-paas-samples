@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:pageTemplate viewId="/WEB-INF/_Templates/fuse-page-1-column.jspx"
+                   id="pt1">
+    <f:facet name="header-start">
+      <af:outputFormatted value="Create Prescription" id="of1"
+                          styleClass="page-title"/>
+    </f:facet>
+    <f:facet name="header-end">
+      <af:group id="g1">
+        <af:commandButton text="Create and Send to Pharmacy" id="cb5"
+                          action="goSave"/>
+        <af:commandButton text="Back" id="cb6" action="goCancel"
+                          immediate="true"/>
+      </af:group>
+    </f:facet>
+    <f:facet name="body">
+      <af:panelGroupLayout layout="vertical" id="pgl2">
+        <af:panelHeader text=" " id="ph1">
+          <af:panelFormLayout id="pfl1" maxColumns="2" rows="2"
+                              styleClass="AFStretchWidth">
+            <af:panelLabelAndMessage label="#{bindings.DoctorName.hints.label}"
+                                     id="plam7">
+              <af:outputText value="#{bindings.DoctorName.inputValue}"
+                             id="ot9"/>
+            </af:panelLabelAndMessage>
+            <af:panelLabelAndMessage label="#{bindings.PatientName.hints.label}"
+                                     id="plam9">
+              <af:outputText value="#{bindings.PatientName.inputValue}"
+                             id="ot18"/>
+            </af:panelLabelAndMessage>
+            <af:panelLabelAndMessage label="#{bindings.PrescriptionId.hints.label}"
+                                     id="plam2" visible="false">
+              <af:outputText value="#{bindings.PrescriptionId.inputValue}"
+                             id="ot10">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.PrescriptionId.format}"/>
+              </af:outputText>
+            </af:panelLabelAndMessage>
+            <af:panelLabelAndMessage label="#{bindings.DoctorId.hints.label}"
+                                     id="plam1" visible="false">
+              <af:outputText value="#{bindings.DoctorId.inputValue}" id="ot2">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.DoctorId.format}"/>
+              </af:outputText>
+            </af:panelLabelAndMessage>
+            <af:panelLabelAndMessage label="#{bindings.PatientId.hints.label}"
+                                     id="plam4" visible="false">
+              <af:outputText value="#{bindings.PatientId.inputValue}" id="ot21">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.PatientId.format}"/>
+              </af:outputText>
+            </af:panelLabelAndMessage>
+            <af:panelLabelAndMessage label="#{bindings.VisitId.hints.label}"
+                                     id="plam8" visible="false">
+              <af:outputText value="#{bindings.VisitId.inputValue}" id="ot4">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.VisitId.format}"/>
+              </af:outputText>
+            </af:panelLabelAndMessage>
+            <af:panelLabelAndMessage label="#{bindings.PrescriptionDate.hints.label}"
+                                     id="plam6">
+              <af:outputText value="#{bindings.PrescriptionDate.inputValue}"
+                             id="ot1">
+                <af:convertDateTime pattern="#{bindings.PrescriptionDate.format}"/>
+              </af:outputText>
+            </af:panelLabelAndMessage>
+            <af:inputDate value="#{bindings.ExpireDate.inputValue}"
+                          required="false"
+                          shortDesc="#{bindings.ExpireDate.hints.tooltip}"
+                          id="expireDatePrescriptionId1" autoSubmit="true"
+                          label="#{bindings.ExpireDate.hints.label}"
+                          showRequired="true">
+              <f:validator binding="#{bindings.ExpireDate.validator}"/>
+              <af:convertDateTime pattern="#{bindings.ExpireDate.format}"/>
+            </af:inputDate>
+            <af:panelLabelAndMessage label="#{bindings.VisitDescription.hints.label}"
+                                     id="plam5" visible="false">
+              <af:outputText value="#{bindings.VisitDescription.inputValue}"
+                             id="ot17"/>
+            </af:panelLabelAndMessage>
+          </af:panelFormLayout>
+        </af:panelHeader>
+        <af:panelGroupLayout id="pgl1" layout="horizontal"
+                             styleClass="AFStretchWidth">
+          <af:activeOutputText value="Medications" id="aot1"
+                               styleClass="section-title"/>
+          <af:spacer width="300" height="10" id="s1"/>
+        <af:commandButton actionListener="#{bindings.CreateInsert.execute}"
+                            text="Add Medication"
+                            disabled="#{!bindings.CreateInsert.enabled}"
+                            id="cb1" immediate="true"
+                            inlineStyle="text-align:right;"/>
+        </af:panelGroupLayout>
+        
+        <af:panelHeader text="" id="ph2">
+          <af:table rows="#{bindings.PrescriptionMedicationView.rangeSize}"
+                    fetchSize="#{bindings.PrescriptionMedicationView.rangeSize}"
+                    emptyText="#{bindings.PrescriptionMedicationView.viewable ? 'No data to display.' : 'Access Denied.'}"
+                    var="row"
+                    value="#{bindings.PrescriptionMedicationView.collectionModel}"
+                    rowBandingInterval="0"
+                    selectedRowKeys="#{bindings.PrescriptionMedicationView.collectionModel.selectedRow}"
+                    selectionListener="#{bindings.PrescriptionMedicationView.collectionModel.makeCurrent}"
+                    rowSelection="single" id="t1" styleClass="AFStretchWidth"
+                    partialTriggers="::cb1">
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.PrescriptionMedicationId.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.PrescriptionMedicationId.name}"
+                       sortable="false" id="c12" visible="false" width="120"
+                       minimumWidth="100">
+              <af:outputText value="#{row.PrescriptionMedicationId}" id="ot19">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.PrescriptionMedicationView.hints.PrescriptionMedicationId.format}"/>
+              </af:outputText>
+            </af:column>
+             
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.PrescriptionId.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.PrescriptionId.name}"
+                       sortable="false" id="c3" visible="false">
+              <af:outputText value="#{row.PrescriptionId}" id="ot20">
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.PrescriptionMedicationView.hints.PrescriptionId.format}"/>
+              </af:outputText>
+            </af:column>
+             
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.MedicationId.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.MedicationId.name}"
+                       sortable="false" id="c6">
+              <af:selectOneChoice value="#{row.bindings.MedicationId.inputValue}"
+                                  label="#{row.bindings.MedicationId.label}"
+                                  required="#{bindings.PrescriptionMedicationView.hints.MedicationId.mandatory}"
+                                  shortDesc="#{bindings.PrescriptionMedicationView.hints.MedicationId.tooltip}"
+                                  id="medicationId1" autoSubmit="true"
+                                  showRequired="true">
+                <f:selectItems value="#{row.bindings.MedicationId.items}"
+                               id="si1"/>
+              </af:selectOneChoice>
+            </af:column>
+             
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.Quantity.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.Quantity.name}"
+                       sortable="false" id="c8" width="50" minimumWidth="50">
+              <af:inputText value="#{row.bindings.Quantity.inputValue}"
+                            required="#{bindings.PrescriptionMedicationView.hints.Quantity.mandatory}"
+                            columns="#{bindings.PrescriptionMedicationView.hints.Quantity.displayWidth}"
+                            maximumLength="#{bindings.PrescriptionMedicationView.hints.Quantity.precision}"
+                            shortDesc="#{bindings.PrescriptionMedicationView.hints.Quantity.tooltip}"
+                            id="it1" showRequired="true">
+                <f:validator binding="#{row.bindings.Quantity.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.PrescriptionMedicationView.hints.Quantity.format}"/>
+              </af:inputText>
+            </af:column>
+             
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.Refills.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.Refills.name}"
+                       sortable="false" id="c10" width="50" minimumWidth="50">
+              <af:inputText value="#{row.bindings.Refills.inputValue}"
+                            required="#{bindings.PrescriptionMedicationView.hints.Refills.mandatory}"
+                            columns="#{bindings.PrescriptionMedicationView.hints.Refills.displayWidth}"
+                            maximumLength="#{bindings.PrescriptionMedicationView.hints.Refills.precision}"
+                            shortDesc="#{bindings.PrescriptionMedicationView.hints.Refills.tooltip}"
+                            id="it2" showRequired="true">
+                <f:validator binding="#{row.bindings.Refills.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.PrescriptionMedicationView.hints.Refills.format}"/>
+              </af:inputText>
+            </af:column>
+             
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.DirectionsForUse.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.DirectionsForUse.name}"
+                       sortable="false" id="c1" width="250" minimumWidth="250">
+              <af:inputText value="#{row.bindings.DirectionsForUse.inputValue}"
+                            simple="true"
+                            required="#{bindings.PrescriptionMedicationView.hints.DirectionsForUse.mandatory}"
+                            columns="30"
+                            maximumLength="#{bindings.PrescriptionMedicationView.hints.DirectionsForUse.precision}"
+                            shortDesc="#{bindings.PrescriptionMedicationView.hints.DirectionsForUse.tooltip}"
+                            id="it3" rows="3" secret="true">
+                <f:validator binding="#{row.bindings.DirectionsForUse.validator}"/>
+              </af:inputText>
+            </af:column>
+             
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.ExpireDate.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.ExpireDate.name}"
+                       sortable="false" id="c11" minimumWidth="110" width="110">
+              <af:inputDate value="#{row.bindings.ExpireDate.inputValue}"
+                            required="#{bindings.PrescriptionMedicationView.hints.ExpireDate.mandatory}"
+                            shortDesc="#{bindings.PrescriptionMedicationView.hints.ExpireDate.tooltip}"
+                            id="id2" showRequired="true">
+                <f:validator binding="#{row.bindings.ExpireDate.validator}"/>
+                <af:convertDateTime pattern="#{bindings.PrescriptionMedicationView.hints.ExpireDate.format}"/>
+              </af:inputDate>
+            </af:column>
+             
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.SentToPharmacyFl.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.SentToPharmacyFl.name}"
+                       sortable="false" id="c4" visible="false">
+              <af:outputText value="#{row.SentToPharmacyFl}" id="ot14"/>
+            </af:column>
+             
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.SentToPharmacyDate.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.SentToPharmacyDate.name}"
+                       sortable="false" id="c7" visible="false">
+              <af:outputText value="#{row.SentToPharmacyDate}" id="ot12">
+                <af:convertDateTime pattern="#{bindings.PrescriptionMedicationView.hints.SentToPharmacyDate.format}"/>
+              </af:outputText>
+            </af:column>
+             
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.OrderNumber.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.OrderNumber.name}"
+                       sortable="false" id="c9" visible="false">
+              <af:outputText value="#{row.OrderNumber}" id="ot6"/>
+            </af:column>
+             
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.PharmacyId.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.PharmacyId.name}"
+                       sortable="false" id="c5" width="120" minimumWidth="100">
+              <af:selectOneChoice value="#{row.bindings.PharmacyId.inputValue}"
+                                  label="#{row.bindings.PharmacyId.label}"
+                                  required="#{bindings.PrescriptionMedicationView.hints.PharmacyId.mandatory}"
+                                  shortDesc="#{bindings.PrescriptionMedicationView.hints.PharmacyId.tooltip}"
+                                  id="soc2" partialTriggers="medicationId1">
+                <f:selectItems value="#{row.bindings.PharmacyId.items}"
+                               id="si2"/>
+              </af:selectOneChoice>
+            </af:column>
+             
+            <af:column headerText="#{bindings.PrescriptionMedicationView.hints.IsReadyToPickupFl.label}"
+                       sortProperty="#{bindings.PrescriptionMedicationView.hints.IsReadyToPickupFl.name}"
+                       sortable="false" id="c2" visible="false">
+              <af:outputText value="#{row.IsReadyToPickupFl}" id="ot8"/>
+            </af:column>
+            <af:column id="c13">
+              <af:commandImageLink actionListener="#{bindings.Delete.execute}"
+                                   disabled="#{!bindings.Delete.enabled}"
+                                   id="cil1"
+                                   icon="/images/fuse-icon-delete.png"
+                                   immediate="true"/>
+            </af:column>
+          </af:table>
+        </af:panelHeader>
+      </af:panelGroupLayout>
+    </f:facet>
+    <f:facet name="footer-end"/>
+    <f:facet name="footer-start"/>
+    <f:facet name="hidden"/>
+    <f:facet name="side-panel"/>
+  </af:pageTemplate>
+</jsp:root>

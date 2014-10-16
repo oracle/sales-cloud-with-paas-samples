@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.63.28" id="Fuse_UI_Shell_TestPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="opportunitiesTF1"
+              taskFlowId="/WEB-INF/sample_taskflows/opportunitiesTF.xml#opportunitiesTF"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="leadsTF1" taskFlowId="/WEB-INF/sample_taskflows/leadsTF.xml#leadsTF"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="customerTF1"
+              taskFlowId="/WEB-INF/sample_taskflows/customerTF.xml#customerTF"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="contactTF1"
+              taskFlowId="/WEB-INF/sample_taskflows/contactTF.xml#contactTF"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="prescriptionTF1"
+              taskFlowId="/WEB-INF/prescriptionTF.xml#prescriptionTF"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="visitId" value="#{param.visitId}"/>
+        <parameter id="doctorId" value="#{param.doctorId}"/>
+        <parameter id="doctorName" value="#{param.doctorName}"/>
+        <parameter id="patientId" value="#{param.patientId}"/>
+        <parameter id="patientName" value="#{param.patientName}"/>
+        <parameter id="prescriptionId" value="#{param.prescriptionId}"/>
+        <parameter id="history" value="#{param.history}"/>
+        <parameter id="jwt" value="#{param.jwt}"/>
+        <parameter id="patientEmail" value="#{param.patientEmail}"/>
+      </parameters>
+    </taskFlow>
+  </executables>
+  <bindings/>
+</pageDefinition>

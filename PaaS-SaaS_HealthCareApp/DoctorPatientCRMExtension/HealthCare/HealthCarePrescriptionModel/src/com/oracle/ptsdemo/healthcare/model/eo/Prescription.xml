@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation"
+  Name="Prescription"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  DBObjectType="table"
+  DBObjectName="PRESCRIPTION"
+  AliasName="Prescription"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="PrescriptionId"
+    IsNotNull="true"
+    ColumnName="PRESCRIPTION_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="PRESCRIPTION"
+    PrimaryKey="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+    <TransientExpression><![CDATA[(new oracle.jbo.server.SequenceImpl("PRESCRIPTION_SEQ",adf.object.getDBTransaction())).getSequenceNumber()]]></TransientExpression>
+  </Attribute>
+  <Attribute
+    Name="DoctorId"
+    IsNotNull="true"
+    ColumnName="DOCTOR_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="PRESCRIPTION">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PatientId"
+    IsNotNull="true"
+    ColumnName="PATIENT_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="PRESCRIPTION">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="VisitId"
+    IsNotNull="true"
+    ColumnName="VISIT_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="PRESCRIPTION">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PrescriptionDate"
+    IsNotNull="true"
+    ColumnName="PRESCRIPTION_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="PRESCRIPTION">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="com.oracle.ptsdemo.healthcare.model.eo.Prescription.PrescriptionDate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="com.oracle.ptsdemo.healthcare.model.eo.Prescription.PrescriptionDate_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="ExpireDate"
+    IsNotNull="true"
+    ColumnName="EXPIRE_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="PRESCRIPTION">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="com.oracle.ptsdemo.healthcare.model.eo.Prescription.ExpireDate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="com.oracle.ptsdemo.healthcare.model.eo.Prescription.ExpireDate_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+    <validation:CompareValidationBean
+      Name="ExpireDate_Rule_0"
+      ResId="INVALID_DATE_IN_THE_PAST"
+      OnAttribute="ExpireDate"
+      OperandType="EXPR"
+      Inverse="false"
+      CompareType="GREATERTHANEQUALTO">
+      <validation:TransientExpression><![CDATA[adf.currentDate]]></validation:TransientExpression>
+    </validation:CompareValidationBean>
+  </Attribute>
+  <Attribute
+    Name="PatientEmail"
+    Precision="200"
+    ColumnName="PATIENT_EMAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="PRESCRIPTION">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="PrescriptionMedication"
+    Association="com.oracle.ptsdemo.healthcare.model.eo.PrescriptionFkAssoc"
+    AssociationEnd="com.oracle.ptsdemo.healthcare.model.eo.PrescriptionFkAssoc.PrescriptionMedication"
+    AssociationOtherEnd="com.oracle.ptsdemo.healthcare.model.eo.PrescriptionFkAssoc.Prescription"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PrescriptionExpireDateCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PRESCRIPTION_EXPIRE_DATE_CHECK"/>
+      <Attr Name="_checkCondition" Value='"EXPIRE_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="com.oracle.ptsdemo.healthcare.model.eo.Prescription.ExpireDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PrescriptionPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRESCRIPTION_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="com.oracle.ptsdemo.healthcare.model.eo.Prescription.PrescriptionId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007035">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007035"/>
+      <Attr Name="_checkCondition" Value='"DOCTOR_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="com.oracle.ptsdemo.healthcare.model.eo.Prescription.DoctorId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007036">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007036"/>
+      <Attr Name="_checkCondition" Value='"PATIENT_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="com.oracle.ptsdemo.healthcare.model.eo.Prescription.PatientId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007037">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007037"/>
+      <Attr Name="_checkCondition" Value='"VISIT_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="com.oracle.ptsdemo.healthcare.model.eo.Prescription.VisitId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007040">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007040"/>
+      <Attr Name="_checkCondition" Value='"PRESCRIPTION_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="com.oracle.ptsdemo.healthcare.model.eo.Prescription.PrescriptionId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007048">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007048"/>
+      <Attr Name="_checkCondition" Value='"PRESCRIPTION_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="com.oracle.ptsdemo.healthcare.model.eo.Prescription.PrescriptionDate"/>
+    </AttrArray>
+  </Key>
+  <validation:CollectionValidationBean
+    Name="Prescription_Rule_0"
+    Accessor="PrescriptionMedication"
+    CollAttribute="PrescriptionMedicationId"
+    ResId="AT_LEAST_ONE_MEDICATION_IS_REQ"
+    OperandType="LITERAL"
+    Inverse="false"
+    CompareType="GREATERTHAN"
+    CompareValue="0"
+    Operation="count"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.oracle.ptsdemo.healthcare.model.HealthCarePrescriptionModelBundle"/>
+  </ResourceBundle>
+</Entity>

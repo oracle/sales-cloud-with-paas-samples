@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1">
+    <af:panelBox text="Invalid token" id="pb1">
+      <af:outputFormatted value="You are not authorized to proceed because you don't have a valid token." id="of1"/>
+      <af:outputFormatted value="Token value = #{pageFlowScope.jwt}" id="oft1"/>
+    </af:panelBox>
+  </af:panelFormLayout>
+</jsp:root>

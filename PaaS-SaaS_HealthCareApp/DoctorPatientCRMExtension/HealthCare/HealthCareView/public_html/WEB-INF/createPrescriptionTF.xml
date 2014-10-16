@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="createPrescriptionTF">
+    <default-activity id="__33">createAndInitPrescription</default-activity>
+    <input-parameter-definition id="__34">
+      <name id="__35">visitId</name>
+      <value>#{pageFlowScope.visitId}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__36">
+      <name id="__37">doctorId</name>
+      <value>#{pageFlowScope.doctorId}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__39">
+      <name id="__38">doctorName</name>
+      <value>#{pageFlowScope.doctorName}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__41">
+      <name id="__40">patientId</name>
+      <value>#{pageFlowScope.patientId}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__42">
+      <name id="__43">patientName</name>
+      <value>#{pageFlowScope.patientName}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__5">
+      <name id="__6">patientEmail</name>
+      <value>#{pageFlowScope.patientEmail}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__26">
+      <name id="__25">jwt</name>
+      <value>#{pageFlowScope.jwt}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <return-value-definition id="__71">
+      <name id="__72">prescriptionId</name>
+      <value>#{data.com_oracle_ptsdemo_healthcare_view_createPrescriptionPageDef.PrescriptionId.inputValue}</value>
+      <class>java.lang.String</class>
+    </return-value-definition>
+    <return-value-definition id="__3">
+      <name id="__2">doctorId</name>
+      <value>#{pageFlowScope.doctorId}</value>
+      <class>java.lang.String</class>
+    </return-value-definition>
+    <return-value-definition id="__4">
+      <name id="__12">doctorName</name>
+      <value>#{pageFlowScope.doctorName}</value>
+      <class>java.lang.String</class>
+    </return-value-definition>
+    <return-value-definition id="__14">
+      <name id="__13">patientId</name>
+      <value>#{pageFlowScope.patientId}</value>
+      <class>java.lang.String</class>
+    </return-value-definition>
+    <return-value-definition id="__16">
+      <name id="__15">patientName</name>
+      <value>#{pageFlowScope.patientName}</value>
+      <class>java.lang.String</class>
+    </return-value-definition>
+    <return-value-definition id="__27">
+      <name id="__50">patientEmail</name>
+      <value>#{pageFlowScope.patientEmail}</value>
+      <class>java.lang.String</class>
+    </return-value-definition>
+    <initializer id="__44">#{TaskFlowDiagnostic.checkParameters}</initializer>
+    <finalizer id="__45">#{TaskFlowDiagnostic.checkParameters}</finalizer>
+    <method-call id="createAndInitPrescription">
+      <method id="__7">#{bindings.createAndInitPrescription.execute}</method>
+      <outcome id="__53">
+        <fixed-outcome id="__8">createAndInitPrescription</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="createPrescription">
+      <page id="__9">/createPrescription.jsff</page>
+    </view>
+    <method-call id="Rollback">
+      <method>#{bindings.Rollback.execute}</method>
+      <outcome id="__46">
+        <fixed-outcome>cancel</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="Commit">
+      <method>#{bindings.Commit.execute}</method>
+      <outcome id="__56">
+        <fixed-outcome>goSave</fixed-outcome>
+      </outcome>
+    </method-call>
+    <task-flow-return id="cancel">
+      <outcome id="__1">
+        <name>cancel</name>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="return">
+      <outcome id="__17">
+        <name>return</name>
+      </outcome>
+    </task-flow-return>
+    <method-call id="sendPrescriptionToPharmacy">
+      <method>#{bindings.sendPrescriptionToPharmacy.execute}</method>
+      <outcome id="__60">
+        <fixed-outcome>sendPrescriptionToPharmacy</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__10">
+      <from-activity-id id="__11">createPrescription</from-activity-id>
+      <control-flow-case id="__47">
+        <from-outcome id="__49">goCancel</from-outcome>
+        <to-activity-id id="__48">Rollback</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__24">
+        <from-outcome id="__59">goSave</from-outcome>
+        <to-activity-id id="__23">Commit</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__28">
+      <from-activity-id id="__29">createAndInitPrescription</from-activity-id>
+      <control-flow-case id="__30">
+        <from-outcome id="__32">createAndInitPrescription</from-outcome>
+        <to-activity-id id="__31">createPrescription</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__18">
+      <from-activity-id id="__19">Rollback</from-activity-id>
+      <control-flow-case id="__22">
+        <from-outcome id="__20">cancel</from-outcome>
+        <to-activity-id id="__21">cancel</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__61">
+      <from-activity-id id="__62">Commit</from-activity-id>
+      <control-flow-case id="__65">
+        <from-outcome id="__64">goSave</from-outcome>
+        <to-activity-id id="__63">sendPrescriptionToPharmacy</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__66">
+      <from-activity-id id="__67">sendPrescriptionToPharmacy</from-activity-id>
+      <control-flow-case id="__69">
+        <from-outcome id="__68">sendPrescriptionToPharmacy</from-outcome>
+        <to-activity-id id="__70">return</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

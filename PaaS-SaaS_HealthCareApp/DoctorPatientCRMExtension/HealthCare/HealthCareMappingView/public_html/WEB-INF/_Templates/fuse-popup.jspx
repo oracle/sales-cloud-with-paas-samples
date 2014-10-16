@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <af:pageTemplateDef var="attrs">
+  
+
+         <af:panelStretchLayout id="fuse-popup-s1" bottomHeight="0px" endWidth="0px"
+                                startWidth="0px"
+                                dimensionsFrom="auto">
+            <f:facet name="top">
+               <af:panelStretchLayout
+                                      id="fuse-popup-s2" startWidth="auto" endWidth="auto"
+                                      topHeight="0" bottomHeight="0" >
+                  <f:facet name="start">
+                     <af:panelGroupLayout id="pgl-header-s" layout="horizontal">
+                  <af:facetRef facetName="header-start"/>
+                </af:panelGroupLayout>
+                  </f:facet>
+                  <f:facet name="end">
+                     <af:panelGroupLayout id="pgl-header-e" layout="horizontal">
+                        <af:facetRef facetName="header-end"/>
+                     </af:panelGroupLayout>
+                  </f:facet>
+               </af:panelStretchLayout>
+            </f:facet>
+            <f:facet name="center">
+                <af:panelGroupLayout layout="#{(attrs['Full-Size'])?'scroll':'vertical'}"
+                                     styleClass="#{(attrs['Full-Size'])?'fuse-popup-content':''}"
+                                     id="body-pgl" valign="top">
+                    <af:facetRef facetName="body"/>
+                </af:panelGroupLayout>
+          </f:facet>
+        <f:facet name="bottom">
+            <af:facetRef facetName="hidden"/>
+        </f:facet>
+      </af:panelStretchLayout>
+
+    
+  
+    
+    <af:xmlContent>
+      <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+        <display-name>Fuse Popup</display-name>
+        <facet>
+          <description>Displays popup title and buttons.</description>
+          <facet-name>header-start</facet-name>
+        </facet>
+        <facet>
+          <description>Displays menus and buttons.</description>
+          <facet-name>header-end</facet-name>
+        </facet>
+        <facet>
+          <description>Displays popup content.</description>
+          <facet-name>body</facet-name>
+        </facet>
+        <facet>
+          <description>Stores secondary window content.</description>
+          <facet-name>hidden</facet-name>
+        </facet>
+        <attribute>
+          <attribute-name>Full-Size</attribute-name>
+          <attribute-class>
+            java.lang.Boolean
+          </attribute-class>
+          <default-value>
+            true
+          </default-value>
+        </attribute>
+      </component>
+    </af:xmlContent>
+  </af:pageTemplateDef>
+</jsp:root>

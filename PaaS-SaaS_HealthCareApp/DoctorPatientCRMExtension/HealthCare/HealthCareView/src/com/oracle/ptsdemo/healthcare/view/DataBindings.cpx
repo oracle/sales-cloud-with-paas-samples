@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.63.28" id="DataBindings" SeparateXMLFiles="false"
+             Package="com.oracle.ptsdemo.healthcare.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/Fuse-UI-Shell-Test.jspx"
+          usageId="view_Fuse_UI_Shell_TestPageDef"/>
+    <page path="/WEB-INF/prescriptionTF.xml#prescriptionTF@ExecuteWithParams"
+          usageId="com_oracle_ptsdemo_healthcare_view_prescriptionTF_prescriptionTF_ExecuteWithParamsPageDef"/>
+    <page path="/createPrescription.jsff"
+          usageId="com_oracle_ptsdemo_healthcare_view_createPrescriptionPageDef"/>
+    <page path="/WEB-INF/createPrescriptionTF.xml#createPrescriptionTF@createAndInitPrescription"
+          usageId="com_oracle_ptsdemo_healthcare_view_prescriptionTF_prescriptionTF_createAndInitPrescriptionPageDef"/>
+    <page path="/WEB-INF/createPrescriptionTF.xml#createPrescriptionTF@Rollback"
+          usageId="com_oracle_ptsdemo_healthcare_view_createPrescriptionTF_createPrescriptionTF_RollbackPageDef"/>
+    <page path="/WEB-INF/createPrescriptionTF.xml#createPrescriptionTF@Commit"
+          usageId="com_oracle_ptsdemo_healthcare_view_createPrescriptionTF_createPrescriptionTF_CommitPageDef"/>
+    <page path="/WEB-INF/editPrescriptionTF.xml#editPrescriptionTF@ExecuteWithParams"
+          usageId="com_oracle_ptsdemo_healthcare_view_editPrescriptionTF_editPrescriptionTF_ExecuteWithParamsPageDef"/>
+    <page path="/editPrescription.jsff"
+          usageId="com_oracle_ptsdemo_healthcare_view_editPrescriptionPageDef"/>
+    <page path="/historyPrescription.jsff"
+          usageId="com_oracle_ptsdemo_healthcare_view_historyPrescriptionPageDef"/>
+    <page path="/WEB-INF/historyTF.xml#historyTF@updateOSCFields"
+          usageId="com_oracle_ptsdemo_healthcare_view_historyTF_historyTF_updateOSCFieldsPageDef"/>
+    <page path="/prescription.jspx"
+          usageId="com_oracle_ptsdemo_healthcare_view_prescriptionPageDef"/>
+    <page path="/WEB-INF/createPrescriptionTF.xml#createPrescriptionTF@sendPrescriptionToPharmacy"
+          usageId="com_oracle_ptsdemo_healthcare_view_createPrescriptionTF_createPrescriptionTF_sendPrescriptionToPharmacy1PageDef"/>
+    <page path="/WEB-INF/viewPrescriptionGanttTF.xml#viewPrescriptionGanttTF@ExecuteWithParams"
+          usageId="com_oracle_ptsdemo_healthcare_view_viewPrescriptionGanttTF_viewPrescriptionGanttTF_ExecuteWithParamsPageDef"/>
+    <page path="/viewPrescriptionGantt.jsff"
+          usageId="com_oracle_ptsdemo_healthcare_view_viewPrescriptionGanttPageDef"/>
+    <page path="/WEB-INF/editPrescriptionTF.xml#editPrescriptionTF@findPrescriptionforDVT"
+          usageId="com_oracle_ptsdemo_healthcare_view_editPrescriptionTF_editPrescriptionTF_ExecuteWithParams1PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_Fuse_UI_Shell_TestPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.Fuse_UI_Shell_TestPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_prescriptionTF_prescriptionTF_ExecuteWithParamsPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.prescriptionTF_prescriptionTF_ExecuteWithParamsPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_prescriptionTF_prescriptionTF_createAndInitPrescriptionPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.prescriptionTF_prescriptionTF_createAndInitPrescriptionPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_prescriptionTF_prescriptionTF_RollbackPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.prescriptionTF_prescriptionTF_RollbackPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_createPrescriptionPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.createPrescriptionPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_createPrescriptionTF_createPrescriptionTF_RollbackPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.createPrescriptionTF_createPrescriptionTF_RollbackPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_createPrescriptionTF_createPrescriptionTF_CommitPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.createPrescriptionTF_createPrescriptionTF_CommitPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_editPrescriptionTF_editPrescriptionTF_ExecuteWithParamsPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.editPrescriptionTF_editPrescriptionTF_ExecuteWithParamsPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_editPrescriptionPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.editPrescriptionPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_historyPrescriptionPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.historyPrescriptionPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_historyTF_historyTF_updateOSCFieldsPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.historyTF_historyTF_updateOSCFieldsPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_prescriptionPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.prescriptionPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_createPrescriptionTF_createPrescriptionTF_sendPrescriptionToPharmacy1PageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.createPrescriptionTF_createPrescriptionTF_sendPrescriptionToPharmacy1PageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_viewPrescriptionGanttTF_viewPrescriptionGanttTF_ExecuteWithParamsPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.viewPrescriptionGanttTF_viewPrescriptionGanttTF_ExecuteWithParamsPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_viewPrescriptionGanttPageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.viewPrescriptionGanttPageDef"/>
+    <page id="com_oracle_ptsdemo_healthcare_view_editPrescriptionTF_editPrescriptionTF_ExecuteWithParams1PageDef"
+          path="com.oracle.ptsdemo.healthcare.view.pageDefs.editPrescriptionTF_editPrescriptionTF_ExecuteWithParams1PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="HealthCarePrescriptionModelAMDataControl"
+                     Package="com.oracle.ptsdemo.healthcare.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="HealthCarePrescriptionModelAMLocal"
+                     syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

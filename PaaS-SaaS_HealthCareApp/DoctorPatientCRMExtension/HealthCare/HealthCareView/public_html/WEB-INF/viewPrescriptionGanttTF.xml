@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="viewPrescriptionGanttTF">
+    <default-activity id="__11">ExecuteWithParams</default-activity>
+    <input-parameter-definition id="__5">
+      <name id="__6">visitId</name>
+      <value>#{pageFlowScope.visitId}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__7">
+      <name id="__8">doctorName</name>
+      <value>#{pageFlowScope.doctorName}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__10">
+      <name id="__9">patientName</name>
+      <value>#{pageFlowScope.patientName}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <managed-bean id="__3">
+      <managed-bean-name id="__4">OfficeVisitBean</managed-bean-name>
+      <managed-bean-class id="__1">com.oracle.ptsdemo.healthcare.view.bean.OfficeVisitBean</managed-bean-class>
+      <managed-bean-scope id="__2">pageFlow</managed-bean-scope>
+      <managed-property id="__19">
+        <property-name id="__20">report</property-name>
+        <property-class>com.oracle.ptsdemo.healthcare.view.bean.PrescriptionReport</property-class>
+        <value id="__18"></value>
+      </managed-property>
+    </managed-bean>
+    <method-call id="ExecuteWithParams">
+      <method>#{pageFlowScope.OfficeVisitBean.findPrescriptionForDVT}</method>
+      <outcome id="__12">
+        <fixed-outcome>ExecuteWithParams</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="viewPrescriptionGantt">
+      <page>/viewPrescriptionGantt.jsff</page>
+    </view>
+    <control-flow-rule id="__13">
+      <from-activity-id id="__14">ExecuteWithParams</from-activity-id>
+      <control-flow-case id="__15">
+        <from-outcome id="__17">ExecuteWithParams</from-outcome>
+        <to-activity-id id="__16">viewPrescriptionGantt</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>
