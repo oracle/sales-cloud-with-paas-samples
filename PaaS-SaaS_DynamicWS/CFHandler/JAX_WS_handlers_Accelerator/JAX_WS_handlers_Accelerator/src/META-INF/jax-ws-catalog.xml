@@ -1,0 +1,8 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="https://fap0930-crm.oracleads.com/opptyMgmtOpportunities/OpportunityService?WSDL"
+          uri="../com/oracle/pts/opp/wsclient/OpportunityService.wsdl"/>
+  <system systemId="https://isv2-crm-crm-ext.oracle.com/crmCommonSalesParties/SalesPartyService?WSDL"
+          uri="../com/oracle/pts/salesparty/wsclient/SalesPartyService.wsdl"/>
+  <system systemId="https://fap0930-crm.oracleads.com/crmCommonSalesParties/SalesPartyService?WSDL"
+          uri="../com/oracle/pts/salesparty/wsclient/SalesPartyService.wsdl"/>
+</catalog>

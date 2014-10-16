@@ -1,0 +1,132 @@
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/crmCommon/assetImport/publicModel/assetImportService/"
+     sdoJava:package="oracle.apps.crmCommon.assetImport.publicModel.assetImportService"
+     xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:sdoJava="commonj.sdo/java" xmlns:sdoXML="commonj.sdo/xml"
+     xmlns="http://xmlns.oracle.com/apps/crmCommon/assetImport/publicModel/assetImportService/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation xmlns:oer="http://xmlns.oracle.com/oer">
+            <name>Asset</name>
+            <description>Assets represents the products owned by Customers.  Anything tangible or intangible that is capable of being owned or controlled to produce value.  For example:
+Tangible Items - Computers, engines, machine parts, and so on.
+Intangible items - Software, Services, Licenses  and agreements</description>
+            <oer:category name="lba">
+                <value>CrmCommonComponent-CRM Common Components</value>
+                <value>CrmCommonComponent-CRM Common Components : CrmCommonAssetImport-CRM Asset Import</value>
+            </oer:category>
+            <oer:attributes>
+                <oer:attribute description="The unique identifier of the Asset." name="AssetId"/>
+                <oer:attribute description="The number that identifies the asset." name="AssetNumber"/>
+                <oer:attribute description="A source system code that identifies the original source system of the asset"
+                     name="AssetOrigSystem"/>
+                <oer:attribute description="A source system reference that identifies the unique ID of the asset in user&apos;s legacy or external system."
+                     name="AssetOrigSystemReference"/>
+                <oer:attribute description="The batch ID for importing process." name="BatchId"/>
+                <oer:attribute description="The cost amount of the asset in the transaction currency."
+                     name="CostDocAmount"/>
+                <oer:attribute description="The user who created the record or imported the record."
+                     name="CreatedBy"/>
+                <oer:attribute description="The time stamp when the record was created." name="CreationDate"/>
+                <oer:attribute description="The unique ID for the existing customer party record in the Oracle Fusion destination table."
+                     name="CustomerId"/>
+                <oer:attribute description="The date when the asset ends." name="EndDate"/>
+                <oer:attribute description="The date the asset was installed." name="InstallDate"/>
+                <oer:attribute description="The interface table row&apos;s unique ID." name="InterfaceRowId"/>
+                <oer:attribute description="The unique ID for the existing sales catalog product (item) record in the Oracle Fusion destination table."
+                     name="InventoryItemId"/>
+                <oer:attribute description="Item Organization Id as created by Fusion CRM" name="InventoryOrgId"/>
+                <oer:attribute description="The time stamp when the record was last updated." name="LastUpdateDate"/>
+                <oer:attribute description="The ID of the user who last updated the record in the interface table or submitted the import process."
+                     name="LastUpdateLogin"/>
+                <oer:attribute description="The session sign in of the user that last updated the row."
+                     name="LastUpdatedBy"/>
+                <oer:attribute description="The version number which is incremented each time the row is updated.  The number is compared at the start and end of a transaction to detect whether another session has updated the row since it was queried."
+                     name="ObjectVersionNumber"/>
+                <oer:attribute description="The date the asset was purchased." name="PurchaseDate"/>
+                <oer:attribute description="The quantity purchased." name="Quantity"/>
+                <oer:attribute description="The request ID of the process that created or last updated the interface row."
+                     name="RequestId"/>
+                <oer:attribute description="The date when the asset starts." name="StartDate"/>
+                <oer:attribute description="The lookup code that represents the asset status, such as active or expired."
+                     name="StatusCode"/>
+                <oer:attribute description="CRM Currency convert rate" name="CrmCurrConvRate"/>
+                <oer:attribute description="The tag number associated with the asset." name="AssetTag"/>
+                <oer:attribute description="The asset&apos;s serial number." name="SerialNum"/>
+                <oer:attribute description="Corporate currency code" name="CrmCorpCurrencyCode"/>
+                <oer:attribute description="The code that represents the currency for the asset amounts."
+                     name="EnteredCurrencyCode"/>
+                <oer:attribute description="Currency Exchange Rate" name="CurrExchangeRate"/>
+                <oer:attribute description="Delete Flag for soft deletes, Y for Yes and NULL or N for No"
+                     name="DeleteFlag"/>
+                <oer:attribute description="Standard column used in Fusion tables." name="AttributeCategory"/>
+                <oer:attribute description="Currency Code" name="CurrencyCode"/>
+                <oer:attribute description="Corporate currency code" name="CorpCurrencyCode"/>
+                <oer:attribute description="Currency convert rate type" name="CurcyConvRateType"/>
+                <oer:attribute description="The name that describes the asset." name="AssetName"/>
+                <oer:attribute description="The description field of the asset." name="DescText"/>
+                <oer:attribute description="Unit of Measure" name="UomCode"/>
+                <oer:attribute description="Product Group ID in sales catalog" name="ProdGroupId"/>
+                <oer:attribute description="Description" name="Description"/>
+                <oer:attribute description="Organization ID" name="OrganizationId"/>
+                <oer:attribute description="Item Number" name="ItemNumber"/>
+                <oer:attribute description="Product Group Name" name="ProdGroupName"/>
+            </oer:attributes>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+    <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+    <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+    <xsd:complexType name="Asset">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>AssetId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="AssetId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="AssetNumber" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AssetOrigSystem" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AssetOrigSystemReference" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="BatchId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="CostDocAmount" nillable="true" type="xsd:decimal"/>
+            <xsd:element minOccurs="0" name="CreatedBy" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CreationDate" nillable="true" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="CustomerId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="EndDate" nillable="true" type="ns0:date-Date"/>
+            <xsd:element minOccurs="0" name="InstallDate" nillable="true" type="ns0:date-Date"/>
+            <xsd:element minOccurs="0" name="InterfaceRowId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="InventoryItemId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="InventoryOrgId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="LastUpdateDate" nillable="true" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="LastUpdateLogin" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="LastUpdatedBy" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ObjectVersionNumber" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element minOccurs="0" name="PurchaseDate" nillable="true" type="ns0:date-Date"/>
+            <xsd:element minOccurs="0" name="Quantity" nillable="true" type="xsd:decimal"/>
+            <xsd:element minOccurs="0" name="RequestId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="StartDate" nillable="true" type="ns0:date-Date"/>
+            <xsd:element minOccurs="0" name="StatusCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CrmCurrConvRate" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AssetTag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="SerialNum" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CrmCorpCurrencyCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="EnteredCurrencyCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CurrExchangeRate" nillable="true" type="xsd:decimal"/>
+            <xsd:element minOccurs="0" name="DeleteFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AttributeCategory" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CurrencyCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CorpCurrencyCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CurcyConvRateType" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AssetName" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="DescText" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="UomCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ProdGroupId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="Description" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="OrganizationId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="ItemNumber" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ProdGroupName" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="asset" type="Asset"/>
+</xsd:schema>
