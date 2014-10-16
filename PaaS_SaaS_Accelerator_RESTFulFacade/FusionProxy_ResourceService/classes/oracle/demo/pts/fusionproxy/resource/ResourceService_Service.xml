@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns2="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname localpart="ResourceService"
+                     namespaceURI="http://xmlns.oracle.com/apps/cdm/foundation/resources/resourceService/applicationModule/"/>
+      <port-info>
+         <wsdl-port localpart="ResourceServiceSoapHttpPort"
+                    namespaceURI="http://xmlns.oracle.com/apps/cdm/foundation/resources/resourceService/applicationModule/"/>
+         <runtime/>
+         <policy-references>
+            <policy-reference uri="oracle/wss_username_token_over_ssl_client_policy"
+                              category="security"/>
+         </policy-references>
+         <operations>
+            <operation name="getResource"/>
+            <operation name="createResource"/>
+            <operation name="updateResource"/>
+            <operation name="mergeResource"/>
+            <operation name="findResource"/>
+            <operation name="processResource"/>
+            <operation name="deleteResource"/>
+            <operation name="processCSResource"/>
+            <operation name="findResourceAsync"/>
+            <operation name="createResourceAsync"/>
+            <operation name="deleteResourceAsync"/>
+            <operation name="updateResourceAsync"/>
+            <operation name="mergeResourceAsync"/>
+            <operation name="getResourceAsync"/>
+            <operation name="processCSResourceAsync"/>
+            <operation name="processResourceAsync"/>
+            <operation name="processResourceRoleProvisioning"/>
+            <operation name="processResourceRoleProvisioningAsync"/>
+            <operation name="terminateResource"/>
+            <operation name="terminateResourceAsync"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>

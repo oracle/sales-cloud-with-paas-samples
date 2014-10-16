@@ -1,0 +1,78 @@
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/hcm/people/roles/userDetailsServiceV2/"
+     sdoJava:package="oracle.apps.hcm.people.roles.userDetailsServiceV2" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/"
+     xmlns:sdoJava="commonj.sdo/java" xmlns:sdoXML="commonj.sdo/xml" xmlns="http://xmlns.oracle.com/apps/hcm/people/roles/userDetailsServiceV2/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation xmlns:oer="http://xmlns.oracle.com/oer">
+            <name>User Details SDO Version 2</name>
+            <description>This object represents user details for the requesting reference (either person id or TCA party id).</description>
+            <oer:category name="lba">
+                <value>HcmTop-HcmTop</value>
+                <value>HcmTop-HcmTop : HcmPeopleTop-People</value>
+                <value>HcmTop-HcmTop : HcmPeopleTop-People : HcmPeopleRoles-Roles
+                    Provisioning</value>
+            </oer:category>
+            <oer:category name="lbo">
+                <value>HCM-HCM</value>
+                <value>HCM-HCM : PER-Global Human Resources</value>
+                <value>HCM-HCM : PER-Global Human Resources : PER_PERSON-Person</value>
+            </oer:category>
+            <oer:attributes>
+                <oer:attribute description="Identifier of the person." name="PersonId"/>
+                <oer:attribute description="Person number." name="PersonNumber"/>
+                <oer:attribute description="Identifier of the user." name="UserId"/>
+                <oer:attribute description="Name of the user." name="Username"/>
+                <oer:attribute description="User globally unique identifier." name="UserGUID"/>
+                <oer:attribute description="Active flag." name="ActiveFlag"/>
+                <oer:attribute description="Xcredentials email sent." name="CredentialsEmailSent"/>
+                <oer:attribute description="User distinguished name." name="UserDistinguishedName"/>
+                <oer:attribute description="User person details." name="UserPersonDetails"/>
+                <oer:attribute description="User session details." name="UserSessionDetails"/>
+                <oer:attribute description="User work relationship details." name="UserWorkRelationshipDetails"/>
+            </oer:attributes>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+    <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+    <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+    <xsd:include schemaLocation="UserPersonDetails.xsd"/>
+    <xsd:include schemaLocation="UserSessionDetails.xsd"/>
+    <xsd:include schemaLocation="UserWorkRelationshipDetails.xsd"/>
+    <xsd:complexType name="UserDetailsResult">
+        <xsd:complexContent>
+            <xsd:extension base="ns0:MethodResult">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="Value" type="UserDetails"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="UserDetails">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>PersonId</attribute>
+                    <attribute>UserId</attribute>
+                    <attribute>PersonId1</attribute>
+                    <attribute>EffectiveStartDate</attribute>
+                    <attribute>EffectiveEndDate</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="PersonId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="PersonNumber" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="UserId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="Username" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="UserGUID" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ActiveFlag" type="xsd:boolean" sdoXML:dataType="sdoJava:BooleanObject"/>
+            <xsd:element minOccurs="0" name="CredentialsEmailSent" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="UserDistinguishedName" nillable="true" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="UserPersonDetails" type="UserPersonDetails"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="UserSessionDetails" type="UserSessionDetails"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="UserWorkRelationshipDetails" type="UserWorkRelationshipDetails"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="userDetailsResult" type="UserDetailsResult"/>
+    <xsd:element name="userDetails" type="UserDetails"/>
+</xsd:schema>

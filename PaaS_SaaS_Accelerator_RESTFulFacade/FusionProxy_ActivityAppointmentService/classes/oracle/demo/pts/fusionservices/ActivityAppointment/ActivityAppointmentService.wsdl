@@ -1,0 +1,2755 @@
+<wsdl:definitions
+     name="ActivityAppointmentService"
+     targetNamespace="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/"
+     xmlns:orafault="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:types="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/types/"
+    >
+    <wsdl:documentation xmlns:oer="http://xmlns.oracle.com/oer">
+        <name>Appointment Service</name>
+        <description>An appointment activity service that captures events such as
+            meetings or appointments that occur at a specific time and appear on
+            a user&apos;s calendar.</description>
+        <docCategories>
+            <category>Integration</category>
+        </docCategories>
+        <oer:lifecycle>Active</oer:lifecycle>
+        <oer:compatibility>Supported - Backward Compatibility Assured</oer:compatibility>
+        <oer:category name="lba">
+            <value>CrmCommonComponent-CRM Common Components</value>
+            <value>CrmCommonComponent-CRM Common Components :
+                AppCmmnCompActivities-Activities</value>
+        </oer:category>
+        <oer:operation name="getActivityAssignee">
+            <description>Get operation for Appointment Assignee</description>
+            <oer:parameters>
+                <oer:parameter name="activityAssigneeId" description="Unique Identifier for Activity Assignee record"/>
+                <oer:return description="Appointment Assignee that matches the inbound key attributes."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="createActivityAssignee">
+            <description>Create operation for Appointment Assignee</description>
+            <oer:parameters>
+                <oer:parameter name="activityAssignee" description="Appointment Assignee to be created"/>
+                <oer:return description="Created Appointment Assignee"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="updateActivityAssignee">
+            <description>Update operation for Appointment Assignee</description>
+            <oer:parameters>
+                <oer:parameter name="activityAssignee" description="Appointment Assignee to be updated"/>
+                <oer:return description="Updated Appointment Assignee"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteActivityAssignee">
+            <description>Delete operation for Appointment Assignee</description>
+            <oer:parameters>
+                <oer:parameter name="activityAssignee" description="Appointment Assignee to be deleted"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="getActivityCategories">
+            <description>Get operation for Appointment Category</description>
+            <oer:parameters>
+                <oer:parameter name="activityCategoryId" description="Appointment Category id to Get"/>
+                <oer:return description="Appointment Category that matches the inbound key attributes."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="createActivityCategories">
+            <description>Create operation for Appointment Category</description>
+            <oer:parameters>
+                <oer:parameter name="activityCategories" description="Appointment Category to be created"/>
+                <oer:return description="Created Appointment Category"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="updateActivityCategories">
+            <description>Update operation for Appointment Category</description>
+            <oer:parameters>
+                <oer:parameter name="activityCategories" description="Appointment Category to be updated"/>
+                <oer:return description="Updated Appointment Category"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteActivityCategories">
+            <description>Delete operation for Appointment Category</description>
+            <oer:parameters>
+                <oer:parameter name="activityCategories" description="Appointment Category to be deleted"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="getActivityContact">
+            <description>Get operation for Appointment Contact</description>
+            <oer:parameters>
+                <oer:parameter name="activityContactId" description="Unique Identifier for Activity Contact record"/>
+                <oer:return description="Appointment Contact that matches the inbound key attributes."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="createActivityContact">
+            <description>Create operation for Appointment Contact</description>
+            <oer:parameters>
+                <oer:parameter name="activityContact" description="Appointment Contact to be created"/>
+                <oer:return description="Created Appointment Contact"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="updateActivityContact">
+            <description>Update operation for Appointment Contact</description>
+            <oer:parameters>
+                <oer:parameter name="activityContact" description="Appointment Contact to be updated"/>
+                <oer:return description="Updated Appointment Contact"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteActivityContact">
+            <description>Delete operation for Appointment Contact</description>
+            <oer:parameters>
+                <oer:parameter name="activityContact" description="Appointment Contact to be deleted"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteNotes">
+            <description>Delete operation for Note</description>
+            <oer:parameters>
+                <oer:parameter name="notes" description="Note to be deleted"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="createAppointment">
+            <description>Create operation for Appointment Transient SDO</description>
+            <oer:parameters>
+                <oer:parameter name="appointment" description="Appointment Transient SDO to be created"/>
+                <oer:return description="Created Appointment Transient SDO"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="getAppointment">
+            <description>Get operation for Appointment Transient SDO</description>
+            <oer:parameters>
+                <oer:parameter name="activityId" description="Appointment Id to Get"/>
+                <oer:return description="Appointment Transient SDO that matches the inbound key attributes."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="mergeAppointment">
+            <description>Merge operation for Appointment</description>
+            <oer:parameters>
+                <oer:parameter name="appointmentRow" description="Appointment Id to be merged"/>
+                <oer:return description="Merged Appointment"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="updateAppointment">
+            <description>Update operation for Appointment</description>
+            <oer:parameters>
+                <oer:parameter name="appointmentRow" description="Id of the Appointment to be updated"/>
+                <oer:return description="Updated Appointment"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteAppointment">
+            <description>Delete Operation for Appointment</description>
+            <oer:parameters>
+                <oer:parameter name="appointmentRow" description="Appointment Id to be deleted"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="createAppointmentDeleteException">
+            <description>Create operation for Appointment Deletion Exception</description>
+            <oer:parameters>
+                <oer:parameter name="appointmentDeleteException" description="Appointment Deletion Exception to be created"/>
+                <oer:return description="Created Appointment Deletion Exception"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteAppointmentDeleteException">
+            <description>Delete operation for Appointment Deletion Exception</description>
+            <oer:parameters>
+                <oer:parameter name="appointmentDeleteException" description="Appointment Deletion Exception to be deleted"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="findActivityAssignee">
+            <description>Find operation for Appointment Assignee</description>
+            <oer:parameters>
+                <oer:parameter name="findCriteria" description="The criteria used to limit your query result, such as the filter (where clause), the fetch size, etc."/>
+                <oer:parameter name="findControl" description="Find Control. Not currently used."/>
+                <oer:return description="A list of Appointment Assignee that satisfy the inbound criteria."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="findActivityCategories">
+            <description>Find operation for Appointment Category</description>
+            <oer:parameters>
+                <oer:parameter name="findCriteria" description="The criteria used to limit your query result, such as the filter (where clause), the fetch size, etc."/>
+                <oer:parameter name="findControl" description="Find Control. Not currently used."/>
+                <oer:return description="A list of Appointment Category that satisfy the inbound criteria."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="findActivityContact">
+            <description>Find operation for Appointment Contact</description>
+            <oer:parameters>
+                <oer:parameter name="findCriteria" description="The criteria used to limit your query result, such as the filter (where clause), the fetch size, etc."/>
+                <oer:parameter name="findControl" description="Find Control. Not currently used."/>
+                <oer:return description="A list of Appointment Contact that satisfy the inbound criteria."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="getNotes">
+            <description>Get operation for Note</description>
+            <oer:parameters>
+                <oer:parameter name="noteId" description="Unique Note Identifier. This is the primary key of the notes table."/>
+                <oer:return description="Note that matches the inbound key attributes."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="createNotes">
+            <description>Create operation for Note</description>
+            <oer:parameters>
+                <oer:parameter name="notes" description="Note to be created"/>
+                <oer:return description="Created Note"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="updateNotes">
+            <description>Update operation for Note</description>
+            <oer:parameters>
+                <oer:parameter name="notes" description="Note to be updated"/>
+                <oer:return description="Updated Note"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="findNotes">
+            <description>Find operation for Note</description>
+            <oer:parameters>
+                <oer:parameter name="findCriteria" description="The criteria used to limit your query result, such as the filter (where clause), the fetch size, etc."/>
+                <oer:parameter name="findControl" description="Find Control. Not currently used."/>
+                <oer:return description="A list of Note that satisfy the inbound criteria."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="findAppointment">
+            <description>Find operation for Appointment Transient SDO</description>
+            <oer:parameters>
+                <oer:parameter name="findCriteria" description="The criteria used to limit your query result, such as the filter (where clause), the fetch size, etc."/>
+                <oer:parameter name="findControl" description="Find Control. Not currently used."/>
+                <oer:return description="A list of Appointment Transient SDO that satisfy the inbound criteria."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="copyAttachment">
+            <description>Copy operation for Appointment Attachment</description>
+            <oer:parameters>
+                <oer:parameter name="attachmentVORows" description="The list of attachment objects to be copied or created"/>
+                <oer:parameter name="commitData" description="Indicates whether data should be committed to the database"/>
+                <oer:return description="A list of warnings or informational messages encountered when deleting the appointment attachment"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="createAttachment">
+            <description>Create operation for Appointment Attachment</description>
+            <oer:parameters>
+                <oer:parameter name="attachmentVORows" description="The list of attachment objects to be copied or created"/>
+                <oer:parameter name="commitData" description="Indicates whether data should be committed to the database"/>
+                <oer:return description="A list of warnings or informational messages encountered when deleting the appointment attachment"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteAttachment">
+            <description>Delete Operation for Appointment Attachment</description>
+            <oer:parameters>
+                <oer:parameter name="deleteParams" description="Parameters driving the Delete operation for Appointment Attachment"/>
+                <oer:parameter name="commitData" description="Indicates whether data should be committed to the database"/>
+                <oer:return description="A list of warnings or informational messages encountered when deleting the appointment attachment"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="getAttachment">
+            <description>Get operation for Appointment Attachment</description>
+            <oer:parameters>
+                <oer:parameter name="getParameters" description="Parameters driving the Get operation for Appointment Attachment"/>
+                <oer:return description="Appointment Attachment"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="updateAppointmentDeleteException">
+            <description>Update operation for Appointment Deletion Exception</description>
+            <oer:parameters>
+                <oer:parameter name="appointmentDeleteException" description="Appointment Deletion Exception to be updated"/>
+                <oer:return description="Updated Appointment Deletion Exception"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="getAppointmentDeleteException">
+            <description>Get operation for Appointment Deletion Exception</description>
+            <oer:parameters>
+                <oer:parameter name="activityChildId" description="Get operation for Appointment Deletion Exception given the Id of an Appointment Child Object"/>
+                <oer:return description="Appointment Deletion Exception that matches the inbound key attributes."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="findAppointmentDeleteException">
+            <description>Find operation for Appointment Deletion Exception</description>
+            <oer:parameters>
+                <oer:parameter name="findCriteria" description="The criteria used to limit your query result, such as the filter (where clause), the fetch size, etc."/>
+                <oer:parameter name="findControl" description="Find Control. Not currently used."/>
+                <oer:return description="A list of Appointment Deletion Exception that satisfy the inbound criteria."/>
+            </oer:parameters>
+        </oer:operation>
+    </wsdl:documentation>
+    <plnk:partnerLinkType name="ActivityAppointmentService">
+        <plnk:role name="ActivityAppointmentServiceProvider">
+            <plnk:portType name="tns:ActivityAppointmentService"/>
+        </plnk:role>
+        <plnk:role name="ActivityAppointmentServiceRequestor">
+            <plnk:portType name="tns:ActivityAppointmentServiceResponse"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="ActivityAppointmentServiceResponse_Fault_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="ActivityAppointmentServiceResponse_Input_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+            <sp:Header Namespace="http://www.w3.org/2005/08/addressing"/>
+            <sp:Header Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+            <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+            <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+        </sp:EncryptedParts>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="ActivityAppointmentServiceResponse_Output_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+        </sp:EncryptedParts>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="ActivityAppointmentServiceSoapHttpPort_Fault_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsp:ExactlyOne>
+            <wsp:All/>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="ActivityAppointmentServiceSoapHttpPort_Input_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                </sp:EncryptedParts>
+            </wsp:All>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                    <sp:Header Name="SignatureConfirmation" Namespace="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                </sp:EncryptedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="ActivityAppointmentServiceSoapHttpPort_Output_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:EncryptedParts>
+            </wsp:All>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:EncryptedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="wsaddr_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="wsmtom_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"/>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="wss11_saml_or_username_token_with_message_protection_service_policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:ProtectionToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:RequireThumbprintReference/>
+                                        <sp:WssX509V3Token11/>
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:ProtectionToken>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic128/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                        <sp:ProtectTokens/>
+                        <sp:OnlySignEntireHeadersAndBody/>
+                    </wsp:Policy>
+                </sp:SymmetricBinding>
+                <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssSamlV11Token11/>
+                            </wsp:Policy>
+                        </sp:SamlToken>
+                    </wsp:Policy>
+                </sp:SignedSupportingTokens>
+                <sp:EndorsingSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssX509V3Token11/>
+                            </wsp:Policy>
+                        </sp:X509Token>
+                    </wsp:Policy>
+                </sp:EndorsingSupportingTokens>
+                <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:RequireSignatureConfirmation/>
+                        <sp:MustSupportRefEncryptedKey/>
+                    </wsp:Policy>
+                </sp:Wss11>
+            </wsp:All>
+            <wsp:All>
+                <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:ProtectionToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:RequireThumbprintReference/>
+                                        <sp:WssX509V3Token11/>
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:ProtectionToken>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic128/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                        <sp:OnlySignEntireHeadersAndBody/>
+                    </wsp:Policy>
+                </sp:SymmetricBinding>
+                <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssUsernameToken10/>
+                            </wsp:Policy>
+                        </sp:UsernameToken>
+                    </wsp:Policy>
+                </sp:SignedSupportingTokens>
+                <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:RequireSignatureConfirmation/>
+                        <sp:MustSupportRefEncryptedKey/>
+                    </wsp:Policy>
+                </sp:Wss11>
+            </wsp:All>
+            <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken RequireClientCertificate="false">
+                                    <wsp:Policy/>
+                                </sp:HttpsToken>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                    </wsp:Policy>
+                </sp:TransportBinding>
+                <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssSamlV11Token10/>
+                            </wsp:Policy>
+                        </sp:SamlToken>
+                    </wsp:Policy>
+                </sp:SupportingTokens>
+            </wsp:All>
+            <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken RequireClientCertificate="false">
+                                    <wsp:Policy/>
+                                </sp:HttpsToken>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                    </wsp:Policy>
+                </sp:TransportBinding>
+                <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssUsernameToken10/>
+                            </wsp:Policy>
+                        </sp:UsernameToken>
+                    </wsp:Policy>
+                </sp:SupportingTokens>
+            </wsp:All>
+            <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken RequireClientCertificate="false">
+                                    <wsp:Policy/>
+                                </sp:HttpsToken>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                    </wsp:Policy>
+                </sp:TransportBinding>
+            </wsp:All>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="wss11_saml_token_with_message_protection_client_policy">
+        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:ProtectionToken>
+                    <wsp:Policy>
+                        <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                            <wsp:Policy>
+                                <sp:RequireThumbprintReference/>
+                                <sp:WssX509V3Token11/>
+                            </wsp:Policy>
+                        </sp:X509Token>
+                    </wsp:Policy>
+                </sp:ProtectionToken>
+                <sp:AlgorithmSuite>
+                    <wsp:Policy>
+                        <sp:Basic128/>
+                    </wsp:Policy>
+                </sp:AlgorithmSuite>
+                <sp:Layout>
+                    <wsp:Policy>
+                        <sp:Lax/>
+                    </wsp:Policy>
+                </sp:Layout>
+                <sp:IncludeTimestamp/>
+                <sp:ProtectTokens/>
+                <sp:OnlySignEntireHeadersAndBody/>
+            </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                    <wsp:Policy>
+                        <sp:WssSamlV11Token11/>
+                    </wsp:Policy>
+                </sp:SamlToken>
+            </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:EndorsingSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                    <wsp:Policy>
+                        <sp:WssX509V3Token11/>
+                    </wsp:Policy>
+                </sp:X509Token>
+            </wsp:Policy>
+        </sp:EndorsingSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:RequireSignatureConfirmation/>
+                <sp:MustSupportRefEncryptedKey/>
+            </wsp:Policy>
+        </sp:Wss11>
+    </wsp:Policy>
+    <wsdl:import namespace="http://xmlns.oracle.com/adf/svc/errors/" location="ServiceException.wsdl"/>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0" schemaLocation="oracle_webservices_async_fault_11_0.xsd"/>
+            <import namespace="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/types/"
+                 schemaLocation="ActivityAppointmentService.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="ActivityAppointmentService_getActivityAssignee">
+        <wsdl:part name="parameters" element="types:getActivityAssignee"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getActivityAssigneeResponse">
+        <wsdl:part name="parameters" element="types:getActivityAssigneeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityAssignee">
+        <wsdl:part name="parameters" element="types:createActivityAssignee"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityAssigneeResponse">
+        <wsdl:part name="parameters" element="types:createActivityAssigneeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityAssignee">
+        <wsdl:part name="parameters" element="types:updateActivityAssignee"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityAssigneeResponse">
+        <wsdl:part name="parameters" element="types:updateActivityAssigneeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityAssignee">
+        <wsdl:part name="parameters" element="types:deleteActivityAssignee"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityAssigneeResponse">
+        <wsdl:part name="parameters" element="types:deleteActivityAssigneeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getActivityCategories">
+        <wsdl:part name="parameters" element="types:getActivityCategories"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getActivityCategoriesResponse">
+        <wsdl:part name="parameters" element="types:getActivityCategoriesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityCategories">
+        <wsdl:part name="parameters" element="types:createActivityCategories"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityCategoriesResponse">
+        <wsdl:part name="parameters" element="types:createActivityCategoriesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityCategories">
+        <wsdl:part name="parameters" element="types:updateActivityCategories"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityCategoriesResponse">
+        <wsdl:part name="parameters" element="types:updateActivityCategoriesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityCategories">
+        <wsdl:part name="parameters" element="types:deleteActivityCategories"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityCategoriesResponse">
+        <wsdl:part name="parameters" element="types:deleteActivityCategoriesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getActivityContact">
+        <wsdl:part name="parameters" element="types:getActivityContact"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getActivityContactResponse">
+        <wsdl:part name="parameters" element="types:getActivityContactResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityContact">
+        <wsdl:part name="parameters" element="types:createActivityContact"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityContactResponse">
+        <wsdl:part name="parameters" element="types:createActivityContactResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityContact">
+        <wsdl:part name="parameters" element="types:updateActivityContact"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityContactResponse">
+        <wsdl:part name="parameters" element="types:updateActivityContactResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityContact">
+        <wsdl:part name="parameters" element="types:deleteActivityContact"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityContactResponse">
+        <wsdl:part name="parameters" element="types:deleteActivityContactResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteNotes">
+        <wsdl:part name="parameters" element="types:deleteNotes"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteNotesResponse">
+        <wsdl:part name="parameters" element="types:deleteNotesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAppointment">
+        <wsdl:part name="parameters" element="types:createAppointment"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAppointmentResponse">
+        <wsdl:part name="parameters" element="types:createAppointmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAppointment">
+        <wsdl:part name="parameters" element="types:getAppointment"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAppointmentResponse">
+        <wsdl:part name="parameters" element="types:getAppointmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_mergeAppointment">
+        <wsdl:part name="parameters" element="types:mergeAppointment"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_mergeAppointmentResponse">
+        <wsdl:part name="parameters" element="types:mergeAppointmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateAppointment">
+        <wsdl:part name="parameters" element="types:updateAppointment"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateAppointmentResponse">
+        <wsdl:part name="parameters" element="types:updateAppointmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAppointment">
+        <wsdl:part name="parameters" element="types:deleteAppointment"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAppointmentResponse">
+        <wsdl:part name="parameters" element="types:deleteAppointmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAppointmentDeleteException">
+        <wsdl:part name="parameters" element="types:createAppointmentDeleteException"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAppointmentDeleteExceptionResponse">
+        <wsdl:part name="parameters" element="types:createAppointmentDeleteExceptionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAppointmentDeleteException">
+        <wsdl:part name="parameters" element="types:deleteAppointmentDeleteException"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAppointmentDeleteExceptionResponse">
+        <wsdl:part name="parameters" element="types:deleteAppointmentDeleteExceptionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityAssignee">
+        <wsdl:part name="parameters" element="types:findActivityAssignee"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityAssigneeResponse">
+        <wsdl:part name="parameters" element="types:findActivityAssigneeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityCategories">
+        <wsdl:part name="parameters" element="types:findActivityCategories"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityCategoriesResponse">
+        <wsdl:part name="parameters" element="types:findActivityCategoriesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityContact">
+        <wsdl:part name="parameters" element="types:findActivityContact"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityContactResponse">
+        <wsdl:part name="parameters" element="types:findActivityContactResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getNotes">
+        <wsdl:part name="parameters" element="types:getNotes"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getNotesResponse">
+        <wsdl:part name="parameters" element="types:getNotesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createNotes">
+        <wsdl:part name="parameters" element="types:createNotes"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createNotesResponse">
+        <wsdl:part name="parameters" element="types:createNotesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateNotes">
+        <wsdl:part name="parameters" element="types:updateNotes"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateNotesResponse">
+        <wsdl:part name="parameters" element="types:updateNotesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findNotes">
+        <wsdl:part name="parameters" element="types:findNotes"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findNotesResponse">
+        <wsdl:part name="parameters" element="types:findNotesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findAppointment">
+        <wsdl:part name="parameters" element="types:findAppointment"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findAppointmentResponse">
+        <wsdl:part name="parameters" element="types:findAppointmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_copyAttachment">
+        <wsdl:part name="parameters" element="types:copyAttachment"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_copyAttachmentResponse">
+        <wsdl:part name="parameters" element="types:copyAttachmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAttachment">
+        <wsdl:part name="parameters" element="types:createAttachment"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAttachmentResponse">
+        <wsdl:part name="parameters" element="types:createAttachmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAttachment">
+        <wsdl:part name="parameters" element="types:deleteAttachment"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAttachmentResponse">
+        <wsdl:part name="parameters" element="types:deleteAttachmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAttachment">
+        <wsdl:part name="parameters" element="types:getAttachment"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAttachmentResponse">
+        <wsdl:part name="parameters" element="types:getAttachmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateAppointmentDeleteException">
+        <wsdl:part name="parameters" element="types:updateAppointmentDeleteException"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateAppointmentDeleteExceptionResponse">
+        <wsdl:part name="parameters" element="types:updateAppointmentDeleteExceptionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityCategoriesAsync">
+        <wsdl:part name="parameters" element="types:updateActivityCategoriesAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAppointmentDeleteExceptionAsync">
+        <wsdl:part name="parameters" element="types:createAppointmentDeleteExceptionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateAppointmentAsync">
+        <wsdl:part name="parameters" element="types:updateAppointmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAppointmentAsync">
+        <wsdl:part name="parameters" element="types:createAppointmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findAppointmentAsync">
+        <wsdl:part name="parameters" element="types:findAppointmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityContactAsync">
+        <wsdl:part name="parameters" element="types:deleteActivityContactAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findNotesAsync">
+        <wsdl:part name="parameters" element="types:findNotesAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateNotesAsync">
+        <wsdl:part name="parameters" element="types:updateNotesAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAttachmentAsync">
+        <wsdl:part name="parameters" element="types:getAttachmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityContactAsync">
+        <wsdl:part name="parameters" element="types:updateActivityContactAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityCategoriesAsync">
+        <wsdl:part name="parameters" element="types:createActivityCategoriesAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityContactAsync">
+        <wsdl:part name="parameters" element="types:findActivityContactAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityCategoriesAsync">
+        <wsdl:part name="parameters" element="types:findActivityCategoriesAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_mergeAppointmentAsync">
+        <wsdl:part name="parameters" element="types:mergeAppointmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAppointmentDeleteExceptionAsync">
+        <wsdl:part name="parameters" element="types:deleteAppointmentDeleteExceptionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityAssigneeAsync">
+        <wsdl:part name="parameters" element="types:createActivityAssigneeAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAttachmentAsync">
+        <wsdl:part name="parameters" element="types:deleteAttachmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateAppointmentDeleteExceptionAsync">
+        <wsdl:part name="parameters" element="types:updateAppointmentDeleteExceptionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAttachmentAsync">
+        <wsdl:part name="parameters" element="types:createAttachmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityCategoriesAsync">
+        <wsdl:part name="parameters" element="types:deleteActivityCategoriesAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityAssigneeAsync">
+        <wsdl:part name="parameters" element="types:deleteActivityAssigneeAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityContactAsync">
+        <wsdl:part name="parameters" element="types:createActivityContactAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getActivityAssigneeAsync">
+        <wsdl:part name="parameters" element="types:getActivityAssigneeAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityAssigneeAsync">
+        <wsdl:part name="parameters" element="types:findActivityAssigneeAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAppointmentAsync">
+        <wsdl:part name="parameters" element="types:getAppointmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteNotesAsync">
+        <wsdl:part name="parameters" element="types:deleteNotesAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAppointmentAsync">
+        <wsdl:part name="parameters" element="types:deleteAppointmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getActivityCategoriesAsync">
+        <wsdl:part name="parameters" element="types:getActivityCategoriesAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getActivityContactAsync">
+        <wsdl:part name="parameters" element="types:getActivityContactAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_copyAttachmentAsync">
+        <wsdl:part name="parameters" element="types:copyAttachmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getNotesAsync">
+        <wsdl:part name="parameters" element="types:getNotesAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createNotesAsync">
+        <wsdl:part name="parameters" element="types:createNotesAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityAssigneeAsync">
+        <wsdl:part name="parameters" element="types:updateActivityAssigneeAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAppointmentDeleteException">
+        <wsdl:part name="parameters" element="types:getAppointmentDeleteException"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAppointmentDeleteExceptionResponse">
+        <wsdl:part name="parameters" element="types:getAppointmentDeleteExceptionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findAppointmentDeleteException">
+        <wsdl:part name="parameters" element="types:findAppointmentDeleteException"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findAppointmentDeleteExceptionResponse">
+        <wsdl:part name="parameters" element="types:findAppointmentDeleteExceptionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAppointmentDeleteExceptionAsync">
+        <wsdl:part name="parameters" element="types:getAppointmentDeleteExceptionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findAppointmentDeleteExceptionAsync">
+        <wsdl:part name="parameters" element="types:findAppointmentDeleteExceptionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_onFault">
+        <wsdl:part name="parameters" element="orafault:Fault"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityCategoriesAsyncResponse">
+        <wsdl:part name="parameters" element="types:updateActivityCategoriesAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAppointmentDeleteExceptionAsyncResponse">
+        <wsdl:part name="parameters" element="types:createAppointmentDeleteExceptionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateAppointmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:updateAppointmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAppointmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:createAppointmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findAppointmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:findAppointmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityContactAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteActivityContactAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findNotesAsyncResponse">
+        <wsdl:part name="parameters" element="types:findNotesAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateNotesAsyncResponse">
+        <wsdl:part name="parameters" element="types:updateNotesAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAttachmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:getAttachmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityContactAsyncResponse">
+        <wsdl:part name="parameters" element="types:updateActivityContactAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityCategoriesAsyncResponse">
+        <wsdl:part name="parameters" element="types:createActivityCategoriesAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityContactAsyncResponse">
+        <wsdl:part name="parameters" element="types:findActivityContactAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityCategoriesAsyncResponse">
+        <wsdl:part name="parameters" element="types:findActivityCategoriesAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_mergeAppointmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:mergeAppointmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAppointmentDeleteExceptionAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteAppointmentDeleteExceptionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityAssigneeAsyncResponse">
+        <wsdl:part name="parameters" element="types:createActivityAssigneeAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAttachmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteAttachmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateAppointmentDeleteExceptionAsyncResponse">
+        <wsdl:part name="parameters" element="types:updateAppointmentDeleteExceptionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createAttachmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:createAttachmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityCategoriesAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteActivityCategoriesAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteActivityAssigneeAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteActivityAssigneeAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createActivityContactAsyncResponse">
+        <wsdl:part name="parameters" element="types:createActivityContactAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getActivityAssigneeAsyncResponse">
+        <wsdl:part name="parameters" element="types:getActivityAssigneeAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findActivityAssigneeAsyncResponse">
+        <wsdl:part name="parameters" element="types:findActivityAssigneeAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAppointmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:getAppointmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteNotesAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteNotesAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_deleteAppointmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteAppointmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getActivityCategoriesAsyncResponse">
+        <wsdl:part name="parameters" element="types:getActivityCategoriesAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getActivityContactAsyncResponse">
+        <wsdl:part name="parameters" element="types:getActivityContactAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_copyAttachmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:copyAttachmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getNotesAsyncResponse">
+        <wsdl:part name="parameters" element="types:getNotesAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_createNotesAsyncResponse">
+        <wsdl:part name="parameters" element="types:createNotesAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_updateActivityAssigneeAsyncResponse">
+        <wsdl:part name="parameters" element="types:updateActivityAssigneeAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_getAppointmentDeleteExceptionAsyncResponse">
+        <wsdl:part name="parameters" element="types:getAppointmentDeleteExceptionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ActivityAppointmentService_findAppointmentDeleteExceptionAsyncResponse">
+        <wsdl:part name="parameters" element="types:findAppointmentDeleteExceptionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="ActivityAppointmentService">
+        <wsdl:documentation>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="ActivityAssignee" xmlns:ns0="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/"
+                 SDOName="ns0:ActivityAssignee" CreateOpName="createActivityAssignee" UpdateOpName="updateActivityAssignee"
+                 DeleteOpName="deleteActivityAssignee" GetOpName="getActivityAssignee" FindOpName="findActivityAssignee"/>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="ActivityCategories"
+                 xmlns:ns0="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/"
+                 SDOName="ns0:ActivityCategory" CreateOpName="createActivityCategories" UpdateOpName="updateActivityCategories"
+                 DeleteOpName="deleteActivityCategories" GetOpName="getActivityCategories"
+                 FindOpName="findActivityCategories"/>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="ActivityContact"
+                 xmlns:ns0="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/"
+                 SDOName="ns0:ActivityContact" CreateOpName="createActivityContact" UpdateOpName="updateActivityContact"
+                 DeleteOpName="deleteActivityContact" GetOpName="getActivityContact" FindOpName="findActivityContact"/>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="Appointment" xmlns:ns0="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/"
+                 SDOName="ns0:TransientAppointment" CreateOpName="createAppointment" GetOpName="getAppointment"
+                 FindOpName="findAppointment"/>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="AppointmentDeleteException"
+                 xmlns:ns0="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/"
+                 SDOName="ns0:AppointmentDeleteException" CreateOpName="createAppointmentDeleteException"
+                 UpdateOpName="updateAppointmentDeleteException" DeleteOpName="deleteAppointmentDeleteException"
+                 GetOpName="getAppointmentDeleteException" FindOpName="findAppointmentDeleteException"/>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="Notes" xmlns:ns0="http://xmlns.oracle.com/apps/crmCommon/notes/noteService"
+                 SDOName="ns0:Note" CreateOpName="createNotes" UpdateOpName="updateNotes" DeleteOpName="deleteNotes"
+                 GetOpName="getNotes" FindOpName="findNotes"/>
+        </wsdl:documentation>
+        <wsdl:operation name="getActivityAssignee">
+            <wsdl:input message="tns:ActivityAppointmentService_getActivityAssignee"/>
+            <wsdl:output message="tns:ActivityAppointmentService_getActivityAssigneeResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityAssignee">
+            <wsdl:input message="tns:ActivityAppointmentService_createActivityAssignee"/>
+            <wsdl:output message="tns:ActivityAppointmentService_createActivityAssigneeResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityAssignee">
+            <wsdl:input message="tns:ActivityAppointmentService_updateActivityAssignee"/>
+            <wsdl:output message="tns:ActivityAppointmentService_updateActivityAssigneeResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityAssignee">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteActivityAssignee"/>
+            <wsdl:output message="tns:ActivityAppointmentService_deleteActivityAssigneeResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityCategories">
+            <wsdl:input message="tns:ActivityAppointmentService_getActivityCategories"/>
+            <wsdl:output message="tns:ActivityAppointmentService_getActivityCategoriesResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityCategories">
+            <wsdl:input message="tns:ActivityAppointmentService_createActivityCategories"/>
+            <wsdl:output message="tns:ActivityAppointmentService_createActivityCategoriesResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityCategories">
+            <wsdl:input message="tns:ActivityAppointmentService_updateActivityCategories"/>
+            <wsdl:output message="tns:ActivityAppointmentService_updateActivityCategoriesResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityCategories">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteActivityCategories"/>
+            <wsdl:output message="tns:ActivityAppointmentService_deleteActivityCategoriesResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityContact">
+            <wsdl:input message="tns:ActivityAppointmentService_getActivityContact"/>
+            <wsdl:output message="tns:ActivityAppointmentService_getActivityContactResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityContact">
+            <wsdl:input message="tns:ActivityAppointmentService_createActivityContact"/>
+            <wsdl:output message="tns:ActivityAppointmentService_createActivityContactResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityContact">
+            <wsdl:input message="tns:ActivityAppointmentService_updateActivityContact"/>
+            <wsdl:output message="tns:ActivityAppointmentService_updateActivityContactResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityContact">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteActivityContact"/>
+            <wsdl:output message="tns:ActivityAppointmentService_deleteActivityContactResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteNotes">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteNotes"/>
+            <wsdl:output message="tns:ActivityAppointmentService_deleteNotesResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointment">
+            <wsdl:input message="tns:ActivityAppointmentService_createAppointment"/>
+            <wsdl:output message="tns:ActivityAppointmentService_createAppointmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointment">
+            <wsdl:input message="tns:ActivityAppointmentService_getAppointment"/>
+            <wsdl:output message="tns:ActivityAppointmentService_getAppointmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeAppointment">
+            <wsdl:input message="tns:ActivityAppointmentService_mergeAppointment"/>
+            <wsdl:output message="tns:ActivityAppointmentService_mergeAppointmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointment">
+            <wsdl:input message="tns:ActivityAppointmentService_updateAppointment"/>
+            <wsdl:output message="tns:ActivityAppointmentService_updateAppointmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointment">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteAppointment"/>
+            <wsdl:output message="tns:ActivityAppointmentService_deleteAppointmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointmentDeleteException">
+            <wsdl:input message="tns:ActivityAppointmentService_createAppointmentDeleteException"/>
+            <wsdl:output message="tns:ActivityAppointmentService_createAppointmentDeleteExceptionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointmentDeleteException">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteAppointmentDeleteException"/>
+            <wsdl:output message="tns:ActivityAppointmentService_deleteAppointmentDeleteExceptionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityAssignee">
+            <wsdl:input message="tns:ActivityAppointmentService_findActivityAssignee"/>
+            <wsdl:output message="tns:ActivityAppointmentService_findActivityAssigneeResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityCategories">
+            <wsdl:input message="tns:ActivityAppointmentService_findActivityCategories"/>
+            <wsdl:output message="tns:ActivityAppointmentService_findActivityCategoriesResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityContact">
+            <wsdl:input message="tns:ActivityAppointmentService_findActivityContact"/>
+            <wsdl:output message="tns:ActivityAppointmentService_findActivityContactResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getNotes">
+            <wsdl:input message="tns:ActivityAppointmentService_getNotes"/>
+            <wsdl:output message="tns:ActivityAppointmentService_getNotesResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createNotes">
+            <wsdl:input message="tns:ActivityAppointmentService_createNotes"/>
+            <wsdl:output message="tns:ActivityAppointmentService_createNotesResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateNotes">
+            <wsdl:input message="tns:ActivityAppointmentService_updateNotes"/>
+            <wsdl:output message="tns:ActivityAppointmentService_updateNotesResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findNotes">
+            <wsdl:input message="tns:ActivityAppointmentService_findNotes"/>
+            <wsdl:output message="tns:ActivityAppointmentService_findNotesResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointment">
+            <wsdl:input message="tns:ActivityAppointmentService_findAppointment"/>
+            <wsdl:output message="tns:ActivityAppointmentService_findAppointmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="copyAttachment">
+            <wsdl:input message="tns:ActivityAppointmentService_copyAttachment"/>
+            <wsdl:output message="tns:ActivityAppointmentService_copyAttachmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createAttachment">
+            <wsdl:input message="tns:ActivityAppointmentService_createAttachment"/>
+            <wsdl:output message="tns:ActivityAppointmentService_createAttachmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAttachment">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteAttachment"/>
+            <wsdl:output message="tns:ActivityAppointmentService_deleteAttachmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAttachment">
+            <wsdl:input message="tns:ActivityAppointmentService_getAttachment"/>
+            <wsdl:output message="tns:ActivityAppointmentService_getAttachmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointmentDeleteException">
+            <wsdl:input message="tns:ActivityAppointmentService_updateAppointmentDeleteException"/>
+            <wsdl:output message="tns:ActivityAppointmentService_updateAppointmentDeleteExceptionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityCategoriesAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_updateActivityCategoriesAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityCategoriesAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointmentDeleteExceptionAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_createAppointmentDeleteExceptionAsync"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentDeleteExceptionAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointmentAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_updateAppointmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointmentAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_createAppointmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointmentAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_findAppointmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityContactAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteActivityContactAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityContactAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="findNotesAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_findNotesAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findNotesAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateNotesAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_updateNotesAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateNotesAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAttachmentAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_getAttachmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAttachmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityContactAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_updateActivityContactAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityContactAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityCategoriesAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_createActivityCategoriesAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityCategoriesAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityContactAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_findActivityContactAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityContactAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityCategoriesAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_findActivityCategoriesAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityCategoriesAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeAppointmentAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_mergeAppointmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/mergeAppointmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointmentDeleteExceptionAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteAppointmentDeleteExceptionAsync"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentDeleteExceptionAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityAssigneeAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_createActivityAssigneeAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityAssigneeAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAttachmentAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteAttachmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAttachmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointmentDeleteExceptionAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_updateAppointmentDeleteExceptionAsync"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentDeleteExceptionAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createAttachmentAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_createAttachmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAttachmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityCategoriesAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteActivityCategoriesAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityCategoriesAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityAssigneeAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteActivityAssigneeAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityAssigneeAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityContactAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_createActivityContactAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityContactAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityAssigneeAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_getActivityAssigneeAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityAssigneeAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityAssigneeAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_findActivityAssigneeAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityAssigneeAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointmentAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_getAppointmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteNotesAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteNotesAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteNotesAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointmentAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteAppointmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityCategoriesAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_getActivityCategoriesAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityCategoriesAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityContactAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_getActivityContactAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityContactAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="copyAttachmentAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_copyAttachmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/copyAttachmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getNotesAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_getNotesAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getNotesAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createNotesAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_createNotesAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createNotesAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityAssigneeAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_updateActivityAssigneeAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityAssigneeAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointmentDeleteException">
+            <wsdl:input message="tns:ActivityAppointmentService_getAppointmentDeleteException"/>
+            <wsdl:output message="tns:ActivityAppointmentService_getAppointmentDeleteExceptionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointmentDeleteException">
+            <wsdl:input message="tns:ActivityAppointmentService_findAppointmentDeleteException"/>
+            <wsdl:output message="tns:ActivityAppointmentService_findAppointmentDeleteExceptionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointmentDeleteExceptionAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_getAppointmentDeleteExceptionAsync"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentDeleteExceptionAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointmentDeleteExceptionAsync">
+            <wsdl:input message="tns:ActivityAppointmentService_findAppointmentDeleteExceptionAsync"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentDeleteExceptionAsync"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="ActivityAppointmentServiceResponse">
+        <wsdl:operation name="onFault">
+            <wsdl:input message="tns:ActivityAppointmentService_onFault" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0/Fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityCategoriesAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_updateActivityCategoriesAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityCategoriesAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointmentDeleteExceptionAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_createAppointmentDeleteExceptionAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentDeleteExceptionAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointmentAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_updateAppointmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointmentAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_createAppointmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointmentAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_findAppointmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityContactAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteActivityContactAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityContactAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="findNotesAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_findNotesAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findNotesAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateNotesAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_updateNotesAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateNotesAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAttachmentAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_getAttachmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAttachmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityContactAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_updateActivityContactAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityContactAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityCategoriesAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_createActivityCategoriesAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityCategoriesAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityContactAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_findActivityContactAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityContactAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityCategoriesAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_findActivityCategoriesAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityCategoriesAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeAppointmentAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_mergeAppointmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/mergeAppointmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointmentDeleteExceptionAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteAppointmentDeleteExceptionAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentDeleteExceptionAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityAssigneeAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_createActivityAssigneeAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityAssigneeAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAttachmentAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteAttachmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAttachmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointmentDeleteExceptionAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_updateAppointmentDeleteExceptionAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentDeleteExceptionAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createAttachmentAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_createAttachmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAttachmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityCategoriesAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteActivityCategoriesAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityCategoriesAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityAssigneeAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteActivityAssigneeAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityAssigneeAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityContactAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_createActivityContactAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityContactAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityAssigneeAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_getActivityAssigneeAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityAssigneeAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityAssigneeAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_findActivityAssigneeAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityAssigneeAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointmentAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_getAppointmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteNotesAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteNotesAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteNotesAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointmentAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_deleteAppointmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityCategoriesAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_getActivityCategoriesAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityCategoriesAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityContactAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_getActivityContactAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityContactAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="copyAttachmentAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_copyAttachmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/copyAttachmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getNotesAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_getNotesAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getNotesAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createNotesAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_createNotesAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createNotesAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityAssigneeAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_updateActivityAssigneeAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityAssigneeAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointmentDeleteExceptionAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_getAppointmentDeleteExceptionAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentDeleteExceptionAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointmentDeleteExceptionAsyncResponse">
+            <wsdl:input message="tns:ActivityAppointmentService_findAppointmentDeleteExceptionAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentDeleteExceptionAsyncResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ActivityAppointmentServiceResponseBinding" type="tns:ActivityAppointmentServiceResponse">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wss11_saml_token_with_message_protection_client_policy"
+             wsdl:required="false"/>
+        <wsdl:operation name="onFault">
+            <soap:operation soapAction="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0/Fault"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityCategoriesAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityCategoriesAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointmentDeleteExceptionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentDeleteExceptionAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityContactAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityContactAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findNotesAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findNotesAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateNotesAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateNotesAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getAttachmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAttachmentAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityContactAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityContactAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityCategoriesAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityCategoriesAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityContactAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityContactAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityCategoriesAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityCategoriesAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="mergeAppointmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/mergeAppointmentAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointmentDeleteExceptionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentDeleteExceptionAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityAssigneeAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityAssigneeAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAttachmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAttachmentAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointmentDeleteExceptionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentDeleteExceptionAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createAttachmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAttachmentAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityCategoriesAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityCategoriesAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityAssigneeAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityAssigneeAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityContactAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityContactAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityAssigneeAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityAssigneeAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityAssigneeAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityAssigneeAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteNotesAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteNotesAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityCategoriesAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityCategoriesAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityContactAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityContactAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="copyAttachmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/copyAttachmentAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getNotesAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getNotesAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createNotesAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createNotesAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityAssigneeAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityAssigneeAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointmentDeleteExceptionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentDeleteExceptionAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointmentDeleteExceptionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentDeleteExceptionAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="ActivityAppointmentServiceSoapHttp" type="tns:ActivityAppointmentService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wss11_saml_or_username_token_with_message_protection_service_policy"
+             wsdl:required="false"/>
+        <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wsmtom_policy"
+             wsdl:required="false"/>
+        <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wsaddr_policy"
+             wsdl:required="false"/>
+        <wsdl:operation name="getActivityAssignee">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityAssignee"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityAssignee">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityAssignee"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityAssignee">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityAssignee"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityAssignee">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityAssignee"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityCategories">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityCategories"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityCategories">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityCategories"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityCategories">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityCategories"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityCategories">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityCategories"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityContact">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityContact"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityContact">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityContact"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityContact">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityContact"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityContact">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityContact"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteNotes">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteNotes"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="mergeAppointment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/mergeAppointment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointmentDeleteException">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentDeleteException"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointmentDeleteException">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentDeleteException"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityAssignee">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityAssignee"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityCategories">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityCategories"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityContact">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityContact"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getNotes">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getNotes"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createNotes">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createNotes"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateNotes">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateNotes"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findNotes">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findNotes"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="copyAttachment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/copyAttachment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createAttachment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAttachment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAttachment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAttachment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getAttachment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAttachment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointmentDeleteException">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentDeleteException"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityCategoriesAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityCategoriesAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointmentDeleteExceptionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentDeleteExceptionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createAppointmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityContactAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityContactAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findNotesAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findNotesAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateNotesAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateNotesAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getAttachmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityContactAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityContactAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityCategoriesAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityCategoriesAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityContactAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityContactAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityCategoriesAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityCategoriesAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="mergeAppointmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/mergeAppointmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointmentDeleteExceptionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentDeleteExceptionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityAssigneeAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityAssigneeAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAttachmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateAppointmentDeleteExceptionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentDeleteExceptionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createAttachmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityCategoriesAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityCategoriesAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteActivityAssigneeAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityAssigneeAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createActivityContactAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityContactAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityAssigneeAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityAssigneeAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findActivityAssigneeAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityAssigneeAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteNotesAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteNotesAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteAppointmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityCategoriesAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityCategoriesAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getActivityContactAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityContactAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="copyAttachmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/copyAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getNotesAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getNotesAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createNotesAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createNotesAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateActivityAssigneeAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityAssigneeAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointmentDeleteException">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentDeleteException"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointmentDeleteException">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentDeleteException"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getAppointmentDeleteExceptionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentDeleteExceptionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findAppointmentDeleteExceptionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentDeleteExceptionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#ActivityAppointmentServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ActivityAppointmentService">
+        <wsdl:port name="ActivityAppointmentServiceSoapHttpPort" binding="tns:ActivityAppointmentServiceSoapHttp">
+            <soap:address location="https://dummy-crm-crm-ext.oracle.com:443/appCmmnCompActivities/ActivityAppointmentService"/>
+            <wsa:EndpointReference xmlns:wsa="http://www.w3.org/2005/08/addressing">
+                <wsa:Address xmlns:wsa="http://www.w3.org/2005/08/addressing">https://dummy-crm-crm-ext.oracle.com:443/appCmmnCompActivities/ActivityAppointmentService</wsa:Address>
+                <wsid:Identity xmlns:wsid="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+                    <dsig:KeyInfo xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+                        <dsig:X509Data>
+                            <dsig:X509Certificate>MIICCzCCAXSgAwIBAgIEUgXqFzANBgkqhkiG9w0BAQUFADBKMRMwEQYKCZImiZPyLGQBGRYDY29tMSEwHwYKCZImiZPyLGQBGRYRb3JhY2xlb3V0c291cmNpbmcxEDAOBgNVBAMTB3NlcnZpY2UwHhcNMTMwODEwMDcyMTU5WhcNMTYwODEwMDcyMTU5WjBKMRMwEQYKCZImiZPyLGQBGRYDY29tMSEwHwYKCZImiZPyLGQBGRYRb3JhY2xlb3V0c291cmNpbmcxEDAOBgNVBAMTB3NlcnZpY2UwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAIwwJxN+lZcxofSpjLD83O4JqO4XW5MrJD/GyUr4MuEQ/K1xYLr8a3qD+p38ld/Bs1ydFr2toCALmJ/vH8vqrcf3+6WQUQwotOrRbctUirs37rF5EUNJS6mCy2LrJz2OjEIc50TCvz4T3krl8r9/AL9ZV4tfthz350Cgw1aU+V3HAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAM9f1nGbsHbO8iT5qgQpFvzX5Lreqk1D1fT7mI07LQ4YydjnIjCJQ8QY635iFW1+GrJeFFgae95N8c3chMdpH4EUnxmahfJMnoX0xAkijIXwvui6QVkKY/XcBwpFFoJVxA8gZRTIU7K9C2E7BBFJquANsPvpuPwEdet3qXj2Ai1g=</dsig:X509Certificate>
+                            <dsig:X509IssuerSerial>
+                                <dsig:X509IssuerName>CN=service, DC=oracleoutsourcing, DC=com</dsig:X509IssuerName>
+                                <dsig:X509SerialNumber>1376119319</dsig:X509SerialNumber>
+                            </dsig:X509IssuerSerial>
+                            <dsig:X509SubjectName>CN=service, DC=oracleoutsourcing, DC=com</dsig:X509SubjectName>
+                        </dsig:X509Data>
+                    </dsig:KeyInfo>
+                </wsid:Identity>
+            </wsa:EndpointReference>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

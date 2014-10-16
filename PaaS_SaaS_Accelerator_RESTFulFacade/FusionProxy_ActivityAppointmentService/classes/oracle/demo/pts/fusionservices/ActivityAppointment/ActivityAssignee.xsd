@@ -1,0 +1,56 @@
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/"
+     sdoJava:package="oracle.apps.crmCommon.activities.activitiesService" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/"
+     xmlns:sdoJava="commonj.sdo/java" xmlns:sdoXML="commonj.sdo/xml" xmlns="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation xmlns:oer="http://xmlns.oracle.com/oer">
+            <name>Appointment Assignee</name>
+            <description>An internal resource participant on an appointment, such as John
+                Jones or Mary Smith.</description>
+            <oer:category name="lba">
+                <value>CrmCommonComponent-CRM Common Components</value>
+                <value>CrmCommonComponent-CRM Common Components :
+                    AppCmmnCompActivities-Activities</value>
+            </oer:category>
+            <oer:attributes>
+                <oer:attribute description="Unique Identifier for Activity Assignee record" name="ActivityAssigneeId"/>
+                <oer:attribute description="ID of the activity this assignee record relates to." name="ActivityId"/>
+                <oer:attribute description="ID of the HZ_PARTY record with a party_usage = Resource"
+                     name="AssigneeId"/>
+                <oer:attribute description="Organization ID to which the resource belongs to" name="AssigneeRsrcOrgId"/>
+                <oer:attribute description="Used to implement optimistic locking. This number is incremented every time that the row is updated. The number is compared at the start and end of a transaction to detect whether another session has updated the row since it was queried."
+                     name="ObjectVersionNumber"/>
+                <oer:attribute description="Who column: indicates the date and time of the last update of the row."
+                     name="LastUpdateDate"/>
+                <oer:attribute description="User friendly name for Show Time As Code" name="ShowTimeAsCd"/>
+                <oer:attribute description="User friendly name for Appointment Response Code" name="AppointmentResponseCd"/>
+                <oer:attribute description="Indicates the period in minutes for reminder notification before the appointment starts."
+                     name="ReminderPeriod"/>
+            </oer:attributes>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+    <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+    <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+    <xsd:complexType name="ActivityAssignee">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>ActivityAssigneeId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="ActivityAssigneeId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="ActivityId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="AssigneeId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="AssigneeRsrcOrgId" nillable="true" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="ObjectVersionNumber" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element minOccurs="0" name="LastUpdateDate" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="ShowTimeAsCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AppointmentResponseCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ReminderPeriod" nillable="true" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="activityAssignee" type="ActivityAssignee"/>
+</xsd:schema>

@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns2="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname namespaceURI="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient"
+                     localpart="ActivityAppointmentService"/>
+      <port-info>
+         <wsdl-port namespaceURI="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient"
+                    localpart="ActivityAppointmentServiceSoapHttpPort"/>
+         <runtime/>
+         <policy-references>
+            <policy-reference category="security"
+                              uri="oracle/wss_username_token_over_ssl_client_policy"/>
+         </policy-references>
+         <operations>
+            <operation name="getActivityAssignee"/>
+            <operation name="createActivityAssignee"/>
+            <operation name="updateActivityAssignee"/>
+            <operation name="deleteActivityAssignee"/>
+            <operation name="getActivityCategories"/>
+            <operation name="createActivityCategories"/>
+            <operation name="updateActivityCategories"/>
+            <operation name="deleteActivityCategories"/>
+            <operation name="getActivityContact"/>
+            <operation name="createActivityContact"/>
+            <operation name="updateActivityContact"/>
+            <operation name="deleteActivityContact"/>
+            <operation name="deleteNotes"/>
+            <operation name="createAppointment"/>
+            <operation name="getAppointment"/>
+            <operation name="mergeAppointment"/>
+            <operation name="updateAppointment"/>
+            <operation name="deleteAppointment"/>
+            <operation name="createAppointmentDeleteException"/>
+            <operation name="deleteAppointmentDeleteException"/>
+            <operation name="findActivityAssignee"/>
+            <operation name="findActivityCategories"/>
+            <operation name="findActivityContact"/>
+            <operation name="getNotes"/>
+            <operation name="createNotes"/>
+            <operation name="updateNotes"/>
+            <operation name="findNotes"/>
+            <operation name="findAppointment"/>
+            <operation name="copyAttachment"/>
+            <operation name="createAttachment"/>
+            <operation name="deleteAttachment"/>
+            <operation name="getAttachment"/>
+            <operation name="updateAppointmentDeleteException"/>
+            <operation name="updateActivityCategoriesAsync"/>
+            <operation name="createAppointmentDeleteExceptionAsync"/>
+            <operation name="updateAppointmentAsync"/>
+            <operation name="createAppointmentAsync"/>
+            <operation name="findAppointmentAsync"/>
+            <operation name="deleteActivityContactAsync"/>
+            <operation name="findNotesAsync"/>
+            <operation name="updateNotesAsync"/>
+            <operation name="getAttachmentAsync"/>
+            <operation name="updateActivityContactAsync"/>
+            <operation name="createActivityCategoriesAsync"/>
+            <operation name="findActivityContactAsync"/>
+            <operation name="findActivityCategoriesAsync"/>
+            <operation name="mergeAppointmentAsync"/>
+            <operation name="deleteAppointmentDeleteExceptionAsync"/>
+            <operation name="createActivityAssigneeAsync"/>
+            <operation name="deleteAttachmentAsync"/>
+            <operation name="updateAppointmentDeleteExceptionAsync"/>
+            <operation name="createAttachmentAsync"/>
+            <operation name="deleteActivityCategoriesAsync"/>
+            <operation name="deleteActivityAssigneeAsync"/>
+            <operation name="createActivityContactAsync"/>
+            <operation name="getActivityAssigneeAsync"/>
+            <operation name="findActivityAssigneeAsync"/>
+            <operation name="getAppointmentAsync"/>
+            <operation name="deleteNotesAsync"/>
+            <operation name="deleteAppointmentAsync"/>
+            <operation name="getActivityCategoriesAsync"/>
+            <operation name="getActivityContactAsync"/>
+            <operation name="copyAttachmentAsync"/>
+            <operation name="getNotesAsync"/>
+            <operation name="createNotesAsync"/>
+            <operation name="updateActivityAssigneeAsync"/>
+            <operation name="getAppointmentDeleteException"/>
+            <operation name="findAppointmentDeleteException"/>
+            <operation name="getAppointmentDeleteExceptionAsync"/>
+            <operation name="findAppointmentDeleteExceptionAsync"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>

@@ -1,0 +1,1279 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="SalesLeadService_Service.xml"/>
+      <url path="SalesLeadService.wsdl"/>
+      <url path="ServiceException.wsdl"/>
+      <url path="sdoXML.xsd"/>
+      <url path="sdoModel.xsd"/>
+      <url path="BC4JService.xsd"/>
+      <url path="MklLeadResources.xsd"/>
+      <url path="ServiceException.xsd"/>
+      <url path="oracle_webservices_async_fault_11_0.xsd"/>
+      <url path="MklProdAssoc.xsd"/>
+      <url path="MklLead.xsd"/>
+      <url path="SalesLeadService.xsd"/>
+      <url path="NoteDFF.xsd"/>
+      <url path="datagraph.xsd"/>
+      <url path="Note.xsd"/>
+      <url path="sdoJava.xsd"/>
+      <url path="MklLeadTcMembers.xsd"/>
+      <url path="../../../../../com/oracle/xmlns/oracleas/schema/oracle_fault_11_0/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ShortResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/AssignLead.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadContactAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadProductResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/DataHandlerResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadProductAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/QualifyLeadAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadContact.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLead.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ObjAttrHints.java"/>
+      <url path="../../../../../sdo/commonj/ChangeSummaryType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ReassignLeadAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ChildFindCriteria.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/FindControl.java"/>
+      <url path="../../../../../com/oracle/xmlns/oracleas/schema/oracle_fault_11_0/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ConvertLeadToOpportunityAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ReturnMode.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadContactResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ServiceViewInfo.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ObjectFactory.java"/>
+      <url path="../../../../../sdo/commonj/Property.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/QualifyLead.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/Conjunction.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadProduct.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ServiceErrorMessage.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ViewCriteriaRow.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadResourceAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/SortAttribute.java"/>
+      <url path="../../../../../com/oracle/xmlns/oracleas/schema/oracle_fault_11_0/Detail.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ViewCriteria.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadResourceResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadProductResponse.java"/>
+      <url path="SalesLeadService_Service.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ByteResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/oracleas/schema/oracle_fault_11_0/FaultType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadContactResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadResourceAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/SubmitDealAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadProductAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadProduct.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/FindCriteria.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/AssignLeadResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ReassignLeadAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/MeasureType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadProductAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/AmountType.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/FloatResult.java"/>
+      <url path="../../../../../sdo/commonj/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/noteservice/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadProductResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadResourceAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/MklLeadTcMembers.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/noteservice/package-info.java"/>
+      <url path="SalesLeadServiceSoapHttpPortClient.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/SubmitDealAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadContactResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadResource.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadContactAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadResourceAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLead.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadResourceAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadContactAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadProductAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ReassignLead.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadContact.java"/>
+      <url path="../../../../../sdo/commonj/java/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadProductAsyncResponse.java"/>
+      <url path="../../../../../sdo/commonj/Types.java"/>
+      <url path="../../../../../com/oracle/xmlns/oracle/apps/marketing/leadmgmt/leads/leadservice/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadResourceAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/MklLeadResources.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/DoubleResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/LongResult.java"/>
+      <url path="../../../../../sdo/commonj/xml/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadResourceResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadResourceAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/BigIntegerResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/AttrCtrlHints.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadContactAsyncResponse.java"/>
+      <url path="../../../../../sdo/commonj/XSDType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/SubmitDeal.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/SubmitDealResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/TimeResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/RankLeadResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/MklProdAssoc.java"/>
+      <url path="../../../../../sdo/commonj/xml/XMLInfo.java"/>
+      <url path="../../../../../sdo/commonj/TextType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadResourceResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/MethodResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/oracle/apps/marketing/leadmgmt/leads/leadservice/MklLead.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadContactAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadProduct.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadResource.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadProductResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadResponse.java"/>
+      <url path="../../../../../sdo/commonj/java/JavaInfo.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/RankLeadAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadContact.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ServiceMessage.java"/>
+      <url path="ServiceException.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/noteservice/Note.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadProduct.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/flex/notedff/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLead.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ConvertLeadToOpportunityAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/RankLeadAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/AssignLeadAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadResourceAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadResource.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadProductAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/DateResult.java"/>
+      <url path="../../../../../sdo/commonj/DataObject.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadContactResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ScoreLeadAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadProduct.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadContactAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadResourceResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLead.java"/>
+      <url path="../../../../../sdo/commonj/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/TimestampResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadResponse.java"/>
+      <url path="SalesLeadService.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ViewCriteriaItem.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/QualifyLeadAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ScoreLeadResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/flex/notedff/NoteDFF.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadContactAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ReassignLeadResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadResource.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadContactAsync.java"/>
+      <url path="../../../../../sdo/commonj/BaseDataGraphType.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ServiceAttrValErrorMessage.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ScoreLead.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/flex/notedff/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadProductAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/RankLead.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/StringResult.java"/>
+      <url path="../../../../../sdo/commonj/ModelsType.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/SortOrder.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadResourceAsyncResponse.java"/>
+      <url path="../../../../../sdo/commonj/java/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadContact.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ServiceDMLErrorMessage.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadProductResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ServiceRowValErrorMessage.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/BooleanResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadResourceResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/oracle/apps/marketing/leadmgmt/leads/leadservice/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/BytesResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ConvertLeadToOpportunityResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadContactResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/BigDecimalResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadProductAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/CreateSalesLeadContact.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/IntegerResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/QualifyLeadResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/CtrlHint.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadContactAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadResource.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ChangeOperation.java"/>
+      <url path="../../../../../sdo/commonj/xml/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ConvertLeadToOpportunity.java"/>
+      <url path="../../../../../sdo/commonj/Type.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLead.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/FindSalesLeadContactAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/UpdateSalesLeadProductAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ProcessControl.java"/>
+      <url path="../../../../../sdo/commonj/DataGraphType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/GetSalesLeadResourceAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/AssignLeadAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/ScoreLeadAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/DataObjectResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/marketing/leadmgmt/leads/leadservice/types/DeleteSalesLeadProductAsync.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="SalesLeadService_Service.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="oracle.demo.pts.fusionproxy.saleslead"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_NONE"/>
+      <list n="PROXY_CLIENTS">
+         <url path="SalesLeadServiceSoapHttpPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <url n="PROXY_ORIGINAL_WSDL_URL" protocol="https" host="dummy.oracle.com" path="/mklLeads/SalesLeadService" query="wsdl"/>
+      <hash n="PROXY_PORTS">
+         <hash n="SalesLeadServiceSoapHttpPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="true"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="oracle.demo.pts.fusionproxy.saleslead.SalesLeadService"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="SalesLeadServiceSoapHttpPort"/>
+            <hash n="OPERATIONS">
+               <hash n="assignLead">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="assignLeadAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="convertLeadToOpportunity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="convertLeadToOpportunityAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesLead">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesLeadAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesLeadContact">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesLeadContactAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesLeadProduct">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesLeadProductAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesLeadResource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesLeadResourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesLead">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesLeadAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesLeadContact">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesLeadContactAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesLeadProduct">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesLeadProductAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesLeadResource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesLeadResourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesLead">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesLeadAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesLeadContact">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesLeadContactAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesLeadProduct">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesLeadProductAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesLeadResource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesLeadResourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesLead">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesLeadAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesLeadContact">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesLeadContactAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesLeadProduct">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesLeadProductAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesLeadResource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesLeadResourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="qualifyLead">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="qualifyLeadAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="rankLead">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="rankLeadAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="reassignLead">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="reassignLeadAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="scoreLead">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="scoreLeadAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="submitDeal">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="submitDealAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesLead">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesLeadAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesLeadContact">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesLeadContactAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesLeadProduct">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesLeadProductAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesLeadResource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesLeadResourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_CLIENT_POLICY">
+                  <value n="addressing"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security">
+                     <string v="oracle/wss_username_token_over_ssl_client_policy"/>
+                  </list>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="https" host="dummy.oracle.com" port="443" path="/mklLeads/SalesLeadService"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="SalesLeadService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../FusionProxy_SalesLeadsService.jpr"/>
+      <list n="PROXY_WSDL_IMPORT_LIST">
+         <url path="ServiceException.wsdl"/>
+         <url path="sdoXML.xsd"/>
+         <url path="sdoModel.xsd"/>
+         <url path="BC4JService.xsd"/>
+         <url path="MklLeadResources.xsd"/>
+         <url path="ServiceException.xsd"/>
+         <url path="oracle_webservices_async_fault_11_0.xsd"/>
+         <url path="MklProdAssoc.xsd"/>
+         <url path="MklLead.xsd"/>
+         <url path="SalesLeadService.xsd"/>
+         <url path="NoteDFF.xsd"/>
+         <url path="datagraph.xsd"/>
+         <url path="Note.xsd"/>
+         <url path="sdoJava.xsd"/>
+         <url path="MklLeadTcMembers.xsd"/>
+      </list>
+      <url n="PROXY_WSDL_URL" path="SalesLeadService.wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BOUND_PORT_TYPE" v="{http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/}SalesLeadService"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/}SalesLeadServiceSoapHttp"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/getSalesLeadProduct"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc.getSalesLeadProduct.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/createSalesLeadProduct"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc.createSalesLeadProduct.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/updateSalesLeadProduct"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc.updateSalesLeadProduct.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/deleteSalesLeadProduct"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteSalesLeadProduct.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/findSalesLeadProduct"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc>.findSalesLeadProduct.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/getSalesLeadResource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources.getSalesLeadResource.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/createSalesLeadResource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources.createSalesLeadResource.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/updateSalesLeadResource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources.updateSalesLeadResource.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/deleteSalesLeadResource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteSalesLeadResource.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/findSalesLeadResource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources>.findSalesLeadResource.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/getSalesLeadProductAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getSalesLeadProductAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/findSalesLeadResourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findSalesLeadResourceAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/createSalesLeadProductAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createSalesLeadProductAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/updateSalesLeadProductAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateSalesLeadProductAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/findSalesLeadProductAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findSalesLeadProductAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/deleteSalesLeadProductAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteSalesLeadProductAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/createSalesLeadResourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createSalesLeadResourceAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/updateSalesLeadResourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateSalesLeadResourceAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/getSalesLeadResourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getSalesLeadResourceAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/deleteSalesLeadResourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteSalesLeadResourceAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/assignLead"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.lang.String.assignLead.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/convertLeadToOpportunity"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.lang.String.convertLeadToOpportunity.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/qualifyLead"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.lang.String.qualifyLead.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/rankLead"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.lang.String.rankLead.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/scoreLead"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.lang.String.scoreLead.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/scoreLeadAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.scoreLeadAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/convertLeadToOpportunityAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.convertLeadToOpportunityAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/assignLeadAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.assignLeadAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/rankLeadAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.rankLeadAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/qualifyLeadAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.qualifyLeadAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/createSalesLead"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead.createSalesLead.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/createSalesLeadAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createSalesLeadAsync.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/getSalesLead"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead.getSalesLead.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/updateSalesLead"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead.updateSalesLead.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/deleteSalesLead"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteSalesLead.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/findSalesLead"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead>.findSalesLead.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/deleteSalesLeadAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteSalesLeadAsync.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/getSalesLeadAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getSalesLeadAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/updateSalesLeadAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateSalesLeadAsync.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/findSalesLeadAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findSalesLeadAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/submitDeal"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.lang.String.submitDeal.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/reassignLead"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.lang.String.reassignLead.java.lang.String.long.long.long.java.lang.String.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/getSalesLeadContact"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers.getSalesLeadContact.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/createSalesLeadContact"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers.createSalesLeadContact.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/updateSalesLeadContact"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers.updateSalesLeadContact.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/deleteSalesLeadContact"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteSalesLeadContact.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/findSalesLeadContact"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers>.findSalesLeadContact.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/getSalesLeadContactAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getSalesLeadContactAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/updateSalesLeadContactAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateSalesLeadContactAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/createSalesLeadContactAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createSalesLeadContactAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/deleteSalesLeadContactAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteSalesLeadContactAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/reassignLeadAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.reassignLeadAsync.java.lang.String.long.long.long.java.lang.String.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/submitDealAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.submitDealAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/findSalesLeadContactAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findSalesLeadContactAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="ea190c5b-0141-1000-8008-0aa7ca4d0619"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="SalesLeadServiceSoapHttpPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/}SalesLeadServiceSoapHttp"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc.getSalesLeadProduct.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc.createSalesLeadProduct.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc.updateSalesLeadProduct.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSalesLeadProduct.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc>.findSalesLeadProduct.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources.getSalesLeadResource.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources.createSalesLeadResource.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources.updateSalesLeadResource.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSalesLeadResource.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources>.findSalesLeadResource.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getSalesLeadProductAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findSalesLeadResourceAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createSalesLeadProductAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateSalesLeadProductAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findSalesLeadProductAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSalesLeadProductAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklProdAssoc"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createSalesLeadResourceAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateSalesLeadResourceAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getSalesLeadResourceAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSalesLeadResourceAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadResources"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.lang.String.assignLead.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.lang.String.convertLeadToOpportunity.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.lang.String.qualifyLead.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.lang.String.rankLead.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.lang.String.scoreLead.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.scoreLeadAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.convertLeadToOpportunityAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.assignLeadAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.rankLeadAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.qualifyLeadAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead.createSalesLead.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createSalesLeadAsync.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead.getSalesLead.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead.updateSalesLead.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSalesLead.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead>.findSalesLead.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSalesLeadAsync.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getSalesLeadAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateSalesLeadAsync.com.oracle.xmlns.oracle.apps.marketing.leadmgmt.leads.leadservice.MklLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findSalesLeadAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.lang.String.submitDeal.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.lang.String.reassignLead.java.lang.String.long.long.long.java.lang.String.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers.getSalesLeadContact.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers.createSalesLeadContact.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers.updateSalesLeadContact.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSalesLeadContact.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers>.findSalesLeadContact.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getSalesLeadContactAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateSalesLeadContactAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createSalesLeadContactAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSalesLeadContactAsync.com.oracle.xmlns.apps.marketing.leadmgmt.leads.leadservice.MklLeadTcMembers"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.reassignLeadAsync.java.lang.String.long.long.long.java.lang.String.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.submitDealAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findSalesLeadContactAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="https" host="dummy.oracle.com" port="443" path="/mklLeads/SalesLeadService"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+               <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="oracle.demo.pts.fusionproxy.saleslead"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/}SalesLeadService"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="oracle.demo.pts.fusionproxy.saleslead.SalesLeadServiceImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="oracle.demo.pts.fusionproxy.saleslead.SalesLeadService"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../../FusionProxy_SalesLeadsService.jpr"/>
+         <value n="WS_CREATE_ONEWAY_OPERATIONS" v="true"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/"/>
+         <value n="WS_URI" v="SalesLeadService"/>
+         <url n="WS_WSDL_FILE" path="SalesLeadService.wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="SERVICE_ASYNC_FEATURES" v="true"/>
+      <value n="USE_WSDL_LOCATION" v="true"/>
+   </hash>
+</jdevws:WebServiceProxy>

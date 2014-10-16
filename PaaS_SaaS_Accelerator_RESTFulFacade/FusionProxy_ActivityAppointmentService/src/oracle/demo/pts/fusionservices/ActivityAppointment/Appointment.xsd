@@ -1,0 +1,113 @@
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/"
+     sdoJava:package="oracle.apps.crmCommon.activities.activitiesService" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/"
+     xmlns:ns1="http://xmlns.oracle.com/apps/crmCommon/notes/noteService" xmlns:sdoJava="commonj.sdo/java"
+     xmlns:sdoXML="commonj.sdo/xml" xmlns="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation xmlns:oer="http://xmlns.oracle.com/oer">
+            <name>Appointment</name>
+            <description>An appointment activity data object that captures events such as
+                meetings or appointments that occur at a specific time and
+                appear on a user&apos;s calendar.</description>
+            <oer:category name="lba">
+                <value>CrmCommonComponent-CRM Common Components</value>
+                <value>CrmCommonComponent-CRM Common Components :
+                    AppCmmnCompActivities-Activities</value>
+            </oer:category>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/crmCommon/notes/noteService" schemaLocation="Note.xsd"/>
+    <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+    <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+    <xsd:include schemaLocation="ActivityAssignee.xsd"/>
+    <xsd:include schemaLocation="ActivityCategory.xsd"/>
+    <xsd:include schemaLocation="ActivityContact.xsd"/>
+    <xsd:complexType name="Appointment">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>ActivityId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="ActivityId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="OwnerId" nillable="true" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="CustomerId" nillable="true" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="ActivityName" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PlannedStartDt" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="PlannedEndDt" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="PlannedDurationNum" nillable="true" type="xsd:decimal"/>
+            <xsd:element minOccurs="0" name="PlannedDurationUomCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurTypeCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurWeekdayFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurWedFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurTueFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="TemplateFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurThuFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CompletedFlag" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurSunFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurSatFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurReplaceCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurMonFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurFriFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AlarmFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurOrigInstDt" nillable="true" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="ApptAlarmTmMinNum" nillable="true" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="RecurOccursNum" nillable="true" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="RecurDay" nillable="true" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="RecurFreqNum" nillable="true" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="RecurMonth" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurEndDt" nillable="true" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="RecurPattern" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurApptId" nillable="true" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="RecurExceptionFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AllDayFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PartyName" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PartyId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="PartyName1" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PartyId1" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="ActivityLocationTxt" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ActivityDesc" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ActivityNumber" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ActivityPriorityCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ActivityStatusCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ActivityTypeCd" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ConflictId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="CreatedBy" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CreationDate" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="LastUpdateDate" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="LastUpdateLogin" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="LastUpdatedBy" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ObjectVersionNumber" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element minOccurs="0" name="AsgnDenormFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AsgnDt" nillable="true" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="AsgnManualFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AsgnSysFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="DoNotRouteFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="LockAsgnFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="TemplateId" nillable="true" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="UserLastUpdateDate" nillable="true" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="ReferenceCustomerId" nillable="true" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="SourceObjectCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="SourceObjectId" nillable="true" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="VisibilityCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="SourceCodeTransient" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Response" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ShowTimeAs" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RecurEveryOptionCd" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="UpdatedCd" nillable="true" type="ns0:base64Binary-DataHandler"/>
+            <xsd:element minOccurs="0" name="MobileActivityId" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="OutlookGuid" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="OutlookApptFlag" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CategoryCd" nillable="true" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="ActivityAssignee" type="ActivityAssignee"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="ActivityCategory" type="ActivityCategory"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="ActivityContact" type="ActivityContact"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Note" type="ns1:Note"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="appointment" type="Appointment"/>
+</xsd:schema>

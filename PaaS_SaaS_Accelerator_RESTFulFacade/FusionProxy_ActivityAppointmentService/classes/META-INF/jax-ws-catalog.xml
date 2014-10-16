@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="https://dummy.oracle.com/appCmmnCompActivities/ActivityAppointmentService?wsdl"
+          uri="../oracle/demo/pts/fusionservices/ActivityAppointment/ActivityAppointmentService.wsdl"/>
+</catalog>

@@ -1,0 +1,275 @@
+<schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/types/"
+     xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:ns1="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/"
+     xmlns:tns="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/types/"
+     xmlns="http://www.w3.org/2001/XMLSchema">
+    <import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+    <import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/"
+         schemaLocation="Location.xsd"/>
+    <import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JServiceCS.xsd"/>
+    <element name="createLocation">
+        <complexType>
+            <sequence>
+                <element name="location" type="ns1:Location"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createLocationResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateLocation">
+        <complexType>
+            <sequence>
+                <element name="location" type="ns1:Location"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateLocationResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="mergeLocation">
+        <complexType>
+            <sequence>
+                <element name="location" type="ns1:Location"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="mergeLocationResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findLocation">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns0:FindCriteria"/>
+                <element name="findControl" type="ns0:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findLocationResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processLocation">
+        <complexType>
+            <sequence>
+                <element name="changeOperation" type="string"/>
+                <element maxOccurs="unbounded" minOccurs="0" name="location" type="ns1:Location"/>
+                <element name="processControl" type="ns0:ProcessControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processLocationResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getLocationByOriginalSystemReference">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns0:FindCriteria"/>
+                <element name="bindOrigSystem" type="string"/>
+                <element name="bindOrigSystemReference" type="string"/>
+                <element name="findControl" type="ns0:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getLocationByOriginalSystemReferenceResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteLocation">
+        <complexType>
+            <sequence>
+                <element name="location" type="ns1:Location"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteLocationResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MethodResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processCSLocation">
+        <complexType>
+            <sequence>
+                <element name="processData" type="ns0:ProcessData"/>
+                <element name="processControl" type="ns0:ProcessControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processCSLocationResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:ProcessData"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getLocationByOriginalSystemReferenceAsync">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns0:FindCriteria"/>
+                <element name="bindOrigSystem" type="string"/>
+                <element name="bindOrigSystemReference" type="string"/>
+                <element name="findControl" type="ns0:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getLocationByOriginalSystemReferenceAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processCSLocationAsync">
+        <complexType>
+            <sequence>
+                <element name="processData" type="ns0:ProcessData"/>
+                <element name="processControl" type="ns0:ProcessControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processCSLocationAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:ProcessData"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="mergeLocationAsync">
+        <complexType>
+            <sequence>
+                <element name="location" type="ns1:Location"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="mergeLocationAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processLocationAsync">
+        <complexType>
+            <sequence>
+                <element name="changeOperation" type="string"/>
+                <element maxOccurs="unbounded" minOccurs="0" name="location" type="ns1:Location"/>
+                <element name="processControl" type="ns0:ProcessControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="processLocationAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteLocationAsync">
+        <complexType>
+            <sequence>
+                <element name="location" type="ns1:Location"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteLocationAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MethodResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findLocationAsync">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns0:FindCriteria"/>
+                <element name="findControl" type="ns0:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findLocationAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateLocationAsync">
+        <complexType>
+            <sequence>
+                <element name="location" type="ns1:Location"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateLocationAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createLocationAsync">
+        <complexType>
+            <sequence>
+                <element name="location" type="ns1:Location"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createLocationAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:LocationResult"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getLocation">
+        <complexType>
+            <sequence>
+                <element name="locationId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getLocationResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:Location"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getLocationAsync">
+        <complexType>
+            <sequence>
+                <element name="locationId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getLocationAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:Location"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
