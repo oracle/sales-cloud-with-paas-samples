@@ -1,9 +1,0 @@
-<handler-chains xmlns="http://java.sun.com/xml/ns/javaee">
-   <handler-chain>
-      <service-name-pattern xmlns:ns1="http://xmlns.oracle.com/apps/cdm/foundation/parties/personService/applicationModule/">ns1:PersonService</service-name-pattern>
-      <handler>
-         <handler-name>EntityHandler</handler-name>
-         <handler-class>com.oracle.pts.handle.EntityHandler</handler-class>
-      </handler>
-   </handler-chain>
-</handler-chains>

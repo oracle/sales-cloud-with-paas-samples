@@ -1,6 +1,0 @@
-C:\Users\jprautia\Documents\Visual Studio 2010\Projects\FusionApplicationAccelerator\FusionApplicationAccelerator\bin\Debug\FusionApplicationAccelerator.dll.config
-C:\Users\jprautia\Documents\Visual Studio 2010\Projects\FusionApplicationAccelerator\FusionApplicationAccelerator\bin\Debug\FusionApplicationAccelerator.dll
-C:\Users\jprautia\Documents\Visual Studio 2010\Projects\FusionApplicationAccelerator\FusionApplicationAccelerator\bin\Debug\FusionApplicationAccelerator.pdb
-C:\Users\jprautia\Documents\Visual Studio 2010\Projects\FusionApplicationAccelerator\FusionApplicationAccelerator\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\jprautia\Documents\Visual Studio 2010\Projects\FusionApplicationAccelerator\FusionApplicationAccelerator\obj\Debug\FusionApplicationAccelerator.dll
-C:\Users\jprautia\Documents\Visual Studio 2010\Projects\FusionApplicationAccelerator\FusionApplicationAccelerator\obj\Debug\FusionApplicationAccelerator.pdb

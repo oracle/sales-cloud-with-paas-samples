@@ -1,4 +1,0 @@
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <system systemId="https://fap0930-crm.oracleads.com/opptyMgmtOpportunities/OpportunityService?WSDL"
-          uri="../com/oracle/pts/opp/wsclient/OpportunityService.wsdl"/>
-</catalog>

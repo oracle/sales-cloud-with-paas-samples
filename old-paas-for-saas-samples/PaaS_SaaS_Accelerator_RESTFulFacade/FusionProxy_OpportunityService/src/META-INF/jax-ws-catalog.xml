@@ -1,4 +1,0 @@
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <system systemId="https://dummy/opptyMgmtOpportunities/OpportunityService?WSDL"
-          uri="../oracle/demo/pts/fusionproxy/opportunities/OpportunityService.wsdl"/>
-</catalog>

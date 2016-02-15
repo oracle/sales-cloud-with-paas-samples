@@ -1,7 +1,0 @@
-c:\users\jprautia\documents\visual studio 2010\Projects\FusionApplicationAcceleratorTester\FusionApplicationAcceleratorTester\bin\Debug\FusionApplicationAcceleratorTester.exe
-c:\users\jprautia\documents\visual studio 2010\Projects\FusionApplicationAcceleratorTester\FusionApplicationAcceleratorTester\bin\Debug\FusionApplicationAcceleratorTester.pdb
-c:\users\jprautia\documents\visual studio 2010\Projects\FusionApplicationAcceleratorTester\FusionApplicationAcceleratorTester\bin\Debug\FusionApplicationAccelerator.dll
-c:\users\jprautia\documents\visual studio 2010\Projects\FusionApplicationAcceleratorTester\FusionApplicationAcceleratorTester\bin\Debug\FusionApplicationAccelerator.pdb
-c:\users\jprautia\documents\visual studio 2010\Projects\FusionApplicationAcceleratorTester\FusionApplicationAcceleratorTester\obj\x86\Debug\ResolveAssemblyReference.cache
-c:\users\jprautia\documents\visual studio 2010\Projects\FusionApplicationAcceleratorTester\FusionApplicationAcceleratorTester\obj\x86\Debug\FusionApplicationAcceleratorTester.exe
-c:\users\jprautia\documents\visual studio 2010\Projects\FusionApplicationAcceleratorTester\FusionApplicationAcceleratorTester\obj\x86\Debug\FusionApplicationAcceleratorTester.pdb

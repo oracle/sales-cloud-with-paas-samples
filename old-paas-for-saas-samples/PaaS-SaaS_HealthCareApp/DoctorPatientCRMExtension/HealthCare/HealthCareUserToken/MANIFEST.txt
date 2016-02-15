@@ -1,5 +1,0 @@
-Specification-Title: ptsdemo-jwt-validator
-Implementation-Title: ptsdemo-jwt-validator
-Specification-Version: 1.0
-Implementation-Version: 1.0
-Extension-Name: ptsdemo-jwt-validator
