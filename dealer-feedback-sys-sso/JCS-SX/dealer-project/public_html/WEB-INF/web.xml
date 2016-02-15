@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!-- Copyright © 2015, Oracle and/or its affiliates. All rights reserved -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+  <context-param>
+    <param-name>dbcs-url</param-name>
+    <param-value>https://YOUR_DBCS_HOST</param-value>
+  </context-param>
+  <context-param>
+    <param-name>access-token</param-name>
+        <param-value>'ACCESS_TOKEN'</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>dealer-feedback.jsp</welcome-file>
+  </welcome-file-list>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>feedback</web-resource-name>
+      <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+  </security-constraint>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>resources</web-resource-name>
+      <url-pattern>/resources/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint />
+  </security-constraint>
+  <login-config>
+    <auth-method>CLIENT-CERT</auth-method>
+  </login-config>
+  <security-role>
+    <role-name>dealerManager</role-name>
+  </security-role>
+  <security-role>
+    <role-name>dealer</role-name>
+  </security-role>
+</web-app>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+
+<JboProject
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="Model"
+   Version="11.1.1.65.57"
+   SeparateXMLFiles="true"
+   PackageName="oracle.cloud.sampleapps.accountdetails.model">
+   <DesignTime>
+      <Attr Name="_jprName" Value="../../../../../../Model.jpr"/>
+      <Attr Name="_appModuleNames0"
+         Value="oracle.cloud.sampleapps.accountdetails.model.AccountDetailsAM"/>
+      <Attr Name="_jbo.TypeMapEntries" Value="Java"/>
+      <Attr Name="_NamedConnection" Value="Local_HR"/>
+   </DesignTime>
+   <Containee
+      Name="entity"
+      PackageName="oracle.cloud.sampleapps.accountdetails.model.entity"
+      ObjectType="JboPackage">
+      <DesignTime>
+         <Attr Name="_EO" Value="true"/>
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="model"
+      PackageName="oracle.cloud.sampleapps.accountdetails.model"
+      ObjectType="JboPackage">
+      <DesignTime>
+         <Attr Name="_AM" Value="true"/>
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="view"
+      PackageName="oracle.cloud.sampleapps.accountdetails.model.view"
+      ObjectType="JboPackage">
+      <DesignTime>
+         <Attr Name="_VO" Value="true"/>
+      </DesignTime>
+   </Containee>
+</JboProject>

@@ -1,0 +1,26 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+     targetNamespace="/oracle/cloud/sampleaapps/leadcapturesys/model/common/" xmlns="/oracle/cloud/sampleaapps/leadcapturesys/model/common/"
+     elementFormDefault="qualified" sdoJava:package="oracle.cloud.sampleaapps.leadcapturesys.model.common">
+    <xsd:import schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd" namespace="http://xmlns.oracle.com/adf/svc/types/"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="LeadCaptureSysVOSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>ActivityId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="ActivityId" type="xsd:decimal" minOccurs="0"/>
+            <xsd:element name="ProspectName" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="DemoCompleted" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="LeadRecUpdated" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="VisitDate" type="ns0:dateTime-Timestamp" minOccurs="0" nillable="true"/>
+            <xsd:element name="StartTime" type="ns0:dateTime-Timestamp" minOccurs="0" nillable="true"/>
+            <xsd:element name="EndTime" type="ns0:dateTime-Timestamp" minOccurs="0" nillable="true"/>
+            <xsd:element name="Notes" type="xsd:string" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="leadCaptureSysVOSDO" type="LeadCaptureSysVOSDO"/>
+</xsd:schema>

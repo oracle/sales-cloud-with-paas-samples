@@ -1,0 +1,5 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+  <system systemId="https://your_sales_cloud_URL/crmCommonSalesParties/SalesPartyService?WSDL"
+          uri="https://your_sales_cloud_URL/crmCommonSalesParties/SalesPartyService?WSDL"/>
+</catalog>

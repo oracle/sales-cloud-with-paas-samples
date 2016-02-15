@@ -1,0 +1,10 @@
+/* Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved */
+af|selectBooleanCheckbox:disabled::label
+{
+  content: url("images/disabledIcon.png"); 
+}
+
+af|selectBooleanCheckbox:enabled::label
+{
+  content: url("images/enabledIcon.png"); 
+}

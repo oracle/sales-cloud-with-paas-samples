@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.65.57" id="DataBindings" SeparateXMLFiles="false"
+             Package="oracle.cloud.sampleapps.salesmerchtracker.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/MerchandiseList.jsff"
+          usageId="oracle_cloud_sampleapps_salesmerchtracker_view_MerchandiseListPageDef"/>
+    <page path="/SalesMerchTracker.jspx"
+          usageId="oracle_cloud_sampleapps_salesmerchtracker_view_SalesMerchTrackerPageDef"/>
+    <page path="/WEB-INF/SalesMerchandiseTrkrTF.xml#SalesMerchandiseTrkrTF@methodCall2"
+          usageId="oracle_cloud_sampleapps_salesmerchtracker_view_SalesMerchandiseTrkrTF_SalesMerchandiseTrkrTF_methodCall2PageDef"/>
+    <page path="/CreateMerchandise.jsff"
+          usageId="oracle_cloud_sampleapps_salesmerchtracker_view_CreateMerchandisePageDef"/>
+    <page path="/WEB-INF/SalesMerchandiseTrkrTF.xml#SalesMerchandiseTrkrTF@methodCall1"
+          usageId="oracle_cloud_sampleapps_salesmerchtracker_view_SalesMerchandiseTrkrTF_SalesMerchandiseTrkrTF_methodCall1PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="oracle_cloud_sampleapps_salesmerchtracker_view_MerchandiseListPageDef"
+          path="oracle.cloud.sampleapps.salesmerchtracker.view.pageDefs.MerchandiseListPageDef"/>
+    <page id="oracle_cloud_sampleapps_salesmerchtracker_view_SalesMerchTrackerPageDef"
+          path="oracle.cloud.sampleapps.salesmerchtracker.view.pageDefs.SalesMerchTrackerPageDef"/>
+    <page id="oracle_cloud_sampleapps_salesmerchtracker_view_SalesMerchandiseTrkrTF_SalesMerchandiseTrkrTF_methodCall2PageDef"
+          path="oracle.cloud.sampleapps.salesmerchtracker.view.pageDefs.SalesMerchandiseTrkrTF_SalesMerchandiseTrkrTF_methodCall2PageDef"/>
+    <page id="oracle_cloud_sampleapps_salesmerchtracker_view_CreateMerchandisePageDef"
+          path="oracle.cloud.sampleapps.salesmerchtracker.view.pageDefs.CreateMerchandisePageDef"/>
+    <page id="oracle_cloud_sampleapps_salesmerchtracker_view_SalesMerchandiseTrkrTF_SalesMerchandiseTrkrTF_methodCall1PageDef"
+          path="oracle.cloud.sampleapps.salesmerchtracker.view.pageDefs.SalesMerchandiseTrkrTF_SalesMerchandiseTrkrTF_methodCall1PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="SalesPartyServiceFacade"
+        path="oracle.cloud.sampleapps.salesmerchtracker.model.SalesPartyServiceFacade"/>
+    <BC4JDataControl id="SalesMerchandiseTrkrAMDataControl"
+                     Package="oracle.cloud.sampleapps.salesmerchtracker.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="SalesMerchandiseTrkrLocal"
+                     syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

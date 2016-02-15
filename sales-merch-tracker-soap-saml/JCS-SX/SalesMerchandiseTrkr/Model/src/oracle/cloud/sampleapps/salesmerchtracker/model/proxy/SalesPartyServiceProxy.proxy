@@ -1,0 +1,1457 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="SalesPartyService_Service.xml"/>
+      <url path="types/MergePersonParty.java"/>
+      <url path="types/CreateOrganizationPartyResponse.java"/>
+      <url path="types/FinancialNumber.java"/>
+      <url path="types/CreatePersonPartyResponse.java"/>
+      <url path="types/GetSalesAccountResourceAsyncResponse.java"/>
+      <url path="types/ObjAttrHints.java"/>
+      <url path="types/Detail.java"/>
+      <url path="types/DataHandlerResult.java"/>
+      <url path="types/MergeOrganizationPartyAsync.java"/>
+      <url path="types/FindSalesPartyAsync.java"/>
+      <url path="types/MergeSalesAccountAsyncResponse.java"/>
+      <url path="types/UpdateSalesAccount.java"/>
+      <url path="types/GetSalesPartyResponse.java"/>
+      <url path="types/GetServiceLastUpdateTime.java"/>
+      <url path="types/Property.java"/>
+      <url path="types/UpdateSalesPartyAsyncResponse.java"/>
+      <url path="types/FaultType.java"/>
+      <url path="types/CreatePartyUsage.java"/>
+      <url path="types/FindSalesAccountMyFavoriteSalesAccountsVCAsyncResponse.java"/>
+      <url path="types/GetDfltObjAttrHintsAsync.java"/>
+      <url path="types/GetServiceLastUpdateTimeResponse.java"/>
+      <url path="types/ModelsType.java"/>
+      <url path="types/FindMySalesAccountMyVCAsync.java"/>
+      <url path="types/GetSalesParty.java"/>
+      <url path="types/GetDfltObjAttrHintsAsyncResponse.java"/>
+      <url path="types/OrganizationParty.java"/>
+      <url path="types/MergeOrganizationPartyResponse.java"/>
+      <url path="types/OrganizationContactInformation.java"/>
+      <url path="types/PersonPartySite.java"/>
+      <url path="types/FindMySalesAccountResponse.java"/>
+      <url path="types/OrganizationPartyResult.java"/>
+      <url path="types/FindMySalesAccountMyVC.java"/>
+      <url path="types/ServiceErrorMessage.java"/>
+      <url path="types/FindSalesAccountResourceAccessAsyncResponse.java"/>
+      <url path="types/Types.java"/>
+      <url path="types/BytesResult.java"/>
+      <url path="types/SalesAccountTerritory.java"/>
+      <url path="types/Conjunction.java"/>
+      <url path="types/CreditRating.java"/>
+      <url path="types/Web.java"/>
+      <url path="types/AssignSalesAccountChkProfileAsyncResponse.java"/>
+      <url path="types/FindSalesAccountResourceResponse.java"/>
+      <url path="types/GetSalesAccount.java"/>
+      <url path="types/SourceSystemRefInformation.java"/>
+      <url path="types/PartyPreference.java"/>
+      <url path="types/CreatePartyUsageAsyncResponse.java"/>
+      <url path="types/Education.java"/>
+      <url path="types/GetEntityListAsync.java"/>
+      <url path="types/OrganizationContactRole.java"/>
+      <url path="types/UpdateExistingFlagResponse.java"/>
+      <url path="types/SalesAccountContacts.java"/>
+      <url path="types/FindSalesAccountResource.java"/>
+      <url path="types/FindSalesParty.java"/>
+      <url path="types/LongResult.java"/>
+      <url path="types/BooleanResult.java"/>
+      <url path="types/CreateOrganizationPartyAsync.java"/>
+      <url path="SalesPartyService.java"/>
+      <url path="types/TimeResult.java"/>
+      <url path="types/BaseDataGraphType.java"/>
+      <url path="types/CreateSalesAccountAsync.java"/>
+      <url path="types/SortOrder.java"/>
+      <url path="types/Citizenship.java"/>
+      <url path="types/MergePersonPartyAsyncResponse.java"/>
+      <url path="types/SalesAccountContactPoints.java"/>
+      <url path="types/UpdateSalesAccountResourceResponse.java"/>
+      <url path="types/FindSalesAccountResourceAccessResponse.java"/>
+      <url path="types/CreateOrganizationPartyAsyncResponse.java"/>
+      <url path="types/FindMySalesAccountAsync.java"/>
+      <url path="types/GetSalesPartyAsyncResponse.java"/>
+      <url path="types/FinancialProfile.java"/>
+      <url path="types/StringResult.java"/>
+      <url path="types/ViewCriteriaItem.java"/>
+      <url path="types/ViewCriteriaRow.java"/>
+      <url path="types/MeasureType.java"/>
+      <url path="types/FindSalesAccountMyFavoriteSalesAccountsVCAsync.java"/>
+      <url path="types/ByteResult.java"/>
+      <url path="types/TimestampResult.java"/>
+      <url path="types/AdditionalOrganizationName.java"/>
+      <url path="types/GetSalesAccountResourceAsync.java"/>
+      <url path="types/PartyUsageAssignmentResult.java"/>
+      <url path="types/FindSalesPartyResponse.java"/>
+      <url path="types/EmploymentHistory.java"/>
+      <url path="types/FindSalesAccountMyFavoriteSalesAccountsVC.java"/>
+      <url path="types/CreateSalesAccountResponse.java"/>
+      <url path="types/DoubleResult.java"/>
+      <url path="types/ObjectFactory.java"/>
+      <url path="types/ProcessControl.java"/>
+      <url path="types/ContactPointInformation.java"/>
+      <url path="types/UpdateSalesPartyResponse.java"/>
+      <url path="types/CreateOrganizationParty.java"/>
+      <url path="types/GetServiceLastUpdateTimeAsyncResponse.java"/>
+      <url path="types/MergeSalesAccountAsync.java"/>
+      <url path="types/GroupResult.java"/>
+      <url path="types/GetSalesPartyAsync.java"/>
+      <url path="types/CreateSalesAccount.java"/>
+      <url path="types/OriginalSystemReference.java"/>
+      <url path="types/UpdateSalesAccountAsync.java"/>
+      <url path="types/UpdateSalesAccountResponse.java"/>
+      <url path="types/CreateSalesAccountResourceAsync.java"/>
+      <url path="types/FindSalesAccountResourceAsync.java"/>
+      <url path="types/SalesAccount.java"/>
+      <url path="types/PersonResult.java"/>
+      <url path="types/FindControl.java"/>
+      <url path="types/FindSalesAccountResponse.java"/>
+      <url path="types/AttrCtrlHints.java"/>
+      <url path="types/GetEntityList.java"/>
+      <url path="types/FindSalesAccountMyFavoriteSalesAccountsVCResponse.java"/>
+      <url path="types/FindSalesPartyAsyncResponse.java"/>
+      <url path="types/DeleteSalesParty.java"/>
+      <url path="types/DateResult.java"/>
+      <url path="types/ContactPreference.java"/>
+      <url path="types/UpdateSalesAccountResource.java"/>
+      <url path="types/Phone.java"/>
+      <url path="types/UpdateSalesParty.java"/>
+      <url path="types/ServiceDMLErrorMessage.java"/>
+      <url path="types/Person.java"/>
+      <url path="types/Eft.java"/>
+      <url path="types/CodeAssignment.java"/>
+      <url path="types/Telex.java"/>
+      <url path="SalesPartyServiceSoapHttpPortClient.java"/>
+      <url path="types/CreatePartyUsageResponse.java"/>
+      <url path="types/MergeOrganizationPartyAsyncResponse.java"/>
+      <url path="types/CreateSalesAccountResourceResponse.java"/>
+      <url path="types/MergePersonPartyAsync.java"/>
+      <url path="types/FindSalesAccountAsyncResponse.java"/>
+      <url path="types/UpdateExistingFlagAsync.java"/>
+      <url path="types/GetSalesAccountResponse.java"/>
+      <url path="types/AssignSalesAccountChkProfileResponse.java"/>
+      <url path="types/OrganizationProfile.java"/>
+      <url path="types/IntegerResult.java"/>
+      <url path="types/CreateSalesPartyAsync.java"/>
+      <url path="types/FindSalesAccountResourceAccess.java"/>
+      <url path="types/CreateSalesPartyAsyncResponse.java"/>
+      <url path="types/SalesParty.java"/>
+      <url path="types/ChangeOperation.java"/>
+      <url path="types/AdditionalGroupName.java"/>
+      <url path="types/GetSalesAccountResourceResponse.java"/>
+      <url path="types/ServiceViewInfo.java"/>
+      <url path="types/FindMySalesAccountMyTeamVCAsyncResponse.java"/>
+      <url path="types/FindSalesAccountResourceAccessAsync.java"/>
+      <url path="types/GetEntityListAsyncResponse.java"/>
+      <url path="types/GetDfltObjAttrHints.java"/>
+      <url path="types/MergePersonPartyResponse.java"/>
+      <url path="types/ViewCriteria.java"/>
+      <url path="types/UpdateSalesPartyAsync.java"/>
+      <url path="types/Relationship.java"/>
+      <url path="types/SalesAccountResource.java"/>
+      <url path="types/FindMySalesAccount.java"/>
+      <url path="types/CtrlHint.java"/>
+      <url path="types/DeleteSalesPartyAsyncResponse.java"/>
+      <url path="types/ChangeSummaryType.java"/>
+      <url path="types/Group.java"/>
+      <url path="types/UpdateExistingFlag.java"/>
+      <url path="types/AdditionalPersonName.java"/>
+      <url path="types/GetSalesAccountAsyncResponse.java"/>
+      <url path="types/PartySiteUse.java"/>
+      <url path="types/UpdateSalesAccountResourceAsyncResponse.java"/>
+      <url path="types/FindSalesAccountAsync.java"/>
+      <url path="types/FindMySalesAccountMyTeamVCAsync.java"/>
+      <url path="types/AssignSalesAccountChkProfileAsync.java"/>
+      <url path="types/MergeSalesAccount.java"/>
+      <url path="types/Asset.java"/>
+      <url path="types/DeleteSalesAccountResourceAsync.java"/>
+      <url path="types/CreateSalesParty.java"/>
+      <url path="types/DataObjectResult.java"/>
+      <url path="SalesPartyService_Service.java"/>
+      <url path="types/CreatePersonPartyAsync.java"/>
+      <url path="types/DataObject.java"/>
+      <url path="types/GetDfltObjAttrHintsResponse.java"/>
+      <url path="types/package-info.java"/>
+      <url path="types/MethodResult.java"/>
+      <url path="types/ReturnMode.java"/>
+      <url path="types/DeleteSalesAccountResource.java"/>
+      <url path="types/MySalesAccount.java"/>
+      <url path="types/FindSalesAccount.java"/>
+      <url path="types/Certification.java"/>
+      <url path="types/SortAttribute.java"/>
+      <url path="types/CreateSalesAccountAsyncResponse.java"/>
+      <url path="types/ServiceAttrValErrorMessage.java"/>
+      <url path="types/DeleteSalesAccountResourceResponse.java"/>
+      <url path="types/OrganizationContact.java"/>
+      <url path="types/ShortResult.java"/>
+      <url path="types/ServiceMessage.java"/>
+      <url path="types/FinancialReport.java"/>
+      <url path="types/BigIntegerResult.java"/>
+      <url path="types/Email.java"/>
+      <url path="types/EmailDomain.java"/>
+      <url path="types/JavaInfo.java"/>
+      <url path="types/FindMySalesAccountMyTeamVCResponse.java"/>
+      <url path="types/DataGraphType.java"/>
+      <url path="types/UpdateExistingFlagAsyncResponse.java"/>
+      <url path="types/PartySiteInformation.java"/>
+      <url path="types/GetServiceLastUpdateTimeAsync.java"/>
+      <url path="types/AssignSalesAccountChkProfile.java"/>
+      <url path="types/FindSalesAccountResourceAsyncResponse.java"/>
+      <url path="types/InstantMessaging.java"/>
+      <url path="types/OrganizationInformation.java"/>
+      <url path="types/Edi.java"/>
+      <url path="types/BigDecimalResult.java"/>
+      <url path="types/PartyUsageAssignment.java"/>
+      <url path="types/AdditionalPartyId.java"/>
+      <url path="types/CreatePersonPartyAsyncResponse.java"/>
+      <url path="types/FindMySalesAccountAsyncResponse.java"/>
+      <url path="types/FindMySalesAccountMyVCAsyncResponse.java"/>
+      <url path="types/Type.java"/>
+      <url path="types/XMLInfo.java"/>
+      <url path="types/RelationshipInformation.java"/>
+      <url path="types/DeleteSalesPartyAsync.java"/>
+      <url path="types/FindMySalesAccountMyVCResponse.java"/>
+      <url path="types/GetSalesAccountAsync.java"/>
+      <url path="types/FloatResult.java"/>
+      <url path="types/PersonLanguage.java"/>
+      <url path="types/XSDType.java"/>
+      <url path="types/UpdateSalesAccountAsyncResponse.java"/>
+      <url path="types/AmountType.java"/>
+      <url path="types/CreateSalesPartyResponse.java"/>
+      <url path="types/TextType.java"/>
+      <url path="types/ServiceRowValErrorMessage.java"/>
+      <url path="types/CreateSalesAccountResource.java"/>
+      <url path="types/ChildFindCriteria.java"/>
+      <url path="types/DeleteSalesAccountResourceAsyncResponse.java"/>
+      <url path="types/PartySite.java"/>
+      <url path="types/FindMySalesAccountMyTeamVC.java"/>
+      <url path="types/FindCriteria.java"/>
+      <url path="types/PersonInterest.java"/>
+      <url path="types/GetEntityListResponse.java"/>
+      <url path="types/UpdateSalesAccountResourceAsync.java"/>
+      <url path="types/PersonProfile.java"/>
+      <url path="types/MergeOrganizationParty.java"/>
+      <url path="types/WorkClass.java"/>
+      <url path="types/CreatePartyUsageAsync.java"/>
+      <url path="types/SalesAccountResourceAccess.java"/>
+      <url path="types/GetSalesAccountResource.java"/>
+      <url path="types/CreatePersonParty.java"/>
+      <url path="types/PersonInformation.java"/>
+      <url path="ServiceException.java"/>
+      <url path="types/CreateSalesAccountResourceAsyncResponse.java"/>
+      <url path="types/MergeSalesAccountResponse.java"/>
+      <url path="types/DeleteSalesPartyResponse.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <value n="FIXED_WSDL" v="false"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="SalesPartyService_Service.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy"/>
+            <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types"/>
+            <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_NONE"/>
+      <list n="PROXY_CLIENTS">
+         <url path="SalesPartyServiceSoapHttpPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <url n="PROXY_ORIGINAL_WSDL_URL" protocol="https" host="your_sales_cloud_URL" path="/crmCommonSalesParties/SalesPartyService" query="WSDL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="SalesPartyServiceSoapHttpPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="false"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.SalesPartyService"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="SalesPartyServiceSoapHttpPort"/>
+            <hash n="OPERATIONS">
+               <hash n="assignSalesAccountChkProfile">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="assignSalesAccountChkProfileAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createOrganizationParty">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createOrganizationPartyAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createPartyUsage">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createPartyUsageAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createPersonParty">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createPersonPartyAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesAccount">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesAccountAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesAccountResource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesAccountResourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesParty">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createSalesPartyAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesAccountResource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesAccountResourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesParty">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteSalesPartyAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findMySalesAccount">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findMySalesAccountAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findMySalesAccountMyTeamVC">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findMySalesAccountMyTeamVCAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findMySalesAccountMyVC">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findMySalesAccountMyVCAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesAccount">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesAccountAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesAccountMyFavoriteSalesAccountsVC">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesAccountMyFavoriteSalesAccountsVCAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesAccountResource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesAccountResourceAccess">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesAccountResourceAccessAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesAccountResourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesParty">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findSalesPartyAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getDfltObjAttrHints">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getDfltObjAttrHintsAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getEntityList">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getEntityListAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesAccount">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesAccountAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesAccountResource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesAccountResourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesParty">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getSalesPartyAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getServiceLastUpdateTime">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getServiceLastUpdateTimeAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergeOrganizationParty">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergeOrganizationPartyAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergePersonParty">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergePersonPartyAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergeSalesAccount">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergeSalesAccountAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateExistingFlag">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateExistingFlagAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesAccount">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesAccountAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesAccountResource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesAccountResourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesParty">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateSalesPartyAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS"/>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="https" host="your_sales_cloud_URL" port="443" path="/crmCommonSalesParties/SalesPartyService"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="SalesPartyService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../../Model.jpr"/>
+      <list n="PROXY_WSDL_IMPORT_LIST">
+         <url path="ServiceException.wsdl"/>
+         <url path="Edi.xsd"/>
+         <url path="sdoXML.xsd"/>
+         <url path="RelationshipInformation.xsd"/>
+         <url path="AdditionalOrganizationName.xsd"/>
+         <url path="ServiceException.xsd"/>
+         <url path="EmailDomain.xsd"/>
+         <url path="SalesAccountResource.xsd"/>
+         <url path="PersonProfile.xsd"/>
+         <url path="PersonInterest.xsd"/>
+         <url path="SalesParty.xsd"/>
+         <url path="EmploymentHistory.xsd"/>
+         <url path="Certification.xsd"/>
+         <url path="OrganizationParty.xsd"/>
+         <url path="Eft.xsd"/>
+         <url path="CreditRating.xsd"/>
+         <url path="SalesAccountTerritory.xsd"/>
+         <url path="OrganizationProfile.xsd"/>
+         <url path="Education.xsd"/>
+         <url path="BC4JService.xsd"/>
+         <url path="AdditionalPartyId.xsd"/>
+         <url path="Asset.xsd"/>
+         <url path="Group.xsd"/>
+         <url path="PartyUsageAssignment.xsd"/>
+         <url path="PersonLanguage.xsd"/>
+         <url path="OrganizationInformation.xsd"/>
+         <url path="SalesAccount.xsd"/>
+         <url path="Email.xsd"/>
+         <url path="OrganizationContactRole.xsd"/>
+         <url path="CodeAssignment.xsd"/>
+         <url path="ContactPointInformation.xsd"/>
+         <url path="FinancialProfile.xsd"/>
+         <url path="Phone.xsd"/>
+         <url path="PartyPreference.xsd"/>
+         <url path="OrganizationContact.xsd"/>
+         <url path="OriginalSystemReference.xsd"/>
+         <url path="Web.xsd"/>
+         <url path="PersonInformation.xsd"/>
+         <url path="sdoModel.xsd"/>
+         <url path="PartySiteUse.xsd"/>
+         <url path="PartySiteInformation.xsd"/>
+         <url path="SalesPartyService.xsd"/>
+         <url path="FinancialReport.xsd"/>
+         <url path="Person.xsd"/>
+         <url path="WorkClass.xsd"/>
+         <url path="AdditionalPersonName.xsd"/>
+         <url path="oracle_webservices_async_fault_11_0.xsd"/>
+         <url path="AdditionalGroupName.xsd"/>
+         <url path="FinancialNumber.xsd"/>
+         <url path="PersonPartySite.xsd"/>
+         <url path="PartySite.xsd"/>
+         <url path="Telex.xsd"/>
+         <url path="sdoJava.xsd"/>
+         <url path="Relationship.xsd"/>
+         <url path="MySalesAccount.xsd"/>
+         <url path="SalesAccountContacts.xsd"/>
+         <url path="SalesAccountResourceAccess.xsd"/>
+         <url path="Citizenship.xsd"/>
+         <url path="SourceSystemRefInformation.xsd"/>
+         <url path="datagraph.xsd"/>
+         <url path="ContactPreference.xsd"/>
+         <url path="SalesAccountContactPoints.xsd"/>
+         <url path="OrganizationContactInformation.xsd"/>
+         <url path="InstantMessaging.xsd"/>
+      </list>
+      <url n="PROXY_WSDL_URL" protocol="https" host="your_sales_cloud_URL" path="/crmCommonSalesParties/SalesPartyService" query="WSDL"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BD_DEFAULT_DOCUMENT_WRAPPED" v="false"/>
+               <value n="BOUND_PORT_TYPE" v="{http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/}SalesPartyService"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/}SalesPartyServiceSoapHttp"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/assignSalesAccountChkProfile"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.AssignSalesAccountChkProfileResponse.assignSalesAccountChkProfile.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.AssignSalesAccountChkProfile"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/updateExistingFlag"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateExistingFlagResponse.updateExistingFlag.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateExistingFlag"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createOrganizationParty"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateOrganizationPartyResponse.createOrganizationParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateOrganizationParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/mergeOrganizationParty"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeOrganizationPartyResponse.mergeOrganizationParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeOrganizationParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createPersonParty"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePersonPartyResponse.createPersonParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePersonParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/mergePersonParty"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergePersonPartyResponse.mergePersonParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergePersonParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getSalesAccount"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccountResponse.getSalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createSalesAccount"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccountResponse.createSalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/updateSalesAccount"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccountResponse.updateSalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/mergeSalesAccount"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeSalesAccountResponse.mergeSalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeSalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findSalesAccount"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResponse.findSalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createSalesAccountResource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccountResourceResponse.createSalesAccountResource.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccountResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/updateSalesAccountResource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccountResourceResponse.updateSalesAccountResource.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccountResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/deleteSalesAccountResource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesAccountResourceResponse.deleteSalesAccountResource.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesAccountResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findSalesAccountResource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResourceResponse.findSalesAccountResource.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findSalesAccountResourceAccess"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResourceAccessResponse.findSalesAccountResourceAccess.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResourceAccess"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getSalesParty"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesPartyResponse.getSalesParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createSalesParty"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesPartyResponse.createSalesParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/updateSalesParty"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesPartyResponse.updateSalesParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findSalesParty"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesPartyResponse.findSalesParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/updateSalesAccountResourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateSalesAccountResourceAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccountResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findSalesAccountResourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findSalesAccountResourceAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createOrganizationPartyAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createOrganizationPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateOrganizationPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getSalesPartyAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getSalesPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/mergeOrganizationPartyAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.mergeOrganizationPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeOrganizationPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/updateExistingFlagAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateExistingFlagAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateExistingFlagAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createSalesAccountResourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createSalesAccountResourceAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccountResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findSalesAccountAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findSalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/mergePersonPartyAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.mergePersonPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergePersonPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/assignSalesAccountChkProfileAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.assignSalesAccountChkProfileAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.AssignSalesAccountChkProfileAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createPersonPartyAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createPersonPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePersonPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createSalesAccountAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createSalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/updateSalesAccountAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateSalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/deleteSalesAccountResourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteSalesAccountResourceAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesAccountResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/mergeSalesAccountAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.mergeSalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeSalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createSalesPartyAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createSalesPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/updateSalesPartyAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateSalesPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findSalesAccountResourceAccessAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findSalesAccountResourceAccessAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResourceAccessAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findSalesPartyAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findSalesPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getSalesAccountAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getSalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getSalesAccountResource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccountResourceResponse.getSalesAccountResource.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccountResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getSalesAccountResourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getSalesAccountResourceAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccountResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createPartyUsage"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePartyUsageResponse.createPartyUsage.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePartyUsage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/createPartyUsageAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createPartyUsageAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePartyUsageAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findMySalesAccount"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountResponse.findMySalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findMySalesAccountAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findMySalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findMySalesAccountMyTeamVC"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyTeamVCResponse.findMySalesAccountMyTeamVC.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyTeamVC"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findMySalesAccountMyVC"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyVCResponse.findMySalesAccountMyVC.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyVC"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findMySalesAccountMyVCAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findMySalesAccountMyVCAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyVCAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findMySalesAccountMyTeamVCAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findMySalesAccountMyTeamVCAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyTeamVCAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findSalesAccountMyFavoriteSalesAccountsVC"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountMyFavoriteSalesAccountsVCResponse.findSalesAccountMyFavoriteSalesAccountsVC.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountMyFavoriteSalesAccountsVC"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/findSalesAccountMyFavoriteSalesAccountsVCAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findSalesAccountMyFavoriteSalesAccountsVCAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountMyFavoriteSalesAccountsVC"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/deleteSalesParty"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesPartyResponse.deleteSalesParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/deleteSalesPartyAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteSalesPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getDfltObjAttrHints"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetDfltObjAttrHintsResponse.getDfltObjAttrHints.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetDfltObjAttrHints"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getServiceLastUpdateTime"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetServiceLastUpdateTimeResponse.getServiceLastUpdateTime.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetServiceLastUpdateTime"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getEntityList"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetEntityListResponse.getEntityList.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetEntityList"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getDfltObjAttrHintsAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getDfltObjAttrHintsAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetDfltObjAttrHintsAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getEntityListAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getEntityListAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetEntityListAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/getServiceLastUpdateTimeAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getServiceLastUpdateTimeAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetServiceLastUpdateTimeAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="71b84363-014d-1000-8002-0a9abb0b1343"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="SalesPartyServiceSoapHttpPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/}SalesPartyServiceSoapHttp"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.AssignSalesAccountChkProfileResponse.assignSalesAccountChkProfile.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.AssignSalesAccountChkProfile"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateExistingFlagResponse.updateExistingFlag.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateExistingFlag"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateOrganizationPartyResponse.createOrganizationParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateOrganizationParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeOrganizationPartyResponse.mergeOrganizationParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeOrganizationParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePersonPartyResponse.createPersonParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePersonParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergePersonPartyResponse.mergePersonParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergePersonParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccountResponse.getSalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccountResponse.createSalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccountResponse.updateSalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeSalesAccountResponse.mergeSalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeSalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResponse.findSalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccountResourceResponse.createSalesAccountResource.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccountResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccountResourceResponse.updateSalesAccountResource.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccountResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesAccountResourceResponse.deleteSalesAccountResource.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesAccountResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResourceResponse.findSalesAccountResource.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResourceAccessResponse.findSalesAccountResourceAccess.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResourceAccess"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesPartyResponse.getSalesParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesPartyResponse.createSalesParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesPartyResponse.updateSalesParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesPartyResponse.findSalesParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateSalesAccountResourceAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccountResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findSalesAccountResourceAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createOrganizationPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateOrganizationPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getSalesPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.mergeOrganizationPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeOrganizationPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateExistingFlagAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateExistingFlagAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createSalesAccountResourceAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccountResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findSalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.mergePersonPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergePersonPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.assignSalesAccountChkProfileAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.AssignSalesAccountChkProfileAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createPersonPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePersonPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createSalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateSalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSalesAccountResourceAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesAccountResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.mergeSalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.MergeSalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createSalesPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreateSalesPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateSalesPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.UpdateSalesPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findSalesAccountResourceAccessAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountResourceAccessAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findSalesPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getSalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccountResourceResponse.getSalesAccountResource.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccountResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getSalesAccountResourceAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetSalesAccountResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePartyUsageResponse.createPartyUsage.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePartyUsage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createPartyUsageAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.CreatePartyUsageAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountResponse.findMySalesAccount.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccount"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findMySalesAccountAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyTeamVCResponse.findMySalesAccountMyTeamVC.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyTeamVC"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyVCResponse.findMySalesAccountMyVC.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyVC"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findMySalesAccountMyVCAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyVCAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findMySalesAccountMyTeamVCAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindMySalesAccountMyTeamVCAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountMyFavoriteSalesAccountsVCResponse.findSalesAccountMyFavoriteSalesAccountsVC.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountMyFavoriteSalesAccountsVC"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findSalesAccountMyFavoriteSalesAccountsVCAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.FindSalesAccountMyFavoriteSalesAccountsVC"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesPartyResponse.deleteSalesParty.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesParty"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteSalesPartyAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.DeleteSalesPartyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetDfltObjAttrHintsResponse.getDfltObjAttrHints.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetDfltObjAttrHints"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetServiceLastUpdateTimeResponse.getServiceLastUpdateTime.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetServiceLastUpdateTime"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetEntityListResponse.getEntityList.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetEntityList"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getDfltObjAttrHintsAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetDfltObjAttrHintsAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getEntityListAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetEntityListAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getServiceLastUpdateTimeAsync.oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types.GetServiceLastUpdateTimeAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="https" host="your_sales_cloud_URL" port="443" path="/crmCommonSalesParties/SalesPartyService"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+               <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy"/>
+               <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.types"/>
+               <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/}SalesPartyService"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.SalesPartyServiceImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.SalesPartyService"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../../../Model.jpr"/>
+         <value n="WS_CREATE_ONEWAY_OPERATIONS" v="true"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://xmlns.oracle.com/apps/crmCommon/salesParties/salesPartiesService/"/>
+         <value n="WS_URI" v="SalesPartyService"/>
+         <url n="WS_WSDL_FILE" protocol="https" host="your_sales_cloud_URL" path="/crmCommonSalesParties/SalesPartyService" query="WSDL"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="SERVICE_ASYNC_FEATURES" v="true"/>
+      <value n="USE_WSDL_LOCATION" v="true"/>
+      <value n="WSDL_IS_LOCAL_COPY" v="false"/>
+   </hash>
+</jdevws:WebServiceProxy>

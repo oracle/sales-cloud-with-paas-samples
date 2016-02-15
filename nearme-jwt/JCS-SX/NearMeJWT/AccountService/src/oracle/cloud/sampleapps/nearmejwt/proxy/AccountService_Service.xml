@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<oracle-webservice-clients xmlns:ns2="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname namespaceURI="http://xmlns.oracle.com/apps/crmCommon/salesParties/accountService/"
+                     localpart="AccountService"/>
+      <port-info>
+         <wsdl-port namespaceURI="http://xmlns.oracle.com/apps/crmCommon/salesParties/accountService/"
+                    localpart="AccountServiceSoapHttpPort"/>
+         <runtime/>
+         <operations>
+            <operation name="processCSAccount"/>
+            <operation name="processCSAccountAsync"/>
+            <operation name="getDfltObjAttrHints"/>
+            <operation name="getServiceLastUpdateTime"/>
+            <operation name="getEntityList"/>
+            <operation name="getEntityListAsync"/>
+            <operation name="getDfltObjAttrHintsAsync"/>
+            <operation name="getServiceLastUpdateTimeAsync"/>
+            <operation name="getAccount"/>
+            <operation name="createAccount"/>
+            <operation name="updateAccount"/>
+            <operation name="deleteAccount"/>
+            <operation name="mergeAccount"/>
+            <operation name="findAccount"/>
+            <operation name="processAccount"/>
+            <operation name="findAccountAsync"/>
+            <operation name="updateAccountAsync"/>
+            <operation name="createAccountAsync"/>
+            <operation name="mergeAccountAsync"/>
+            <operation name="getAccountAsync"/>
+            <operation name="processAccountAsync"/>
+            <operation name="deleteAccountAsync"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>

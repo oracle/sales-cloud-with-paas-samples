@@ -1,0 +1,21 @@
+<xsd:schema xmlns:sdoJava="commonj.sdo/java" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="/oracle/cloud/sampleaapps/leadcapturesys/model/common/"
+     xmlns="/oracle/cloud/sampleaapps/leadcapturesys/model/common/" elementFormDefault="qualified"
+     sdoJava:package="oracle.cloud.sampleaapps.leadcapturesys.model.common">
+    <xsd:annotation>
+        <xsd:documentation>
+            <name>New Activity ID</name>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="LeadCaptureSysNewActivityIdVOSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/"/>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="MaxActivityId1" type="xsd:decimal" minOccurs="0" nillable="true"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="leadCaptureSysNewActivityIdVOSDO" type="LeadCaptureSysNewActivityIdVOSDO"/>
+</xsd:schema>

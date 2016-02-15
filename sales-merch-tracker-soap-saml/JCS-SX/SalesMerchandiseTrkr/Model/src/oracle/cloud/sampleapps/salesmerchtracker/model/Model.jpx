@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+
+<JboProject
+   xmlns="http://xmlns.oracle.com/bc4j"
+   Name="Model"
+   Version="11.1.1.65.57"
+   SeparateXMLFiles="true"
+   PackageName="oracle.cloud.sampleapps.salesmerchtracker.model" >
+   <DesignTime>
+      <Attr Name="_jprName" Value="../../../../../../Model.jpr" />
+      <Attr Name="_appModuleNames0" Value="oracle.cloud.sampleapps.salesmerchtracker.model.SalesMerchandiseTrkrAM" />
+      <Attr Name="_NamedConnection" Value="myXE" />
+      <Attr Name="_jbo.TypeMapEntries" Value="Java"/>
+   </DesignTime>
+   <Containee
+      Name="entity"
+      ObjectType="JboPackage"
+      PackageName="oracle.cloud.sampleapps.salesmerchtracker.model.entity" >
+      <DesignTime>
+         <Attr Name="_EO" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="model"
+      ObjectType="JboPackage"
+      PackageName="oracle.cloud.sampleapps.salesmerchtracker.model" >
+      <DesignTime>
+         <Attr Name="_AM" Value="true" />
+      </DesignTime>
+   </Containee>
+   <Containee
+      Name="view"
+      ObjectType="JboPackage"
+      PackageName="oracle.cloud.sampleapps.salesmerchtracker.model.view" >
+      <DesignTime>
+         <Attr Name="_VO" Value="true" />
+      </DesignTime>
+   </Containee>
+</JboProject>

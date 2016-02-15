@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="readme-for-oracle-cloud----saas-for-paas-sample">README for Oracle Cloud -- SaaS for PaaS Sample</h1>
+<h2 id="sample-name">Sample Name</h2>
+<p>Lead Capture with Single Sign On</p>
+<h2 id="sample-name">Author</h2>
+<p>Jesse Stephens, Oracle A-Team</p>
+<h2 id="source-code-location">Source Code Location</h2>
+<ul>
+<li>GitHub: <a href="https://github.com/oracle/sales-cloud-with-paas.git">https://github.com/oracle/sales-cloud-with-paas.git</a></li>
+<li>OTN: <a href="http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html">http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html</a></li>
+</ul>
+<h2 id="oracle-cloud-products-involved">Oracle Cloud Products Involved</h2>
+<ul>
+<li>Oracle Java Cloud Service - SaaS Extension</li>
+<li>Oracle Sales Cloud</li>
+<li>Oracle Database Cloud Service (Database Schema)</li>
+<li>Oracle JDeveloper Cloud specific version (11.1.1.7.1 or higher) / Oracle Enterprise pack for Eclipse available at <a href="http://www.oracle.com/technetwork/topics/cloud/downloads/index.html">this</a> location on OTN</li>
+</ul>
+<h2 id="demonstrates">Demonstrates</h2>
+<p>This sample demonstrates the following aspects of Oracle Cloud integration.</p>
+<h3 id="primary-goals">Primary Goals</h3>
+<ul>
+<li>This sample demonstrates single-sign-on (SSO) from a Java Cloud Service - SaaS Extension application linking out to Oracle Sales Cloud.</li>
+</ul>
+<h3 id="secondary-goals">Secondary Goals</h3>
+<ul>
+<li>Using Oracle Database Cloud Service (Database Schema) as the data store for the application deployed on Java Cloud Service - SaaS Extension.</li>
+</ul>
+<h2 id="functional-overview">Functional Overview</h2>
+<p>Information and status pertaining to leads is kept in an ADF application deployed to Java Cloud Service - SaaS Extension. External users of this system are given limited access to Oracle Sales Cloud leads and contacts for updating purposes. These users do not have access to other Oracle Sales Cloud system functions; what appears in menus and navigation is a slimmed-down subset of Oracle Sales Cloud features.</p>
+<h2 id="technical-overview">Technical Overview</h2>
+<p>The Java/ADF application is deployed to Java Cloud Service - Saas Extension and also uses Oracle Database Cloud Service (Database Schema) to display additional data. A link to Oracle Sales Cloud is provided so a business user can quickly use the information displayed in the Java Cloud Service - SaaS Extension application to work with Oracle Sales Cloud. Single Sign-On (SSO) is used to allow a user to access the Java Application without having to authenticate with Oracle Sales Cloud again, after being already authenticated with Java Cloud Service - SaaS Extension.</p>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>All sample code is provided by Oracle for illustrative purposes only. The objective of this sample is only to demonstrate the goals defined above and may not represent other best practices, functional or technical. These sample code examples have not been thoroughly tested under all conditions. Oracle, therefore, cannot guarantee or imply security, reliability, serviceability, or function of the sample code. All sample code contained herein are provided to you AS IS without any warranties of any kind. The implied warranties of non-infringement, merchantability and fitness for a particular purpose are expressly disclaimed.</p>
+<h2 id="user-and-role-setup">User and Role Setup:</h2>
+<h3 id="setting-up-the-sample">Setting up the Sample</h3>
+<ol type="1">
+<li>The Java Cloud Service - SaaS Extension and Oracle Sales Cloud instances should be associated. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-9C1BA413-EB5D-429C-AECA-4069995385EF">Getting a JCS - SaaS Extension Subscription</a> and <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-19C1D17A-195D-4CB3-AD04-0224F629165B">Security Strategies for JCS - SaaS Extension and Oracle Sales Cloud interactions</a> for more details.</li>
+<li>For Java Cloud Service - SaaS Extension, a user with the <em>Java Administrator</em> Role to deploy an application to the Java Cloud Service - SaaS Extension instance is required. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-9C1BA413-EB5D-429C-AECA-4069995385EF">Getting a JCS - SaaS Extension Subscription</a> for more details about the <em>Java Administrator</em> Role. Refer to Chapter 7, &quot;Managing Users and Roles&quot; in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=CSGSG166">Getting Started with Oracle Cloud</a> for more details on creating users.</li>
+</ol>
+<h2 id="running-the-sample">Running the Sample</h2>
+<ol type="1">
+<li><p>Create a new user or use an existing user that exists in both Oracle Sales Cloud and Java Cloud Service-SaaS Extension. For Java Cloud Service - SaaS Extension, refer to Chapter 7, &quot;Managing Users and Roles&quot; in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=CSGSG166">Getting Started with Oracle Cloud</a> for more details. For Sales Cloud, refer to Chapter 5, &quot;About Oracle Sales Cloud Users&quot;, in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=OSCUS1288015">Securing Oracle Sales Cloud</a>.</p></li>
+<li><p>A Sales Cloud user needs to be assigned a custom role. This role needs to be created in Sales Cloud. Refer to Chapter 12, &quot;Customizing Security&quot;, in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=OSCUS1239294">Securing Oracle Sales Cloud</a> for details.</p></li>
+</ol>
+<h2 id="install-instructions">Install Instructions</h2>
+<h3 id="installation-steps">Installation Steps</h3>
+<p>Clone the Git repository locally. You can also download the code from OTN to your local working directory and follow the same steps below. However the remaining steps will assume that you are using git.</p>
+<h3 id="oracle-database-cloud-service-database-schema">Oracle Database Cloud Service (Database Schema)</h3>
+<p>Run the SQL scripts included in the source code using the SQL command in Oracle Database Cloud Service (Database Schema). For more details about the steps to access the SQL command, refer to the SQL Script section of <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-0B2A2A62-BFB1-48C3-9398-23B7896E0E89">Creating Data Models in Oracle Database Cloud Service - Database Schema</a>.</p>
+<p><em>git-home</em>/lead-capture-app-sso/DbCS/sql/crTable_LEAD_CAPTURE_SYS_SSO.sql</p>
+<p>To confirm script execution, verify that the <code>LEAD_CAPTURE_SYS_SSO</code> table has been created in the Oracle Database Cloud Service (Database Schema) console.</p>
+<h3 id="java-cloud-service---saas-extension">Java Cloud Service - SaaS Extension</h3>
+<p>Use JDeveloper to build the ADF application EAR and deploy it to Java Cloud Service - SaaS Extension:</p>
+<ol type="1">
+<li>Open the .jws in JDeveloper or Eclipse. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-645953AE-3C6F-40DD-AF06-03D466DEFECE">Configuring IDEs for Developing with JCS - SaaS Extension</a> for more details about configuring JDeveloper/Eclipse. Further steps in this readme will refer to JDeveloper although similar steps can be performed in Eclipse.</li>
+<li>Change in the IE or with an editor the values for the token <em>@<span class="citation" data-cites="datasource-servicename">@datasource-servicename</span>@@</em> in the file JCS-SX/ModelLeadCaptureSys/src/oracle/cloud/sampleaapps/leadcapturesys/model/common/bc4j.xcfg and for token <em>@<span class="citation" data-cites="your_sales_cloud_URL">@your_sales_cloud_URL</span>@@</em> in file JCS-SX/ViewLCS/public_html/LeadCapture.jspx.</li>
+<li>Deploy the application to your Java Cloud Service - SaaS Extension instance. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploying Applications Individually Using JCS - SaaS Extension Control</a> for more details.</li>
+</ol>
+<p>Create an application user for testing purposes.</p>
+<h3 id="oracle-sales-cloud">Oracle Sales Cloud</h3>
+<p>Create a test user in Oracle Sales Cloud with the same user ID as the one created in Java Cloud Service - SaaS Extension.</p>
+<ol type="1">
+<li>See Chapter 5, &quot;About Oracle Sales Cloud Users&quot;, in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=OSCUS1288015">Securing Oracle Sales Cloud</a> for details.</li>
+<li>Special consideration for custom role. Refer to Chapter 12, &quot;Customizing Security&quot;, in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=OSCUS1239294">Securing Oracle Sales Cloud</a> for details. Also refer to documents listed below for additional information:
+<ul>
+<li><a href="https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=288586409880989&amp;id=1451022.1">How to Create a Custom Role with Restricted Privileges in Fusion Applications - Doc ID 1451022.1</a></li>
+<li><a href="https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=288586409880989&amp;id=1459828.1">Mapping Of Duty Roles To Top Level Menu Entries in Fusion Applications - Doc ID 1459828.1</a></li>
+<li><a href="https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=288586409880989&amp;id=1460486.1">Mapping Of Roles, Duties and Privileges in Fusion Applications - Doc ID 1460486.1</a></li>
+<li><a href="https://support.oracle.com/epmos/faces/DocumentDisplay?_afrLoop=288586409880989&amp;id=1631632.2">Information Center: Oracle Fusion Application - Fusion Security - &quot;User - Role Administration&quot; - Doc ID 1631632.2</a></li>
+</ul></li>
+</ol>
+<h2 id="running-the-sample-application">Running the Sample Application</h2>
+<p>To run the sample:</p>
+<ol type="1">
+<li><p>After being deployed the ADF application for Lead Capture can be opened using this link:</p>
+<p><strong>https://your_jcs-sx_url/LeadCaptureSys-ViewLCS-context-root</strong></p></li>
+<li>To test the functionality:
+<ol type="1">
+<li>Open the URL to the Java Cloud Service - SaaS Extension page (the URL above) in a different window.</li>
+<li>When the Login Page appears, click the &quot;Sign in using Company&quot; link on the bottom. You will be redirected to the Oracle Sales Cloud login page.</li>
+<li>Enter the login credentials. You will be redirected again to your Java application.</li>
+<li>After seeing the page displayed correctly, click the Manage Leads and Contacts button. You should be taken to the Oracle Sales Cloud instances where you can continue with your activities. You should not be prompted to login again.</li>
+</ol></li>
+</ol>
+<h2 id="additional-information">Additional information</h2>
+<p>For more details about this sample and other related samples refer to Oracle Cloud Solutions at <a href="https://cloud.oracle.com/developer/solutions">https://cloud.oracle.com/developer/solutions</a></p>
+<h2 id="uninstall-instructions">Uninstall Instructions</h2>
+<h3 id="oracle-database-cloud-service-database-schema-1">Oracle Database Cloud Service (Database Schema)</h3>
+<p>Drop the table and sequence from Oracle Database Cloud Service (Database Schema). You can borrow the two drop statements from the <code>crTable_LEAD_CAPTURE_SYS_SSO.sql</code> script.</p>
+<h3 id="java-cloud-service---saas-extension-1">Java Cloud Service - SaaS Extension</h3>
+<ol type="1">
+<li>Undeploy the application from Java Cloud Service - SaaS Extension. Refer to the Undeploy section in <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploying Applications Individually Using JCS - SaaS Extension Control</a> for more details.</li>
+<li>Remove the application from JDeveloper.</li>
+<li>Remove the files from your local file system.</li>
+</ol>
+<h3 id="oracle-sales-cloud-1">Oracle Sales Cloud</h3>
+<ol type="1">
+<li>Deactivate the restricted user in Oracle Sales Cloud.</li>
+<li>If necessary, delete the custom role that was created to support this application.</li>
+</ol>
+<h2 id="known-issues">Known Issues</h2>
+<p>There are no known issues with the sample.</p>
+<p>Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved</p>
+</body>
+</html>

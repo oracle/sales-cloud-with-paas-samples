@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<!-- Copyright © 2015, Oracle and/or its affiliates. All rights reserved -->
+<weblogic-web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://www.bea.com/ns/weblogic/weblogic-web-app http://www.bea.com/ns/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd"
+                  xmlns="http://www.bea.com/ns/weblogic/weblogic-web-app">
+  <security-role-assignment>
+    <role-name>dealerManager</role-name>
+    <principal-name>DealerManager</principal-name>
+  </security-role-assignment>
+  <security-role-assignment>
+    <role-name>dealer</role-name>
+    <principal-name>Dealer</principal-name>
+  </security-role-assignment>
+</weblogic-web-app>

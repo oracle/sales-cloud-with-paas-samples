@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <Page
+      id="Page2">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="y">205.51855</property>
+      <property
+         name="x">233.02344</property>
+      <property
+         name="jspName">/LeadCapture.jspx</property>
+   </Page>
+</SDM>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="NewsVO"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <Variable
+    Name="pEvenOrOdd"
+    Kind="viewcriteria"
+    Type="java.lang.String"/>
+  <SQLQuery>
+    <![CDATA[SELECT
+    News.NEWS_ID,
+    News.TITLE,
+    News.BODY,
+    (mod(News.NEWS_ID,2)) as NewsIdMod2
+FROM S4_NEWS News]]>
+  </SQLQuery>
+  <EntityUsage
+    Name="News"
+    Entity="oracle.cloud.sampleapps.accountdetails.model.entity.News"/>
+  <ViewAttribute
+    Name="NewsId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="NewsId"
+    EntityUsage="News"
+    AliasName="NEWS_ID"/>
+  <ViewAttribute
+    Name="Title"
+    PrecisionRule="true"
+    EntityAttrName="Title"
+    EntityUsage="News"
+    AliasName="TITLE"/>
+  <ViewAttribute
+    Name="Body"
+    PrecisionRule="true"
+    EntityAttrName="Body"
+    EntityUsage="News"
+    AliasName="BODY"/>
+  <ViewAttribute
+    Name="Newsidmod2"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="NEWSIDMOD2"
+    Expression="NEWSIDMOD2"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewCriteria
+    Name="FilterByEvenOrOddNewsId"
+    ViewObjectName="oracle.cloud.sampleapps.accountdetails.model.view.NewsVO"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="vcrow34"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="Newsidmod2"
+        ViewAttribute="Newsidmod2"
+        Operator="="
+        Conjunction="AND"
+        Value=":pEvenOrOdd"
+        GenerateIsNullClauseForBindVars="false"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+</ViewObject>

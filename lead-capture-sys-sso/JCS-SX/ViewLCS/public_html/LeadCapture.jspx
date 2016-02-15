@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document title="Prospect activity time tracking" id="d1">
+      <af:form id="f1" inlineStyle="font-size:100.0%;"> 
+        <af:panelStretchLayout id="psl1" topHeight="240px" startWidth="30px"
+                               endWidth="30px" bottomHeight="10px">
+          <f:facet name="top">
+            <af:panelGridLayout id="grid1">
+              <af:gridRow id="gr1" marginTop="20px" marginBottom="20px" height="30px">
+                <af:gridCell id="gc1" marginStart="30px" marginEnd="10px" width="80%"
+                       halign="start" valign="top">
+                  <af:outputFormatted id="of1"
+                         inlineStyle="font-size:x-large; font-weight:bold; text-align:left;" value="Welcome #{securityContext.userName}"/>
+                </af:gridCell>
+                <af:gridCell id="gc2" marginStart="10px" marginEnd="30px" width="20%"
+                       halign="end" valign="top">
+                  <af:goLink destination="https://cloud.oracle.com/home" text="Demo Guide" id="demoLink" targetFrame="_blank"
+                                   inlineStyle="text-align:right;"/>
+                </af:gridCell>
+              </af:gridRow>
+              <af:gridRow id="gr2" marginBottom="5px" height="30px" marginTop="5px">
+               <af:gridCell id="gc3" width="50%" halign="start" valign="bottom" marginStart="30px" marginEnd="10px">
+                 <af:outputFormatted id="of2" value="Click button below to create, edit and view your leads."/>
+               </af:gridCell>         
+               <af:gridCell id="gc4" width="50%" halign="stretch" valign="stretch">
+                 <af:outputText id="ot4" value=" "/>
+               </af:gridCell>
+             </af:gridRow>
+              <af:gridRow id="gr3" marginBottom="20px" height="50px" marginTop="5px">
+               <af:gridCell id="gc5" width="50%" halign="start" valign="top" marginStart="30px" marginEnd="10px">
+                 <af:goButton text="Manage Leads and Contacts" id="leadButton"
+                               destination="https://@@your_sales_cloud_URL@@/customer/faces/CrmFusionHome"
+                               targetFrame="_blank"/>
+               </af:gridCell>         
+               <af:gridCell id="gc6" width="50%" halign="start" valign="top">
+                 <af:outputText id="ot6" value=" "/>
+               </af:gridCell>
+             </af:gridRow>             
+             <af:gridRow id="gr4" marginBottom="3px" height="30px" marginTop="10px">
+               <af:gridCell id="gc7" width="50%" halign="start" valign="bottom" marginStart="30px" marginEnd="10px">
+                <af:outputFormatted id="of8" value="Time Tracker"
+                            inlineStyle="font-weight:bold; font-size:large;"/>
+               </af:gridCell>
+               <af:gridCell id="gc8" width="50%" halign="end" valign="bottom" marginStart="30px" marginEnd="10px">
+                 <af:commandButton text="New Time Entry"
+                              disabled="#{!bindings.CreateInsert.enabled}"
+                              id="cbInsert" useWindow="false"
+                                   windowModalityType="applicationModal">
+                   <af:showPopupBehavior popupId="insertPopup"/>
+                 </af:commandButton>
+               </af:gridCell>
+             </af:gridRow>
+           </af:panelGridLayout>
+          </f:facet>
+          <f:facet name="start">
+            <af:outputText id="s" value=" "/>
+          </f:facet>
+          <f:facet name="center">
+            <af:table value="#{bindings.LeadCaptureSysVO11.collectionModel}"
+                  var="row" rows="#{bindings.LeadCaptureSysVO11.rangeSize}"
+                  emptyText="#{bindings.LeadCaptureSysVO11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  fetchSize="#{bindings.LeadCaptureSysVO11.rangeSize}"
+                  rowBandingInterval="0"
+                  filterModel="#{bindings.LeadCaptureSysVO11Query.queryDescriptor}"
+                  queryListener="#{bindings.LeadCaptureSysVO11Query.processQuery}"
+                  filterVisible="true" varStatus="vs" id="t1"
+                  styleClass="AFStretchWidth" columnStretching="last"
+                  partialTriggers="::d2 ::cbInsert" summary=" ">
+              <af:column sortProperty="#{bindings.LeadCaptureSysVO11.hints.ProspectName.name}"
+                     filterable="true" sortable="true" rowHeader="unstyled"
+                     headerText="#{bindings.LeadCaptureSysVO11.hints.ProspectName.label}"
+                     id="c3" width="210">
+                <af:outputFormatted value="#{row.bindings.ProspectName.inputValue}"
+                                id="of7"/>
+              </af:column>
+              <af:column sortProperty="#{bindings.LeadCaptureSysVO11.hints.DemoCompleted.name}"
+                     filterable="true" sortable="true"
+                     headerText="#{bindings.LeadCaptureSysVO11.hints.DemoCompleted.label}"
+                     id="c1">
+                <af:selectBooleanCheckbox value="#{row.bindings.DemoCompleted.attributeValue == 'Y' ? true : false}"
+                                id="sbc1" disabled="true" autoSubmit="true" simple="false"
+                                      label=" "/>
+              </af:column>
+              <af:column sortProperty="#{bindings.LeadCaptureSysVO11.hints.LeadRecUpdated.name}"
+                     filterable="true" sortable="true"
+                     headerText="#{bindings.LeadCaptureSysVO11.hints.LeadRecUpdated.label}"
+                     id="c5">
+                <af:selectBooleanCheckbox value="#{row.bindings.LeadRecUpdated.attributeValue == 'Y' ? true : false}"
+                                id="sbc2" disabled="true" autoSubmit="true" simple="false"
+                                       label=" "/>
+              </af:column>
+              <af:column sortProperty="#{bindings.LeadCaptureSysVO11.hints.VisitDate.name}"
+                     filterable="true" sortable="true"
+                     headerText="#{bindings.LeadCaptureSysVO11.hints.VisitDate.label}"
+                     id="c6">
+                <f:facet name="filter">
+                  <af:inputDate value="#{vs.filterCriteria['#{bindings.LeadCaptureSysVO11.hints.VisitDate.name}']}" id="id3"
+                            label=" "/>
+                </f:facet>
+                <af:outputFormatted value="#{row.bindings.VisitDate.inputValue}"
+                                id="of3">
+                  <af:convertDateTime pattern="#{bindings.LeadCaptureSysVO11.hints.VisitDate.format}"/>
+                </af:outputFormatted>
+              </af:column>
+              <af:column sortProperty="#{bindings.LeadCaptureSysVO11.hints.StartTime.name}"
+                     filterable="true" sortable="true"
+                     headerText="#{bindings.LeadCaptureSysVO11.hints.StartTime.label}"
+                     id="c2">
+                <f:facet name="filter">
+                  <af:inputDate value="#{vs.filterCriteria['#{bindings.LeadCaptureSysVO11.hints.StartTime.name}']}" id="id2"
+                            label=" "/>
+                </f:facet>
+                <af:outputFormatted value="#{row.bindings.StartTime.inputValue}"
+                                id="of6">
+                  <af:convertDateTime pattern="#{bindings.LeadCaptureSysVO11.hints.StartTime.format}"/>
+                </af:outputFormatted>
+              </af:column>
+              <af:column sortProperty="#{bindings.LeadCaptureSysVO11.hints.EndTime.name}"
+                     filterable="true" sortable="true"
+                     headerText="#{bindings.LeadCaptureSysVO11.hints.EndTime.label}"
+                     id="c7">
+                <f:facet name="filter">
+                  <af:inputDate value="#{vs.filterCriteria['#{bindings.LeadCaptureSysVO11.hints.EndTime.name}']}" id="id1"
+                            label=" "/>
+                </f:facet>
+                <af:outputFormatted value="#{row.bindings.EndTime.inputValue}"
+                                id="of4">
+                  <af:convertDateTime pattern="#{bindings.LeadCaptureSysVO11.hints.EndTime.format}"/>
+                </af:outputFormatted>
+              </af:column>
+              <af:column sortProperty="#{bindings.LeadCaptureSysVO11.hints.Notes.name}"
+                     filterable="true" sortable="true"
+                     headerText="#{bindings.LeadCaptureSysVO11.hints.Notes.label}"
+                     id="c4">
+                <af:outputFormatted value="#{row.bindings.Notes.inputValue}"
+                                id="of5"/>
+              </af:column>
+            </af:table>
+          </f:facet>    
+          <f:facet name="end">
+            <af:outputText id="e" value=" "/>
+          </f:facet>
+          <f:facet name="bottom">
+            <af:outputText id="b" value=" "/>
+          </f:facet>
+        </af:panelStretchLayout>
+        <af:popup id="insertPopup"
+                  popupFetchListener="#{backing_Main.editPopupFetchListener}"
+                  popupCanceledListener="#{backing_Main.editPopupCancelListener}"
+                  contentDelivery="lazyUncached" partialTriggers="d2">
+          <af:dialog id="d2" type="okCancel" title="New Record" resize="on"
+                   dialogListener="#{backing_Main.editDialogListener}"
+                     modal="true" partialTriggers="pfl1">
+            <af:panelFormLayout id="pfl1" inlineStyle="width:800px;">
+              <af:inputText value="#{bindings.ProspectName.inputValue}"
+                            label="#{bindings.ProspectName.hints.label}"
+                            required="#{bindings.ProspectName.hints.mandatory}"
+                            columns="#{bindings.ProspectName.hints.displayWidth}"
+                            maximumLength="#{bindings.ProspectName.hints.precision}"
+                            shortDesc="#{bindings.ProspectName.hints.tooltip}"
+                            id="it2">
+                <f:validator binding="#{bindings.ProspectName.validator}"/>
+              </af:inputText>
+              <af:selectOneRadio value="#{bindings.DemoCompleted.inputValue}"
+                                        label="#{bindings.DemoCompleted.label}"
+                                        shortDesc="#{bindings.DemoCompleted.hints.tooltip}"
+                                        autoSubmit="true" styleClass="messageRadio" id="sor1"  
+                                        layout="horizontal"
+                                        required="true" showRequired="true">                                                 
+                <af:selectItem value="Y" label="Yes" id="si1Req"/>  
+                <af:selectItem value="N" label="No" id="si2Req"/>  
+              </af:selectOneRadio>
+              <af:selectOneRadio value="#{bindings.LeadRecUpdated.inputValue}"
+                                        label="#{bindings.LeadRecUpdated.label}"
+                                        shortDesc="#{bindings.LeadRecUpdated.hints.tooltip}"
+                                        autoSubmit="true" styleClass="messageRadio" id="sor2"  
+                                        layout="horizontal"
+                                        required="true" showRequired="true"
+                                 changed="true">                                                 
+                <af:selectItem value="Y" label="Yes" id="si3Req"/>  
+                <af:selectItem value="N" label="No" id="si4Req"/>  
+              </af:selectOneRadio>
+              <af:inputDate value="#{bindings.VisitDate.inputValue}"
+                            label="#{bindings.VisitDate.hints.label}"
+                            required="#{bindings.VisitDate.hints.mandatory}"
+                            shortDesc="#{bindings.VisitDate.hints.tooltip}"
+                            id="id5">
+                <f:validator binding="#{bindings.VisitDate.validator}"/>
+                <af:convertDateTime pattern="#{bindings.VisitDate.format}"/>
+              </af:inputDate>
+              <af:inputDate value="#{bindings.StartTime.inputValue}"
+                            label="#{bindings.StartTime.hints.label}"
+                            required="#{bindings.StartTime.hints.mandatory}"
+                            shortDesc="#{bindings.StartTime.hints.tooltip}"
+                            id="id6">
+                <af:convertDateTime pattern="#{bindings.StartTime.format}"/>
+              </af:inputDate>
+              <af:inputDate value="#{bindings.EndTime.inputValue}"
+                            label="#{bindings.EndTime.hints.label}"
+                            required="#{bindings.EndTime.hints.mandatory}"
+                            shortDesc="#{bindings.EndTime.hints.tooltip}"
+                            id="id4">
+                <f:validator binding="#{bindings.EndTime.validator}"/>
+                <af:convertDateTime pattern="#{bindings.EndTime.format}"/>
+              </af:inputDate>
+              <af:inputText value="#{bindings.Notes.inputValue}"
+                            label="#{bindings.Notes.hints.label}"
+                            required="#{bindings.Notes.hints.mandatory}"
+                            columns="#{bindings.Notes.hints.displayWidth}"
+                            maximumLength="#{bindings.Notes.hints.precision}"
+                            shortDesc="#{bindings.Notes.hints.tooltip}"
+                            inlineStyle="width:500px;"
+                            id="it1">
+                <f:validator binding="#{bindings.Notes.validator}"/>
+              </af:inputText>
+            </af:panelFormLayout>
+          </af:dialog>                      
+        </af:popup>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="readme-for-oracle-cloud---paas-for-saas-sample">README for Oracle Cloud - PaaS for SaaS Sample</h1>
+<h2 id="sample-name">Sample Name</h2>
+<p>Sales Preparation Insight</p>
+<h2 id="sample-name">Authors</h2>
+<p>Ulrich Janke, Oracle A-Team; Dolf Djikstra, Oracle A-Team</p>
+<h2 id="source-location">Source Location</h2>
+<ul>
+<li>GitHub: <a href="https://github.com/oracle/sales-cloud-with-paas.git">https://github.com/oracle/sales-cloud-with-paas.git</a></li>
+<li>OTN: <a href="http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html">http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html</a></li>
+</ul>
+<h2 id="oracle-cloud-products-involved">Oracle Cloud Products Involved</h2>
+<ul>
+<li>Oracle Java Cloud Service - SaaS Extension</li>
+<li>Oracle Sales Cloud</li>
+<li>Oracle Database Cloud Service (Database Schema)</li>
+<li>Oracle JDeveloper Cloud specific version (11.1.1.7.1 or higher) / Oracle Enterprise pack for Eclipse available at <a href="http://www.oracle.com/technetwork/topics/cloud/downloads/index.html">this</a> location on OTN</li>
+</ul>
+<h2 id="demonstrates">Demonstrates</h2>
+<p>This sample demonstrates the following aspects of Oracle Cloud integration</p>
+<h3 id="primary-goals">Primary Goals</h3>
+<ul>
+<li>Showcase JCS - SaaS Extension as an option to build UI extensions to Oracle Sales Cloud. An ADF application is deployed in JCS - SaaS Extension with the same look and feel as Oracle Sales Cloud. This extended UI will be embedded within the Oracle Sales Cloud UI.</li>
+<li>To leverage pre-wired SSO between Oracle Sales Cloud and JCS - SaaS Extension such that the embedded application (which by itself is protected) does not challenge an already logged-in Oracle Sales Cloud user.</li>
+</ul>
+<h3 id="secondary-goals">Secondary Goals</h3>
+<ul>
+<li>To showcase Oracle Database Cloud Service (Database Schema) as the data store for the application deployed on JCS - SaaS Extension.</li>
+</ul>
+<h2 id="functional-overview">Functional Overview</h2>
+<p>Prior to meeting their existing accounts for additional sales opportunities, the sales representatives of XYZ Inc. would like to know if these accounts have any critical or long pending Service Requests (SRs) that are open and relevant to their sales process. With this insight the representatives are able to reach out to internal teams to understand more about these SRs. The sales reps would like to see the list of these SRs along with their statuses automatically show up for each account on Oracle Sales Cloud, rather than having to reach out to the Service team of their organization to obtain the same information. Additionally, the reps would also like to be current on the latest news about their accounts such as leadership changes, recent announcements, or anything else that may impact their selling ability. This insight could come from their internal research team or public websites.</p>
+<h2 id="technical-overview">Technical Overview</h2>
+<p>The Sales Preparation Insight application is deployed to JCS - SaaS Extension and displays the open SRs related to a given customer. The application also provides news articles from internal sources and public news that match the account name or the industry name. For the sake of simplicity this application mocks up all this data. The mock data is stored in Oracle Database Cloud Service (Database Schema). Based on the account ID, which is passed as a URL parameter to this application, different mock data is shown.</p>
+<p>This application is then embedded as an iFrame within the Account widget of the Oracle Sales Cloud UI. Whenever a sales rep opens an account, he or she can click a sub-tab for that account that displays this embedded application.</p>
+<p>The key objective of this sample is to show that the embedded application, although running as a protected application on JCS - SaaS Extension, does not show a log in page when a sales rep navigates to the sub-tab. This is because of the pre-wired SSO configuration between Oracle Sales Cloud and JCS - SaaS Extension. Since the sales rep is already signed into Oracle Sales Cloud, the embedded page is directly displayed. (See the Known Issues section at the end of this README if you encounter problems.)</p>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>All sample code is provided by Oracle for illustrative purposes only. The objective of these samples is to demonstrate the goals defined above and may not represent other best practices, either functional or technical. These sample code examples have not been thoroughly tested under all conditions. Oracle, therefore, cannot guarantee or imply security, reliability, serviceability, or function of the sample code. All sample code contained herein are provided to you &quot;AS IS&quot; without any warranties of any kind. The implied warranties of non-infringement, merchantability and fitness for a particular purpose are expressly disclaimed.</p>
+<h2 id="user-and-role-setup">User and Role Setup:</h2>
+<h3 id="setting-up-the-sample">Setting up the Sample</h3>
+<ol type="1">
+<li>The JCS - SaaS Extension and Oracle Sales Cloud instances should be associated. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-9C1BA413-EB5D-429C-AECA-4069995385EF">Getting a JCS - SaaS Extension Subscription</a> and <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-19C1D17A-195D-4CB3-AD04-0224F629165B">Security Strategies for JCS - SaaS Extension and Oracle Sales Cloud interactions</a> for more details.</li>
+<li>For JCS - SaaS Extension, a user with the <em>Java Administrator</em> Role to deploy an application to the JCS - SaaS Extension instance is required. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-9C1BA413-EB5D-429C-AECA-4069995385EF">Getting a JCS - SaaS Extension Subscription</a> for more details about the <em>Java Administrator</em> Role. Refer to Chapter 7, &quot;Managing Users and Roles&quot; in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=CSGSG166">Getting Started with Oracle Cloud</a> for more details on creating users.</li>
+</ol>
+<h3 id="running-the-sample">Running the Sample</h3>
+<p>Create a new user or use an existing user that exists in both Oracle Sales Cloud and JCS - SaaS Extension. The role of this user in Oracle Sales Cloud could be <em>Sales Administrator</em>. There is no role logic for the user in JCS - SaaS Extension in this sample.</p>
+<h2 id="install-instructions">Install Instructions</h2>
+<p>Clone the Git repository to your local working directory. The steps below will assume that you are using git. However you can also download the code from OTN to your local working directory and follow the same steps below.</p>
+<h3 id="oracle-database-cloud-service-database-schema">Oracle Database Cloud Service (Database Schema)</h3>
+<p>Run the SQL scripts included in the source code using the SQL command in Oracle Database Cloud Service (Database Schema). For more details about the steps to access the SQL command, refer to the SQL Script section of <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-0B2A2A62-BFB1-48C3-9398-23B7896E0E89">Creating Data Models in Oracle Database Cloud Service - Database Schema</a>.</p>
+<p><em>git-home</em>/sales-prep-insight-sso/DbCS/SalesPrepCreateInsert.sql</p>
+<h3 id="jcs---saas-extension">JCS - SaaS Extension</h3>
+<p>Use JDeveloper to build the ADF application EAR and deploy it to JCS-SaaS Extension:</p>
+<ol type="1">
+<li>Open the .jws in JDeveloper or Eclipse. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-645953AE-3C6F-40DD-AF06-03D466DEFECE">Configuring IDEs for Developing with JCS - SaaS Extension</a> for more details about configuring JDeveloper or Eclipse. Further steps in this readme will refer to JDeveloper although similar steps can be performed in Eclipse.</li>
+<li>In the IDE, open the file AccountDetailsAM.xml under Model &gt; Application Sources &gt; oracle.cloud.sampleapps &gt; accountdetails &gt; model &gt; AccountDetailsAM, click on configurations, double click AccountDetailsAMLocal, and under the Connection type, the existing value will be YourDbCSDataSourceName. Change this to the JNDI name of the Datasource as provided in the JCS - SaaS Extension console. During development/debug time, you will likely be working with a local instance (instead of JCS - SaaS Extension). In that case, you can change the connection type to <em>JDBC URL</em> and provide the JDBC URL of the local database.</li>
+<li><p>ADF applications are automatically configured for framebusting to prevent other applications from embedding them. This measure is normally used to ensure the correct formatting and to prevent click-jacking. Because, in this special Oracle Cloud to Oracle Cloud extension use case, we require embedding, the ADF Application should be manually configured to disable Framebusting (refer to Known Issues for more details). In the IDE, open the file web.xml under ViewController &gt; Web Content &gt; WEB-INF. Click on the Source Tab. At the end of the last context-param XML tag and before the beginning of the filter XML tag, paste the following code:</p>
+<pre><code>&lt;context-param&gt;
+  &lt;!-- Setting FRAME_BUSTING to NEVER avoids this error - Refused to display &#39;http://...&#39; in a frame because it set &#39;X-Frame-Options&#39; to &#39;sameorigin&#39;--&gt;
+  &lt;description&gt; Security precaution to prevent clickjacking- bust frames if the ancestor window domain (protocol, host, and port) and the frame domain are different. Another options for this parameter are always and never &lt;/description&gt;
+        &lt;param-name&gt;org.apache.myfaces.trinidad.security.FRAME_BUSTING&lt;/param-name&gt;
+        &lt;param-value&gt;never&lt;/param-value&gt;
+&lt;/context-param&gt;</code></pre></li>
+<li><p>Deploy the application to your JCS - SaaS Extension instance. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploying Applications Individually Using JCS - SaaS Extension Control</a> for more details.</p></li>
+</ol>
+<h3 id="oracle-sales-cloud">Oracle Sales Cloud</h3>
+<p>Make customizations to Oracle Sales Cloud to embed the ADF UI.</p>
+<p><strong>NOTE</strong>: It is critical to perform all Oracle Sales Cloud development/customization work in an activated sandbox. Not only does this aid in testing and debugging, but it also greatly simplifies un-installing/rolling back sample application extensions when required. Given that all customizations will be isolated to a sandbox, it is necessary to communicate sandbox details to others so that they can interact with sample application customizations while acting in different roles.</p>
+<p>The steps involved in rolling back Oracle Sales Cloud customizations published from sandboxes to the main code line will not be documented here.</p>
+<ol type="1">
+<li>Create or activate a sandbox as required. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-73F02E54-38FB-4081-BD9D-4570DD26CDBD">Understanding the Basics of Oracle Sales Cloud Customization and Integration Features</a> for details.</li>
+<li>Register AccountDetails as a third party app.</li>
+</ol>
+<ul>
+<li><em>Application Name:</em> AccountDetails</li>
+<li><em>Partner Name:</em> AccountDetails</li>
+<li><em>Full URL:</em> https://your_sales_cloud_URL/AccountDetails. For instructions on registering a Third Party App, refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-73F02E54-38FB-4081-BD9D-4570DD26CDBD">Understanding the Basics of Oracle Sales Cloud Customization and Integration Features</a> for more details.</li>
+</ul>
+<ol start="3" type="1">
+<li>Add a sub-tab to the Account page's details.</li>
+<li>Click the Navigator icon to open the Navigator menu.</li>
+<li>Click the Tools icon if necessary to expand its contents, then click Application Composer.</li>
+<li>Expand <em>Standard Objects</em> under the Objects item on the left.</li>
+<li>Expand <em>Account</em> and click <em>Pages</em>.</li>
+<li>At the Account: Pages screen, on the <em>Simplified Pages</em> tab, select the <em>Default Layout</em> row in the table under the &quot;Details Page Layout&quot; section.<br /></li>
+<li>Click Actions &gt; Edit Layout</li>
+<li>This will open the Details Layout: Default Layout screen. It resembles the live <em>Account Details</em> screen. Along the left side will be a set of vertical tabs. At the bottom of those tabs will be a green plus Add icon that will allow a new tab to be added. Click the Add icon.</li>
+<li>At the Details Layout: Default Layout: Create Subtab screen, select <em>Web Content.</em> A Web content subtab exposes content from an external Web site.</li>
+<li>Click Next.</li>
+<li>In the <em>Basic Information</em> section, enter <em>Service Requests</em> for <em>Display Label</em> and <em>Service Requests and News</em> for the Description.</li>
+<li>In the <em>URL Definition</em> section, copy the content from the ServiceRequestSubTab.groovy file found under: <em>git-home</em>/sales-prep-insight-sso/SalesCloud/common/standard/account/pages/details-page-layout _into the Groovy editor.</li>
+<li>Click <em>Save and Close.</em></li>
+<li>Click Done.</li>
+</ol>
+<h2 id="running-the-sample-1">Running the Sample</h2>
+<p>To run the sample:</p>
+<ol type="1">
+<li>Log out of Oracle Sales Cloud and JCS-SaaS Extension.</li>
+<li>Launch the Oracle Sales Cloud application.</li>
+<li>Log in as a user with Sales Administrator privileges. This role allows access to sales functions required to run the sample as well as allowing access to sandbox management. As discussed earlier, this user should exist in JCS - SaaS Extension as well.</li>
+<li>Click the Home icon in the navigation menu.</li>
+<li>Click the Accounts icon.</li>
+<li>Click on an Account in the search results. <em>Note</em>: An account may need to be created if none are present.</li>
+<li>Click the &quot;Service Requests&quot; subtab.</li>
+<li>During the first time you do this, you may be prompted with a login page. Select <em>Remember my choice</em> and click on <em>Sign In Using Company</em>. This is a one time setup. You will not be prompted the next time, until you log out of Oracle Sales Cloud (see Known Issues for additional information).</li>
+<li>Now the AccountDetails ADF application will be displayed within a subtab of the Oracle Sales Cloud Account.</li>
+</ol>
+<h2 id="uninstall-instructions">Uninstall Instructions</h2>
+<h3 id="oracle-database-cloud-service-database-schema-1">Oracle Database Cloud Service (Database Schema)</h3>
+<p>Run the SQL script SalesPrepDropTables.sql included in the source code (under /sales-prep-insight-sso/DbCS/sql/) using the SQL command in Oracle Database Cloud Service (Database Schema). Refer to the SQL Script section of <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-0B2A2A62-BFB1-48C3-9398-23B7896E0E89">Creating Data Models in Oracle Database Cloud Service Database Schema</a> for more details about the steps to access the SQL command.</p>
+<h3 id="jcs---saas-extension-1">JCS - SaaS Extension</h3>
+<p>Undeploy the application from JCS - SaaS Extension. Refer to the Undeploy section in <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploying Applications Individually to JCS - SaaS Extension</a> for more details.</p>
+<h3 id="oracle-sales-cloud-1">Oracle Sales Cloud</h3>
+<p>Remove the customizations from Oracle Sales Cloud.</p>
+<ol type="1">
+<li>Deactivate and delete the development sandbox. This will roll back all customizations to Oracle Sales Cloud.</li>
+</ol>
+<h2 id="known-issues">Known Issues</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Issue</th>
+<th style="text-align: left;">Workaround</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">After clicking the newly added &quot;Service Requests&quot; tab and authenticating, the ADF page that is supposed to be embedded in the Oracle Sales Cloud's Account Details area takes up the full browser display area. Additionaly, sometimes after authenticating, a 500 error will occur and the ADF page will not display at all. If, however, the user is already authenticated with JCS - SaaS Extension, either by authenticating directly with the JCS - SaaS Extension login or by clicking the new tab and choosing &quot;Sign in Using Company&quot; previously, the ADF page will appear embedded in the <em>Service Requests</em> tab.</td>
+<td style="text-align: left;">Log into JCS - SaaS Extension prior to clicking the <em>Service Requests</em> tab.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">ADF applications are automatically configured for framebusting to prevent other applications from embedding them. This measure is normally used to ensure the correct formatting and to prevent click-jacking. Because, in this special Oracle Cloud to Oracle Cloud extension usecase, we require embedding, the ADF Application should be manually configured to disable Framebusting.</td>
+<td style="text-align: left;">Oracle will provide automated mechanisms for ensuring that framebusting is automatically disabled only for Oracle Cloud-Oracle Cloud interactions. Until then, please apply the workaround mentioned in the install steps. <em>Note</em>: Ensure that you always protect your ADF application for authentication</td>
+</tr>
+</tbody>
+</table>
+<p>Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved</p>
+</body>
+</html>

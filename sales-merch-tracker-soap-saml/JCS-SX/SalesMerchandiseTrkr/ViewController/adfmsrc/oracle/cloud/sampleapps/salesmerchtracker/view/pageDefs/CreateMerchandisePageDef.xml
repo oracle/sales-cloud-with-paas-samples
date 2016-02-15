@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="CreateMerchandisePageDef"
+                Package="oracle.cloud.sampleapps.salesmerchtracker.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="S2MerchandiseTxnView1" RangeSize="25"
+              DataControl="SalesMerchandiseTrkrAMDataControl"
+              id="S2MerchandiseTxnView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="S2MerchandiseTxnView1Iterator"
+                     id="AccountName">
+      <AttrNames>
+        <Item Value="AccountName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="S2MerchandiseTxnView1Iterator" id="Quantity">
+      <AttrNames>
+        <Item Value="Quantity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="S2MerchandiseTxnView1Iterator"
+                     id="DateDelivered">
+      <AttrNames>
+        <Item Value="DateDelivered"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="SalesMerchandiseTrkrAMDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false"
+            Action="rollbackTransaction"
+            DataControl="SalesMerchandiseTrkrAMDataControl"/>
+    <attributeValues IterBinding="S2MerchandiseTxnView1Iterator" id="UnitCost">
+      <AttrNames>
+        <Item Value="UnitCost"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="S2MerchandiseTxnView1Iterator" StaticList="false"
+          Uses="LOV_MerchandiseCode" id="MerchandiseCode1"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <methodAction id="getSalesPartyList" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="getSalesPartyList"
+                  IsViewObjectMethod="false"
+                  DataControl="SalesPartyServiceFacade"
+                  InstanceName="SalesPartyServiceFacade.dataProvider"
+                  ReturnName="data.SalesPartyServiceFacade.methodResults.getSalesPartyList_SalesPartyServiceFacade_dataProvider_getSalesPartyList_result">
+      <NamedData NDName="startsWith" NDType="java.lang.String" NDOption="3"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

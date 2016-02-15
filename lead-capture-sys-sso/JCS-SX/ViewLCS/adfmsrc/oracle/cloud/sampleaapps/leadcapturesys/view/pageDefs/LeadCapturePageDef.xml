@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="LeadCapturePageDef"
+                Package="oracle.cloud.sampleaapps.leadcapturesys.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <invokeAction id="Search" Binds="doSearch"/>
+    <iterator Binds="LeadCaptureSysVO1" RangeSize="25"
+              DataControl="LeadCaptureSysAMDataControl"
+              id="LeadCaptureSysVO1Iterator"/>
+    <searchRegion Binds="LeadCaptureSysVO1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="LeadCaptureSysVO11Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="LeadCaptureSysVO1Iterator" id="LeadCaptureSysVO1">
+      <nodeDefinition DefName="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysVO"
+                      Name="LeadCaptureSysVO10">
+        <AttrNames>
+          <Item Value="ProspectName"/>
+          <Item Value="DemoCompleted"/>
+          <Item Value="LeadRecUpdated"/>
+          <Item Value="VisitDate"/>
+          <Item Value="StartTime"/>
+          <Item Value="EndTime"/>
+          <Item Value="Notes"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="LeadCaptureSysVO1Iterator" id="LeadCaptureSysVO11">
+      <nodeDefinition DefName="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysVO"
+                      Name="LeadCaptureSysVO110">
+        <AttrNames>
+          <Item Value="ProspectName"/>
+          <Item Value="DemoCompleted"/>
+          <Item Value="LeadRecUpdated"/>
+          <Item Value="VisitDate"/>
+          <Item Value="StartTime"/>
+          <Item Value="EndTime"/>
+          <Item Value="Notes"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="LeadCaptureSysVO1Iterator" id="ProspectName">
+      <AttrNames>
+        <Item Value="ProspectName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LeadCaptureSysVO1Iterator" id="VisitDate">
+      <AttrNames>
+        <Item Value="VisitDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LeadCaptureSysVO1Iterator" id="StartTime">
+      <AttrNames>
+        <Item Value="StartTime"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LeadCaptureSysVO1Iterator" id="EndTime">
+      <AttrNames>
+        <Item Value="EndTime"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LeadCaptureSysVO1Iterator" id="Notes">
+      <AttrNames>
+        <Item Value="Notes"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="LeadCaptureSysVO1Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <attributeValues IterBinding="LeadCaptureSysVO1Iterator" id="ActivityId">
+      <AttrNames>
+        <Item Value="ActivityId"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="LeadCaptureSysAMDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false"
+            Action="rollbackTransaction"
+            DataControl="LeadCaptureSysAMDataControl"/>
+    <attributeValues IterBinding="LeadCaptureSysVO1Iterator" id="DemoCompleted">
+      <AttrNames>
+        <Item Value="DemoCompleted"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LeadCaptureSysVO1Iterator"
+                     id="LeadRecUpdated">
+      <AttrNames>
+        <Item Value="LeadRecUpdated"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

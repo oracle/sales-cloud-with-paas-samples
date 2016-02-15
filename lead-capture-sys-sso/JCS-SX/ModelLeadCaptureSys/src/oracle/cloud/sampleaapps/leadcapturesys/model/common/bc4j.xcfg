@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysAM">
+      <AppModuleConfig DeployPlatform="LOCAL" jbo.project="oracle.cloud.sampleaapps.leadcapturesys.model.ModelLCS" name="LeadCaptureSysAMLocal" ApplicationName="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysAM" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <Database jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysAM"/>
+         <Custom JDBCDataSource="@@datasource-servicename@@"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="LeadCaptureSysAMShared" ApplicationName="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysAM" DeployPlatform="LOCAL" jbo.project="oracle.cloud.sampleaapps.leadcapturesys.model.ModelLCS" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory">
+         <AM-Pooling jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1"/>
+         <Security AppModuleJndiName="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysAM"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/localDS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

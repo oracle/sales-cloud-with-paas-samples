@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!-- Copyright © 2015, Oracle and/or its affiliates. All rights reserved -->
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="SalesMerchandiseTrkrTF">
+    <default-activity id="__2">MerchandiseList</default-activity>
+    <data-control-scope id="__26">
+      <isolated/>
+    </data-control-scope>
+    <managed-bean id="__27">
+      <managed-bean-name id="__30">SuggestAccounts</managed-bean-name>
+      <managed-bean-class id="__28">oracle.cloud.sampleapps.salesmerchtracker.view.SuggestAccounts</managed-bean-class>
+      <managed-bean-scope id="__29">backingBean</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__35">
+      <managed-bean-name id="__25">CurrentDate</managed-bean-name>
+      <managed-bean-class id="__33">oracle.cloud.sampleapps.salesmerchtracker.view.CurrentDate</managed-bean-class>
+      <managed-bean-scope id="__34">backingBean</managed-bean-scope>
+    </managed-bean>
+    <view id="MerchandiseList">
+      <page>/MerchandiseList.jsff</page>
+    </view>
+    <view id="CreateMerchandise">
+      <page>/CreateMerchandise.jsff</page>
+    </view>
+    <method-call id="methodCall2">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome id="__3">
+        <fixed-outcome>CreateInsert</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="methodCall1">
+      <method>#{bindings.Execute.execute}</method>
+      <outcome id="__1">
+        <fixed-outcome>Execute</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__7">
+      <from-activity-id id="__8">CreateMerchandise</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome id="__11">Submit</from-outcome>
+        <to-activity-id id="__9">methodCall1</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__13">
+        <from-outcome id="__14">Cancel</from-outcome>
+        <to-activity-id id="__12">MerchandiseList</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__4">
+      <from-activity-id id="__5">MerchandiseList</from-activity-id>
+      <control-flow-case id="__15">
+        <from-outcome id="__16">Create</from-outcome>
+        <to-activity-id id="__6">methodCall2</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__17">
+      <from-activity-id id="__18">methodCall2</from-activity-id>
+      <control-flow-case id="__32">
+        <from-outcome id="__31">CreateInsert</from-outcome>
+        <to-activity-id id="__19">CreateMerchandise</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__20">
+      <from-activity-id id="__21">methodCall1</from-activity-id>
+      <control-flow-case id="__22">
+        <from-outcome id="__24">Execute</from-outcome>
+        <to-activity-id id="__23">MerchandiseList</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+  <servlet>
+    <servlet-name>CreditHealthScorePort</servlet-name>
+    <servlet-class>oracle.cloud.sampleapps.credithealthscore.CreditHealthScore</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreditHealthScorePort</servlet-name>
+    <url-pattern>/CreditHealthScorePort</url-pattern>
+  </servlet-mapping>
+  <login-config/>
+</web-app>

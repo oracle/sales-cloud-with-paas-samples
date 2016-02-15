@@ -1,0 +1,33 @@
+/* Copyright © 2015, Oracle and/or its affiliates. All rights reserved */
+ 
+body
+{
+    background-color: White;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.table-noborder td {
+    border-color:transparent;
+}
+
+table.list, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+table.list tr:nth-child(odd)	
+{
+    background-color: #e7e7e7;
+}
+table.list tr:nth-child(even) 
+{
+    background-color: #ffffff;
+}
+.error {
+  color: red;
+  font-size: small;
+}
+input.ng-dirty.ng-invalid {
+  border-color: red;
+}

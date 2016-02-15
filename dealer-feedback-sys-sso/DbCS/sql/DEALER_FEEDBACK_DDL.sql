@@ -1,0 +1,16 @@
+/* Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved */
+CREATE TABLE DEALER_FEEDBACK 
+(
+  DEALER_NAME VARCHAR2(60) NOT NULL 
+, FEEDBACK VARCHAR2(200) NOT NULL 
+, DATE_GIVEN DATE NOT NULL 
+, IMPACT VARCHAR2(20) NOT NULL 
+, FOLLOW_UP_WITH VARCHAR2(40) 
+, PHONE_NUMBER CHAR(12) check (regexp_like(PHONE_NUMBER , '((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}')) 
+, FOLLOWED_UP CHAR(1) DEFAULT 'F' NOT NULL 
+, FOLLOWED_UP_BY VARCHAR2(40) 
+);
+
+INSERT INTO DEALER_FEEDBACK(
+DEALER_NAME,FEEDBACK,DATE_GIVEN,IMPACT,FOLLOW_UP_WITH,PHONE_NUMBER,FOLLOWED_UP) values(
+'Honda at Burlington','Acute shortage of white CRV',TO_DATE('2015/01/03', 'yyyy/mm/dd'),'High','Chris T','617-222-2345','F'); 

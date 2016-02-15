@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <jsp:directive.page contentType="text/html;charset=ISO-8859-1"/>
+  <f:view>
+    <af:document id="d1" title="Account Details for #{pageFlowScope.accountNumber}">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:panelBorderLayout id="pbl1">
+          <f:facet name="start">
+            <af:spacer width="10" id="s4"/>
+          </f:facet>
+          <f:facet name="bottom">
+            <af:spacer height="10" id="s3"/>
+          </f:facet>
+          <f:facet name="end">
+            <af:spacer width="10" id="s1"/>
+          </f:facet>
+          <f:facet name="top">
+            <af:spacer height="10" id="s2"/>
+          </f:facet>
+          <af:panelGroupLayout layout="scroll"
+                               xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                               id="pgl2">
+            <af:panelBox id="pb1" text="Service Requests" showDisclosure="false"
+                         showHeader="never">
+              <af:panelHeader text="Service Requests" id="ph1">
+                <af:spacer height="10" id="s6"/>
+                <af:table value="#{bindings.ServiceRequestsVO.collectionModel}"
+                          var="row"
+                          rows="#{bindings.ServiceRequestsVO.rangeSize}"
+                          emptyText="#{bindings.ServiceRequestsVO.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.ServiceRequestsVO.rangeSize}"
+                          rowBandingInterval="0" id="t1"
+                          summary="Service Requests">
+                  <af:column sortProperty="#{bindings.ServiceRequestsVO.hints.SrNumber.name}"
+                             sortable="true"
+                             headerText="#{bindings.ServiceRequestsVO.hints.SrNumber.label}"
+                             id="c4" rowHeader="unstyled">
+                    <af:outputText value="#{row.SrNumber}" id="ot3"/>
+                  </af:column>
+                  <!--af:column headerText="#{bindings.ServiceRequestsVO.hints.PriorityMod2.label}"
+                             id="c8">
+                    <af:outputText value="#{row.PriorityMod2}" id="ot9"/>
+                  </af:column-->
+                  <af:column sortProperty="#{bindings.ServiceRequestsVO.hints.Priority.name}"
+                             sortable="true"
+                             headerText="#{bindings.ServiceRequestsVO.hints.Priority.label}"
+                             id="c2">
+                    <af:outputText value="#{row.Priority}" id="ot7">
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ServiceRequestsVO.hints.Priority.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ServiceRequestsVO.hints.Product.name}"
+                             sortable="true"
+                             headerText="#{bindings.ServiceRequestsVO.hints.Product.label}"
+                             id="c6">
+                    <af:outputText value="#{row.Product}" id="ot6"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ServiceRequestsVO.hints.CreateDate.name}"
+                             sortable="true"
+                             headerText="#{bindings.ServiceRequestsVO.hints.CreateDate.label}"
+                             id="c1">
+                    <af:outputText value="#{row.CreateDate}" id="ot5">
+                      <af:convertDateTime pattern="#{bindings.ServiceRequestsVO.hints.CreateDate.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ServiceRequestsVO.hints.LastUpdated.name}"
+                             sortable="true"
+                             headerText="#{bindings.ServiceRequestsVO.hints.LastUpdated.label}"
+                             id="c7">
+                    <af:outputText value="#{row.LastUpdated}" id="ot2">
+                      <af:convertDateTime pattern="#{bindings.ServiceRequestsVO.hints.LastUpdated.format}"/>
+                    </af:outputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ServiceRequestsVO.hints.SrOwner.name}"
+                             sortable="true"
+                             headerText="#{bindings.ServiceRequestsVO.hints.SrOwner.label}"
+                             id="c3">
+                    <af:outputText value="#{row.SrOwner}" id="ot4"/>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ServiceRequestsVO.hints.CustomerContact.name}"
+                             sortable="true"
+                             headerText="#{bindings.ServiceRequestsVO.hints.CustomerContact.label}"
+                             id="c5">
+                    <af:outputText value="#{row.CustomerContact}" id="ot1"/>
+                  </af:column>
+                </af:table>
+              </af:panelHeader>
+              <af:spacer height="10" id="s7"/>
+            </af:panelBox>
+            
+            <af:spacer height="10" id="s5"/>
+            
+            <af:panelBox text="Recent News" showDisclosure="false"
+                         showHeader="never" id="pb2">
+              <af:panelHeader text="Recent News" id="ph4">
+                <af:spacer height="10" id="s9"/>
+                <af:iterator value="#{bindings.NewsVO.collectionModel}"
+                             var="row" varStatus="rowStatus" id="i1">
+                  <af:panelHeader text="#{row.Title}" id="ph2">
+                    <af:outputText value="#{row.Body}" id="ot8"/>
+                    <af:spacer height="10" id="s10"/>
+                  </af:panelHeader>
+                </af:iterator>
+              </af:panelHeader>
+              <af:spacer height="10" id="s8"/>
+            </af:panelBox>
+          </af:panelGroupLayout>
+        </af:panelBorderLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

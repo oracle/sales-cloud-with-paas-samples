@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.65.57" id="DataBindings" SeparateXMLFiles="false"
+             Package="oracle.cloud.sampleaapps.leadcapturesys.view" ClientType="Generic">
+  <pageMap>
+    <page path="/LeadCapture.jspx"
+          usageId="oracle_cloud_sampleaapps_leadcapturesys_view_LeadCapturePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="oracle_cloud_sampleaapps_leadcapturesys_view_LeadCapturePageDef"
+          path="oracle.cloud.sampleaapps.leadcapturesys.view.pageDefs.LeadCapturePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="LeadCaptureSysAMDataControl"
+                     Package="oracle.cloud.sampleaapps.leadcapturesys.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="LeadCaptureSysAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

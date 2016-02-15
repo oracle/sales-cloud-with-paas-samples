@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.65.57"
+          id="SalesPartyServiceFacade"
+          Package="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.facade"
+          BeanClass="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.facade.SalesPartyServiceFacade"
+          isJavaBased="true">
+  <MethodAccessor IsCollection="true"
+                  Type="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.facade.SimplifiedSalesParty"
+                  BeanClass="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.facade.SimplifiedSalesParty"
+                  id="getSalesPartyList" ReturnNodeName="SimplifiedSalesParty"
+                  CollectionBeanClass="UpdateableCollection">
+    <ParameterInfo id="startsWith" Type="java.lang.String"
+                   isStructured="false"/>
+  </MethodAccessor>
+  <ConstructorMethod IsCollection="true"
+                     Type="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.facade.SalesPartyServiceFacade"
+                     BeanClass="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.facade.SalesPartyServiceFacade"
+                     id="SalesPartyServiceFacade"/>
+</JavaBean>

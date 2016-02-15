@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration"
+                    version="11.1.1.65.57" id="DataControls"
+                    Package="oracle.cloud.sampleapps.salesmerchtracker.model">
+  <AdapterDataControl id="SalesPartyServiceFacade"
+                      FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDefinition"
+                      SupportsTransactions="false" SupportsSortCollection="true"
+                      SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.facade.SalesPartyServiceFacade"
+                      BeanClass="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.facade.SalesPartyServiceFacade"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.facade.SimplifiedSalesParty"/>
+      <TypeInfo FullName="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.facade.SalesPartyServiceFacade"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="oracle.cloud.sampleapps.salesmerchtracker.model.proxy.facade.SalesPartyServiceFacade"
+                       xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

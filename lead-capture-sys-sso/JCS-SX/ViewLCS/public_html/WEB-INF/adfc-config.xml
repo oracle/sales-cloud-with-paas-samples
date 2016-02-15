@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <metadata-resource>/WEB-INF/lead-capture-task-flow-definition.xml</metadata-resource>
+  <exception-handler id="__1">main</exception-handler>
+  <view id="main">
+    <page>/LeadCapture.jspx</page>
+  </view>
+  <managed-bean id="__18">
+    <managed-bean-name id="__16">backing_Main</managed-bean-name>
+    <managed-bean-class id="__17">oracle.cloud.sampleaapps.leadcapturesys.view.backing.Main</managed-bean-class>
+    <managed-bean-scope id="__19">request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

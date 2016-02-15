@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View5">
+      <property
+         name="activityId">acctlist</property>
+      <property
+         name="page">/acctlist.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>acctlist&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">214.48242</property>
+      <property
+         name="x">473.0</property>
+   </View>
+   <WildcardControlFlowRule
+      id="WildcardControlFlowRule8">
+      <property
+         name="activityId">*</property>
+      <property
+         name="y">-21.925781</property>
+      <property
+         name="x">468.0</property>
+   </WildcardControlFlowRule>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="WildcardControlFlowRule8"
+      to="View5">
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="sdm:polyPoints">B50,468.0,20.723633,473.0,160.13184,T50</property>
+   </ControlFlowCase>
+</SDM>

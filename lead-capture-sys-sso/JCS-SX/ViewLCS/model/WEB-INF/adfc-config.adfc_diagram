@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1">
+      <property
+         name="y">250.46289</property>
+      <property
+         name="x">91.65625</property>
+   </OverallProperties>
+   <View
+      id="View2">
+      <property
+         name="activityId">main</property>
+      <property
+         name="page">/LeadCapture.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>main&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">true</property>
+      <property
+         name="y">83.5</property>
+      <property
+         name="x">91.65625</property>
+   </View>
+</SDM>

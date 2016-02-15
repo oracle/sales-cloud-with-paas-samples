@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="MainPageDef" Package="main">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="NewsVO" RangeSize="10"
+              DataControl="AccountDetailsAMDataControl" id="NewsVOIterator"/>
+    <iterator Binds="ServiceRequestsVO" RangeSize="25"
+              DataControl="AccountDetailsAMDataControl"
+              id="ServiceRequestsVOIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="NewsVOIterator" id="NewsVO">
+      <nodeDefinition DefName="oracle.cloud.sampleapps.accountdetails.model.view.NewsVO"
+                      Name="NewsVO0">
+        <AttrNames>
+          <Item Value="NewsId"/>
+          <Item Value="Body"/>
+          <Item Value="Title"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ServiceRequestsVOIterator" id="ServiceRequestsVO">
+      <nodeDefinition DefName="oracle.cloud.sampleapps.accountdetails.model.view.ServiceRequestsVO"
+                      Name="ServiceRequestsVO0">
+        <AttrNames>
+          <Item Value="SrNumber"/>
+          <Item Value="Priority"/>
+          <Item Value="Product"/>
+          <Item Value="CreateDate"/>
+          <Item Value="LastUpdated"/>
+          <Item Value="SrOwner"/>
+          <Item Value="CustomerContact"/>
+          <Item Value="PriorityMod2"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <Page
+      id="Page2">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="y">171.59766</property>
+      <property
+         name="x">289.0</property>
+      <property
+         name="jspName">/SalesMerchTracker.jspx</property>
+   </Page>
+</SDM>

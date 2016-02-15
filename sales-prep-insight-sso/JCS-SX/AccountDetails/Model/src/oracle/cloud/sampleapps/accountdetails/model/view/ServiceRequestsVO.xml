@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ServiceRequestsVO"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <Variable
+    Name="pEvenOrOdd"
+    Kind="viewcriteria"
+    Type="java.lang.String"/>
+  <SQLQuery>
+    <![CDATA[SELECT ServiceRequests.SR_NUMBER, 
+       ServiceRequests.PRIORITY, 
+       ServiceRequests.PRODUCT, 
+       ServiceRequests.CREATE_DATE, 
+       ServiceRequests.LAST_UPDATED, 
+       ServiceRequests.SR_OWNER, 
+       ServiceRequests.CUSTOMER_CONTACT,
+      (mod(ServiceRequests.PRIORITY,2)) as PRIORITY_MOD_2
+FROM S4_SERVICE_REQUESTS ServiceRequests]]>
+  </SQLQuery>
+  <EntityUsage
+    Name="ServiceRequests"
+    Entity="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests"/>
+  <ViewAttribute
+    Name="SrNumber"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="SrNumber"
+    EntityUsage="ServiceRequests"
+    AliasName="SR_NUMBER"/>
+  <ViewAttribute
+    Name="Priority"
+    PrecisionRule="true"
+    EntityAttrName="Priority"
+    EntityUsage="ServiceRequests"
+    AliasName="PRIORITY"/>
+  <ViewAttribute
+    Name="Product"
+    PrecisionRule="true"
+    EntityAttrName="Product"
+    EntityUsage="ServiceRequests"
+    AliasName="PRODUCT"/>
+  <ViewAttribute
+    Name="CreateDate"
+    PrecisionRule="true"
+    EntityAttrName="CreateDate"
+    EntityUsage="ServiceRequests"
+    AliasName="CREATE_DATE"/>
+  <ViewAttribute
+    Name="LastUpdated"
+    PrecisionRule="true"
+    EntityAttrName="LastUpdated"
+    EntityUsage="ServiceRequests"
+    AliasName="LAST_UPDATED"/>
+  <ViewAttribute
+    Name="SrOwner"
+    PrecisionRule="true"
+    EntityAttrName="SrOwner"
+    EntityUsage="ServiceRequests"
+    AliasName="SR_OWNER"/>
+  <ViewAttribute
+    Name="CustomerContact"
+    PrecisionRule="true"
+    EntityAttrName="CustomerContact"
+    EntityUsage="ServiceRequests"
+    AliasName="CUSTOMER_CONTACT"/>
+  <ViewAttribute
+    Name="PriorityMod2"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    AliasName="PRIORITY_MOD_2"
+    Expression="PRIORITY_MOD_2"
+    SQLType="NUMERIC">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewCriteria
+    Name="FilterByEvenOrOddPriorityVC"
+    ViewObjectName="oracle.cloud.sampleapps.accountdetails.model.view.ServiceRequestsVO"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="vcrow45"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="PriorityMod2"
+        ViewAttribute="PriorityMod2"
+        Operator="="
+        Conjunction="AND"
+        Value=":pEvenOrOdd"
+        GenerateIsNullClauseForBindVars="false"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+</ViewObject>

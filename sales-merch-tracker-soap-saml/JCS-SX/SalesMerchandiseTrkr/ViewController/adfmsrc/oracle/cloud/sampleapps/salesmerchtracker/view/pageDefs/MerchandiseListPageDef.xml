@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="MerchandiseListPageDef"
+                Package="oracle.cloud.sampleapps.salesmerchtracker.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="S2MerchandiseTxnView1" RangeSize="25"
+              DataControl="SalesMerchandiseTrkrAMDataControl"
+              id="S2MerchandiseTxnView1Iterator" Refresh="always">
+      <sortCriteria>
+        <sort attribute="DateDelivered" ascending="false"/>
+        <sort attribute="AccountName" ascending="true"/>
+      </sortCriteria>
+    </iterator>
+  </executables>
+  <bindings>
+    <tree IterBinding="S2MerchandiseTxnView1Iterator"
+          id="S2MerchandiseTxnView1">
+      <nodeDefinition DefName="oracle.cloud.sampleapps.salesmerchtracker.model.view.S2MerchandiseTxnView"
+                      Name="S2MerchandiseTxnView10">
+        <AttrNames>
+          <Item Value="AccountName"/>
+          <Item Value="Quantity"/>
+          <Item Value="DateDelivered"/>
+          <Item Value="IssuingSalesRep"/>
+          <Item Value="MerchandiseDescription"/>
+          <Item Value="TotalPrice"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="LeadCaptureSysAM"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  ClearCacheOnRollback="true"
+  ComponentClass="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysAMImpl"
+  DefClass="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysAMDefImpl">
+  <DesignTime>
+    <Attr Name="_deployType" Value="0"/>
+    <Attr Name="_isDefCodegen" Value="true"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewUsage
+    Name="LeadCaptureSysVO1"
+    ViewObjectName="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysVO"/>
+</AppModule>

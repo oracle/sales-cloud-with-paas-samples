@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<MetadataDirectory xmlns="http://xmlns.oracle.com/adfm/metainf"
+                   version="11.1.1.0.0">
+  <DataBindingRegistry path="oracle/cloud/sampleapps/salesmerchtracker/view/DataBindings.cpx"/>
+</MetadataDirectory>

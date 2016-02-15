@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="tf-main">
+    <default-activity id="__1">evenOrOddAccountNumber</default-activity>
+    <input-parameter-definition id="__3">
+      <name id="__4">accountNumber</name>
+      <value>#{pageFlowScope.accountNumber}</value>
+      <class>java.lang.String</class>
+    </input-parameter-definition>
+    <view id="main">
+      <page>/main/Main.jspx</page>
+    </view>
+    <router id="evenOrOddAccountNumber">
+      <case>
+        <expression>#{pageFlowScope.accountNumber % 2 eq 0}</expression>
+        <outcome id="__30">even</outcome>
+      </case>
+      <case>
+        <expression>#{pageFlowScope.accountNumber % 2 eq 1}</expression>
+        <outcome id="__31">odd</outcome>
+      </case>
+      <default-outcome>even</default-outcome>
+    </router>
+    <method-call id="FilterEvenSRs">
+      <method>#{bindings.ExecuteWithParams.execute}</method>
+      <outcome id="__5">
+        <fixed-outcome>continue</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="FilterOddSRs">
+      <method>#{bindings.ExecuteWithParams.execute}</method>
+      <outcome id="__21">
+        <fixed-outcome>continue</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="FileterEvenNews">
+      <method>#{bindings.ExecuteWithParams.execute}</method>
+      <outcome id="__32">
+        <fixed-outcome>continue</fixed-outcome>
+      </outcome>
+    </method-call>
+    <method-call id="FileterOddNews">
+      <method>#{bindings.ExecuteWithParams.execute}</method>
+      <outcome id="__38">
+        <fixed-outcome>continue</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__6">
+      <from-activity-id id="__7">evenOrOddAccountNumber</from-activity-id>
+      <control-flow-case id="__10">
+        <from-outcome id="__8">even</from-outcome>
+        <to-activity-id id="__9">FilterEvenSRs</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__23">
+        <from-outcome id="__24">odd</from-outcome>
+        <to-activity-id id="__22">FilterOddSRs</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__11">
+      <from-activity-id id="__12">FilterEvenSRs</from-activity-id>
+      <control-flow-case id="__15">
+        <from-outcome id="__13">continue</from-outcome>
+        <to-activity-id id="__14">FileterEvenNews</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__16">
+      <from-activity-id id="__17">FilterOddSRs</from-activity-id>
+      <control-flow-case id="__19">
+        <from-outcome id="__20">continue</from-outcome>
+        <to-activity-id id="__18">FileterOddNews</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__25">
+      <from-activity-id id="__26">FileterEvenNews</from-activity-id>
+      <control-flow-case id="__28">
+        <from-outcome id="__29">continue</from-outcome>
+        <to-activity-id id="__27">main</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__33">
+      <from-activity-id id="__34">FileterOddNews</from-activity-id>
+      <control-flow-case id="__36">
+        <from-outcome id="__37">continue</from-outcome>
+        <to-activity-id id="__35">main</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <visibility id="__2">
+      <url-invoke-allowed/>
+    </visibility>
+  </task-flow-definition>
+</adfc-config>

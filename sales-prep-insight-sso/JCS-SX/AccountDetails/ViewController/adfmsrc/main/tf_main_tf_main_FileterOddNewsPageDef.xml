@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57"
+                id="tf_main_tf_main_FileterOddNewsPageDef" Package="main"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="NewsVO" RangeSize="25"
+              DataControl="AccountDetailsAMDataControl" id="NewsVOIterator"
+              Refresh="never"/>
+  </executables>
+  <bindings>
+    <action IterBinding="NewsVOIterator" id="ExecuteWithParams"
+            RequiresUpdateModel="true" Action="executeWithParams">
+      <NamedData NDName="pEvenOrOdd" NDValue="1" NDType="java.lang.String"/>
+    </action>
+  </bindings>
+</pageDefinition>

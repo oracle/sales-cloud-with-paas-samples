@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="S2Merchandise"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  DBObjectType="table"
+  DBObjectName="S2_MERCHANDISE"
+  AliasName="S2Merchandise"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="MerchandiseCode"
+    IsNotNull="true"
+    Precision="32"
+    ColumnName="MERCHANDISE_CODE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="S2_MERCHANDISE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="32"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MerchandiseDescription"
+    IsNotNull="true"
+    Precision="255"
+    ColumnName="MERCHANDISE_DESCRIPTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="S2_MERCHANDISE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="255"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MerchandiseType"
+    Precision="32"
+    ColumnName="MERCHANDISE_TYPE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="S2_MERCHANDISE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="32"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UnitPrice"
+    Precision="20"
+    Scale="0"
+    ColumnName="UNIT_PRICE"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="S2_MERCHANDISE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="21"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Availability"
+    Precision="1"
+    ColumnName="AVAILABILITY"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="S2_MERCHANDISE"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RowID"
+    IsUpdateable="false"
+    ColumnName="ROWID"
+    SQLType="ROWID"
+    Type="oracle.jbo.domain.RowID"
+    ColumnType="ROWID"
+    TableName="S2_MERCHANDISE"
+    PrimaryKey="true"/>
+  <Key
+    Name="SysC007001">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007001"/>
+      <Attr Name="_checkCondition" Value='"MERCHANDISE_CODE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleapps.salesmerchtracker.model.entity.S2Merchandise.MerchandiseCode"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC007002">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C007002"/>
+      <Attr Name="_checkCondition"
+        Value='"MERCHANDISE_DESCRIPTION" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleapps.salesmerchtracker.model.entity.S2Merchandise.MerchandiseDescription"/>
+    </AttrArray>
+  </Key>
+</Entity>

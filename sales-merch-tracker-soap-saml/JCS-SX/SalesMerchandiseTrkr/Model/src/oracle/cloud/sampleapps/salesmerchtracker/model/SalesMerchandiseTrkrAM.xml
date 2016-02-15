@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SalesMerchandiseTrkrAM"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  ClearCacheOnRollback="true">
+  <DesignTime>
+    <Attr Name="_deployType" Value="0"/>
+  </DesignTime>
+  <ViewUsage
+    Name="S2MerchandiseTxnView1"
+    ViewObjectName="oracle.cloud.sampleapps.salesmerchtracker.model.view.S2MerchandiseTxnView">
+    <ViewCriteriaUsage
+      Name="S2MerchandiseTxnViewCriteria"
+      FullName="oracle.cloud.sampleapps.salesmerchtracker.model.view.S2MerchandiseTxnView.S2MerchandiseTxnViewCriteria"/>
+  </ViewUsage>
+  <ViewUsage
+    Name="S2MerchandiseView1"
+    ViewObjectName="oracle.cloud.sampleapps.salesmerchtracker.model.view.S2MerchandiseView"/>
+</AppModule>

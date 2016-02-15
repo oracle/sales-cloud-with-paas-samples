@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="oracle.cloud.sampleapps.salesmerchtracker.model.SalesMerchandiseTrkrAM">
+      <AppModuleConfig DeployPlatform="LOCAL" jbo.project="oracle.cloud.sampleapps.salesmerchtracker.model.Model" name="SalesMerchandiseTrkrLocal" ApplicationName="oracle.cloud.sampleapps.salesmerchtracker.model.SalesMerchandiseTrkrAM">
+         <Database jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.cloud.sampleapps.salesmerchtracker.model.SalesMerchandiseTrkrAM"/>
+         <Custom JDBCDataSource="YourDbCSDataSourceName"/>
+      </AppModuleConfig>
+      <AppModuleConfig DeployPlatform="LOCAL" jbo.project="oracle.cloud.sampleapps.salesmerchtracker.model.Model" name="SalesMerchandiseTrkrShared" ApplicationName="oracle.cloud.sampleapps.salesmerchtracker.model.SalesMerchandiseTrkrAM">
+         <AM-Pooling jbo.ampool.dynamicjdbccredentials="false" jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1" jbo.ampool.resetnontransactionalstate="false"/>
+         <Database jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="oracle.cloud.sampleapps.salesmerchtracker.model.SalesMerchandiseTrkrAM"/>
+         <Custom JDBCDataSource="YourDbCSDataSourceName"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

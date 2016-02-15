@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="LeadCaptureSysEO"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  DBObjectType="table"
+  DBObjectName="LEAD_CAPTURE_SYS_SSO"
+  AliasName="LeadCaptureSysEO"
+  BindingStyle="OracleName"
+  UseGlueCode="false"
+  RowClass="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEOImpl"
+  DefClass="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEODefImpl"
+  CollClass="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEOCollImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Delete|Access|DML|Def|Coll"/>
+    <AttrArray Name="_publishEvents"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="ProspectName"
+    IsNotNull="true"
+    Precision="200"
+    ColumnName="PROSPECT_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="LEAD_CAPTURE_SYS_SSO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DemoCompleted"
+    Precision="1"
+    ColumnName="DEMO_COMPLETED"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="LEAD_CAPTURE_SYS_SSO"
+    IsNotNull="true"
+    DefaultValue="N">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="check_box"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="LeadRecUpdated"
+    Precision="1"
+    ColumnName="LEAD_REC_UPDATED"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="LEAD_CAPTURE_SYS_SSO"
+    IsNotNull="true"
+    DefaultValue="N">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="check_box"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="VisitDate"
+    ColumnName="VISIT_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="LEAD_CAPTURE_SYS_SSO"
+    IsNotNull="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="StartTime"
+    ColumnName="START_TIME"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="LEAD_CAPTURE_SYS_SSO"
+    IsNotNull="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="11"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.StartTime_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.StartTime_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="EndTime"
+    ColumnName="END_TIME"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="LEAD_CAPTURE_SYS_SSO"
+    IsNotNull="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="11"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.EndTime_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.EndTime_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Notes"
+    Precision="4000"
+    ColumnName="NOTES"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="LEAD_CAPTURE_SYS_SSO">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ActivityId"
+    IsUnique="true"
+    IsNotNull="true"
+    ColumnName="ACTIVITY_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="LEAD_CAPTURE_SYS_SSO"
+    PrimaryKey="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+    <TransientExpression><![CDATA[(new oracle.jbo.server.SequenceImpl("LEAD_CAPTURE_ACTIVITY_ID_SEQ",adf.object.getDBTransaction())).getSequenceNumber()]]></TransientExpression>
+  </Attribute>
+  <Key
+    Name="ActivityKey">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="ACTIVITY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.ActivityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="LeadCaptureSysSsoDemoCompletedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_DBObjectName" Value="LEAD_CAPTURE_SYS_SSO_DEMO_COMP"/>
+      <Attr Name="_checkCondition" Value='"DEMO_COMPLETED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.DemoCompleted"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="LeadCaptureSysSsoLeadRecUpdatedCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_DBObjectName" Value="LEAD_CAPTURE_SYS_SSO_LEAD_REC_"/>
+      <Attr Name="_checkCondition" Value='"LEAD_REC_UPDATED" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.LeadRecUpdated"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="LeadcapturesyseoPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="LEADCAPTURESYSEO_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.ActivityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0010050">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0010050"/>
+      <Attr Name="_checkCondition" Value='"ACTIVITY_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.ActivityId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0010051">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0010051"/>
+      <Attr Name="_checkCondition" Value='"PROSPECT_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.ProspectName"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0010052">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0010052"/>
+      <Attr Name="_checkCondition" Value='"VISIT_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.VisitDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0010053">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0010053"/>
+      <Attr Name="_checkCondition" Value='"START_TIME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.StartTime"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0010054">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0010054"/>
+      <Attr Name="_checkCondition" Value='"END_TIME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleaapps.leadcapturesys.model.LeadCaptureSysEO.EndTime"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.cloud.sampleaapps.leadcapturesys.model.ModelLCSBundle"/>
+  </ResourceBundle>
+</Entity>

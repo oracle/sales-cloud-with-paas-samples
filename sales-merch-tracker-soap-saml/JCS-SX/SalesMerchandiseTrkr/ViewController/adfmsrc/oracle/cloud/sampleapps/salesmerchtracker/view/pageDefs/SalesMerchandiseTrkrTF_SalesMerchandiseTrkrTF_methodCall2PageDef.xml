@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57"
+                id="SalesMerchandiseTrkrTF_SalesMerchandiseTrkrTF_methodCall2PageDef"
+                Package="oracle.cloud.sampleapps.salesmerchtracker.view.pageDefs"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="S2MerchandiseTxnView1" RangeSize="25"
+              DataControl="SalesMerchandiseTrkrAMDataControl"
+              id="S2MerchandiseTxnView1Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="S2MerchandiseTxnView1Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

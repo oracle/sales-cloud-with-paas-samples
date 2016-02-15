@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:decorativeBox id="db1" theme="dark"
+                    topHeight="100px"
+                    inlineStyle="color:White; background-color:Silver; height:2cm;"
+                    styleClass="AFStretchWidth">
+    <f:facet name="top">
+      <af:outputText value="Sales Merchandise Tracker" id="ot1"
+                     inlineStyle="width:inherit; height:inherit; background-color:inherit; color:inherit; font-family:Arial; font-size:x-large; vertical-align:1cm; text-align:left; margin:0.5cm;"/>
+    </f:facet>
+  </af:decorativeBox>
+  <af:panelHeader text=" " id="ph2">
+    <f:facet name="context"/>
+    <f:facet name="menuBar"/>
+    <f:facet name="toolbar">
+      <af:outputLabel value="logged in as  #{securityContext.userName}" id="ol1"
+                      inlineStyle="text-align:right;"/>
+    </f:facet>
+    <f:facet name="legend"/>
+    <f:facet name="info"/>
+  </af:panelHeader>
+  <af:panelFormLayout id="pfl1">
+    <f:facet name="footer"/>
+    <af:panelHeader text="Report New Merchandise Issuance" id="ph1">
+      <f:facet name="context"/>
+      <f:facet name="menuBar"/>
+      <f:facet name="legend"/>
+      <f:facet name="info"/>
+      <f:facet name="toolbar"/>
+    </af:panelHeader>
+    <af:spacer width="10" height="10" id="s4"/>
+    <af:panelFormLayout id="pfl2" fieldWidth="1000" labelAlignment="start">
+      <af:inputText value="#{bindings.AccountName.inputValue}"
+                    label="#{bindings.AccountName.hints.label}" required="true"
+                    columns="#{bindings.AccountName.hints.displayWidth}"
+                    maximumLength="#{bindings.AccountName.hints.precision}"
+                    shortDesc="#{bindings.AccountName.hints.tooltip}" id="it1"
+                    showRequired="true">
+        <af:autoSuggestBehavior suggestedItems="#{backingBeanScope.SuggestAccounts.getAccounts}"/>
+        <f:validator binding="#{bindings.AccountName.validator}"/>
+      </af:inputText>
+      <af:selectOneChoice value="#{bindings.MerchandiseCode1.inputValue}"
+                          label="#{bindings.MerchandiseCode1.label}"
+                          required="true"
+                          shortDesc="#{bindings.MerchandiseCode1.hints.tooltip}"
+                          id="soc1" autoSubmit="true" showRequired="true">
+        <f:selectItems value="#{bindings.MerchandiseCode1.items}" id="si1"/>
+      </af:selectOneChoice>
+      <af:panelLabelAndMessage label="Unit Cost (USD)" id="plam2"
+                               partialTriggers="soc1">
+        <af:outputText value="#{bindings.UnitCost.inputValue}" id="ot2"/>
+      </af:panelLabelAndMessage>
+      <af:inputText value="#{bindings.Quantity.inputValue}"
+                    label="#{bindings.Quantity.hints.label}" required="true"
+                    columns="#{bindings.Quantity.hints.displayWidth}"
+                    maximumLength="#{bindings.Quantity.hints.precision}"
+                    shortDesc="#{bindings.Quantity.hints.tooltip}" id="it2"
+                    showRequired="true">
+        <f:validator binding="#{bindings.Quantity.validator}"/>
+        <af:convertNumber groupingUsed="false"
+                          pattern="#{bindings.Quantity.format}"/>
+        <af:validateLongRange
+       minimum="1"
+       messageDetailNotInRange="Value does not fall within the range"/>
+      </af:inputText>
+      <af:inputDate value="#{bindings.DateDelivered.inputValue}"
+                    label="#{bindings.DateDelivered.hints.label}"
+                    required="true"
+                    shortDesc="#{bindings.DateDelivered.hints.tooltip}" id="id2"
+                    showRequired="true">
+        <f:validator binding="#{bindings.DateDelivered.validator}"/>
+        <af:convertDateTime pattern="#{bindings.DateDelivered.format}"/>
+                      <af:validateDateTimeRange minimum="2014-05-20"
+                                        maximum="#{backingBeanScope.CurrentDate.maxDate}" />
+              <af:convertDateTime  hintDate="The date must be less than or equal to the current date"                        
+                                          messageDetailConvertDate="The date must be less than or equal to the current date"  />
+      </af:inputDate>
+      <f:facet name="footer">
+        <af:group id="g1">
+          <af:spacer width="10" height="10" id="s1"/>
+          <af:panelGroupLayout id="pgl1" inlineStyle="width:5.0in;">
+            <af:commandButton actionListener="#{bindings.Rollback.execute}"
+                              text="Cancel"
+                              disabled="#{!bindings.Rollback.enabled}"
+                              immediate="true" id="cb2" action="Cancel">
+              <af:resetActionListener/>
+            </af:commandButton>
+             
+            <af:commandButton actionListener="#{bindings.Commit.execute}"
+                              text="Submit"
+                              disabled="#{!bindings.Commit.enabled}" id="cb1"
+                              action="Submit"/>
+          </af:panelGroupLayout>
+        </af:group>
+      </f:facet>
+    </af:panelFormLayout>
+  </af:panelFormLayout>
+  <!--oracle-jdev-comment:preferred-managed-bean-name:CurrentDate-->
+</jsp:root>

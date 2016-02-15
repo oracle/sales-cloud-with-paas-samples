@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<weblogic-web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://www.bea.com/ns/weblogic/weblogic-web-app http://www.bea.com/ns/weblogic/weblogic-web-app/1.0/weblogic-web-app.xsd"
+                  xmlns="http://www.bea.com/ns/weblogic/weblogic-web-app">
+  <session-descriptor>
+    <cookie-http-only>true</cookie-http-only>
+  </session-descriptor>
+  <jsp-descriptor>
+    <backward-compatible>false</backward-compatible>
+  </jsp-descriptor>
+  <context-root>/LeadCapture</context-root>
+</weblogic-web-app>

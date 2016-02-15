@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved -->
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ServiceRequests"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  DBObjectType="table"
+  DBObjectName="S4_SERVICE_REQUESTS"
+  AliasName="ServiceRequests"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="SrNumber"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="SR_NUMBER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="S4_SERVICE_REQUESTS"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests.SrNumber_LABEL"/>
+        <TOOLTIP
+          ResId="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests.SrNumber_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="Priority"
+    ColumnName="PRIORITY"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="S4_SERVICE_REQUESTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="22"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Product"
+    Precision="20"
+    ColumnName="PRODUCT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="S4_SERVICE_REQUESTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreateDate"
+    ColumnName="CREATE_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="S4_SERVICE_REQUESTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests.CreateDate_LABEL"/>
+        <TOOLTIP
+          ResId="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests.CreateDate_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="LastUpdated"
+    ColumnName="LAST_UPDATED"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="S4_SERVICE_REQUESTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests.LastUpdated_LABEL"/>
+        <TOOLTIP
+          ResId="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests.LastUpdated_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="SrOwner"
+    Precision="20"
+    ColumnName="SR_OWNER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="S4_SERVICE_REQUESTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests.SrOwner_LABEL"/>
+        <TOOLTIP
+          ResId="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests.SrOwner_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="CustomerContact"
+    Precision="20"
+    ColumnName="CUSTOMER_CONTACT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="S4_SERVICE_REQUESTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests.CustomerContact_LABEL"/>
+        <TOOLTIP
+          ResId="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests.CustomerContact_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="PriorityMod2"
+    IsQueriable="false"
+    IsPersistent="false"
+    Precision="80"
+    ColumnName="$none$"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    Expression="mod(priority,2)"/>
+  <Key
+    Name="SysC0011320"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0011320"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="oracle.cloud.sampleapps.accountdetails.model.entity.ServiceRequests.SrNumber"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="oracle.cloud.sampleapps.accountdetails.model.ModelBundle"/>
+  </ResourceBundle>
+</Entity>
