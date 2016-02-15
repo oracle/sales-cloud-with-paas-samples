@@ -1,0 +1,1023 @@
+<wsdl:definitions
+     name="LocationService"
+     targetNamespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/"
+     xmlns:orafault="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:types="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/types/"
+    >
+    <wsdl:documentation xmlns:oer="http://xmlns.oracle.com/oer">
+        <name>Trading Community Location</name>
+        <description>A postal address, for example, 500 Oracle Parkway, Redwood Shores,
+            CA 94065, USA or Oracle Parkway, Thames Valley Park (TVP), Reading,
+            Berkshire, RG6 1RA.</description>
+        <docCategories>
+            <category>Integration</category>
+        </docCategories>
+        <oer:lifecycle>Active</oer:lifecycle>
+        <oer:compatibility>Supported - Backward Compatibility Assured</oer:compatibility>
+        <oer:category name="lba">
+            <value>CdmTop-Customer Data Management</value>
+            <value>CdmTop-Customer Data Management : FoundationTop-Foundation</value>
+            <value>CdmTop-Customer Data Management : FoundationTop-Foundation :
+                FoundationParties-Parties</value>
+        </oer:category>
+        <oer:operation name="createLocation">
+            <description>Create operation for Trading Community Location SDO</description>
+            <oer:parameters>
+                <oer:parameter name="location" description="Trading Community Location SDO to be created"/>
+                <oer:return description="Result of the operation includes the successfully created Trading Community Location SDO and/or a list of warnings or informational messages."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="updateLocation">
+            <description>Update operation for Trading Community Location SDO</description>
+            <oer:parameters>
+                <oer:parameter name="location" description="Trading Community Location SDO to be updated"/>
+                <oer:return description="Result of the operation includes the successfully updated Trading Community Location SDO and/or a list of warnings or informational messages."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="mergeLocation">
+            <description>Merge operation for Trading Community Location SDO. It will
+                perform an update if the object exists, or an insert if the
+                object doesn&apos;t already exist.</description>
+            <oer:parameters>
+                <oer:parameter name="location" description="Trading Community Location SDO to be merged"/>
+                <oer:return description="Result of the operation includes the successfully merged Trading Community Location SDO and/or a list of warnings or informational messages."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="findLocation">
+            <description>Find operation for Trading Community Location SDO</description>
+            <oer:parameters>
+                <oer:parameter name="findCriteria" description="The criteria used to limit your query result, such as the filter (where clause), the fetch size, etc."/>
+                <oer:parameter name="findControl" description="Find Control. Not currently used."/>
+                <oer:return description="Result of the operation including a list of Trading Community Location SDO that satisfy the inbound criteria and any warnings or informational messages encountered during the invocation."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="processLocation">
+            <description>Bulk load operation for Trading Community Location SDO</description>
+            <oer:parameters>
+                <oer:parameter name="changeOperation" description="Indicates what action shall be performed, such as Create, Update, Merge, or Delete"/>
+                <oer:parameter name="location" description="A list of Trading Community Location SDO to be processed"/>
+                <oer:parameter name="processControl" description="Control your bulk upload behavior, such as whether the valid data will be committed if there are other invalid data in the same batch, and whether the outbound will contain the key attributes only or the full object."/>
+                <oer:return description="Result of the operation including a list of Trading Community Location SDO that are successfully processed and any warnings or informational messages encountered during the invocation."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="getLocationByOriginalSystemReference">
+            <description>Get operation for Trading Community Location filtered by Source
+                System Reference</description>
+            <oer:parameters>
+                <oer:parameter name="findCriteria" description="The criteria used to limit your query result, such as the filter (where clause), the fetch size, etc."/>
+                <oer:parameter name="bindOrigSystem" description="Unique Original System Code"/>
+                <oer:parameter name="bindOrigSystemReference" description="Unique Original System Reference Identifier"/>
+                <oer:parameter name="findControl" description="Find Control. Not currently used."/>
+                <oer:return description="Get operation for Trading Community Location filtered by Source System Reference"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteLocation">
+            <description>Delete operation for Trading Community Location SDO</description>
+            <oer:parameters>
+                <oer:parameter name="location" description="Trading Community Location SDO to be deleted"/>
+                <oer:return description="A list of warnings or informational messages encountered when deleting the object."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="processCSLocation">
+            <description>An operation to apply the changes back to the data source for
+                Trading Community Location SDO</description>
+            <oer:parameters>
+                <oer:parameter name="processData" description="The object that is used to represent the changes that have been made."/>
+                <oer:parameter name="processControl" description="Control your bulk upload behavior, such as whether the valid data will be committed if there are other invalid data in the same batch, and whether the outbound will contain the key attributes only or the full object."/>
+                <oer:return description="Result of the operation including a list of created/updated data objects, and all warning and informational messages."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="getLocation">
+            <description>Get operation for Trading Community Location SDO</description>
+            <oer:parameters>
+                <oer:parameter name="locationId" description="Unique identifier for location."/>
+                <oer:return description="Trading Community Location SDO that matches the inbound key attributes."/>
+            </oer:parameters>
+        </oer:operation>
+    </wsdl:documentation>
+    <plnk:partnerLinkType name="LocationService">
+        <plnk:role name="LocationServiceProvider">
+            <plnk:portType name="tns:LocationService"/>
+        </plnk:role>
+        <plnk:role name="LocationServiceRequestor">
+            <plnk:portType name="tns:LocationServiceResponse"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="LocationServiceResponse_Fault_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="LocationServiceResponse_Input_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+            <sp:Header Namespace="http://www.w3.org/2005/08/addressing"/>
+            <sp:Header Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+            <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+            <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+        </sp:EncryptedParts>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="LocationServiceResponse_Output_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+        </sp:EncryptedParts>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="LocationServiceSoapHttpPort_Fault_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsp:ExactlyOne>
+            <wsp:All/>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="LocationServiceSoapHttpPort_Input_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                </sp:EncryptedParts>
+            </wsp:All>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                    <sp:Header Name="SignatureConfirmation" Namespace="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                </sp:EncryptedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="LocationServiceSoapHttpPort_Output_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:EncryptedParts>
+            </wsp:All>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:EncryptedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="wsaddr_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="wss11_saml_or_username_token_with_message_protection_service_policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:ProtectionToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:RequireThumbprintReference/>
+                                        <sp:WssX509V3Token11/>
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:ProtectionToken>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic128/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                        <sp:ProtectTokens/>
+                        <sp:OnlySignEntireHeadersAndBody/>
+                    </wsp:Policy>
+                </sp:SymmetricBinding>
+                <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssSamlV11Token11/>
+                            </wsp:Policy>
+                        </sp:SamlToken>
+                    </wsp:Policy>
+                </sp:SignedSupportingTokens>
+                <sp:EndorsingSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssX509V3Token11/>
+                            </wsp:Policy>
+                        </sp:X509Token>
+                    </wsp:Policy>
+                </sp:EndorsingSupportingTokens>
+                <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:RequireSignatureConfirmation/>
+                        <sp:MustSupportRefEncryptedKey/>
+                    </wsp:Policy>
+                </sp:Wss11>
+            </wsp:All>
+            <wsp:All>
+                <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:ProtectionToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:RequireThumbprintReference/>
+                                        <sp:WssX509V3Token11/>
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:ProtectionToken>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic128/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                        <sp:OnlySignEntireHeadersAndBody/>
+                    </wsp:Policy>
+                </sp:SymmetricBinding>
+                <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssUsernameToken10/>
+                            </wsp:Policy>
+                        </sp:UsernameToken>
+                    </wsp:Policy>
+                </sp:SignedSupportingTokens>
+                <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:RequireSignatureConfirmation/>
+                        <sp:MustSupportRefEncryptedKey/>
+                    </wsp:Policy>
+                </sp:Wss11>
+            </wsp:All>
+            <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken RequireClientCertificate="false">
+                                    <wsp:Policy/>
+                                </sp:HttpsToken>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                    </wsp:Policy>
+                </sp:TransportBinding>
+                <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssSamlV11Token10/>
+                            </wsp:Policy>
+                        </sp:SamlToken>
+                    </wsp:Policy>
+                </sp:SupportingTokens>
+            </wsp:All>
+            <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken RequireClientCertificate="false">
+                                    <wsp:Policy/>
+                                </sp:HttpsToken>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                    </wsp:Policy>
+                </sp:TransportBinding>
+                <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssUsernameToken10/>
+                            </wsp:Policy>
+                        </sp:UsernameToken>
+                    </wsp:Policy>
+                </sp:SupportingTokens>
+            </wsp:All>
+            <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken RequireClientCertificate="false">
+                                    <wsp:Policy/>
+                                </sp:HttpsToken>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                    </wsp:Policy>
+                </sp:TransportBinding>
+            </wsp:All>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="wss11_saml_token_with_message_protection_client_policy">
+        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:ProtectionToken>
+                    <wsp:Policy>
+                        <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                            <wsp:Policy>
+                                <sp:RequireThumbprintReference/>
+                                <sp:WssX509V3Token11/>
+                            </wsp:Policy>
+                        </sp:X509Token>
+                    </wsp:Policy>
+                </sp:ProtectionToken>
+                <sp:AlgorithmSuite>
+                    <wsp:Policy>
+                        <sp:Basic128/>
+                    </wsp:Policy>
+                </sp:AlgorithmSuite>
+                <sp:Layout>
+                    <wsp:Policy>
+                        <sp:Lax/>
+                    </wsp:Policy>
+                </sp:Layout>
+                <sp:IncludeTimestamp/>
+                <sp:ProtectTokens/>
+                <sp:OnlySignEntireHeadersAndBody/>
+            </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                    <wsp:Policy>
+                        <sp:WssSamlV11Token11/>
+                    </wsp:Policy>
+                </sp:SamlToken>
+            </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:EndorsingSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                    <wsp:Policy>
+                        <sp:WssX509V3Token11/>
+                    </wsp:Policy>
+                </sp:X509Token>
+            </wsp:Policy>
+        </sp:EndorsingSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:RequireSignatureConfirmation/>
+                <sp:MustSupportRefEncryptedKey/>
+            </wsp:Policy>
+        </sp:Wss11>
+    </wsp:Policy>
+    <wsdl:import namespace="http://xmlns.oracle.com/adf/svc/errors/" location="ServiceException.wsdl"/>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0" schemaLocation="oracle_webservices_async_fault_11_0.xsd"/>
+            <import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/types/"
+                 schemaLocation="LocationService.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="LocationService_createLocation">
+        <wsdl:part name="parameters" element="types:createLocation"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_createLocationResponse">
+        <wsdl:part name="parameters" element="types:createLocationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_updateLocation">
+        <wsdl:part name="parameters" element="types:updateLocation"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_updateLocationResponse">
+        <wsdl:part name="parameters" element="types:updateLocationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_mergeLocation">
+        <wsdl:part name="parameters" element="types:mergeLocation"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_mergeLocationResponse">
+        <wsdl:part name="parameters" element="types:mergeLocationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_findLocation">
+        <wsdl:part name="parameters" element="types:findLocation"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_findLocationResponse">
+        <wsdl:part name="parameters" element="types:findLocationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_processLocation">
+        <wsdl:part name="parameters" element="types:processLocation"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_processLocationResponse">
+        <wsdl:part name="parameters" element="types:processLocationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_getLocationByOriginalSystemReference">
+        <wsdl:part name="parameters" element="types:getLocationByOriginalSystemReference"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_getLocationByOriginalSystemReferenceResponse">
+        <wsdl:part name="parameters" element="types:getLocationByOriginalSystemReferenceResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_deleteLocation">
+        <wsdl:part name="parameters" element="types:deleteLocation"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_deleteLocationResponse">
+        <wsdl:part name="parameters" element="types:deleteLocationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_processCSLocation">
+        <wsdl:part name="parameters" element="types:processCSLocation"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_processCSLocationResponse">
+        <wsdl:part name="parameters" element="types:processCSLocationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_getLocationByOriginalSystemReferenceAsync">
+        <wsdl:part name="parameters" element="types:getLocationByOriginalSystemReferenceAsync"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_processCSLocationAsync">
+        <wsdl:part name="parameters" element="types:processCSLocationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_mergeLocationAsync">
+        <wsdl:part name="parameters" element="types:mergeLocationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_processLocationAsync">
+        <wsdl:part name="parameters" element="types:processLocationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_deleteLocationAsync">
+        <wsdl:part name="parameters" element="types:deleteLocationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_findLocationAsync">
+        <wsdl:part name="parameters" element="types:findLocationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_updateLocationAsync">
+        <wsdl:part name="parameters" element="types:updateLocationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_createLocationAsync">
+        <wsdl:part name="parameters" element="types:createLocationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_getLocation">
+        <wsdl:part name="parameters" element="types:getLocation"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_getLocationResponse">
+        <wsdl:part name="parameters" element="types:getLocationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_getLocationAsync">
+        <wsdl:part name="parameters" element="types:getLocationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_onFault">
+        <wsdl:part name="parameters" element="orafault:Fault"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_getLocationByOriginalSystemReferenceAsyncResponse">
+        <wsdl:part name="parameters" element="types:getLocationByOriginalSystemReferenceAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_processCSLocationAsyncResponse">
+        <wsdl:part name="parameters" element="types:processCSLocationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_mergeLocationAsyncResponse">
+        <wsdl:part name="parameters" element="types:mergeLocationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_processLocationAsyncResponse">
+        <wsdl:part name="parameters" element="types:processLocationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_deleteLocationAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteLocationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_findLocationAsyncResponse">
+        <wsdl:part name="parameters" element="types:findLocationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_updateLocationAsyncResponse">
+        <wsdl:part name="parameters" element="types:updateLocationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_createLocationAsyncResponse">
+        <wsdl:part name="parameters" element="types:createLocationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="LocationService_getLocationAsyncResponse">
+        <wsdl:part name="parameters" element="types:getLocationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="LocationService">
+        <wsdl:documentation>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="Location" xmlns:ns0="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/"
+                 SDOName="ns0:Location" CreateOpName="createLocation" UpdateOpName="updateLocation"
+                 DeleteOpName="deleteLocation" MergeOpName="mergeLocation" GetOpName="getLocation"
+                 FindOpName="findLocation" ProcessOpName="processLocation" ProcessCSOpName="processCSLocation"/>
+        </wsdl:documentation>
+        <wsdl:operation name="createLocation">
+            <wsdl:input message="tns:LocationService_createLocation"/>
+            <wsdl:output message="tns:LocationService_createLocationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateLocation">
+            <wsdl:input message="tns:LocationService_updateLocation"/>
+            <wsdl:output message="tns:LocationService_updateLocationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeLocation">
+            <wsdl:input message="tns:LocationService_mergeLocation"/>
+            <wsdl:output message="tns:LocationService_mergeLocationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findLocation">
+            <wsdl:input message="tns:LocationService_findLocation"/>
+            <wsdl:output message="tns:LocationService_findLocationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="processLocation">
+            <wsdl:input message="tns:LocationService_processLocation"/>
+            <wsdl:output message="tns:LocationService_processLocationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getLocationByOriginalSystemReference">
+            <wsdl:input message="tns:LocationService_getLocationByOriginalSystemReference"/>
+            <wsdl:output message="tns:LocationService_getLocationByOriginalSystemReferenceResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteLocation">
+            <wsdl:input message="tns:LocationService_deleteLocation"/>
+            <wsdl:output message="tns:LocationService_deleteLocationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="processCSLocation">
+            <wsdl:input message="tns:LocationService_processCSLocation"/>
+            <wsdl:output message="tns:LocationService_processCSLocationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getLocationByOriginalSystemReferenceAsync">
+            <wsdl:input message="tns:LocationService_getLocationByOriginalSystemReferenceAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/getLocationByOriginalSystemReferenceAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="processCSLocationAsync">
+            <wsdl:input message="tns:LocationService_processCSLocationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/processCSLocationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeLocationAsync">
+            <wsdl:input message="tns:LocationService_mergeLocationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/mergeLocationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="processLocationAsync">
+            <wsdl:input message="tns:LocationService_processLocationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/processLocationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteLocationAsync">
+            <wsdl:input message="tns:LocationService_deleteLocationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/deleteLocationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="findLocationAsync">
+            <wsdl:input message="tns:LocationService_findLocationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/findLocationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateLocationAsync">
+            <wsdl:input message="tns:LocationService_updateLocationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/updateLocationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createLocationAsync">
+            <wsdl:input message="tns:LocationService_createLocationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/createLocationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getLocation">
+            <wsdl:input message="tns:LocationService_getLocation"/>
+            <wsdl:output message="tns:LocationService_getLocationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getLocationAsync">
+            <wsdl:input message="tns:LocationService_getLocationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/getLocationAsync"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="LocationServiceResponse">
+        <wsdl:operation name="onFault">
+            <wsdl:input message="tns:LocationService_onFault" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0/Fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="getLocationByOriginalSystemReferenceAsyncResponse">
+            <wsdl:input message="tns:LocationService_getLocationByOriginalSystemReferenceAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/getLocationByOriginalSystemReferenceAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="processCSLocationAsyncResponse">
+            <wsdl:input message="tns:LocationService_processCSLocationAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/processCSLocationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeLocationAsyncResponse">
+            <wsdl:input message="tns:LocationService_mergeLocationAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/mergeLocationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="processLocationAsyncResponse">
+            <wsdl:input message="tns:LocationService_processLocationAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/processLocationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteLocationAsyncResponse">
+            <wsdl:input message="tns:LocationService_deleteLocationAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/deleteLocationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="findLocationAsyncResponse">
+            <wsdl:input message="tns:LocationService_findLocationAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/findLocationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateLocationAsyncResponse">
+            <wsdl:input message="tns:LocationService_updateLocationAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/updateLocationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createLocationAsyncResponse">
+            <wsdl:input message="tns:LocationService_createLocationAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/createLocationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getLocationAsyncResponse">
+            <wsdl:input message="tns:LocationService_getLocationAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/getLocationAsyncResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="LocationServiceResponseBinding" type="tns:LocationServiceResponse">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wss11_saml_token_with_message_protection_client_policy"
+             wsdl:required="false"/>
+        <wsdl:operation name="onFault">
+            <soap:operation soapAction="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0/Fault"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getLocationByOriginalSystemReferenceAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/getLocationByOriginalSystemReferenceAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="processCSLocationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/processCSLocationAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="mergeLocationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/mergeLocationAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="processLocationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/processLocationAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteLocationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/deleteLocationAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findLocationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/findLocationAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateLocationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/updateLocationAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createLocationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/createLocationAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getLocationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/getLocationAsyncResponse"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="LocationServiceSoapHttp" type="tns:LocationService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wss11_saml_or_username_token_with_message_protection_service_policy"
+             wsdl:required="false"/>
+        <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wsaddr_policy"
+             wsdl:required="false"/>
+        <wsdl:operation name="createLocation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/createLocation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateLocation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/updateLocation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="mergeLocation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/mergeLocation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findLocation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/findLocation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="processLocation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/processLocation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getLocationByOriginalSystemReference">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/getLocationByOriginalSystemReference"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteLocation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/deleteLocation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="processCSLocation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/processCSLocation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getLocationByOriginalSystemReferenceAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/getLocationByOriginalSystemReferenceAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="processCSLocationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/processCSLocationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="mergeLocationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/mergeLocationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="processLocationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/processLocationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteLocationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/deleteLocationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findLocationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/findLocationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateLocationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/updateLocationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createLocationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/createLocationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getLocation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/getLocation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getLocationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/applicationModule/getLocationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#LocationServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="LocationService">
+        <wsdl:port name="LocationServiceSoapHttpPort" binding="tns:LocationServiceSoapHttp">
+            <soap:address location="https://dummy-crm-crm-ext.oracle.com:443/foundationParties/LocationService"/>
+            <wsa:EndpointReference xmlns:wsa="http://www.w3.org/2005/08/addressing">
+                <wsa:Address xmlns:wsa="http://www.w3.org/2005/08/addressing">https://dummy-crm-crm-ext.oracle.com:443/foundationParties/LocationService</wsa:Address>
+                <wsid:Identity xmlns:wsid="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+                    <dsig:KeyInfo xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+                        <dsig:X509Data>
+                            <dsig:X509Certificate>MIICCzCCAXSgAwIBAgIEUgXqFzANBgkqhkiG9w0BAQUFADBKMRMwEQYKCZImiZPyLGQBGRYDY29tMSEwHwYKCZImiZPyLGQBGRYRb3JhY2xlb3V0c291cmNpbmcxEDAOBgNVBAMTB3NlcnZpY2UwHhcNMTMwODEwMDcyMTU5WhcNMTYwODEwMDcyMTU5WjBKMRMwEQYKCZImiZPyLGQBGRYDY29tMSEwHwYKCZImiZPyLGQBGRYRb3JhY2xlb3V0c291cmNpbmcxEDAOBgNVBAMTB3NlcnZpY2UwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAIwwJxN+lZcxofSpjLD83O4JqO4XW5MrJD/GyUr4MuEQ/K1xYLr8a3qD+p38ld/Bs1ydFr2toCALmJ/vH8vqrcf3+6WQUQwotOrRbctUirs37rF5EUNJS6mCy2LrJz2OjEIc50TCvz4T3krl8r9/AL9ZV4tfthz350Cgw1aU+V3HAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAM9f1nGbsHbO8iT5qgQpFvzX5Lreqk1D1fT7mI07LQ4YydjnIjCJQ8QY635iFW1+GrJeFFgae95N8c3chMdpH4EUnxmahfJMnoX0xAkijIXwvui6QVkKY/XcBwpFFoJVxA8gZRTIU7K9C2E7BBFJquANsPvpuPwEdet3qXj2Ai1g=</dsig:X509Certificate>
+                            <dsig:X509IssuerSerial>
+                                <dsig:X509IssuerName>CN=service, DC=oracleoutsourcing, DC=com</dsig:X509IssuerName>
+                                <dsig:X509SerialNumber>1376119319</dsig:X509SerialNumber>
+                            </dsig:X509IssuerSerial>
+                            <dsig:X509SubjectName>CN=service, DC=oracleoutsourcing, DC=com</dsig:X509SubjectName>
+                        </dsig:X509Data>
+                    </dsig:KeyInfo>
+                </wsid:Identity>
+            </wsa:EndpointReference>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

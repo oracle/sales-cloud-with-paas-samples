@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="fusionSubtab">
+    <page>/fusionSubtab.jspx</page>
+  </view>
+  <view id="Fuse-UI-Shell-Test">
+    <page>/Fuse-UI-Shell-Test.jspx</page>
+  </view>
+  <control-flow-rule id="__17">
+    <from-activity-id id="__18">*</from-activity-id>
+    <control-flow-case id="__19">
+      <to-activity-id id="__20">fusionSubtab</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__21">
+      <to-activity-id id="__22">Fuse-UI-Shell-Test</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__1">
+    <managed-bean-name id="__4">SessionStateBean</managed-bean-name>
+    <managed-bean-class id="__3">com.oracle.fuse.session.SessionStateBean</managed-bean-class>
+    <managed-bean-scope id="__2">session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__6">
+    <managed-bean-name id="__7">DataSourceBean</managed-bean-name>
+    <managed-bean-class id="__8">com.oracle.fuse.util.DataSource</managed-bean-class>
+    <managed-bean-scope id="__5">session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name id="__10">UtilLibraryBean</managed-bean-name>
+    <managed-bean-class id="__9">com.oracle.fuse.util.UtilLibrary</managed-bean-class>
+    <managed-bean-scope id="__12">backingBean</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__16">
+    <managed-bean-name id="__15">FusionConfigBean</managed-bean-name>
+    <managed-bean-class id="__13">com.oracle.ptsdemo.uiaccelerator.bean.FusionConfigBean</managed-bean-class>
+    <managed-bean-scope id="__14">session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__24">
+    <managed-bean-name id="__23">LOVDataBean</managed-bean-name>
+    <managed-bean-class id="__26">com.oracle.fuse.model.LOVDataBean</managed-bean-class>
+    <managed-bean-scope id="__25">session</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

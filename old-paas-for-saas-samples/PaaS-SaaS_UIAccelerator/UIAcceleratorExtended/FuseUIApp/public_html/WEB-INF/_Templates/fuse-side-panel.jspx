@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <af:pageTemplateDef var="attrs">
+         <af:panelStretchLayout styleClass="fuse-side-panel #{attrs['side-panel-size']}"
+            id="main-sl" bottomHeight="0px" endWidth="0px"
+                                startWidth="0px" dimensionsFrom="auto"
+                                topHeight="0px">
+       
+            <f:facet name="center">
+                <af:facetRef facetName="body"/>
+          </f:facet>
+        <f:facet name="bottom">
+            <af:facetRef facetName="hidden"/>
+        </f:facet>
+      </af:panelStretchLayout>
+      <af:xmlContent>
+        <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+            <display-name>Fuse Side Panel</display-name>
+              <facet>
+                <description>Displays side-panel content.</description>
+                <facet-name>body</facet-name>
+              </facet>
+             <facet>
+                <description>Stores secondary window content.</description>
+                <facet-name>hidden</facet-name>
+              </facet>
+              <attribute>
+                <attribute-name>side-panel-size</attribute-name>
+                <attribute-class>java.lang.String</attribute-class>
+              <default-value>narrow</default-value>
+             </attribute>
+            </component>
+          </af:xmlContent>
+      </af:pageTemplateDef>
+      </jsp:root>

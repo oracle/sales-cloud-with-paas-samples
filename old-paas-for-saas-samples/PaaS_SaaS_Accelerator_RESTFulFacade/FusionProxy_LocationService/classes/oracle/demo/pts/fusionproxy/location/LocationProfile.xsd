@@ -1,0 +1,119 @@
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/"
+     sdoJava:package="oracle.apps.cdm.foundation.parties.locationService" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/"
+     xmlns:sdoJava="commonj.sdo/java" xmlns:sdoXML="commonj.sdo/xml" xmlns="http://xmlns.oracle.com/apps/cdm/foundation/parties/locationService/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation xmlns:oer="http://xmlns.oracle.com/oer">
+            <name>Trading Community Location Profile</name>
+            <description>Profile of a location.</description>
+            <oer:category name="lba">
+                <value>CdmTop-Customer Data Management : FoundationTop-Foundation</value>
+                <value>CdmTop-Customer Data Management : FoundationTop-Foundation :
+                    FoundationParties-Parties</value>
+                <value>CdmTop-Customer Data Management</value>
+            </oer:category>
+            <oer:attributes>
+                <oer:attribute description="Unique Identifier for a location profile. System Generated. Primary Key"
+                     name="LocationProfileId"/>
+                <oer:attribute description="Foreign key to HZ_LOCATIONS" name="LocationId"/>
+                <oer:attribute description="Date Effective Entity: indicates the date at the beginning of the date range within which the row is effective."
+                     name="EffectiveStartDate"/>
+                <oer:attribute description="Date Effective Entity: indicates the date at the end of the date range within which the row is effective."
+                     name="EffectiveEndDate"/>
+                <oer:attribute description="Flag to indicate if this record is denormalized into the HZ_LOCATIONS table as the single source of truth for validated address information"
+                     name="ValidationSstFlag"/>
+                <oer:attribute description="Standardized status code describing the results of the validation.Lookup: HZ_ADDR_VAL_STATUS"
+                     name="ValidationStatusCode"/>
+                <oer:attribute description="Date the address was last validated" name="DateValidated"/>
+                <oer:attribute description="First line of address" name="Address1"/>
+                <oer:attribute description="Second line of address" name="Address2"/>
+                <oer:attribute description="Third line of address" name="Address3"/>
+                <oer:attribute description="Fourth line of address" name="Address4"/>
+                <oer:attribute description="City or town element of the address" name="City"/>
+                <oer:attribute description="Postal Code element of the address" name="PostalCode"/>
+                <oer:attribute description="County element of the address" name="County"/>
+                <oer:attribute description="Country element of the address" name="Country"/>
+                <oer:attribute description="Used to implement optimistic locking. This number is incremented every time that the row is updated. The number is compared at the start and end of a transaction to detect whether another session has updated the row since it was queried."
+                     name="ObjectVersionNumber"/>
+                <oer:attribute description="Who column: indicates the date and time of the last update of the row."
+                     name="LastUpdateDate"/>
+                <oer:attribute description="Who column: indicates the user who last updated the row."
+                     name="LastUpdatedBy"/>
+                <oer:attribute description="Who column: indicates the session login associated to the user who last updated the row."
+                     name="LastUpdateLogin"/>
+                <oer:attribute description="Who column: indicates the date and time of the creation of the row."
+                     name="CreationDate"/>
+                <oer:attribute description="Who column: indicates the user who created the row." name="CreatedBy"/>
+                <oer:attribute description="Enterprise Service Scheduler: indicates the request ID of the job that created or last updated the row."
+                     name="RequestId"/>
+                <oer:attribute description="State element of the address" name="State"/>
+                <oer:attribute description="Province element of the address" name="Province"/>
+                <oer:attribute description="Date Effective Entity: indicates the order of different changes made during a day. The lowest value represents the earliest change in the day."
+                     name="EffectiveSequence"/>
+                <oer:attribute description="Date Effective Entity: &apos;Y&apos; indicates that this row represents the latest change in the day."
+                     name="EffectiveLatestChange"/>
+                <oer:attribute description="Additional address element to support flexible address format"
+                     name="AddrElementAttribute1"/>
+                <oer:attribute description="Additional address element to support flexible address format"
+                     name="AddrElementAttribute2"/>
+                <oer:attribute description="Additional address element to support flexible address format"
+                     name="AddrElementAttribute3"/>
+                <oer:attribute description="Additional address element to support flexible address format"
+                     name="AddrElementAttribute4"/>
+                <oer:attribute description="Additional address element to support flexible address format"
+                     name="AddrElementAttribute5"/>
+                <oer:attribute description="Specific building name or number at a given address" name="Building"/>
+                <oer:attribute description="Specific floor number at a given address or in a particular building when building number is provided"
+                     name="FloorNumber"/>
+            </oer:attributes>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+    <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+    <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+    <xsd:complexType name="LocationProfile">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>LocationProfileId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="LocationProfileId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="LocationId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="EffectiveStartDate" type="ns0:date-Date"/>
+            <xsd:element minOccurs="0" name="EffectiveEndDate" nillable="true" type="ns0:date-Date"/>
+            <xsd:element minOccurs="0" name="ValidationSstFlag" type="xsd:boolean" sdoXML:dataType="sdoJava:BooleanObject"/>
+            <xsd:element minOccurs="0" name="ValidationStatusCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="DateValidated" nillable="true" type="ns0:date-Date"/>
+            <xsd:element minOccurs="0" name="Address1" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Address2" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Address3" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Address4" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="City" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PostalCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="County" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Country" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ObjectVersionNumber" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element minOccurs="0" name="LastUpdateDate" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="LastUpdatedBy" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="LastUpdateLogin" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CreationDate" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="CreatedBy" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RequestId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="State" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Province" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="EffectiveSequence" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element minOccurs="0" name="EffectiveLatestChange" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AddrElementAttribute1" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AddrElementAttribute2" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AddrElementAttribute3" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AddrElementAttribute4" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AddrElementAttribute5" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Building" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="FloorNumber" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="locationProfile" type="LocationProfile"/>
+</xsd:schema>

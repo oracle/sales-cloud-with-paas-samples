@@ -1,0 +1,287 @@
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/groupService/"
+     sdoJava:package="oracle.apps.cdm.foundation.parties.groupService" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/"
+     xmlns:ns1="http://xmlns.oracle.com/apps/cdm/foundation/parties/partyService/" xmlns:ns2="http://xmlns.oracle.com/apps/cdm/foundation/parties/contactPointService/"
+     xmlns:ns3="http://xmlns.oracle.com/apps/cdm/foundation/parties/relationshipService/"
+     xmlns:sdo="commonj.sdo" xmlns:sdoJava="commonj.sdo/java" xmlns:sdoXML="commonj.sdo/xml"
+     xmlns="http://xmlns.oracle.com/apps/cdm/foundation/parties/groupService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation xmlns:oer="http://xmlns.oracle.com/oer">
+            <name>Household</name>
+            <description>A trading community group information</description>
+            <oer:attributes>
+                <oer:attribute description="Party identifier" name="PartyId"/>
+                <oer:attribute description="Unique identification number for this party" name="PartyNumber"/>
+                <oer:attribute description="Name of this Group" name="GroupName"/>
+                <oer:attribute description="The party type can only be Person, Organization, Group."
+                     name="GroupType"/>
+                <oer:attribute description="Size of the Group" name="GroupSize"/>
+                <oer:attribute description="This is the derived column. For Group, it is concatenation of unique_name_alias and suffix. For Person, this is concatenation of person_name and suffix."
+                     name="PartyUniqueName"/>
+                <oer:attribute description="System generated or Manually overridden suffix" name="UniqueNameSuffix"/>
+                <oer:attribute description="This will have Y if the suffix is overridden by user N if not."
+                     name="SuffixOverriddenFlag"/>
+                <oer:attribute description="Not Used." name="EffectiveStartDate"/>
+                <oer:attribute description="Not Used." name="EffectiveEndDate"/>
+                <oer:attribute description="Not Used." name="EffectiveSequence"/>
+                <oer:attribute description="Not Used." name="EffectiveLatestChange"/>
+                <oer:attribute description="Annual Income Value." name="AnnualIncome"/>
+                <oer:attribute description="Household annual expenses." name="AnnualExpenses"/>
+                <oer:attribute description="Household average age." name="AverageAge"/>
+                <oer:attribute description="Number of childer between 0 and 6 years" name="Child0to6Number"/>
+                <oer:attribute description="Number of childer between 13 and 18 years" name="Child13to18Number"/>
+                <oer:attribute description="Number of childer between 7 and 12 years" name="Child7to12Number"/>
+                <oer:attribute description="Number of dependents." name="DependentsNumber"/>
+                <oer:attribute description="Reason for group party&apos;s current certification level assignment. HZ_PARTY_CERT_REASON lookup type"
+                     name="CertificationReasonCode"/>
+                <oer:attribute description="Certification level an group party. HZ_PARTY_CERT_LEVEL lookup type"
+                     name="CertificationLevel"/>
+                <oer:attribute description="Description of a group" name="Comments"/>
+                <oer:attribute description="Median Age" name="MedianAge"/>
+                <oer:attribute description="Hous Hold Wealth Amount or Net Worth." name="WealthAmount"/>
+                <oer:attribute description="Denormalization of the PREF_FUNCTIONAL_CURRENCY in HZ_GROUP_PROFILES"
+                     name="PreferredFunctionalCurrency"/>
+                <oer:attribute description="How a person or organization or group prefers to be contacted. Validated against lookup HZ_PREFERRED_CONTACT_METHOD."
+                     name="PreferredContactMethod"/>
+                <oer:attribute description="Denormalization of the PARTY_NAME field in the HZ_ADDTNL_PARTY_NAMES row identified by PREFERRED_NAME_ID."
+                     name="PreferredName"/>
+                <oer:attribute description="Foreign Key to HZ_ADDTNL_PARTY_NAMES.PARTY_NAME_ID. If not NULL contains the ID of the overall Preferred Name for the Party. If NULL the Profile Name (i.e. the name contained in the profile) will be used as overall Preferred name. By default the value is NULL"
+                     name="PreferredNameId"/>
+                <oer:attribute description="Whether Validated or not." name="ValidatedFlag"/>
+                <oer:attribute description="Primary Address Country" name="PrimaryAddressCountry"/>
+                <oer:attribute description="Primary Address Line 1" name="PrimaryAddressLine1"/>
+                <oer:attribute description="Primary Address Line 2" name="PrimaryAddressLine2"/>
+                <oer:attribute description="Primary Address Line 3" name="PrimaryAddressLine3"/>
+                <oer:attribute description="Primary Address Line 4" name="PrimaryAddressLine4"/>
+                <oer:attribute description="Primary Address City" name="PrimaryAddressCity"/>
+                <oer:attribute description="Primary Address County" name="PrimaryAddressCounty"/>
+                <oer:attribute description="Primary Address State" name="PrimaryAddressState"/>
+                <oer:attribute description="Primary Address Province" name="PrimaryAddressProvince"/>
+                <oer:attribute description="Primary Address Postal Code" name="PrimaryAddressPostalCode"/>
+                <oer:attribute description="Primary Formatted address for the group" name="PrimaryFormattedAddress"/>
+                <oer:attribute description="Primary Formatted multiline address for the group" name="PrimaryFormattedMultilineAddress"/>
+                <oer:attribute description="Primary Address Party Site Unique Identification Number"
+                     name="PrimaryAddressPartySiteId"/>
+                <oer:attribute description="Primary Address Location Unique Identification Number"
+                     name="PrimaryAddressLocationId"/>
+                <oer:attribute description="Contact point type, such as business or personal" name="PrimaryPhonePurpose"/>
+                <oer:attribute description="Lookup code for the type of phone line. For example, general, fax, inbound or outbound"
+                     name="PrimaryPhoneLineType"/>
+                <oer:attribute description="International country code for a telephone number. For example, 33 for France"
+                     name="PrimaryPhoneCountryCode"/>
+                <oer:attribute description="The area code within a country code" name="PrimaryPhoneAreaCode"/>
+                <oer:attribute description="A telephone number formatted in local format. The number should not include country code, area code, or extension"
+                     name="PrimaryPhoneNumber"/>
+                <oer:attribute description="Additional number addressed after initial connection to an internal telephone system"
+                     name="PrimaryPhoneExtension"/>
+                <oer:attribute description="Primary Formatted phone number for the group" name="PrimaryFormattedPhoneNumber"/>
+                <oer:attribute description="Primary Phone Unique Identification Number" name="PrimaryPhoneId"/>
+                <oer:attribute description="Primary E-Mail Address of the Group" name="PrimaryEmail"/>
+                <oer:attribute description="Primary E-Mail ID" name="PrimaryEmailId"/>
+                <oer:attribute description="Primary URL" name="PrimaryURL"/>
+                <oer:attribute description="Primary Web ID" name="PrimaryWebId"/>
+                <oer:attribute description="Preferred Contact Person Name" name="PreferredContactPersonName"/>
+                <oer:attribute description="Preferred Contact Person Phone" name="PreferredContactPersonPhone"/>
+                <oer:attribute description="Preferred Contact Person E-Mail" name="PreferredContactPersonEmail"/>
+                <oer:attribute description="Preferred Contact Person URL" name="PreferredContactPersonURL"/>
+                <oer:attribute description="Group PARTY_ID of a preferred contact for a given party. There should be a valid relationship."
+                     name="PreferredContactPersonId"/>
+                <oer:attribute description="Standard name for a primary language" name="PrimaryLanguage"/>
+                <oer:attribute description="Group status flag." name="Status"/>
+                <oer:attribute description="TCA Who column" name="CreatedByModule"/>
+                <oer:attribute description="Who column: indicates the user who created the row." name="CreatedBy"/>
+                <oer:attribute description="Who column: indicates the date and time of the creation of the row."
+                     name="CreationDate"/>
+                <oer:attribute description="Who column: indicates the user who last updated the row."
+                     name="LastUpdatedBy"/>
+                <oer:attribute description="Who column: indicates the date and time of the last update of the row."
+                     name="LastUpdateDate"/>
+                <oer:attribute description="Who column: indicates the session login associated to the user who last updated the row."
+                     name="LastUpdateLogin"/>
+                <oer:attribute description="TCA Who column" name="ProfileCreatedByModule"/>
+                <oer:attribute description="Who column: indicates the user who created the row." name="ProfileCreatedBy"/>
+                <oer:attribute description="Who column: indicates the date and time of the creation of the row."
+                     name="ProfileCreationDate"/>
+                <oer:attribute description="Who column: indicates the user who last updated the row."
+                     name="ProfileLastUpdatedBy"/>
+                <oer:attribute description="Who column: indicates the date and time of the last update of the row."
+                     name="ProfileLastUpdateDate"/>
+                <oer:attribute description="Who column: indicates the session login associated to the user who last updated the row."
+                     name="ProfileLastUpdateLogin"/>
+                <oer:attribute description="Indicates the request ID of the job that created or last updated the row."
+                     name="RequestId"/>
+                <oer:attribute description="Currency Code This attribute is used by CRM Extensibility framework"
+                     name="CurrencyCode"/>
+                <oer:attribute description="Corporate Currency Code This attribute is used by CRM Extensibility framework"
+                     name="CorpCurrencyCode"/>
+                <oer:attribute description="Currency Conversion Rate Type This attribute is used by CRM Extensibility framework"
+                     name="CurcyConvRateType"/>
+                <oer:attribute description="Additional name associated with the group." name="AdditionalGroupName"/>
+                <oer:attribute description="Additional Identifier for the group." name="AdditionalPartyId"/>
+                <oer:attribute description="Certification information associated with the group."
+                     name="Certification"/>
+                <oer:attribute description="Classification code assigned to the group." name="CodeAssignment"/>
+                <oer:attribute description="Contact preference information of the group." name="ContactPreference"/>
+                <oer:attribute description="Email domain information for the group." name="EmailDomain"/>
+                <oer:attribute description="Email information for the group." name="Email"/>
+                <oer:attribute description="Financial Profile information of the group." name="FinancialProfile"/>
+                <oer:attribute description="Instant messaging information associated with the group."
+                     name="InstantMessaging"/>
+                <oer:attribute description="Identifier for this record from foreign or legacy system."
+                     name="OriginalSystemReference"/>
+                <oer:attribute description="Preference information of the group." name="PartyPreference"/>
+                <oer:attribute description="Address information associated with the group." name="PartySite"/>
+                <oer:attribute description="Party usage assigned to the group." name="PartyUsageAssignment"/>
+                <oer:attribute description="Language information associated with a group." name="PersonLanguage"/>
+                <oer:attribute description="Phone information for the group." name="Phone"/>
+                <oer:attribute description="Web information for the group." name="Web"/>
+                <oer:attribute description="Relationship information for the group." name="Relationship"/>
+            </oer:attributes>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/partyService/" schemaLocation="AdditionalPartyId.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/partyService/" schemaLocation="Certification.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/partyService/" schemaLocation="CodeAssignment.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/contactPointService/"
+         schemaLocation="ContactPreference.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/partyService/" schemaLocation="EmailDomain.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/contactPointService/"
+         schemaLocation="Email.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/partyService/" schemaLocation="FinancialProfile.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/contactPointService/"
+         schemaLocation="InstantMessaging.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/partyService/" schemaLocation="OriginalSystemReference.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/partyService/" schemaLocation="PartyPreference.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/partyService/" schemaLocation="PartySite.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/partyService/" schemaLocation="PartyUsageAssignment.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/partyService/" schemaLocation="PersonLanguage.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/contactPointService/"
+         schemaLocation="Phone.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/contactPointService/"
+         schemaLocation="Web.xsd"/>
+    <xsd:import namespace="http://xmlns.oracle.com/apps/cdm/foundation/parties/relationshipService/"
+         schemaLocation="Relationship.xsd"/>
+    <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+    <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+    <xsd:import namespace="commonj.sdo" schemaLocation="sdoModel.xsd"/>
+    <xsd:include schemaLocation="AdditionalGroupName.xsd"/>
+    <xsd:complexType name="GroupResult">
+        <xsd:complexContent>
+            <xsd:extension base="ns0:MethodResult">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="Value" type="Group"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:complexType name="Group">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>PartyId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="PartyId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="PartyNumber" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="GroupName" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="GroupType" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="GroupSize" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="PartyUniqueName" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="UniqueNameSuffix" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="SuffixOverriddenFlag" type="xsd:boolean" sdoXML:dataType="sdoJava:BooleanObject"/>
+            <xsd:element minOccurs="0" name="EffectiveStartDate" type="ns0:date-Date"/>
+            <xsd:element minOccurs="0" name="EffectiveEndDate" type="ns0:date-Date"/>
+            <xsd:element minOccurs="0" name="EffectiveSequence" type="xsd:int" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element minOccurs="0" name="EffectiveLatestChange" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="AnnualIncome" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="AnnualExpenses" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="AverageAge" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="Child0to6Number" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="Child13to18Number" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="Child7to12Number" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="DependentsNumber" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="CertificationReasonCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CertificationLevel" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Comments" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="MedianAge" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="WealthAmount" nillable="true" type="ns0:AmountType"/>
+            <xsd:element minOccurs="0" name="PreferredFunctionalCurrency" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PreferredContactMethod" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PreferredName" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PreferredNameId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="ValidatedFlag" nillable="true" type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressCountry" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressLine1" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressLine2" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressLine3" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressLine4" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressCity" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressCounty" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressState" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressProvince" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressPostalCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryFormattedAddress" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryFormattedMultilineAddress" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressPartySiteId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="PrimaryAddressLocationId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="PrimaryPhonePurpose" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryPhoneLineType" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryPhoneCountryCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryPhoneAreaCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryPhoneNumber" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryPhoneExtension" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryFormattedPhoneNumber" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryPhoneId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="PrimaryEmail" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryEmailId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="PrimaryURL" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PrimaryWebId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="PreferredContactPersonName" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PreferredContactPersonPhone" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PreferredContactPersonEmail" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PreferredContactPersonURL" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PreferredContactPersonId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="PrimaryLanguage" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Status" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CreatedByModule" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CreatedBy" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CreationDate" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="LastUpdatedBy" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="LastUpdateDate" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="LastUpdateLogin" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ProfileCreatedByModule" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ProfileCreatedBy" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ProfileCreationDate" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="ProfileLastUpdatedBy" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ProfileLastUpdateDate" type="ns0:dateTime-Timestamp"/>
+            <xsd:element minOccurs="0" name="ProfileLastUpdateLogin" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="RequestId" nillable="true" type="xsd:long"/>
+            <xsd:element minOccurs="0" name="CurrencyCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CorpCurrencyCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CurcyConvRateType" nillable="true" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="AdditionalGroupName" type="AdditionalGroupName"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="AdditionalPartyId" type="ns1:AdditionalPartyId"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Certification" type="ns1:Certification"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="CodeAssignment" type="ns1:CodeAssignment"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="ContactPreference" type="ns2:ContactPreference"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="EmailDomain" type="ns1:EmailDomain"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Email" type="ns2:Email" sdoXML:dataType="sdo:DataObject"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="FinancialProfile" type="ns1:FinancialProfile"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="InstantMessaging" type="ns2:InstantMessaging"
+                 sdoXML:dataType="sdo:DataObject"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="OriginalSystemReference" type="ns1:OriginalSystemReference"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="PartyPreference" type="ns1:PartyPreference"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="PartySite" type="ns1:PartySite"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="PartyUsageAssignment" type="ns1:PartyUsageAssignment"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="PersonLanguage" type="ns1:PersonLanguage"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Phone" type="ns2:Phone" sdoXML:dataType="sdo:DataObject"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Web" type="ns2:Web" sdoXML:dataType="sdo:DataObject"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Relationship" type="ns3:Relationship"
+                 sdoXML:dataType="sdo:DataObject"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="groupResult" type="GroupResult"/>
+    <xsd:element name="group" type="Group"/>
+</xsd:schema>

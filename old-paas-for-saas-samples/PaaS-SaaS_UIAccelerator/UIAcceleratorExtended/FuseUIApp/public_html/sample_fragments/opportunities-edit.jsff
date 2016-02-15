@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:pageTemplate viewId="/WEB-INF/_Templates/fuse-popup.jspx" id="pt1">
+    <f:facet name="header-start">
+      <af:outputText value="Edit Opportunity: Vision DB and Manageme...: Summary" id="ot1"
+                     styleClass="page-title"/>
+    </f:facet>
+    <f:facet name="header-end">
+      <af:panelGroupLayout id="pgl1" layout="horizontal">
+        <af:commandButton text="Actions" id="cb1"
+                          icon="/images/fuse-icon-drop-menu-arrow.png"
+                          iconPosition="trailing"/>
+        <af:commandButton text="Save and Close" id="cb2"/>
+        <af:commandButton text="Cancel" id="cb3" immediate="true"
+                          actionListener="#{backingBeanScope.UtilLibraryBean.cancelButton}"/>
+      </af:panelGroupLayout>
+    </f:facet>
+    <f:facet name="body">
+      <af:panelTabbed id="pt2" styleClass="fuse-detail-tabs" position="left"
+                      childCreation="lazyUncached" dimensionsFrom="auto">
+        <af:showDetailItem text="showDetailItem 1" id="sdi1" disabled="true"
+                           icon="/images/fuse-detail-tab-start.png"/>
+        <af:showDetailItem text="Detail" id="sdi2"
+                           icon="/images/fuse-detail-tab-summary.png"
+                           immediate="true" disclosed="true">
+          <af:region value="#{bindings.opportunitiescreatesummaryTF1.regionModel}"
+                     id="r1"/>
+        </af:showDetailItem>
+        <af:showDetailItem text="Contacts" id="showDetailItem1"
+                           icon="/images/fuse-detail-tab-contacts.png"
+                           immediate="true" disclosed="true">
+          <af:region value="#{bindings.opportunitiescontactsTF1.regionModel}"
+                     id="r2"/>
+        </af:showDetailItem>
+        <af:showDetailItem text="showDetailItem 3" id="sdi3"
+                           icon="/images/fuse-detail-tab-end.png"
+                           disabled="true" disclosed="true" displayIndex="-1"/>
+      </af:panelTabbed>
+    </f:facet>
+    <f:facet name="hidden"/>
+  </af:pageTemplate>
+</jsp:root>

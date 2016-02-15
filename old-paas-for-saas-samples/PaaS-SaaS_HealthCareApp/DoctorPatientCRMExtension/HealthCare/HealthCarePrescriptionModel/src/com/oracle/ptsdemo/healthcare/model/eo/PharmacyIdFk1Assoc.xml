@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PharmacyIdFk1Assoc"
+  Version="11.1.1.65.92"
+  InheritPersonalization="true">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="Pharmacy"
+    Cardinality="1"
+    Source="true"
+    Owner="com.oracle.ptsdemo.healthcare.model.eo.Pharmacy">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="Pharmacy"/>
+      <Attr Name="_foreignKey"
+        Value="com.oracle.ptsdemo.healthcare.model.eo.Pharmacy.PharmacyPk"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.oracle.ptsdemo.healthcare.model.eo.Pharmacy.PharmacyId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="PharmacyMedication"
+    Cardinality="-1"
+    Owner="com.oracle.ptsdemo.healthcare.model.eo.PharmacyMedication">
+    <DesignTime>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="PharmacyMedication"/>
+      <Attr Name="_foreignKey"
+        Value="com.oracle.ptsdemo.healthcare.model.eo.PharmacyMedication.PharmacyIdFk1"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item
+        Value="com.oracle.ptsdemo.healthcare.model.eo.PharmacyMedication.PharmacyId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

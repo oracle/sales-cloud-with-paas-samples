@@ -1,0 +1,93 @@
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/hcm/people/roles/userDetailsServiceV2/"
+     sdoJava:package="oracle.apps.hcm.people.roles.userDetailsServiceV2" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/"
+     xmlns:sdoJava="commonj.sdo/java" xmlns:sdoXML="commonj.sdo/xml" xmlns="http://xmlns.oracle.com/apps/hcm/people/roles/userDetailsServiceV2/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation xmlns:oer="http://xmlns.oracle.com/oer">
+            <name>User Personal Details Version 2</name>
+            <description>This object represents personal details for the requesting
+                reference.</description>
+            <oer:category name="lba">
+                <value>HcmTop-HcmTop : HcmPeopleTop-People</value>
+                <value>HcmTop-HcmTop : HcmPeopleTop-People : HcmPeopleCore-Personal
+                    Information</value>
+            </oer:category>
+            <oer:category name="lbo">
+                <value>HCM-HCM</value>
+                <value>HCM-HCM : PER-Global Human Resources</value>
+                <value>HCM-HCM : PER-Global Human Resources : PER_PERSON-Person</value>
+            </oer:category>
+            <oer:attributes>
+                <oer:attribute description="Identifier of the person." name="PersonId"/>
+                <oer:attribute description="Identifier of the person name." name="PersonNameId"/>
+                <oer:attribute description="Title." name="Title"/>
+                <oer:attribute description="Last name." name="LastName"/>
+                <oer:attribute description="First name." name="FirstName"/>
+                <oer:attribute description="Middle names." name="MiddleNames"/>
+                <oer:attribute description="Display names." name="DisplayName"/>
+                <oer:attribute description="Suffix." name="Suffix"/>
+                <oer:attribute description="Honors." name="Honors"/>
+                <oer:attribute description="Person name adjunct." name="PreNameAdjunct"/>
+                <oer:attribute description="Known as." name="KnownAs"/>
+                <oer:attribute description="Name type." name="NameType"/>
+                <oer:attribute description="Identifier of the email address." name="EmailAddressId"/>
+                <oer:attribute description="Email address." name="EmailAddress"/>
+                <oer:attribute description="Identifier of the phone number." name="PhoneId"/>
+                <oer:attribute description="Phone area code." name="PhoneAreaCode"/>
+                <oer:attribute description="Country code for the phone number." name="PhoneCountryCodeNumber"/>
+                <oer:attribute description="Phone number." name="PhoneNumber"/>
+                <oer:attribute description="Identifier of the fax." name="FaxId"/>
+                <oer:attribute description="Fax area code." name="FaxAreaCode"/>
+                <oer:attribute description="Country code for the fax number." name="FaxCountryCodeNumber"/>
+                <oer:attribute description="Fax number." name="FaxNumber"/>
+            </oer:attributes>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+    <xsd:import namespace="commonj.sdo/java" schemaLocation="sdoJava.xsd"/>
+    <xsd:import namespace="commonj.sdo/xml" schemaLocation="sdoXML.xsd"/>
+    <xsd:complexType name="UserPersonDetails">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>PersonId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="PersonId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="PersonNameId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="Title" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="LastName" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="FirstName" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="MiddleNames" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="DisplayName" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Suffix" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="Honors" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PreNameAdjunct" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="KnownAs" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="NameType" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="EmailAddressId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="EmailAddress" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PhoneId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="PhoneAreaCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PhoneCountryCodeNumber" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="PhoneNumber" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="FaxId" type="xsd:long" sdoXML:dataType="sdoJava:LongObject"/>
+            <xsd:element minOccurs="0" name="FaxAreaCode" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="FaxCountryCodeNumber" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="FaxNumber" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="UserPersonDetailsResult">
+        <xsd:complexContent>
+            <xsd:extension base="ns0:MethodResult">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="Value" type="UserPersonDetails"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:element name="userPersonDetailsResult" type="UserPersonDetailsResult"/>
+    <xsd:element name="userPersonDetails" type="UserPersonDetails"/>
+</xsd:schema>

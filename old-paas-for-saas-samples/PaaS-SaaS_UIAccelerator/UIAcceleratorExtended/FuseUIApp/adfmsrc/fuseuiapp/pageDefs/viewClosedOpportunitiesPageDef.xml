@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="viewClosedOpportunitiesPageDef"
+                Package="fuseuiapp.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String"
+                Name="findClosedWonOpportunity_partyUniqueName"
+                IsQueriable="false"/>
+    </variableIterator>
+    <methodIterator Binds="findClosedWonOpportunity.result"
+                    DataControl="FusionOpportunityService" RangeSize="10"
+                    BeanClass="com.oracle.ptsdemo.uiaccelerator.vo.OpportunityVO"
+                    id="findClosedWonOpportunityIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="findClosedWonOpportunity" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="findClosedWonOpportunity"
+                  IsViewObjectMethod="false"
+                  DataControl="FusionOpportunityService"
+                  InstanceName="FusionOpportunityService.dataProvider"
+                  ReturnName="data.FusionOpportunityService.methodResults.findClosedWonOpportunity_FusionOpportunityService_dataProvider_findClosedWonOpportunity_result">
+      <NamedData NDName="partyUniqueName" NDType="java.lang.String"
+                 NDValue="${bindings.findClosedWonOpportunity_partyUniqueName}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="partyUniqueName">
+      <AttrNames>
+        <Item Value="findClosedWonOpportunity_partyUniqueName"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="findClosedWonOpportunityIterator" id="OpportunityVO">
+      <nodeDefinition DefName="com.oracle.ptsdemo.uiaccelerator.vo.OpportunityVO"
+                      Name="OpportunityVO0">
+        <AttrNames>
+          <Item Value="optyName"/>
+          <Item Value="partyUniqueName"/>
+          <Item Value="revenueValue"/>
+          <Item Value="optyCreationDate"/>
+          <Item Value="optyLastUpdateDate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

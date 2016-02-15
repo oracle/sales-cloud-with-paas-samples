@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.92" id="historyPrescriptionPageDef"
+                Package="com.oracle.ptsdemo.healthcare.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PrescriptionView" RangeSize="-1"
+              DataControl="HealthCarePrescriptionModelAMDataControl"
+              id="PrescriptionViewIterator"/>
+    <taskFlow id="dynamicRegion1"
+              taskFlowId="#{backingBeanScope.HistoryBean.dynamicTaskFlowId}"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"
+              Refresh="ifNeeded" activation="conditional"
+              active="#{not empty pageFlowScope.visitId}">
+      <parameters>
+        <parameter id="visitId" value="#{pageFlowScope.visitId}"/>
+        <parameter id="patientName" value="#{pageFlowScope.patientName}"/>
+        <parameter id="doctorName" value="#{pageFlowScope.doctorName}"/>
+      </parameters>
+    </taskFlow>
+  </executables>
+  <bindings>
+    <tree IterBinding="PrescriptionViewIterator" id="PrescriptionView">
+      <nodeDefinition DefName="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionView"
+                      Name="PrescriptionView0">
+        <AttrNames>
+          <Item Value="PrescriptionId"/>
+          <Item Value="DoctorId"/>
+          <Item Value="PatientId"/>
+          <Item Value="VisitId"/>
+          <Item Value="PrescriptionDate"/>
+          <Item Value="ExpireDate"/>
+          <Item Value="DoctorName"/>
+          <Item Value="PatientName"/>
+          <Item Value="VisitDescription"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="PrescriptionViewIterator" id="PatientName">
+      <AttrNames>
+        <Item Value="PatientName"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

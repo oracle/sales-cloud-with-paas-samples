@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.65.57"
+          id="OpportunityVO" Package="com.oracle.ptsdemo.uiaccelerator.vo"
+          BeanClass="com.oracle.ptsdemo.uiaccelerator.vo.OpportunityVO"
+          isJavaBased="true">
+  <Attribute Name="optyId" Type="java.lang.Long"/>
+  <Attribute Name="optyName" Type="java.lang.String"/>
+  <Attribute Name="partyUniqueName" Type="java.lang.String"/>
+  <Attribute Name="revenueValue" Type="java.math.BigDecimal"/>
+  <Attribute Name="optyCreationDate" Type="java.util.Calendar"/>
+  <Attribute Name="optyLastUpdateDate" Type="java.util.Calendar"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="com.oracle.ptsdemo.uiaccelerator.vo.OpportunityVO"
+                     BeanClass="com.oracle.ptsdemo.uiaccelerator.vo.OpportunityVO"
+                     id="OpportunityVO"/>
+</JavaBean>

@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">fusionSubtab</property>
+      <property
+         name="page">/fusionSubtab.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>fusionSubtab&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">202.1543</property>
+      <property
+         name="x">536.02734</property>
+   </View>
+   <WildcardControlFlowRule
+      id="WildcardControlFlowRule3">
+      <property
+         name="activityId">*</property>
+      <property
+         name="y">82.29883</property>
+      <property
+         name="x">324.0</property>
+   </WildcardControlFlowRule>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="WildcardControlFlowRule3"
+      to="View2">
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="sdm:polyPoints">R50,360.0,82.44824,495.02734,201.80371,L50</property>
+   </ControlFlowCase>
+   <View
+      id="View5">
+      <property
+         name="activityId">Fuse-UI-Shell-Test</property>
+      <property
+         name="page">/Fuse-UI-Shell-Test.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Fuse-UI-Shell-Test&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">201.79883</property>
+      <property
+         name="x">235.34375</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase6"
+      from="WildcardControlFlowRule3"
+      to="View5">
+      <property
+         name="fromOutcome">*</property>
+      <property
+         name="sdm:polyPoints">L50,288.0,82.44824,235.34375,147.44824,T50</property>
+   </ControlFlowCase>
+</SDM>

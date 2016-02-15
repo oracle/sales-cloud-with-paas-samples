@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.oracle.ptsdemo.healthcare.model.am.HealthCarePrescriptionModelAM" default="HealthCarePrescriptionModelAMShared">
+      <AppModuleConfig DeployPlatform="LOCAL" jbo.project="com.oracle.ptsdemo.healthcare.model.HealthCarePrescriptionModel" name="HealthCarePrescriptionModelAMLocal" ApplicationName="com.oracle.ptsdemo.healthcare.model.am.HealthCarePrescriptionModelAM">
+         <Database jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="com.oracle.ptsdemo.healthcare.model.am.HealthCarePrescriptionModelAM"/>
+         <Custom JDBCDataSource="db1"/>
+      </AppModuleConfig>
+      <AppModuleConfig DeployPlatform="LOCAL" jbo.project="com.oracle.ptsdemo.healthcare.model.HealthCarePrescriptionModel" name="HealthCarePrescriptionModelAMShared" ApplicationName="com.oracle.ptsdemo.healthcare.model.am.HealthCarePrescriptionModelAM">
+         <AM-Pooling jbo.ampool.dynamicjdbccredentials="false" jbo.ampool.isuseexclusive="false" jbo.ampool.maxpoolsize="1" jbo.ampool.resetnontransactionalstate="false"/>
+         <Database jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="com.oracle.ptsdemo.healthcare.model.am.HealthCarePrescriptionModelAM"/>
+         <Custom JDBCDataSource="db1"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

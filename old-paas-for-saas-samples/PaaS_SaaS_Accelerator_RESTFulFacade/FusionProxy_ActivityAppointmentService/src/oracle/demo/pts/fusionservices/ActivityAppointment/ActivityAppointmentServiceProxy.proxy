@@ -1,0 +1,1616 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="ActivityAppointmentService_Service.xml"/>
+      <url path="ActivityAppointmentService.wsdl"/>
+      <url path="ServiceException.wsdl"/>
+      <url path="oracle_webservices_async_fault_11_0.xsd"/>
+      <url path="Appointment.xsd"/>
+      <url path="TransientCategory.xsd"/>
+      <url path="sdoXML.xsd"/>
+      <url path="ActivityAssignee.xsd"/>
+      <url path="TransientNote.xsd"/>
+      <url path="ActivityAppointmentService.xsd"/>
+      <url path="TransientAssignee.xsd"/>
+      <url path="BC4JService.xsd"/>
+      <url path="Note.xsd"/>
+      <url path="AppointmentDeleteException.xsd"/>
+      <url path="CommonAttachments.xsd"/>
+      <url path="ActivityCategory.xsd"/>
+      <url path="sdoJava.xsd"/>
+      <url path="TransientAppointment.xsd"/>
+      <url path="TransientContact.xsd"/>
+      <url path="ActivityContact.xsd"/>
+      <url path="ServiceException.xsd"/>
+      <url path="sdoModel.xsd"/>
+      <url path="NoteDFF.xsd"/>
+      <url path="datagraph.xsd"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityAssigneeAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ServiceMessage.java"/>
+      <url path="../../../../../sdo/commonj/java/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityAssignee.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/flex/notedff/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityCategoriesResponse.java"/>
+      <url path="../../../../../sdo/commonj/Types.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityAssignee.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityAssigneeAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityAssigneeAsyncResponse.java"/>
+      <url path="../../../../../sdo/commonj/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityAssigneeAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAppointmentResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityAssigneeAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CopyAttachmentAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/CtrlHint.java"/>
+      <url path="../../../../../sdo/commonj/DataObject.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ViewCriteria.java"/>
+      <url path="ActivityAppointmentService.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/TimeResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAppointmentAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAttachmentAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/flex/notedff/NoteDFF.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAppointmentResponse.java"/>
+      <url path="../../../../../sdo/commonj/xml/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAppointmentAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAppointmentDeleteException.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityAssigneeAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/objects/objectsservice/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteNotesAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateAppointmentDeleteExceptionAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAppointment.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAppointmentAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAppointmentDeleteExceptionResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindAppointment.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityCategories.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ObjAttrHints.java"/>
+      <url path="../../../../../sdo/commonj/ModelsType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityContactResponse.java"/>
+      <url path="../../../../../sdo/commonj/Type.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateNotesAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAttachmentResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/noteservice/Note.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityContactResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/LongResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityCategories.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAppointmentAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ServiceErrorMessage.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/MergeAppointmentResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/noteservice/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAttachmentAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/BytesResult.java"/>
+      <url path="../../../../../sdo/commonj/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityAssigneeResponse.java"/>
+      <url path="../../../../../sdo/commonj/TextType.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ServiceAttrValErrorMessage.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/StringResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityContactResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateNotesAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityContactAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/oracleas/schema/oracle_fault_11_0/Detail.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CopyAttachmentResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityCategoriesResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateNotesAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateNotes.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityAssignee.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityContact.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityAssignee.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/DateResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/TransientAssignee.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/BooleanResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityCategoriesAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ViewCriteriaRow.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/TimestampResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityCategoriesAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/FindControl.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateAppointmentDeleteExceptionAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityAssigneeAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/noteservice/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/Conjunction.java"/>
+      <url path="../../../../../sdo/commonj/XSDType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityAssigneeAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityContactAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityContactAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/DataHandlerResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityContact.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/DoubleResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindAppointmentAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateNotesResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAppointment.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ChildFindCriteria.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityCategoriesResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAppointmentDeleteExceptionAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityCategoriesAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityCategoriesAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAppointmentResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAttachmentAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ServiceRowValErrorMessage.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/MergeAppointment.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ServiceViewInfo.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityCategoriesResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/ActivityAssignee.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAppointmentAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteNotes.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAttachmentAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityContactResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateAppointmentAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityContactAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAttachmentResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetNotesAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindAppointmentDeleteExceptionResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityContact.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityContactAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityAssigneeResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/SortOrder.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/MethodResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAppointmentDeleteExceptionAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityContactAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityCategoriesAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/objects/objectsservice/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/BigIntegerResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityCategoriesAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/MeasureType.java"/>
+      <url path="ActivityAppointmentService_Service.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityContactAsyncResponse.java"/>
+      <url path="../../../../../sdo/commonj/ChangeSummaryType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateAppointment.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/objects/objectsservice/CommonAttachments.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityCategoriesAsyncResponse.java"/>
+      <url path="../../../../../sdo/commonj/java/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteNotesAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/FloatResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/BigDecimalResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAppointmentDeleteExceptionAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAppointmentAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAppointmentDeleteExceptionResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CopyAttachmentAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/AmountType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityAssignee.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityAssigneeResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateAppointmentAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetNotesAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/AttrCtrlHints.java"/>
+      <url path="../../../../../sdo/commonj/xml/XMLInfo.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CopyAttachment.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityContactAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityContactResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAttachmentAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/TransientCategory.java"/>
+      <url path="../../../../../sdo/commonj/xml/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/MergeAppointmentAsyncResponse.java"/>
+      <url path="../../../../../sdo/commonj/Property.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityContact.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAppointmentDeleteExceptionAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityContact.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindAppointmentDeleteExceptionAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/oracleas/schema/oracle_fault_11_0/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindAppointmentDeleteExceptionAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/MergeAppointmentAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindAppointmentDeleteException.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityCategories.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateAppointmentDeleteException.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/SortAttribute.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAttachmentAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/ObjectFactory.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityAssigneeResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateAppointmentResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteAttachment.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateNotesAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindNotesAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAppointmentDeleteException.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ByteResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateAppointmentDeleteExceptionResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityAssigneeAsync.java"/>
+      <url path="../../../../../sdo/commonj/java/JavaInfo.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAppointmentDeleteExceptionAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetNotesResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateActivityCategories.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAttachment.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ProcessControl.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityCategories.java"/>
+      <url path="ActivityAppointmentServiceSoapHttpPortClient.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/notes/flex/notedff/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAppointmentDeleteExceptionResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindAppointmentResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/TransientAppointment.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ShortResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindNotesResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/oracleas/schema/oracle_fault_11_0/package-info.java"/>
+      <url path="../../../../../com/oracle/xmlns/oracleas/schema/oracle_fault_11_0/FaultType.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/FindCriteria.java"/>
+      <url path="ServiceException.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindActivityContactAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ChangeOperation.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateNotes.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityCategoriesAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteNotesResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/IntegerResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/errors/ServiceDMLErrorMessage.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAppointmentDeleteException.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityCategoriesAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/DeleteActivityAssigneeAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindAppointmentAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityContactAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ViewCriteriaItem.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/ReturnMode.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/ActivityContact.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAttachment.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/TransientContact.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/AppointmentDeleteException.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityCategoriesAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetNotes.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindNotesAsync.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/TransientNote.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateNotesResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAppointmentDeleteExceptionAsyncResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/ActivityCategory.java"/>
+      <url path="../../../../../com/oracle/xmlns/adf/svc/types/DataObjectResult.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/CreateAttachmentResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetAppointment.java"/>
+      <url path="../../../../../sdo/commonj/DataGraphType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/GetActivityAssigneeResponse.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/FindNotes.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/Appointment.java"/>
+      <url path="../../../../../sdo/commonj/BaseDataGraphType.java"/>
+      <url path="../../../../../com/oracle/xmlns/apps/crmcommon/activities/activitiesservice/_transient/types/UpdateActivityCategoriesResponse.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <value n="FIXED_WSDL" v="false"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="ActivityAppointmentService_Service.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="oracle.demo.pts.fusionservices.ActivityAppointment"/>
+            <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v=""/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_NONE"/>
+      <list n="PROXY_CLIENTS">
+         <url path="ActivityAppointmentServiceSoapHttpPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <url n="PROXY_ORIGINAL_WSDL_URL" protocol="https" host="dummy.oracle.com" path="/appCmmnCompActivities/ActivityAppointmentService" query="wsdl"/>
+      <hash n="PROXY_PORTS">
+         <hash n="ActivityAppointmentServiceSoapHttpPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="true"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="oracle.demo.pts.fusionservices.ActivityAppointment.ActivityAppointmentService"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="ActivityAppointmentServiceSoapHttpPort"/>
+            <hash n="OPERATIONS">
+               <hash n="copyAttachment">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="copyAttachmentAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createActivityAssignee">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createActivityAssigneeAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createActivityCategories">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createActivityCategoriesAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createActivityContact">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createActivityContactAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createAppointment">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createAppointmentAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createAppointmentDeleteException">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createAppointmentDeleteExceptionAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createAttachment">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createAttachmentAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createNotes">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createNotesAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteActivityAssignee">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteActivityAssigneeAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteActivityCategories">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteActivityCategoriesAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteActivityContact">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteActivityContactAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteAppointment">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteAppointmentAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteAppointmentDeleteException">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteAppointmentDeleteExceptionAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteAttachment">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteAttachmentAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteNotes">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteNotesAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findActivityAssignee">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findActivityAssigneeAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findActivityCategories">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findActivityCategoriesAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findActivityContact">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findActivityContactAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findAppointment">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findAppointmentAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findAppointmentDeleteException">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findAppointmentDeleteExceptionAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findNotes">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findNotesAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getActivityAssignee">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getActivityAssigneeAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getActivityCategories">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getActivityCategoriesAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getActivityContact">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getActivityContactAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getAppointment">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getAppointmentAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getAppointmentDeleteException">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getAppointmentDeleteExceptionAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getAttachment">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getAttachmentAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getNotes">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getNotesAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergeAppointment">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergeAppointmentAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateActivityAssignee">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateActivityAssigneeAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateActivityCategories">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateActivityCategoriesAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateActivityContact">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateActivityContactAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateAppointment">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateAppointmentAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateAppointmentDeleteException">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateAppointmentDeleteExceptionAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateNotes">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateNotesAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_CLIENT_POLICY">
+                  <value n="addressing"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <value n="POLCIY_FROM_DD" v="true"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security">
+                     <string v="oracle/wss_username_token_over_ssl_client_policy"/>
+                  </list>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="https" host="dummy-crm-crm-ext.oracle.com" port="443" path="/appCmmnCompActivities/ActivityAppointmentService"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="ActivityAppointmentService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../FusionProxy_ActivityAppointmentService.jpr"/>
+      <list n="PROXY_WSDL_IMPORT_LIST">
+         <url path="ServiceException.wsdl"/>
+         <url path="oracle_webservices_async_fault_11_0.xsd"/>
+         <url path="Appointment.xsd"/>
+         <url path="TransientCategory.xsd"/>
+         <url path="sdoXML.xsd"/>
+         <url path="ActivityAssignee.xsd"/>
+         <url path="TransientNote.xsd"/>
+         <url path="ActivityAppointmentService.xsd"/>
+         <url path="TransientAssignee.xsd"/>
+         <url path="BC4JService.xsd"/>
+         <url path="Note.xsd"/>
+         <url path="AppointmentDeleteException.xsd"/>
+         <url path="CommonAttachments.xsd"/>
+         <url path="ActivityCategory.xsd"/>
+         <url path="sdoJava.xsd"/>
+         <url path="TransientAppointment.xsd"/>
+         <url path="TransientContact.xsd"/>
+         <url path="ActivityContact.xsd"/>
+         <url path="ServiceException.xsd"/>
+         <url path="sdoModel.xsd"/>
+         <url path="NoteDFF.xsd"/>
+         <url path="datagraph.xsd"/>
+      </list>
+      <url n="PROXY_WSDL_URL" path="ActivityAppointmentService.wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BOUND_PORT_TYPE" v="{http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient}ActivityAppointmentService"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient}ActivityAppointmentServiceSoapHttp"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityAssignee"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee.getActivityAssignee.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityAssignee"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee.createActivityAssignee.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityAssignee"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee.updateActivityAssignee.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityAssignee"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteActivityAssignee.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityCategories"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory.getActivityCategories.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityCategories"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory.createActivityCategories.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityCategories"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory.updateActivityCategories.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityCategories"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteActivityCategories.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityContact"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact.getActivityContact.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityContact"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact.createActivityContact.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityContact"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact.updateActivityContact.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityContact"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteActivityContact.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteNotes"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteNotes.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointment"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment.createAppointment.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointment"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment.getAppointment.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/mergeAppointment"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment.mergeAppointment.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointment"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment.updateAppointment.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointment"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteAppointment.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentDeleteException"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException.createAppointmentDeleteException.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentDeleteException"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteAppointmentDeleteException.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityAssignee"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee>.findActivityAssignee.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityCategories"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory>.findActivityCategories.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityContact"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact>.findActivityContact.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getNotes"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note.getNotes.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createNotes"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note.createNotes.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateNotes"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note.updateNotes.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findNotes"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note>.findNotes.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointment"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment>.findAppointment.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/copyAttachment"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.lang.String.copyAttachment.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAttachment"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.lang.String.createAttachment.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAttachment"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.lang.String.deleteAttachment.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAttachment"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.getAttachment.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentDeleteException"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException.updateAppointmentDeleteException.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityCategoriesAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateActivityCategoriesAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentDeleteExceptionAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createAppointmentDeleteExceptionAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateAppointmentAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAppointmentAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createAppointmentAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findAppointmentAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityContactAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteActivityContactAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findNotesAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findNotesAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateNotesAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateNotesAsync.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAttachmentAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getAttachmentAsync.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityContactAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateActivityContactAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityCategoriesAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createActivityCategoriesAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityContactAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findActivityContactAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityCategoriesAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findActivityCategoriesAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/mergeAppointmentAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.mergeAppointmentAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentDeleteExceptionAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteAppointmentDeleteExceptionAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityAssigneeAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createActivityAssigneeAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAttachmentAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteAttachmentAsync.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateAppointmentDeleteExceptionAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateAppointmentDeleteExceptionAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createAttachmentAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createAttachmentAsync.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityCategoriesAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteActivityCategoriesAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteActivityAssigneeAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteActivityAssigneeAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createActivityContactAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createActivityContactAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityAssigneeAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getActivityAssigneeAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findActivityAssigneeAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findActivityAssigneeAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getAppointmentAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteNotesAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteNotesAsync.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/deleteAppointmentAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteAppointmentAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityCategoriesAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getActivityCategoriesAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getActivityContactAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getActivityContactAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/copyAttachmentAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.copyAttachmentAsync.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getNotesAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getNotesAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/createNotesAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createNotesAsync.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/updateActivityAssigneeAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateActivityAssigneeAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentDeleteException"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException.getAppointmentDeleteException.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentDeleteException"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException>.findAppointmentDeleteException.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/getAppointmentDeleteExceptionAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getAppointmentDeleteExceptionAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient/findAppointmentDeleteExceptionAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findAppointmentDeleteExceptionAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="1c19cfe3-0146-1000-8005-0aafe93b7ee1"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="ActivityAppointmentServiceSoapHttpPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient}ActivityAppointmentServiceSoapHttp"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee.getActivityAssignee.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee.createActivityAssignee.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee.updateActivityAssignee.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteActivityAssignee.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory.getActivityCategories.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory.createActivityCategories.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory.updateActivityCategories.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteActivityCategories.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact.getActivityContact.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact.createActivityContact.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact.updateActivityContact.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteActivityContact.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteNotes.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment.createAppointment.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment.getAppointment.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment.mergeAppointment.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment.updateAppointment.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteAppointment.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException.createAppointmentDeleteException.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteAppointmentDeleteException.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee>.findActivityAssignee.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory>.findActivityCategories.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact>.findActivityContact.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note.getNotes.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note.createNotes.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note.updateNotes.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note>.findNotes.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment>.findAppointment.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.lang.String.copyAttachment.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.lang.String.createAttachment.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.lang.String.deleteAttachment.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.getAttachment.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException.updateAppointmentDeleteException.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateActivityCategoriesAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createAppointmentDeleteExceptionAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateAppointmentAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createAppointmentAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findAppointmentAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteActivityContactAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findNotesAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateNotesAsync.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getAttachmentAsync.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateActivityContactAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createActivityCategoriesAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findActivityContactAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findActivityCategoriesAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.mergeAppointmentAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteAppointmentDeleteExceptionAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createActivityAssigneeAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteAttachmentAsync.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateAppointmentDeleteExceptionAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createAttachmentAsync.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteActivityCategoriesAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityCategory"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteActivityAssigneeAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createActivityContactAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getActivityAssigneeAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findActivityAssigneeAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getAppointmentAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteNotesAsync.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteAppointmentAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.TransientAppointment"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getActivityCategoriesAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getActivityContactAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.copyAttachmentAsync.java.util.List&lt;com.oracle.xmlns.apps.crmcommon.objects.objectsservice.CommonAttachments>.java.lang.String"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getNotesAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createNotesAsync.com.oracle.xmlns.apps.crmcommon.notes.noteservice.Note"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateActivityAssigneeAsync.com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.ActivityAssignee"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException.getAppointmentDeleteException.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="java.util.List&lt;com.oracle.xmlns.apps.crmcommon.activities.activitiesservice.AppointmentDeleteException>.findAppointmentDeleteException.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getAppointmentDeleteExceptionAsync.long"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findAppointmentDeleteExceptionAsync.com.oracle.xmlns.adf.svc.types.FindCriteria.com.oracle.xmlns.adf.svc.types.FindControl"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="https" host="dummy-crm-crm-ext.oracle.com" port="443" path="/appCmmnCompActivities/ActivityAppointmentService"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+               <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="oracle.demo.pts.fusionservices.ActivityAppointment"/>
+               <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v=""/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient}ActivityAppointmentService"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="oracle.demo.pts.fusionservices.ActivityAppointment.ActivityAppointmentServiceImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="oracle.demo.pts.fusionservices.ActivityAppointment.ActivityAppointmentService"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../../FusionProxy_ActivityAppointmentService.jpr"/>
+         <value n="WS_CREATE_ONEWAY_OPERATIONS" v="true"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://xmlns.oracle.com/apps/crmCommon/activities/activitiesService/transient"/>
+         <value n="WS_URI" v="ActivityAppointmentService"/>
+         <url n="WS_WSDL_FILE" path="ActivityAppointmentService.wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="SERVICE_ASYNC_FEATURES" v="true"/>
+      <value n="USE_WSDL_LOCATION" v="true"/>
+   </hash>
+</jdevws:WebServiceProxy>

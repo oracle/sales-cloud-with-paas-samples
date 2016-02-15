@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelStretchLayout id="psl1" startWidth="auto" endWidth="auto"
+                         topHeight="0px" bottomHeight="0px"
+                         dimensionsFrom="auto">
+    <f:facet name="start">
+      <af:selectOneChoice label="Show" id="soc1" value="All Contacts">
+        <af:selectItem label="All Contacts" value="All Contacts" id="si1"/>
+      </af:selectOneChoice>
+    </f:facet>
+    <f:facet name="end">
+      <af:panelGroupLayout id="pgl1">
+        <af:commandButton text="Add Contacts" id="cb1">
+          <af:showPopupBehavior popupId="p1" triggerType="action"/>
+        </af:commandButton>
+        <af:popup id="p1" contentDelivery="lazyUncached">
+          <af:panelWindow id="pw2" closeIconVisible="false" modal="true"
+                          styleClass="fuse-popup">
+            <af:region value="#{bindings.contactsearchselectTF1.regionModel}"
+                       id="r1"/>
+          </af:panelWindow>
+        </af:popup>
+      </af:panelGroupLayout>
+    </f:facet>
+  </af:panelStretchLayout>
+  <af:table var="row" rowBandingInterval="0" id="t1"
+            value="#{DataSourceBean.contactList}" columnStretching="multiple"
+            binding="#{pageFlowScope.OpportunitiesContactBean.contactTable}">
+    <af:column sortable="false" headerText="Primary" id="c5" width="4%">
+      <af:image source="/images/fuse-icon-checked - Copy.png" id="i1"/>
+    </af:column>
+    <af:column sortable="false" headerText="Name" id="c2" width="30%">
+      <af:commandLink text="#{row.name}" id="cl1" styleClass="major-link"/>
+    </af:column>
+    <af:column sortable="false" headerText="Job Title" id="c6" width="20%">
+      <af:outputText id="ot7"/>
+    </af:column>
+    <af:column sortable="false" headerText="Phone" id="c7" width="15%">
+      <af:outputText value="#{row.phoneNumber}" id="ot1"/>
+    </af:column>
+    <af:column sortable="false" headerText="E-Mail" id="c3" width="15%">
+      <af:outputText value="#{row.email}" id="ot5"/>
+    </af:column>
+    <af:column sortable="false" headerText="Function" id="c4" width="15%">
+      <af:selectOneChoice label="Label 1" id="soc2"/>
+    </af:column>
+    <af:column sortable="false" id="c1" width="1%">
+      <af:commandImageLink id="cil1" icon="/images/fuse-icon-delete.png"/>
+    </af:column>
+  </af:table>
+</jsp:root>

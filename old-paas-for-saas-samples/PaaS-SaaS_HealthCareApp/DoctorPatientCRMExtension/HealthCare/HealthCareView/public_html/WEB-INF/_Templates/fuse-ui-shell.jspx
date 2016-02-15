@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <af:pageTemplateDef var="attrs">
+        <af:panelGridLayout id="pgl1">
+            <af:gridRow id="gr1">
+                <af:gridCell id="gc1" width="50%"/>
+                <af:gridCell id="gc2"
+                         styleClass="application-container-size application-container watermark">
+                    <af:panelStretchLayout id="application-container"
+                                     styleClass="application-container-size"
+                                     topHeight="auto" dimensionsFrom="children"
+                                     startWidth="50%" endWidth="50%"
+                                     clientComponent="true">
+                        <f:facet name="center">
+                            <af:panelGroupLayout layout="horizontal" valign="top">
+                                <af:panelStretchLayout styleClass="#{sessionScope.SessionStateBean.objectNavigatorIconStripMode == 'yes' ? 'announcements-strip-mode-size' : 'announcements-grid-mode-size'} ease-in-out-250ms"
+                                           id="announcements-container">
+                                    <f:facet name="center">
+                                        <af:panelStretchLayout id="psl2"
+                                               styleClass="fuse-box black fuse-side-panel background-color">
+                                            <f:facet name="center">
+                                                <af:facetRef facetName="announcement-content"/>
+                                            </f:facet>
+                                        </af:panelStretchLayout>
+                                    </f:facet>
+                                </af:panelStretchLayout>
+                                <af:panelStretchLayout id="navigation-container"
+                                           styleClass="#{sessionScope.SessionStateBean.objectNavigatorIconStripMode == 'yes' ? 'springboard-strip-mode-size' : 'springboard-grid-mode-size'} ease-in-out-250ms"
+                                           bottomHeight="auto">
+                                    <f:facet name="center">                               
+                                        <af:panelSpringboard id="object-navigator"
+                                                childCreation="lazyUncached"
+                                                binding="#{SessionStateBean.springboard_component}"
+                                                displayMode="grid">
+                                            <af:clientListener type="propertyChange"
+                                                     method="objectNavigatorPropertyChangeListener"/>
+                                            <af:showDetailItem text="#{attrs['card-1']}"
+                                                     icon="#{attrs['icon-1']}"
+                                                     disclosureListener="#{SessionStateBean.delay}"
+                                                     id="nav-item-1" rendered="#{attrs['card-1']!=''}">
+                                                <af:facetRef facetName="card-1-content"/>
+                                            </af:showDetailItem>
+                                            <af:showDetailItem text="#{attrs['card-2']}"
+                                                     icon="#{attrs['icon-2']}"
+                                                     disclosureListener="#{SessionStateBean.delay}"
+                                                     id="nav-item-11" rendered="#{attrs['card-2']!=''}">
+                                                <af:facetRef facetName="card-2-content"/>
+                                            </af:showDetailItem>
+                                            <af:showDetailItem text="#{attrs['card-3']}"
+                                                     icon="#{attrs['icon-3']}"
+                                                     disclosureListener="#{SessionStateBean.delay}"
+                                                     id="nav-item-8" rendered="#{attrs['card-3']!=''}">
+                                                <af:facetRef facetName="card-3-content"/>
+                                            </af:showDetailItem>
+                                            <af:showDetailItem text="#{attrs['card-4']}"
+                                                     icon="#{attrs['icon-4']}"
+                                                     disclosureListener="#{SessionStateBean.delay}"
+                                                     id="nav-item-10" rendered="#{attrs['card-4']!=''}">
+                                                <af:facetRef facetName="card-4-content"/>
+                                            </af:showDetailItem>
+                                            <af:showDetailItem text="#{attrs['card-5']}"
+                                                     icon="#{attrs['icon-5']}"
+                                                     disclosureListener="#{SessionStateBean.delay}"
+                                                     id="nav-item-5" rendered="#{attrs['card-5']!=''}">
+                                                <af:facetRef facetName="card-5-content"/>
+                                            </af:showDetailItem>
+                                            <af:showDetailItem text="#{attrs['card-6']}"
+                                                     icon="#{attrs['icon-6']}"
+                                                     disclosureListener="#{SessionStateBean.delay}"
+                                                     id="nav-item-4" rendered="#{attrs['card-6']!=''}">
+                                                <af:facetRef facetName="card-6-content"/>
+                                            </af:showDetailItem>
+                                            <af:showDetailItem text="#{attrs['card-7']}"
+                                                     icon="#{attrs['icon-7']}"
+                                                     disclosureListener="#{SessionStateBean.delay}"
+                                                     id="nav-item-3" rendered="#{attrs['card-7']!=''}">
+                                                <af:facetRef facetName="card-7-content"/>
+                                            </af:showDetailItem>
+                                            <af:showDetailItem text="#{attrs['card-8']}"
+                                                     icon="#{attrs['icon-8']}"
+                                                     disclosureListener="#{SessionStateBean.delay}"
+                                                     id="nav-item-7" rendered="#{attrs['card-8']!=''}">
+                                                <af:facetRef facetName="card-8-content"/>
+                                            </af:showDetailItem>
+                                            <af:showDetailItem text="#{attrs['card-9']}"
+                                                     icon="#{attrs['icon-9']}"
+                                                     disclosureListener="#{SessionStateBean.delay}"
+                                                     id="nav-item-2" rendered="#{attrs['card-9']!=''}">
+                                                <af:facetRef facetName="card-9-content"/>
+                                            </af:showDetailItem>
+                                        </af:panelSpringboard>
+                                    </f:facet>
+                                </af:panelStretchLayout>
+                            </af:panelGroupLayout>
+                        </f:facet>
+                        <f:facet name="top">
+                            <af:panelGroupLayout layout="horizontal" valign="middle" 
+                                       styleClass="application-container-width">
+                                <af:commandImageLink text="" id="logo"
+                                         icon="#{attrs['application-logo']}"
+                                         styleClass="#{sessionScope.SessionStateBean.objectNavigatorIconStripMode == 'yes' ? 'logo-strip-mode-size' : 'logo-grid-mode-size'} ease-in-out-250ms"
+                                         actionListener="#{sessionScope.SessionStateBean.objectNavigator_SetGridMode}">
+                                    <af:clientListener type="action" method="setObjectNavigatorMode_Springboard"/>
+                                </af:commandImageLink>
+                                <af:panelGroupLayout halign="end" layout="horizontal">
+                                    <af:facetRef facetName="global-header-end"/>
+                                </af:panelGroupLayout>
+                            </af:panelGroupLayout>
+                        </f:facet>
+                        <f:facet name="bottom"/>
+                    </af:panelStretchLayout>
+                </af:gridCell>
+                <af:gridCell id="gc3" width="50%"/>
+            </af:gridRow>
+        </af:panelGridLayout>
+        <af:xmlContent>
+            <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+                <display-name>fuse-ui-shell</display-name>
+                <facet>
+                    <description>Announcement Content</description>
+                    <facet-name>announcement-content</facet-name>
+                </facet>
+                <facet>
+                    <description>Global button, menu, etc</description>
+                    <facet-name>global-header-end</facet-name>
+                </facet>
+                <facet>
+                    <description>Card 1 content</description>
+                    <facet-name>card-1-content</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>card-2-content</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>card-3-content</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>card-4-content</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>card-5-content</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>card-6-content</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>card-7-content</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>card-8-content</facet-name>
+                </facet>
+                <facet>
+                    <facet-name>card-9-content</facet-name>
+                </facet>
+                <attribute>
+                    <attribute-name>application-logo</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>card-1</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>icon-1</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>card-2</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>icon-2</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>card-3</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>icon-3</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>card-4</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>icon-4</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>card-5</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>icon-5</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>card-6</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>icon-6</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>card-7</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>icon-7</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>card-8</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>icon-8</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>card-9</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+                <attribute>
+                    <attribute-name>icon-9</attribute-name>
+                    <attribute-class>java.lang.String</attribute-class>
+                    <default-value></default-value>
+                </attribute>
+            </component>
+        </af:xmlContent>
+    </af:pageTemplateDef>
+</jsp:root>

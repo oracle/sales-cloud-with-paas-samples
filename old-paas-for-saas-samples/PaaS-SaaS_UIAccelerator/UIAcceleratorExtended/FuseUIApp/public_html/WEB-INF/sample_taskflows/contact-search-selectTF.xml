@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="contact-search-selectTF">
+    <default-activity id="__1">contact-search-select</default-activity>
+    <view id="contact-search-select">
+      <page>/sample_fragments/contact-search-select.jsff</page>
+    </view>
+    <parent-action id="addContact">
+      <parent-outcome>refreshData</parent-outcome>
+    </parent-action>
+    <control-flow-rule id="__2">
+      <from-activity-id id="__3">contact-search-select</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome id="__8">OK_AddContact</from-outcome>
+        <to-activity-id id="__4">addContact</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

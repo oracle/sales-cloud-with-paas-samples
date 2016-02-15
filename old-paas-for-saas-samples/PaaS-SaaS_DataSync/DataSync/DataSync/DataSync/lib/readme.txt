@@ -1,0 +1,1 @@
+This directory contains a list of files that are required to compile the application. In addition, there is a .war file that can be deployed into the embedded WLS as a shared-library.

@@ -1,0 +1,1052 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="OpportunityService_Service.xml"/>
+      <url path="types/AmountType.java"/>
+      <url path="types/ObjectFactory.java"/>
+      <url path="types/UpdateOpportunityResponse.java"/>
+      <url path="types/ServiceViewInfo.java"/>
+      <url path="types/FloatResult.java"/>
+      <url path="types/DeleteOpportunitySourceAsyncResponse.java"/>
+      <url path="types/DoAutoAssignmentAsynchronously.java"/>
+      <url path="types/DataHandlerResult.java"/>
+      <url path="OpportunityServiceSoapHttpPortClient.java"/>
+      <url path="types/GetEntityListResponse.java"/>
+      <url path="types/GetServiceLastUpdateTime.java"/>
+      <url path="types/AttrCtrlHints.java"/>
+      <url path="types/DateResult.java"/>
+      <url path="types/DeleteOpportunityMktResponseResponse.java"/>
+      <url path="types/DeleteOpportunitySourceResponse.java"/>
+      <url path="types/ProcessOpportunityAsync.java"/>
+      <url path="types/DoAutoAssignmentAsynchronouslyAsyncResponse.java"/>
+      <url path="OpportunityService_Service.java"/>
+      <url path="types/ProcessData.java"/>
+      <url path="types/GetEntityListAsync.java"/>
+      <url path="types/IntegerResult.java"/>
+      <url path="types/DeleteError.java"/>
+      <url path="types/CreateOpportunityAsyncResponse.java"/>
+      <url path="types/ViewCriteria.java"/>
+      <url path="types/ShortResult.java"/>
+      <url path="types/GetOpportunityResponse.java"/>
+      <url path="types/ServiceRowValErrorMessage.java"/>
+      <url path="types/DataObjectResult.java"/>
+      <url path="types/TimestampResult.java"/>
+      <url path="types/MergeOpportunityAsync.java"/>
+      <url path="types/IsSalesAccountUsedInOpportunity.java"/>
+      <url path="types/DeleteOpportunitySourceAsync.java"/>
+      <url path="types/SortAttribute.java"/>
+      <url path="types/GetDfltObjAttrHints.java"/>
+      <url path="types/NoteDFF.java"/>
+      <url path="types/TransientAssignee.java"/>
+      <url path="types/BigIntegerResult.java"/>
+      <url path="types/XSDType.java"/>
+      <url path="types/FindOpportunityAsyncResponse.java"/>
+      <url path="types/GetOpportunityAsync.java"/>
+      <url path="types/IsSalesAccountUsedInOpportunityAsyncResponse.java"/>
+      <url path="types/GetOpportunityAsyncResponse.java"/>
+      <url path="types/DeleteOpportunityAsync.java"/>
+      <url path="types/DeleteOpportunityContactResponse.java"/>
+      <url path="OpportunityService.java"/>
+      <url path="types/RecurringRevenue.java"/>
+      <url path="types/DeleteOpportunityAsyncResponse.java"/>
+      <url path="types/ServiceErrorMessage.java"/>
+      <url path="types/FindOpportunityAsync.java"/>
+      <url path="types/TransientCategory.java"/>
+      <url path="types/IsSalesAccountUsedInOpportunityAsync.java"/>
+      <url path="types/CheckConstraintResponse.java"/>
+      <url path="types/Type.java"/>
+      <url path="types/StringResult.java"/>
+      <url path="types/MethodResult.java"/>
+      <url path="types/GetDfltObjAttrHintsAsync.java"/>
+      <url path="ServiceException.java"/>
+      <url path="types/OpportunityReference.java"/>
+      <url path="types/Note.java"/>
+      <url path="types/CheckConstraint.java"/>
+      <url path="types/DeleteOpportunityRevenueResponse.java"/>
+      <url path="types/ProcessCSOpportunityResponse.java"/>
+      <url path="types/CheckConstraintAsyncResponse.java"/>
+      <url path="types/MeasureType.java"/>
+      <url path="types/ObjAttrHints.java"/>
+      <url path="types/DeleteOpportunityCompetitorAsyncResponse.java"/>
+      <url path="types/DeleteOpportunityContactAsync.java"/>
+      <url path="types/OpportunitySource.java"/>
+      <url path="types/ChangeSummaryType.java"/>
+      <url path="types/CreateOpportunityResponse.java"/>
+      <url path="types/DeleteOpportunitySource.java"/>
+      <url path="types/OpportunityResponse.java"/>
+      <url path="types/FindCriteria.java"/>
+      <url path="types/FindOpportunity.java"/>
+      <url path="types/GetServiceLastUpdateTimeResponse.java"/>
+      <url path="types/LongResult.java"/>
+      <url path="types/SplitRevenue.java"/>
+      <url path="types/ProcessCSOpportunityAsyncResponse.java"/>
+      <url path="types/Conjunction.java"/>
+      <url path="types/DeleteOpportunityMktResponse.java"/>
+      <url path="types/DeleteOpportunityCompetitorResponse.java"/>
+      <url path="types/MergeOpportunity.java"/>
+      <url path="types/GetServiceLastUpdateTimeAsync.java"/>
+      <url path="types/BigDecimalResult.java"/>
+      <url path="types/DeleteOpportunityReferenceAsyncResponse.java"/>
+      <url path="types/ProcessOpportunityResponse.java"/>
+      <url path="types/RevenueTerritory.java"/>
+      <url path="types/Property.java"/>
+      <url path="types/DeleteOpportunityRevenue.java"/>
+      <url path="types/ChildFindCriteria.java"/>
+      <url path="types/DeleteEntity.java"/>
+      <url path="types/XMLInfo.java"/>
+      <url path="types/ViewCriteriaRow.java"/>
+      <url path="types/ProcessCSOpportunityAsync.java"/>
+      <url path="types/DoAutoAssignmentAsynchronouslyResponse.java"/>
+      <url path="types/package-info.java"/>
+      <url path="types/TransientAppointment.java"/>
+      <url path="types/DeleteOpportunityReferenceResponse.java"/>
+      <url path="types/ServiceAttrValErrorMessage.java"/>
+      <url path="types/TransientNote.java"/>
+      <url path="types/MergeOpportunityResponse.java"/>
+      <url path="types/ProcessCSOpportunity.java"/>
+      <url path="types/OpportunityContact.java"/>
+      <url path="types/GetDfltObjAttrHintsAsyncResponse.java"/>
+      <url path="types/UpdateOpportunityAsync.java"/>
+      <url path="types/ChangeOperation.java"/>
+      <url path="types/DataObject.java"/>
+      <url path="types/ProcessOpportunity.java"/>
+      <url path="types/DeleteOpportunityRevenueAsync.java"/>
+      <url path="types/DeleteOpportunityLeadAsync.java"/>
+      <url path="types/DataGraphType.java"/>
+      <url path="types/IsSalesAccountUsedInOpportunityResponse.java"/>
+      <url path="types/BaseDataGraphType.java"/>
+      <url path="types/Opportunity.java"/>
+      <url path="types/Types.java"/>
+      <url path="types/DeleteOpportunityMktResponseAsync.java"/>
+      <url path="types/TimeResult.java"/>
+      <url path="types/CheckConstraintAsync.java"/>
+      <url path="types/BytesResult.java"/>
+      <url path="types/RevenueLineSet.java"/>
+      <url path="types/TransientContact.java"/>
+      <url path="types/DeleteOpportunityLeadAsyncResponse.java"/>
+      <url path="types/ProcessOpportunityAsyncResponse.java"/>
+      <url path="types/BooleanResult.java"/>
+      <url path="types/OpportunityResource.java"/>
+      <url path="types/ViewCriteriaItem.java"/>
+      <url path="types/SortOrder.java"/>
+      <url path="types/ByteResult.java"/>
+      <url path="types/ModelsType.java"/>
+      <url path="types/GetServiceLastUpdateTimeAsyncResponse.java"/>
+      <url path="types/DeleteOpportunityCompetitorAsync.java"/>
+      <url path="types/DeleteOpportunityResourceAsyncResponse.java"/>
+      <url path="types/FindControl.java"/>
+      <url path="types/GetOpportunity.java"/>
+      <url path="types/DeleteOpportunityResourceAsync.java"/>
+      <url path="types/DeleteOpportunityRevenueAsyncResponse.java"/>
+      <url path="types/JavaInfo.java"/>
+      <url path="types/GetEntityList.java"/>
+      <url path="types/ServiceMessage.java"/>
+      <url path="types/Detail.java"/>
+      <url path="types/ProcessControl.java"/>
+      <url path="types/Revenue.java"/>
+      <url path="types/GetEntityListAsyncResponse.java"/>
+      <url path="types/DeleteOpportunityContactAsyncResponse.java"/>
+      <url path="types/CreateOpportunityAsync.java"/>
+      <url path="types/DeleteOpportunityMktResponseAsyncResponse.java"/>
+      <url path="types/DeleteOpportunityReferenceAsync.java"/>
+      <url path="types/GetDfltObjAttrHintsResponse.java"/>
+      <url path="types/RevenuePartner.java"/>
+      <url path="types/DeleteOpportunityReference.java"/>
+      <url path="types/OpportunityLead.java"/>
+      <url path="types/UpdateOpportunityAsyncResponse.java"/>
+      <url path="types/DeleteOpportunityResponse.java"/>
+      <url path="types/CreateOpportunity.java"/>
+      <url path="types/MergeOpportunityAsyncResponse.java"/>
+      <url path="types/CategorySummaryRevenue.java"/>
+      <url path="types/DeleteOpportunityResource.java"/>
+      <url path="types/FaultType.java"/>
+      <url path="types/ServiceDMLErrorMessage.java"/>
+      <url path="types/DeleteOpportunityContact.java"/>
+      <url path="types/DeleteOpportunityCompetitor.java"/>
+      <url path="types/CtrlHint.java"/>
+      <url path="types/DoubleResult.java"/>
+      <url path="types/DeleteOpportunity.java"/>
+      <url path="types/TextType.java"/>
+      <url path="types/DeleteOpportunityLead.java"/>
+      <url path="types/ReturnMode.java"/>
+      <url path="types/DoAutoAssignmentAsynchronouslyAsync.java"/>
+      <url path="types/FindOpportunityResponse.java"/>
+      <url path="types/UpdateOpportunity.java"/>
+      <url path="types/OpportunityCompetitor.java"/>
+      <url path="types/DeleteOpportunityLeadResponse.java"/>
+      <url path="types/DeleteOpportunityResourceResponse.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="OpportunityService_Service.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="com.oracle.ptsdemo.oscproxyclient"/>
+            <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="com.oracle.ptsdemo.oscproxyclient.types"/>
+            <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_NONE"/>
+      <list n="PROXY_CLIENTS">
+         <url path="OpportunityServiceSoapHttpPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="OpportunityServiceSoapHttpPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="true"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="com.oracle.ptsdemo.oscproxyclient.OpportunityService"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="OpportunityServiceSoapHttpPort"/>
+            <hash n="OPERATIONS">
+               <hash n="checkConstraint">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="checkConstraintAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createOpportunity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createOpportunityAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityCompetitor">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityCompetitorAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityContact">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityContactAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityLead">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityLeadAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityMktResponse">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityMktResponseAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityReference">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityReferenceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityResource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityResourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityRevenue">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunityRevenueAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunitySource">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="deleteOpportunitySourceAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="doAutoAssignmentAsynchronously">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="doAutoAssignmentAsynchronouslyAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findOpportunity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="findOpportunityAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getDfltObjAttrHints">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getDfltObjAttrHintsAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getEntityList">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getEntityListAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getOpportunity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getOpportunityAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getServiceLastUpdateTime">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getServiceLastUpdateTimeAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="isSalesAccountUsedInOpportunity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="isSalesAccountUsedInOpportunityAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergeOpportunity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="mergeOpportunityAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="processCSOpportunity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="processCSOpportunityAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="processOpportunity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="processOpportunityAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateOpportunity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="updateOpportunityAsync">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_CLIENT_POLICY">
+                  <value n="addressing"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security">
+                     <string v="oracle/wss_username_token_over_ssl_client_policy"/>
+                  </list>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="https" host="my-oraclesalescloud.com" port="443" path="/opptyMgmtOpportunities/OpportunityService"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="OpportunityService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../OSCProxyClient.jpr"/>
+      <url n="PROXY_WSDL_URL" protocol="https" host="my-oraclesalescloud.com" path="/opptyMgmtOpportunities/OpportunityService" query="wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BOUND_PORT_TYPE" v="{http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/}OpportunityService"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/}OpportunityServiceSoapHttp"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/getOpportunity"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.GetOpportunityResponse.getOpportunity.com.oracle.ptsdemo.oscproxyclient.types.GetOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/createOpportunity"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.CreateOpportunityResponse.createOpportunity.com.oracle.ptsdemo.oscproxyclient.types.CreateOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/updateOpportunity"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.UpdateOpportunityResponse.updateOpportunity.com.oracle.ptsdemo.oscproxyclient.types.UpdateOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunity"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityResponse.deleteOpportunity.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/mergeOpportunity"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.MergeOpportunityResponse.mergeOpportunity.com.oracle.ptsdemo.oscproxyclient.types.MergeOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/processOpportunity"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.ProcessOpportunityResponse.processOpportunity.com.oracle.ptsdemo.oscproxyclient.types.ProcessOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/processCSOpportunity"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.ProcessCSOpportunityResponse.processCSOpportunity.com.oracle.ptsdemo.oscproxyclient.types.ProcessCSOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/processCSOpportunityAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.processCSOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.ProcessCSOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/processOpportunityAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.processOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.ProcessOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/getOpportunityAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.GetOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/createOpportunityAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.createOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.CreateOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/mergeOpportunityAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.mergeOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.MergeOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/updateOpportunityAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.updateOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.UpdateOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityCompetitor"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityCompetitorResponse.deleteOpportunityCompetitor.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityCompetitor"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityLead"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityLeadResponse.deleteOpportunityLead.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityReference"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityReferenceResponse.deleteOpportunityReference.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityReference"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityResource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityResourceResponse.deleteOpportunityResource.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityMktResponse"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityMktResponseResponse.deleteOpportunityMktResponse.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityMktResponse"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityRevenue"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityRevenueResponse.deleteOpportunityRevenue.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityRevenue"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunitySource"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunitySourceResponse.deleteOpportunitySource.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunitySource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityCompetitorAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteOpportunityCompetitorAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityCompetitorAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityMktResponseAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteOpportunityMktResponseAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityMktResponseAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityRevenueAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteOpportunityRevenueAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityRevenueAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityResourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteOpportunityResourceAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityLeadAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteOpportunityLeadAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityLeadAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunitySourceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteOpportunitySourceAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunitySourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityReferenceAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteOpportunityReferenceAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityReferenceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/doAutoAssignmentAsynchronously"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DoAutoAssignmentAsynchronouslyResponse.doAutoAssignmentAsynchronously.com.oracle.ptsdemo.oscproxyclient.types.DoAutoAssignmentAsynchronously"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/doAutoAssignmentAsynchronouslyAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.doAutoAssignmentAsynchronouslyAsync.com.oracle.ptsdemo.oscproxyclient.types.DoAutoAssignmentAsynchronouslyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityContact"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityContactResponse.deleteOpportunityContact.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/deleteOpportunityContactAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.deleteOpportunityContactAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityContactAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/findOpportunity"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.FindOpportunityResponse.findOpportunity.com.oracle.ptsdemo.oscproxyclient.types.FindOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/findOpportunityAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.findOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.FindOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/isSalesAccountUsedInOpportunity"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.IsSalesAccountUsedInOpportunityResponse.isSalesAccountUsedInOpportunity.com.oracle.ptsdemo.oscproxyclient.types.IsSalesAccountUsedInOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/isSalesAccountUsedInOpportunityAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.isSalesAccountUsedInOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.IsSalesAccountUsedInOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/checkConstraint"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.CheckConstraintResponse.checkConstraint.com.oracle.ptsdemo.oscproxyclient.types.CheckConstraint"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/checkConstraintAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.checkConstraintAsync.com.oracle.ptsdemo.oscproxyclient.types.CheckConstraintAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/getDfltObjAttrHints"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.GetDfltObjAttrHintsResponse.getDfltObjAttrHints.com.oracle.ptsdemo.oscproxyclient.types.GetDfltObjAttrHints"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/getServiceLastUpdateTime"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.GetServiceLastUpdateTimeResponse.getServiceLastUpdateTime.com.oracle.ptsdemo.oscproxyclient.types.GetServiceLastUpdateTime"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/getEntityList"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_OUTPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.GetEntityListResponse.getEntityList.com.oracle.ptsdemo.oscproxyclient.types.GetEntityList"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/getEntityListAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getEntityListAsync.com.oracle.ptsdemo.oscproxyclient.types.GetEntityListAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/getDfltObjAttrHintsAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getDfltObjAttrHintsAsync.com.oracle.ptsdemo.oscproxyclient.types.GetDfltObjAttrHintsAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BD_SOAP_ACTION" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/getServiceLastUpdateTimeAsync"/>
+                     <value n="BD_SOAP_INPUT_USE" v="1"/>
+                     <value n="BD_SOAP_STYLE" v="1"/>
+                     <value n="BOUND_OPERATION" v="void.getServiceLastUpdateTimeAsync.com.oracle.ptsdemo.oscproxyclient.types.GetServiceLastUpdateTimeAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="2577aa1a-0145-1000-8003-0a9a967240aa"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="OpportunityServiceSoapHttpPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/}OpportunityServiceSoapHttp"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.GetOpportunityResponse.getOpportunity.com.oracle.ptsdemo.oscproxyclient.types.GetOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.CreateOpportunityResponse.createOpportunity.com.oracle.ptsdemo.oscproxyclient.types.CreateOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.UpdateOpportunityResponse.updateOpportunity.com.oracle.ptsdemo.oscproxyclient.types.UpdateOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityResponse.deleteOpportunity.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.MergeOpportunityResponse.mergeOpportunity.com.oracle.ptsdemo.oscproxyclient.types.MergeOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.ProcessOpportunityResponse.processOpportunity.com.oracle.ptsdemo.oscproxyclient.types.ProcessOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.ProcessCSOpportunityResponse.processCSOpportunity.com.oracle.ptsdemo.oscproxyclient.types.ProcessCSOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.processCSOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.ProcessCSOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.processOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.ProcessOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.GetOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.createOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.CreateOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.mergeOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.MergeOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.updateOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.UpdateOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityCompetitorResponse.deleteOpportunityCompetitor.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityCompetitor"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityLeadResponse.deleteOpportunityLead.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityLead"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityReferenceResponse.deleteOpportunityReference.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityReference"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityResourceResponse.deleteOpportunityResource.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityResource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityMktResponseResponse.deleteOpportunityMktResponse.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityMktResponse"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityRevenueResponse.deleteOpportunityRevenue.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityRevenue"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunitySourceResponse.deleteOpportunitySource.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunitySource"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteOpportunityCompetitorAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityCompetitorAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteOpportunityMktResponseAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityMktResponseAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteOpportunityRevenueAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityRevenueAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteOpportunityResourceAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityResourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteOpportunityLeadAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityLeadAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteOpportunitySourceAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunitySourceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteOpportunityReferenceAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityReferenceAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DoAutoAssignmentAsynchronouslyResponse.doAutoAssignmentAsynchronously.com.oracle.ptsdemo.oscproxyclient.types.DoAutoAssignmentAsynchronously"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.doAutoAssignmentAsynchronouslyAsync.com.oracle.ptsdemo.oscproxyclient.types.DoAutoAssignmentAsynchronouslyAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityContactResponse.deleteOpportunityContact.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityContact"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.deleteOpportunityContactAsync.com.oracle.ptsdemo.oscproxyclient.types.DeleteOpportunityContactAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.FindOpportunityResponse.findOpportunity.com.oracle.ptsdemo.oscproxyclient.types.FindOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.findOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.FindOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.IsSalesAccountUsedInOpportunityResponse.isSalesAccountUsedInOpportunity.com.oracle.ptsdemo.oscproxyclient.types.IsSalesAccountUsedInOpportunity"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.isSalesAccountUsedInOpportunityAsync.com.oracle.ptsdemo.oscproxyclient.types.IsSalesAccountUsedInOpportunityAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.CheckConstraintResponse.checkConstraint.com.oracle.ptsdemo.oscproxyclient.types.CheckConstraint"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.checkConstraintAsync.com.oracle.ptsdemo.oscproxyclient.types.CheckConstraintAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.GetDfltObjAttrHintsResponse.getDfltObjAttrHints.com.oracle.ptsdemo.oscproxyclient.types.GetDfltObjAttrHints"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.GetServiceLastUpdateTimeResponse.getServiceLastUpdateTime.com.oracle.ptsdemo.oscproxyclient.types.GetServiceLastUpdateTime"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.ptsdemo.oscproxyclient.types.GetEntityListResponse.getEntityList.com.oracle.ptsdemo.oscproxyclient.types.GetEntityList"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getEntityListAsync.com.oracle.ptsdemo.oscproxyclient.types.GetEntityListAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getDfltObjAttrHintsAsync.com.oracle.ptsdemo.oscproxyclient.types.GetDfltObjAttrHintsAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="void.getServiceLastUpdateTimeAsync.com.oracle.ptsdemo.oscproxyclient.types.GetServiceLastUpdateTimeAsync"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="https" host="my-oraclesalescloud.com" port="443" path="/opptyMgmtOpportunities/OpportunityService"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+               <value n="WSDL2JAVA_DEFAULT_PACKAGE" v="com.oracle.ptsdemo.oscproxyclient"/>
+               <value n="WSDL2JAVA_ROOT_VALUE_PACKAGE" v="com.oracle.ptsdemo.oscproxyclient.types"/>
+               <value n="WSDL2JAVA_UNWRAP_PARAMETERS" v="false"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/}OpportunityService"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="com.oracle.ptsdemo.oscproxyclient.OpportunityServiceImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="com.oracle.ptsdemo.oscproxyclient.OpportunityService"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../OSCProxyClient.jpr"/>
+         <value n="WS_CREATE_ONEWAY_OPERATIONS" v="true"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://xmlns.oracle.com/apps/sales/opptyMgmt/opportunities/opportunityService/"/>
+         <value n="WS_URI" v="OpportunityService"/>
+         <url n="WS_WSDL_FILE" protocol="https" host="my-oraclesalescloud.com" path="/opptyMgmtOpportunities/OpportunityService" query="wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="SERVICE_ASYNC_FEATURES" v="true"/>
+      <value n="WSDL_IS_LOCAL_COPY" v="false"/>
+   </hash>
+</jdevws:WebServiceProxy>

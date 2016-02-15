@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="opportunities-contactsTF">
+    <default-activity id="__1">opportunities-contacts</default-activity>
+    <managed-bean id="__9">
+      <managed-bean-name id="__10">OpportunitiesContactBean</managed-bean-name>
+      <managed-bean-class id="__8">com.oracle.fuse.model.OpportunitiesContactBean</managed-bean-class>
+      <managed-bean-scope id="__7">pageFlow</managed-bean-scope>
+    </managed-bean>
+    <view id="opportunities-contacts">
+      <page>/sample_fragments/opportunities-contacts.jsff</page>
+    </view>
+    <method-call id="addContact">
+      <method>#{pageFlowScope.OpportunitiesContactBean.addContact}</method>
+      <outcome id="__11">
+        <fixed-outcome>back</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__2">
+      <from-activity-id id="__3">opportunities-contacts</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome id="__6">refreshData</from-outcome>
+        <to-activity-id id="__4">addContact</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__12">
+      <from-activity-id id="__13">addContact</from-activity-id>
+      <control-flow-case id="__15">
+        <from-outcome id="__16">back</from-outcome>
+        <to-activity-id id="__14">opportunities-contacts</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

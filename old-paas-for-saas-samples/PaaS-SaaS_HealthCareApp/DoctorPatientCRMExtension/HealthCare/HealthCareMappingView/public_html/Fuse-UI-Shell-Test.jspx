@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1" title="Fuse"
+                 styleClass="application-container round">
+        <f:facet name="metaContainer">
+        <af:resource type="javascript" source="/faces/skins/js/fuse-ui.js"/>
+        
+        <f:verbatim>
+               <meta name="apple-mobile-web-app-capable"
+                     content="yes"/>
+               <meta name="apple-mobile-web-app-status-bar-style"
+                     content="black"/>
+               <meta name="viewport" content="width=device-width,
+                               maximum-scale=1.0"/>
+        </f:verbatim>
+      </f:facet>
+      <af:clientListener type="load" method="objectNavigatorPropertyChangeListener_Helper"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/WEB-INF/_Templates/fuse-ui-shell.jspx"
+                         id="pt1">
+          <f:attribute name="application-logo" value="/images/fuse-brand-oracle-white.png"/>
+          <f:attribute name="card-1" value="Agenda"/>
+          <f:attribute name="icon-1" value="/images/fuse-obj-nav-matte-customers.png"/>
+                    
+          <f:attribute name="card-2" value="Doctor"/>
+          <f:attribute name="icon-2" value="/images/fuse-obj-nav-matte-leads.png"/>          
+  
+          <f:attribute name="card-3" value="Patient"/>
+          <f:attribute name="icon-3" value="/images/fuse-obj-nav-matte-navigator.png"/>
+   
+          
+          <f:attribute name="card-4" value="Insurance"/>
+          <f:attribute name="icon-4" value="/images/fuse-obj-nav-matte-watchlist.png"/>
+                    
+          <f:attribute name="card-6" value="Pharmacy"/>
+          <f:attribute name="icon-6" value="/images/fuse-obj-nav-matte-notifications.png"/>          
+                    
+          <f:attribute name="card-5" value="Prescription"/>
+          <f:attribute name="icon-5" value="/images/fuse-obj-nav-matte-worklist.png"/>
+          <f:facet name="global-header-end">
+              <af:menuBar id="login-menu" styleClass="global-menu-bar">
+                    <af:menu text="#{securityContext.userName}"
+                                 id="m1" styleClass="global-menu">
+                          <af:commandMenuItem text="Sign Out" id="cmi5"
+                                              action="performLogout"/>
+                    </af:menu>
+                </af:menuBar>
+          </f:facet>
+          <f:facet name="card-1-content">
+              <af:region value="#{bindings.leadsTF1.regionModel}" id="r2"/>
+          </f:facet>
+          <f:facet name="card-2-content">
+            <af:region value="#{bindings.opportunitiesTF1.regionModel}" id="r1"/>
+          </f:facet>
+          <f:facet name="card-3-content">
+            <af:region value="#{bindings.customerTF1.regionModel}" id="r3"/>
+          </f:facet>
+          <f:facet name="card-4-content">
+            <af:region value="#{bindings.contactTF1.regionModel}" id="r4"/>
+          </f:facet>
+          <f:facet name="announcement-content">
+            <af:outputText value="Welcome to SaaS-PaaS workshop" id="ot10"/>
+          </f:facet>
+          <f:facet name="card-5-content">
+            <af:region value="#{bindings.prescriptionTF1.regionModel}" id="r5"/>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

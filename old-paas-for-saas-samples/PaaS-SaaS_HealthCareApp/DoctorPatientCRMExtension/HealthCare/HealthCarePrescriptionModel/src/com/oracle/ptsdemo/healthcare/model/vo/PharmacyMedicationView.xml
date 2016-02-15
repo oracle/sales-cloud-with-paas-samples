@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PharmacyMedicationView"
+  Version="11.1.1.65.92"
+  InheritPersonalization="true"
+  SelectList="PharmacyMedication.PHARMACY_ID, 
+       PharmacyMedication.MEDICATION_ID, 
+       PharmacyMedication.IN_STOCK_FL"
+  FromList="PHARMACY_MEDICATION PharmacyMedication, MEDICATION Medication, PHARMACY Pharmacy"
+  Where="(PharmacyMedication.MEDICATION_ID = Medication.MEDICATION_ID) AND (PharmacyMedication.PHARMACY_ID = Pharmacy.PHARMACY_ID)"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="PharmacyMedication"
+    Entity="com.oracle.ptsdemo.healthcare.model.eo.PharmacyMedication"/>
+  <EntityUsage
+    Name="Medication"
+    Entity="com.oracle.ptsdemo.healthcare.model.eo.Medication"
+    Association="com.oracle.ptsdemo.healthcare.model.eo.MedicationFk1Assoc"
+    AssociationEnd="com.oracle.ptsdemo.healthcare.model.eo.MedicationFk1Assoc.Medication"
+    SourceUsage="com.oracle.ptsdemo.healthcare.model.vo.PharmacyMedicationView.PharmacyMedication"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_srcAttributes">
+        <Item
+          Value="com.oracle.ptsdemo.healthcare.model.eo.PharmacyMedication.MedicationId"/>
+      </AttrArray>
+      <AttrArray Name="_dstAttributes">
+        <Item
+          Value="com.oracle.ptsdemo.healthcare.model.eo.Medication.MedicationId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="Pharmacy"
+    Entity="com.oracle.ptsdemo.healthcare.model.eo.Pharmacy"
+    Association="com.oracle.ptsdemo.healthcare.model.eo.PharmacyIdFk1Assoc"
+    AssociationEnd="com.oracle.ptsdemo.healthcare.model.eo.PharmacyIdFk1Assoc.Pharmacy"
+    SourceUsage="com.oracle.ptsdemo.healthcare.model.vo.PharmacyMedicationView.PharmacyMedication"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_srcAttributes">
+        <Item
+          Value="com.oracle.ptsdemo.healthcare.model.eo.PharmacyMedication.PharmacyId"/>
+      </AttrArray>
+      <AttrArray Name="_dstAttributes">
+        <Item
+          Value="com.oracle.ptsdemo.healthcare.model.eo.Pharmacy.PharmacyId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <ViewAttribute
+    Name="PharmacyId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="PharmacyId"
+    EntityUsage="PharmacyMedication"
+    AliasName="PHARMACY_ID"/>
+  <ViewAttribute
+    Name="MedicationId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="MedicationId"
+    EntityUsage="PharmacyMedication"
+    AliasName="MEDICATION_ID"/>
+  <ViewAttribute
+    Name="InStockFl"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="InStockFl"
+    EntityUsage="PharmacyMedication"
+    AliasName="IN_STOCK_FL"/>
+  <ViewCriteria
+    Name="PharmacyMedicationViewCriteria"
+    ViewObjectName="com.oracle.ptsdemo.healthcare.model.vo.PharmacyMedicationView"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="vcrow36"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="PharmacyMedicationViewCriteria_vcrow36_InStockFl"
+        ViewAttribute="InStockFl"
+        Operator="="
+        Conjunction="AND"
+        Value="F"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+</ViewObject>

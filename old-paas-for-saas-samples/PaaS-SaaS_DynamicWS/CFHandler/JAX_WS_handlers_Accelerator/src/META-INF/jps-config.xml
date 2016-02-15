@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<jpsConfig xmlns="http://xmlns.oracle.com/oracleas/schema/11/jps-config-11_1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/oracleas/schema/11/jps-config-11_1.xsd jps-config-11_1.xsd">
+   <property name="oracle.security.jps.jaas.mode" value="doasprivileged"/>
+   <serviceProviders>
+      <serviceProvider type="CREDENTIAL_STORE" name="credstore.provider" class="oracle.security.jps.internal.credstore.ssp.SspCredentialStoreProvider">
+         <description>Credential Store Service Provider</description>
+      </serviceProvider>
+      <serviceProvider type="ANONYMOUS" name="anonymous.provider" class="oracle.security.jps.internal.anonymous.idm.IdmAnonymousServiceProvider">
+         <description>Anonymous Service Provider</description>
+      </serviceProvider>
+      <serviceProvider type="LOGIN" name="jaas.login.provider" class="oracle.security.jps.internal.login.jaas.JaasLoginServiceProvider">
+         <description>Login Module Service Provider</description>
+      </serviceProvider>
+   </serviceProviders>
+   <serviceInstances>
+      <serviceInstance name="credstore" provider="credstore.provider">
+         <property name="location" value="./"/>
+      </serviceInstance>
+      <serviceInstance name="anonymous" provider="anonymous.provider"/>
+      <serviceInstance name="idstore.loginmodule" provider="jaas.login.provider">
+         <property name="loginModuleClassName" value="oracle.security.jps.internal.jaas.module.idstore.IdStoreLoginModule"/>
+         <property name="jaas.login.controlFlag" value="REQUIRED"/>
+         <property name="debug" value="true"/>
+         <property name="addAllRoles" value="true"/>
+         <property name="remove.anonymous.role" value="false"/>
+      </serviceInstance>
+      <serviceInstance name="anonymous.loginmodule" provider="jaas.login.provider">
+         <property name="loginModuleClassName" value="oracle.security.jps.internal.jaas.module.anonymous.AnonymousLoginModule"/>
+         <property name="jaas.login.controlFlag" value="REQUIRED"/>
+         <property name="debug" value="true"/>
+         <property name="addAllRoles" value="true"/>
+      </serviceInstance>
+   </serviceInstances>
+   <jpsContexts default="JAX_WS_handlers_Accelerator">
+      <jpsContext name="JAX_WS_handlers_Accelerator">
+         <serviceInstanceRef ref="credstore"/>
+         <serviceInstanceRef ref="anonymous"/>
+         <serviceInstanceRef ref="idstore.loginmodule"/>
+      </jpsContext>
+      <jpsContext name="anonymous">
+         <serviceInstanceRef ref="credstore"/>
+         <serviceInstanceRef ref="anonymous"/>
+         <serviceInstanceRef ref="anonymous.loginmodule"/>
+      </jpsContext>
+   </jpsContexts>
+</jpsConfig>

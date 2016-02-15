@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="sampleOptyTF">
+    <default-activity id="__1">loadFusionProperties</default-activity>
+    <input-parameter-definition id="__27">
+      <name id="__28">jwt</name>
+      <value>#{pageFlowScope.jwt}</value>
+      <class>java.lang.String</class>
+    </input-parameter-definition>
+    <task-flow-call id="validateUserTokenTF">
+      <task-flow-reference>
+        <document id="__7">/WEB-INF/validateUserTokenTF.xml</document>
+        <id id="__3">validateUserTokenTF</id>
+      </task-flow-reference>
+      <input-parameter id="__123">
+        <name id="__4">jwt</name>
+        <value id="__2">#{pageFlowScope.jwt}</value>
+      </input-parameter>
+      <input-parameter id="__29">
+        <name>fusionJWTTokenEndpoint</name>
+        <value>#{pageFlowScope.fusionJWTTokenEndpoint}</value>
+      </input-parameter>
+      <return-value id="__231">
+        <name id="__6">jwtUserContext</name>
+        <value id="__5">#{sessionScope.jwtUserContext}</value>
+      </return-value>
+    </task-flow-call>
+    <method-call id="loadFusionProperties">
+      <method id="__8">#{FusionConfigBean.loadFusionProperties}</method>
+      <outcome id="__9">
+        <fixed-outcome id="__9123">goValidate</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="error">
+      <page>/error.jsff</page>
+    </view>
+    <view id="viewClosedOpportunities">
+      <page>/viewClosedOpportunities.jsff</page>
+    </view>
+    <control-flow-rule id="__14">
+      <from-activity-id id="__12">loadFusionProperties</from-activity-id>
+      <control-flow-case id="__13">
+        <from-outcome id="__10">goValidate</from-outcome>
+        <to-activity-id id="__11">validateUserTokenTF</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__15">
+      <from-activity-id id="__16">validateUserTokenTF</from-activity-id>
+      <control-flow-case id="__18">
+        <from-outcome id="__19">goNext</from-outcome>
+        <to-activity-id id="__17">viewClosedOpportunities</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__24">
+        <from-outcome id="__26">error</from-outcome>
+        <to-activity-id id="__25">error</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

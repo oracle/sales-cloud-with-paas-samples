@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:pageTemplate viewId="/WEB-INF/_Templates/fuse-popup.jspx" id="pt1">
+    <f:facet name="header-start">
+      <af:outputText value="Create Opportunity" id="ot1"
+                     styleClass="page-title"/>
+    </f:facet>
+    <f:facet name="header-end">
+      <af:panelGroupLayout id="pgl1" layout="horizontal">
+        <af:commandButton text="Save and Close" id="cb1"/>
+        <af:spacer width="10" height="10" id="s1"/>
+        <af:commandButton text="Cancel" id="cb2" immediate="true"
+                          actionListener="#{backingBeanScope.UtilLibraryBean.cancelButton}"/>
+      </af:panelGroupLayout>
+    </f:facet>
+    <f:facet name="body">
+      <af:panelGroupLayout id="pgl2" layout="vertical">
+        <af:panelFormLayout id="pfl1" maxColumns="2" rows="5"
+                            labelWidth="200px">
+          <af:inputText label="Name" id="it1" showRequired="true"/>
+          <af:inputComboboxListOfValues label="Customer"
+                                        popupTitle="Search and Result Dialog"
+                                        id="iclov1"/>
+          <af:inputComboboxListOfValues label="Primary Contact"
+                                        popupTitle="Search and Result Dialog"
+                                        id="iclov2"/>
+          <af:inputText label="Win Probability (%)" id="it2" columns="3"/>
+          <af:spacer width="10" height="10" id="s2"/>
+          <af:selectOneChoice label="Currency" id="soc1" value="USD">
+            <af:selectItem label="USD" value="USD" id="si5"/>
+            <af:selectItem label="EUR" value="EUR" id="si4"/>
+            <af:selectItem label="GBP" value="GBP" id="si3"/>
+            <af:selectItem label="CAD" value="CAD" id="si1"/>
+            <af:selectItem label="AUD" value="AUD" id="si6"/>
+            <af:selectItem label="RUB" value="RUB" id="si2"/>
+            <af:selectItem label="JPY" value="JPY" id="si7"/>
+          </af:selectOneChoice>
+          <af:panelLabelAndMessage label="Revenue" id="plam1">
+            <af:outputText value="0.00" id="ot2"/>
+          </af:panelLabelAndMessage>
+          <af:inputDate label="Close Date" id="id1" showRequired="true"/>
+          <af:selectOneChoice label="Sales Mehtod" id="soc2">
+            <af:selectItem label="Standard Sales Process"
+                           value="Standard Sales Process" id="si8"/>
+          </af:selectOneChoice>
+          <af:selectOneChoice label="Sales Stage" id="soc3">
+            <af:selectItem label="01 - Qualification" value="01 - Qualification"
+                           id="si9"/>
+          </af:selectOneChoice>
+        </af:panelFormLayout>
+        <af:panelBox text="Revenuew Items" id="pb1" styleClass="indent-content"
+                     showDisclosure="false">
+          <f:facet name="toolbar">
+            <af:commandButton text="Add Revenue Item" id="cb3"/>
+          </f:facet>
+          <af:table var="row" rowBandingInterval="0" id="t1"
+                    columnStretching="multiple" fetchSize="5"
+                    autoHeightRows="0" columnResizing="disabled"
+                    value="#{DataSourceBean.revenueItems}">
+            <af:column sortable="false" headerText="Type" id="c5" width="15%">
+              <af:selectOneChoice label="Label 1" id="soc4" simple="true">
+                <af:selectItem label="Group" value="Group" id="si10"/>
+              </af:selectOneChoice>
+            </af:column>
+            <af:column sortable="false" headerText="Product" id="c1"
+                       width="25%">
+              <af:inputComboboxListOfValues label="Label 1"
+                                            popupTitle="Search and Result Dialog"
+                                            id="iclov3" simple="true"/>
+            </af:column>
+            <af:column sortable="false" headerText="UOM" id="c8" width="15%">
+              <af:selectOneChoice label="Label 2" id="soc5" simple="true"
+                                  readOnly="true"/>
+            </af:column>
+            <af:column sortable="false" headerText="Quantity" id="c2"
+                       width="10%">
+              <af:inputText label="Label 1" id="it3" simple="true" value="0"
+                            readOnly="true"/>
+            </af:column>
+            <af:column sortable="false" headerText="Estimated Price" id="c4"
+                       width="10%">
+              <af:inputText label="Label 2" id="it4" simple="true"
+                            value="00.0" readOnly="true"/>
+            </af:column>
+            <af:column sortable="false" headerText="Revenue" id="c3"
+                       width="12%">
+              <af:inputText label="Label 2" id="inputText1" simple="true"
+                            value="00.0" readOnly="true"/>
+            </af:column>
+            <af:column sortable="false" headerText="Currency" id="c7"
+                       width="12%">
+              <af:selectOneChoice label="Currency" id="selectOneChoice1"
+                                  value="USD" readOnly="false">
+                <af:selectItem label="USD" value="USD" id="selectItem1"/>
+                <af:selectItem label="EUR" value="EUR" id="selectItem2"/>
+                <af:selectItem label="GBP" value="GBP" id="selectItem3"/>
+                <af:selectItem label="CAD" value="CAD" id="selectItem4"/>
+                <af:selectItem label="AUD" value="AUD" id="selectItem5"/>
+                <af:selectItem label="RUB" value="RUB" id="selectItem6"/>
+                <af:selectItem label="JPY" value="JPY" id="selectItem7"/>
+              </af:selectOneChoice>
+            </af:column>
+            <af:column sortable="false" id="c6" width="1%">
+              <af:commandImageLink id="cil1"
+                                   icon="/images/fuse-icon-delete.png"/>
+            </af:column>
+          </af:table>
+        </af:panelBox>
+      </af:panelGroupLayout>
+    </f:facet>
+    <f:facet name="hidden"/>
+  </af:pageTemplate>
+</jsp:root>

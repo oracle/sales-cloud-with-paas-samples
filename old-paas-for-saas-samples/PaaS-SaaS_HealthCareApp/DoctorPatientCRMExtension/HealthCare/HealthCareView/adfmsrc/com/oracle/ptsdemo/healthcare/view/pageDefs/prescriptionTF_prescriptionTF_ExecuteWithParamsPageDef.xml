@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.92"
+                id="prescriptionTF_prescriptionTF_ExecuteWithParamsPageDef"
+                Package="com.oracle.ptsdemo.healthcare.view.pageDefs"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="PrescriptionView" RangeSize="25"
+              DataControl="HealthCarePrescriptionModelAMDataControl"
+              id="PrescriptionViewIterator" Refresh="never"/>
+  </executables>
+  <bindings>
+    <action IterBinding="PrescriptionViewIterator" id="ExecuteWithParams"
+            RequiresUpdateModel="true" Action="executeWithParams">
+      <NamedData NDName="prescriptionIdVar"
+                 NDValue="#{pageFlowScope.prescriptionId}"
+                 NDType="java.lang.String"/>
+      <NamedData NDName="visitIdVar" NDValue="#{pageFlowScope.visitId}"
+                 NDType="java.lang.String"/>
+      <NamedData NDName="patientIdVar" NDValue="#{pageFlowScope.patientId}"
+                 NDType="java.lang.String"/>
+    </action>
+  </bindings>
+</pageDefinition>

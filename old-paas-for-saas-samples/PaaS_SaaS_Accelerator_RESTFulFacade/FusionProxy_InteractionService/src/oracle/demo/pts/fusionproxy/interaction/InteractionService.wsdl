@@ -1,0 +1,1952 @@
+<wsdl:definitions
+     name="InteractionService"
+     targetNamespace="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/"
+     xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:errors="http://xmlns.oracle.com/adf/svc/errors/"
+     xmlns:orafault="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:tns="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/"
+     xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+     xmlns:types="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/types/"
+    >
+    <wsdl:documentation xmlns:oer="http://xmlns.oracle.com/oer">
+        <name>Customer Interaction</name>
+        <description>An interaction that represents the communication between an internal
+            resource such as Mary Smith and a customer through e-mail, phone, or
+            another channel.</description>
+        <docCategories>
+            <category>Integration</category>
+        </docCategories>
+        <oer:lifecycle>Active</oer:lifecycle>
+        <oer:compatibility>Supported - Backward Compatibility Assured</oer:compatibility>
+        <oer:category name="lba">
+            <value>CrmCommonComponent-CRM Common Components</value>
+            <value>CrmCommonComponent-CRM Common Components :
+                AppCmmnCompInteractions-Interactions</value>
+        </oer:category>
+        <oer:operation name="getInteraction">
+            <description>Get operation for Interaction</description>
+            <oer:parameters>
+                <oer:parameter name="interactionId" description="Unique Interaction Identifier for the interaction"/>
+                <oer:return description="Interaction that matches the inbound key attributes."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="createInteraction">
+            <description>Create operation for Interaction</description>
+            <oer:parameters>
+                <oer:parameter name="interaction" description="Interaction to be created"/>
+                <oer:return description="Created Interaction"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="updateInteraction">
+            <description>Update operation for Interaction</description>
+            <oer:parameters>
+                <oer:parameter name="interaction" description="Interaction to be updated"/>
+                <oer:return description="Updated Interaction"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteInteraction">
+            <description>Delete operation for Interaction</description>
+            <oer:parameters>
+                <oer:parameter name="interaction" description="Interaction to be deleted"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="mergeInteraction">
+            <description>Merge operation for Interaction. It will perform an update if
+                the object exists, or an insert if the object doesn&apos;t already
+                exist.</description>
+            <oer:parameters>
+                <oer:parameter name="interaction" description="Interaction to be merged"/>
+                <oer:return description="Merged Interaction"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="getInteractionAssociation">
+            <description>Get operation for Interaction Association</description>
+            <oer:parameters>
+                <oer:parameter name="interactionAssociationId" description="Unique Identifier for the Interaction Associations Table."/>
+                <oer:return description="Interaction Association that matches the inbound key attributes."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="createInteractionAssociation">
+            <description>Create operation for Interaction Association</description>
+            <oer:parameters>
+                <oer:parameter name="interactionAssociationWS" description="Interaction Association to be created"/>
+                <oer:return description="Created Interaction Association"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="updateInteractionAssociation">
+            <description>Update operation for Interaction Association</description>
+            <oer:parameters>
+                <oer:parameter name="interactionAssociationWS" description="Interaction Association to be updated"/>
+                <oer:return description="Updated Interaction Association"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteInteractionAssociation">
+            <description>Delete operation for Interaction Association</description>
+            <oer:parameters>
+                <oer:parameter name="interactionAssociationWS" description="Interaction Association to be deleted"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="getInteractionParticipant">
+            <description>Get operation for Interaction Participant</description>
+            <oer:parameters>
+                <oer:parameter name="interactionParticipantId" description="Unique Identifier for the Interaction Participant Object."/>
+                <oer:return description="Interaction Participant that matches the inbound key attributes."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="createInteractionParticipant">
+            <description>Create operation for Interaction Participant</description>
+            <oer:parameters>
+                <oer:parameter name="interactionParticipantWS" description="Interaction Participant to be created"/>
+                <oer:return description="Created Interaction Participant"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="updateInteractionParticipant">
+            <description>Update operation for Interaction Participant</description>
+            <oer:parameters>
+                <oer:parameter name="interactionParticipantWS" description="Interaction Participant to be updated"/>
+                <oer:return description="Updated Interaction Participant"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteInteractionParticipant">
+            <description>Delete operation for Interaction Participant</description>
+            <oer:parameters>
+                <oer:parameter name="interactionParticipantWS" description="Interaction Participant to be deleted"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="findInteraction">
+            <description>Find operation for Interaction</description>
+            <oer:parameters>
+                <oer:parameter name="findCriteria" description="The criteria used to limit your query result, such as the filter (where clause), the fetch size, etc."/>
+                <oer:parameter name="findControl" description="Find Control. Not currently used."/>
+                <oer:return description="A list of Interaction that satisfy the inbound criteria."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="processInteraction">
+            <description>Bulk load operation for Interaction</description>
+            <oer:parameters>
+                <oer:parameter name="changeOperation" description="Indicates what action shall be performed, such as Create, Update, Merge, or Delete"/>
+                <oer:parameter name="interaction" description="A list of Interaction to be processed"/>
+                <oer:parameter name="processControl" description="Control your bulk upload behavior, such as whether the valid data will be committed if there are other invalid data in the same batch, and whether the outbound will contain the key attributes only or the full object."/>
+                <oer:return description="A list of Interaction that are successfully processed."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="findInteractionAssociation">
+            <description>Find operation for Interaction Association</description>
+            <oer:parameters>
+                <oer:parameter name="findCriteria" description="The criteria used to limit your query result, such as the filter (where clause), the fetch size, etc."/>
+                <oer:parameter name="findControl" description="Find Control. Not currently used."/>
+                <oer:return description="A list of Interaction Association that satisfy the inbound criteria."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="findInteractionParticipant">
+            <description>Find operation for Interaction Participant</description>
+            <oer:parameters>
+                <oer:parameter name="findCriteria" description="The criteria used to limit your query result, such as the filter (where clause), the fetch size, etc."/>
+                <oer:parameter name="findControl" description="Find Control. Not currently used."/>
+                <oer:return description="A list of Interaction Participant that satisfy the inbound criteria."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="processInteractionAssociation">
+            <description>Bulk load operation for Interaction Association</description>
+            <oer:parameters>
+                <oer:parameter name="changeOperation" description="Indicates what action shall be performed, such as Create, Update, Merge, or Delete"/>
+                <oer:parameter name="interactionAssociationWS" description="A list of Interaction Association to be processed"/>
+                <oer:parameter name="processControl" description="Control your bulk upload behavior, such as whether the valid data will be committed if there are other invalid data in the same batch, and whether the outbound will contain the key attributes only or the full object."/>
+                <oer:return description="A list of Interaction Association that are successfully processed."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="processInteractionParticipant">
+            <description>Bulk load operation for Interaction Participant</description>
+            <oer:parameters>
+                <oer:parameter name="changeOperation" description="Indicates what action shall be performed, such as Create, Update, Merge, or Delete"/>
+                <oer:parameter name="interactionParticipantWS" description="A list of Interaction Participant to be processed"/>
+                <oer:parameter name="processControl" description="Control your bulk upload behavior, such as whether the valid data will be committed if there are other invalid data in the same batch, and whether the outbound will contain the key attributes only or the full object."/>
+                <oer:return description="A list of Interaction Participant that are successfully processed."/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="getInteractionAttachment">
+            <description>Get operation for Interaction Attachment</description>
+            <oer:parameters>
+                <oer:parameter name="getParameters" description="Parameters driving the Get operation for Interaction Attachment"/>
+                <oer:return description="The Interaction Attachment that satisfy the inbound Get criteria"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="createInteractionAttachment">
+            <description>Create operation for Interaction Attachment</description>
+            <oer:parameters>
+                <oer:parameter name="attachmentVORows" description="The list of attachment objects to be copied or created"/>
+                <oer:return description="The Interaction Attachment to be created"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="copyInteractionAttachment">
+            <description>Copy operation for Interaction Attachment</description>
+            <oer:parameters>
+                <oer:parameter name="attachmentVORows" description="The list of attachment objects to be copied or created"/>
+                <oer:return description="A list of warnings or informational messages encountered when copying the interaction attachment"/>
+            </oer:parameters>
+        </oer:operation>
+        <oer:operation name="deleteInteractionAttachment">
+            <description>Delete operation for Interaction Attachment</description>
+            <oer:parameters>
+                <oer:parameter name="attachmentVORows" description="The list of attachment objects to be copied or created"/>
+                <oer:return description="A list of warnings or informational messages encountered when deleting the appointment attachment"/>
+            </oer:parameters>
+        </oer:operation>
+    </wsdl:documentation>
+    <plnk:partnerLinkType name="InteractionService">
+        <plnk:role name="InteractionServiceProvider">
+            <plnk:portType name="tns:InteractionService"/>
+        </plnk:role>
+        <plnk:role name="InteractionServiceRequestor">
+            <plnk:portType name="tns:InteractionServiceResponse"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="InteractionServiceResponse_Fault_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="InteractionServiceResponse_Input_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+            <sp:Header Namespace="http://www.w3.org/2005/08/addressing"/>
+            <sp:Header Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+            <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+            <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+        </sp:EncryptedParts>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="InteractionServiceResponse_Output_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <sp:Body/>
+        </sp:EncryptedParts>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="InteractionServiceSoapHttpPort_Fault_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsp:ExactlyOne>
+            <wsp:All/>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="InteractionServiceSoapHttpPort_Input_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                </sp:EncryptedParts>
+            </wsp:All>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Namespace="http://www.w3.org/2005/08/addressing"/>
+                    <sp:Header Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                    <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+                </sp:EncryptedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="InteractionServiceSoapHttpPort_Output_Policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:EncryptedParts>
+            </wsp:All>
+            <wsp:All>
+                <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:SignedParts>
+                <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <sp:Body/>
+                </sp:EncryptedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="wsaddr_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+        <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="wss11_saml_or_username_token_with_message_protection_service_policy">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:ProtectionToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:RequireThumbprintReference/>
+                                        <sp:WssX509V3Token11/>
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:ProtectionToken>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic128/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                        <sp:ProtectTokens/>
+                        <sp:OnlySignEntireHeadersAndBody/>
+                    </wsp:Policy>
+                </sp:SymmetricBinding>
+                <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssSamlV11Token11/>
+                            </wsp:Policy>
+                        </sp:SamlToken>
+                    </wsp:Policy>
+                </sp:SignedSupportingTokens>
+                <sp:EndorsingSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssX509V3Token11/>
+                            </wsp:Policy>
+                        </sp:X509Token>
+                    </wsp:Policy>
+                </sp:EndorsingSupportingTokens>
+                <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:RequireSignatureConfirmation/>
+                        <sp:MustSupportRefEncryptedKey/>
+                    </wsp:Policy>
+                </sp:Wss11>
+            </wsp:All>
+            <wsp:All>
+                <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:ProtectionToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:RequireThumbprintReference/>
+                                        <sp:WssX509V3Token11/>
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:ProtectionToken>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic128/>
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                        <sp:OnlySignEntireHeadersAndBody/>
+                    </wsp:Policy>
+                </sp:SymmetricBinding>
+                <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssUsernameToken10/>
+                            </wsp:Policy>
+                        </sp:UsernameToken>
+                    </wsp:Policy>
+                </sp:SignedSupportingTokens>
+                <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:RequireSignatureConfirmation/>
+                        <sp:MustSupportRefEncryptedKey/>
+                    </wsp:Policy>
+                </sp:Wss11>
+            </wsp:All>
+            <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken RequireClientCertificate="false">
+                                    <wsp:Policy/>
+                                </sp:HttpsToken>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                    </wsp:Policy>
+                </sp:TransportBinding>
+                <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssSamlV11Token10/>
+                            </wsp:Policy>
+                        </sp:SamlToken>
+                    </wsp:Policy>
+                </sp:SupportingTokens>
+            </wsp:All>
+            <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken RequireClientCertificate="false">
+                                    <wsp:Policy/>
+                                </sp:HttpsToken>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:IncludeTimestamp/>
+                    </wsp:Policy>
+                </sp:TransportBinding>
+                <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <wsp:Policy>
+                                <sp:WssUsernameToken10/>
+                            </wsp:Policy>
+                        </sp:UsernameToken>
+                    </wsp:Policy>
+                </sp:SupportingTokens>
+            </wsp:All>
+            <wsp:All>
+                <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:TransportToken>
+                            <wsp:Policy>
+                                <sp:HttpsToken RequireClientCertificate="false">
+                                    <wsp:Policy/>
+                                </sp:HttpsToken>
+                            </wsp:Policy>
+                        </sp:TransportToken>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax/>
+                            </wsp:Policy>
+                        </sp:Layout>
+                    </wsp:Policy>
+                </sp:TransportBinding>
+            </wsp:All>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         wsu:Id="wss11_saml_token_with_message_protection_client_policy">
+        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:ProtectionToken>
+                    <wsp:Policy>
+                        <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                            <wsp:Policy>
+                                <sp:RequireThumbprintReference/>
+                                <sp:WssX509V3Token11/>
+                            </wsp:Policy>
+                        </sp:X509Token>
+                    </wsp:Policy>
+                </sp:ProtectionToken>
+                <sp:AlgorithmSuite>
+                    <wsp:Policy>
+                        <sp:Basic128/>
+                    </wsp:Policy>
+                </sp:AlgorithmSuite>
+                <sp:Layout>
+                    <wsp:Policy>
+                        <sp:Lax/>
+                    </wsp:Policy>
+                </sp:Layout>
+                <sp:IncludeTimestamp/>
+                <sp:ProtectTokens/>
+                <sp:OnlySignEntireHeadersAndBody/>
+            </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                    <wsp:Policy>
+                        <sp:WssSamlV11Token11/>
+                    </wsp:Policy>
+                </sp:SamlToken>
+            </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:EndorsingSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                    <wsp:Policy>
+                        <sp:WssX509V3Token11/>
+                    </wsp:Policy>
+                </sp:X509Token>
+            </wsp:Policy>
+        </sp:EndorsingSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+            <wsp:Policy>
+                <sp:RequireSignatureConfirmation/>
+                <sp:MustSupportRefEncryptedKey/>
+            </wsp:Policy>
+        </sp:Wss11>
+    </wsp:Policy>
+    <wsdl:import namespace="http://xmlns.oracle.com/adf/svc/errors/" location="ServiceException.wsdl"/>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0" schemaLocation="oracle_webservices_async_fault_11_0.xsd"/>
+            <import namespace="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/types/"
+                 schemaLocation="InteractionService.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="InteractionService_getInteraction">
+        <wsdl:part name="parameters" element="types:getInteraction"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionResponse">
+        <wsdl:part name="parameters" element="types:getInteractionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteraction">
+        <wsdl:part name="parameters" element="types:createInteraction"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionResponse">
+        <wsdl:part name="parameters" element="types:createInteractionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteraction">
+        <wsdl:part name="parameters" element="types:updateInteraction"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteractionResponse">
+        <wsdl:part name="parameters" element="types:updateInteractionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteraction">
+        <wsdl:part name="parameters" element="types:deleteInteraction"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionResponse">
+        <wsdl:part name="parameters" element="types:deleteInteractionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_mergeInteraction">
+        <wsdl:part name="parameters" element="types:mergeInteraction"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_mergeInteractionResponse">
+        <wsdl:part name="parameters" element="types:mergeInteractionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionAssociation">
+        <wsdl:part name="parameters" element="types:getInteractionAssociation"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionAssociationResponse">
+        <wsdl:part name="parameters" element="types:getInteractionAssociationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionAssociation">
+        <wsdl:part name="parameters" element="types:createInteractionAssociation"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionAssociationResponse">
+        <wsdl:part name="parameters" element="types:createInteractionAssociationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteractionAssociation">
+        <wsdl:part name="parameters" element="types:updateInteractionAssociation"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteractionAssociationResponse">
+        <wsdl:part name="parameters" element="types:updateInteractionAssociationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionAssociation">
+        <wsdl:part name="parameters" element="types:deleteInteractionAssociation"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionAssociationResponse">
+        <wsdl:part name="parameters" element="types:deleteInteractionAssociationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionParticipant">
+        <wsdl:part name="parameters" element="types:getInteractionParticipant"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionParticipantResponse">
+        <wsdl:part name="parameters" element="types:getInteractionParticipantResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionParticipant">
+        <wsdl:part name="parameters" element="types:createInteractionParticipant"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionParticipantResponse">
+        <wsdl:part name="parameters" element="types:createInteractionParticipantResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteractionParticipant">
+        <wsdl:part name="parameters" element="types:updateInteractionParticipant"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteractionParticipantResponse">
+        <wsdl:part name="parameters" element="types:updateInteractionParticipantResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionParticipant">
+        <wsdl:part name="parameters" element="types:deleteInteractionParticipant"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionParticipantResponse">
+        <wsdl:part name="parameters" element="types:deleteInteractionParticipantResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteraction">
+        <wsdl:part name="parameters" element="types:findInteraction"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteractionResponse">
+        <wsdl:part name="parameters" element="types:findInteractionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteraction">
+        <wsdl:part name="parameters" element="types:processInteraction"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteractionResponse">
+        <wsdl:part name="parameters" element="types:processInteractionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteractionAssociation">
+        <wsdl:part name="parameters" element="types:findInteractionAssociation"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteractionAssociationResponse">
+        <wsdl:part name="parameters" element="types:findInteractionAssociationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteractionParticipant">
+        <wsdl:part name="parameters" element="types:findInteractionParticipant"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteractionParticipantResponse">
+        <wsdl:part name="parameters" element="types:findInteractionParticipantResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteractionAssociation">
+        <wsdl:part name="parameters" element="types:processInteractionAssociation"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteractionAssociationResponse">
+        <wsdl:part name="parameters" element="types:processInteractionAssociationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteractionParticipant">
+        <wsdl:part name="parameters" element="types:processInteractionParticipant"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteractionParticipantResponse">
+        <wsdl:part name="parameters" element="types:processInteractionParticipantResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionAttachment">
+        <wsdl:part name="parameters" element="types:getInteractionAttachment"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionAttachmentResponse">
+        <wsdl:part name="parameters" element="types:getInteractionAttachmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionAttachment">
+        <wsdl:part name="parameters" element="types:createInteractionAttachment"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionAttachmentResponse">
+        <wsdl:part name="parameters" element="types:createInteractionAttachmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_copyInteractionAttachment">
+        <wsdl:part name="parameters" element="types:copyInteractionAttachment"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_copyInteractionAttachmentResponse">
+        <wsdl:part name="parameters" element="types:copyInteractionAttachmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionAttachment">
+        <wsdl:part name="parameters" element="types:deleteInteractionAttachment"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionAttachmentResponse">
+        <wsdl:part name="parameters" element="types:deleteInteractionAttachmentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionAsync">
+        <wsdl:part name="parameters" element="types:deleteInteractionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteractionAssociationAsync">
+        <wsdl:part name="parameters" element="types:findInteractionAssociationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteractionParticipantAsync">
+        <wsdl:part name="parameters" element="types:updateInteractionParticipantAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionAsync">
+        <wsdl:part name="parameters" element="types:getInteractionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteractionParticipantAsync">
+        <wsdl:part name="parameters" element="types:processInteractionParticipantAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionAssociationAsync">
+        <wsdl:part name="parameters" element="types:getInteractionAssociationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionParticipantAsync">
+        <wsdl:part name="parameters" element="types:createInteractionParticipantAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteractionAsync">
+        <wsdl:part name="parameters" element="types:updateInteractionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionAssociationAsync">
+        <wsdl:part name="parameters" element="types:createInteractionAssociationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_copyInteractionAttachmentAsync">
+        <wsdl:part name="parameters" element="types:copyInteractionAttachmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionAttachmentAsync">
+        <wsdl:part name="parameters" element="types:getInteractionAttachmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteractionAssociationAsync">
+        <wsdl:part name="parameters" element="types:updateInteractionAssociationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteractionAsync">
+        <wsdl:part name="parameters" element="types:findInteractionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteractionAsync">
+        <wsdl:part name="parameters" element="types:processInteractionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteractionParticipantAsync">
+        <wsdl:part name="parameters" element="types:findInteractionParticipantAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionAttachmentAsync">
+        <wsdl:part name="parameters" element="types:createInteractionAttachmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionAsync">
+        <wsdl:part name="parameters" element="types:createInteractionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionParticipantAsync">
+        <wsdl:part name="parameters" element="types:deleteInteractionParticipantAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteractionAssociationAsync">
+        <wsdl:part name="parameters" element="types:processInteractionAssociationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionAssociationAsync">
+        <wsdl:part name="parameters" element="types:deleteInteractionAssociationAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_mergeInteractionAsync">
+        <wsdl:part name="parameters" element="types:mergeInteractionAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionParticipantAsync">
+        <wsdl:part name="parameters" element="types:getInteractionParticipantAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionAttachmentAsync">
+        <wsdl:part name="parameters" element="types:deleteInteractionAttachmentAsync"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_onFault">
+        <wsdl:part name="parameters" element="orafault:Fault"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteInteractionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteractionAssociationAsyncResponse">
+        <wsdl:part name="parameters" element="types:findInteractionAssociationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteractionParticipantAsyncResponse">
+        <wsdl:part name="parameters" element="types:updateInteractionParticipantAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionAsyncResponse">
+        <wsdl:part name="parameters" element="types:getInteractionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteractionParticipantAsyncResponse">
+        <wsdl:part name="parameters" element="types:processInteractionParticipantAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionAssociationAsyncResponse">
+        <wsdl:part name="parameters" element="types:getInteractionAssociationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionParticipantAsyncResponse">
+        <wsdl:part name="parameters" element="types:createInteractionParticipantAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteractionAsyncResponse">
+        <wsdl:part name="parameters" element="types:updateInteractionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionAssociationAsyncResponse">
+        <wsdl:part name="parameters" element="types:createInteractionAssociationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_copyInteractionAttachmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:copyInteractionAttachmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionAttachmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:getInteractionAttachmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_updateInteractionAssociationAsyncResponse">
+        <wsdl:part name="parameters" element="types:updateInteractionAssociationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteractionAsyncResponse">
+        <wsdl:part name="parameters" element="types:findInteractionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteractionAsyncResponse">
+        <wsdl:part name="parameters" element="types:processInteractionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_findInteractionParticipantAsyncResponse">
+        <wsdl:part name="parameters" element="types:findInteractionParticipantAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionAttachmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:createInteractionAttachmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_createInteractionAsyncResponse">
+        <wsdl:part name="parameters" element="types:createInteractionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionParticipantAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteInteractionParticipantAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_processInteractionAssociationAsyncResponse">
+        <wsdl:part name="parameters" element="types:processInteractionAssociationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionAssociationAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteInteractionAssociationAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_mergeInteractionAsyncResponse">
+        <wsdl:part name="parameters" element="types:mergeInteractionAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_getInteractionParticipantAsyncResponse">
+        <wsdl:part name="parameters" element="types:getInteractionParticipantAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:message name="InteractionService_deleteInteractionAttachmentAsyncResponse">
+        <wsdl:part name="parameters" element="types:deleteInteractionAttachmentAsyncResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="InteractionService">
+        <wsdl:documentation>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="Interaction" SDOName="tns:Interaction"
+                 CreateOpName="createInteraction" UpdateOpName="updateInteraction" DeleteOpName="deleteInteraction"
+                 MergeOpName="mergeInteraction" GetOpName="getInteraction" FindOpName="findInteraction"
+                 ProcessOpName="processInteraction"/>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="InteractionAssociationWS"
+                 SDOName="tns:InteractionAssociation" CreateOpName="createInteractionAssociation"
+                 UpdateOpName="updateInteractionAssociation" DeleteOpName="deleteInteractionAssociation"
+                 GetOpName="getInteractionAssociation" FindOpName="findInteractionAssociation"
+                 ProcessOpName="processInteractionAssociation"/>
+            <ViewInstance xmlns="http://xmlns.oracle.com/adf/svc/metadata/" Name="InteractionParticipantWS"
+                 SDOName="tns:InteractionParticipant" CreateOpName="createInteractionParticipant"
+                 UpdateOpName="updateInteractionParticipant" DeleteOpName="deleteInteractionParticipant"
+                 GetOpName="getInteractionParticipant" FindOpName="findInteractionParticipant"
+                 ProcessOpName="processInteractionParticipant"/>
+        </wsdl:documentation>
+        <wsdl:operation name="getInteraction">
+            <wsdl:input message="tns:InteractionService_getInteraction"/>
+            <wsdl:output message="tns:InteractionService_getInteractionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteraction">
+            <wsdl:input message="tns:InteractionService_createInteraction"/>
+            <wsdl:output message="tns:InteractionService_createInteractionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteraction">
+            <wsdl:input message="tns:InteractionService_updateInteraction"/>
+            <wsdl:output message="tns:InteractionService_updateInteractionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteraction">
+            <wsdl:input message="tns:InteractionService_deleteInteraction"/>
+            <wsdl:output message="tns:InteractionService_deleteInteractionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeInteraction">
+            <wsdl:input message="tns:InteractionService_mergeInteraction"/>
+            <wsdl:output message="tns:InteractionService_mergeInteractionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAssociation">
+            <wsdl:input message="tns:InteractionService_getInteractionAssociation"/>
+            <wsdl:output message="tns:InteractionService_getInteractionAssociationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAssociation">
+            <wsdl:input message="tns:InteractionService_createInteractionAssociation"/>
+            <wsdl:output message="tns:InteractionService_createInteractionAssociationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionAssociation">
+            <wsdl:input message="tns:InteractionService_updateInteractionAssociation"/>
+            <wsdl:output message="tns:InteractionService_updateInteractionAssociationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAssociation">
+            <wsdl:input message="tns:InteractionService_deleteInteractionAssociation"/>
+            <wsdl:output message="tns:InteractionService_deleteInteractionAssociationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionParticipant">
+            <wsdl:input message="tns:InteractionService_getInteractionParticipant"/>
+            <wsdl:output message="tns:InteractionService_getInteractionParticipantResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionParticipant">
+            <wsdl:input message="tns:InteractionService_createInteractionParticipant"/>
+            <wsdl:output message="tns:InteractionService_createInteractionParticipantResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionParticipant">
+            <wsdl:input message="tns:InteractionService_updateInteractionParticipant"/>
+            <wsdl:output message="tns:InteractionService_updateInteractionParticipantResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionParticipant">
+            <wsdl:input message="tns:InteractionService_deleteInteractionParticipant"/>
+            <wsdl:output message="tns:InteractionService_deleteInteractionParticipantResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findInteraction">
+            <wsdl:input message="tns:InteractionService_findInteraction"/>
+            <wsdl:output message="tns:InteractionService_findInteractionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="processInteraction">
+            <wsdl:input message="tns:InteractionService_processInteraction"/>
+            <wsdl:output message="tns:InteractionService_processInteractionResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionAssociation">
+            <wsdl:input message="tns:InteractionService_findInteractionAssociation"/>
+            <wsdl:output message="tns:InteractionService_findInteractionAssociationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionParticipant">
+            <wsdl:input message="tns:InteractionService_findInteractionParticipant"/>
+            <wsdl:output message="tns:InteractionService_findInteractionParticipantResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionAssociation">
+            <wsdl:input message="tns:InteractionService_processInteractionAssociation"/>
+            <wsdl:output message="tns:InteractionService_processInteractionAssociationResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionParticipant">
+            <wsdl:input message="tns:InteractionService_processInteractionParticipant"/>
+            <wsdl:output message="tns:InteractionService_processInteractionParticipantResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAttachment">
+            <wsdl:input message="tns:InteractionService_getInteractionAttachment"/>
+            <wsdl:output message="tns:InteractionService_getInteractionAttachmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAttachment">
+            <wsdl:input message="tns:InteractionService_createInteractionAttachment"/>
+            <wsdl:output message="tns:InteractionService_createInteractionAttachmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="copyInteractionAttachment">
+            <wsdl:input message="tns:InteractionService_copyInteractionAttachment"/>
+            <wsdl:output message="tns:InteractionService_copyInteractionAttachmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAttachment">
+            <wsdl:input message="tns:InteractionService_deleteInteractionAttachment"/>
+            <wsdl:output message="tns:InteractionService_deleteInteractionAttachmentResponse"/>
+            <wsdl:fault name="ServiceException" message="errors:ServiceException"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAsync">
+            <wsdl:input message="tns:InteractionService_deleteInteractionAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionAssociationAsync">
+            <wsdl:input message="tns:InteractionService_findInteractionAssociationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionAssociationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionParticipantAsync">
+            <wsdl:input message="tns:InteractionService_updateInteractionParticipantAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionParticipantAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAsync">
+            <wsdl:input message="tns:InteractionService_getInteractionAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionParticipantAsync">
+            <wsdl:input message="tns:InteractionService_processInteractionParticipantAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionParticipantAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAssociationAsync">
+            <wsdl:input message="tns:InteractionService_getInteractionAssociationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAssociationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionParticipantAsync">
+            <wsdl:input message="tns:InteractionService_createInteractionParticipantAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionParticipantAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionAsync">
+            <wsdl:input message="tns:InteractionService_updateInteractionAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAssociationAsync">
+            <wsdl:input message="tns:InteractionService_createInteractionAssociationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAssociationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="copyInteractionAttachmentAsync">
+            <wsdl:input message="tns:InteractionService_copyInteractionAttachmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/copyInteractionAttachmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAttachmentAsync">
+            <wsdl:input message="tns:InteractionService_getInteractionAttachmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAttachmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionAssociationAsync">
+            <wsdl:input message="tns:InteractionService_updateInteractionAssociationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionAssociationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionAsync">
+            <wsdl:input message="tns:InteractionService_findInteractionAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionAsync">
+            <wsdl:input message="tns:InteractionService_processInteractionAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionParticipantAsync">
+            <wsdl:input message="tns:InteractionService_findInteractionParticipantAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionParticipantAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAttachmentAsync">
+            <wsdl:input message="tns:InteractionService_createInteractionAttachmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAttachmentAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAsync">
+            <wsdl:input message="tns:InteractionService_createInteractionAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionParticipantAsync">
+            <wsdl:input message="tns:InteractionService_deleteInteractionParticipantAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionParticipantAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionAssociationAsync">
+            <wsdl:input message="tns:InteractionService_processInteractionAssociationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionAssociationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAssociationAsync">
+            <wsdl:input message="tns:InteractionService_deleteInteractionAssociationAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAssociationAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeInteractionAsync">
+            <wsdl:input message="tns:InteractionService_mergeInteractionAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/mergeInteractionAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionParticipantAsync">
+            <wsdl:input message="tns:InteractionService_getInteractionParticipantAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionParticipantAsync"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAttachmentAsync">
+            <wsdl:input message="tns:InteractionService_deleteInteractionAttachmentAsync" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAttachmentAsync"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="InteractionServiceResponse">
+        <wsdl:operation name="onFault">
+            <wsdl:input message="tns:InteractionService_onFault" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0/Fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAsyncResponse">
+            <wsdl:input message="tns:InteractionService_deleteInteractionAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionAssociationAsyncResponse">
+            <wsdl:input message="tns:InteractionService_findInteractionAssociationAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionAssociationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionParticipantAsyncResponse">
+            <wsdl:input message="tns:InteractionService_updateInteractionParticipantAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionParticipantAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAsyncResponse">
+            <wsdl:input message="tns:InteractionService_getInteractionAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionParticipantAsyncResponse">
+            <wsdl:input message="tns:InteractionService_processInteractionParticipantAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionParticipantAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAssociationAsyncResponse">
+            <wsdl:input message="tns:InteractionService_getInteractionAssociationAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAssociationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionParticipantAsyncResponse">
+            <wsdl:input message="tns:InteractionService_createInteractionParticipantAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionParticipantAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionAsyncResponse">
+            <wsdl:input message="tns:InteractionService_updateInteractionAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAssociationAsyncResponse">
+            <wsdl:input message="tns:InteractionService_createInteractionAssociationAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAssociationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="copyInteractionAttachmentAsyncResponse">
+            <wsdl:input message="tns:InteractionService_copyInteractionAttachmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/copyInteractionAttachmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAttachmentAsyncResponse">
+            <wsdl:input message="tns:InteractionService_getInteractionAttachmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAttachmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionAssociationAsyncResponse">
+            <wsdl:input message="tns:InteractionService_updateInteractionAssociationAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionAssociationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionAsyncResponse">
+            <wsdl:input message="tns:InteractionService_findInteractionAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionAsyncResponse">
+            <wsdl:input message="tns:InteractionService_processInteractionAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionParticipantAsyncResponse">
+            <wsdl:input message="tns:InteractionService_findInteractionParticipantAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionParticipantAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAttachmentAsyncResponse">
+            <wsdl:input message="tns:InteractionService_createInteractionAttachmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAttachmentAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAsyncResponse">
+            <wsdl:input message="tns:InteractionService_createInteractionAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionParticipantAsyncResponse">
+            <wsdl:input message="tns:InteractionService_deleteInteractionParticipantAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionParticipantAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionAssociationAsyncResponse">
+            <wsdl:input message="tns:InteractionService_processInteractionAssociationAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionAssociationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAssociationAsyncResponse">
+            <wsdl:input message="tns:InteractionService_deleteInteractionAssociationAsyncResponse"
+                 xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl" ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAssociationAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="mergeInteractionAsyncResponse">
+            <wsdl:input message="tns:InteractionService_mergeInteractionAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/mergeInteractionAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionParticipantAsyncResponse">
+            <wsdl:input message="tns:InteractionService_getInteractionParticipantAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionParticipantAsyncResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAttachmentAsyncResponse">
+            <wsdl:input message="tns:InteractionService_deleteInteractionAttachmentAsyncResponse" xmlns:ns1="http://www.w3.org/2006/05/addressing/wsdl"
+                 ns1:Action="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAttachmentAsyncResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="InteractionServiceSoapHttp" type="tns:InteractionService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wss11_saml_or_username_token_with_message_protection_service_policy"
+             wsdl:required="false"/>
+        <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wsaddr_policy"
+             wsdl:required="false"/>
+        <wsdl:operation name="getInteraction">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteraction"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createInteraction">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteraction"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteraction">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteraction"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteraction">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteraction"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="mergeInteraction">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/mergeInteraction"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAssociation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAssociation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAssociation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAssociation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionAssociation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionAssociation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAssociation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAssociation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionParticipant">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionParticipant"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionParticipant">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionParticipant"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionParticipant">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionParticipant"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionParticipant">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionParticipant"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findInteraction">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteraction"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="processInteraction">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteraction"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionAssociation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionAssociation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionParticipant">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionParticipant"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionAssociation">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionAssociation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionParticipant">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionParticipant"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAttachment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAttachment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAttachment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAttachment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="copyInteractionAttachment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/copyInteractionAttachment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAttachment">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAttachment"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Output_Policy"
+                     wsdl:required="false"/>
+            </wsdl:output>
+            <wsdl:fault name="ServiceException">
+                <soap:fault name="ServiceException" use="literal" encodingStyle=""/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Fault_Policy"
+                     wsdl:required="false"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionAssociationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionParticipantAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionParticipantAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAssociationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionParticipantAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAssociationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="copyInteractionAttachmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/copyInteractionAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAttachmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionAssociationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionParticipantAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAttachmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionParticipantAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionAssociationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAssociationAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="mergeInteractionAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/mergeInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionParticipantAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAttachmentAsync">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceSoapHttpPort_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="InteractionServiceResponseBinding" type="tns:InteractionServiceResponse">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wss11_saml_token_with_message_protection_client_policy"
+             wsdl:required="false"/>
+        <wsdl:operation name="onFault">
+            <soap:operation soapAction="http://xmlns.oracle.com/oracleas/schema/oracle-fault-11_0/Fault"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionAssociationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionParticipantAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionParticipantAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAssociationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionParticipantAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAssociationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="copyInteractionAttachmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/copyInteractionAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionAttachmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="updateInteractionAssociationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/updateInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="findInteractionParticipantAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/findInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAttachmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="createInteractionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/createInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionParticipantAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="processInteractionAssociationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/processInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAssociationAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAssociationAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="mergeInteractionAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/mergeInteractionAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="getInteractionParticipantAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/getInteractionParticipantAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="deleteInteractionAttachmentAsyncResponse">
+            <soap:operation soapAction="http://xmlns.oracle.com/apps/crmCommon/interactions/interactionService/deleteInteractionAttachmentAsync"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+                <wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#InteractionServiceResponse_Input_Policy"
+                     wsdl:required="false"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="InteractionService">
+        <wsdl:port name="InteractionServiceSoapHttpPort" binding="tns:InteractionServiceSoapHttp">
+            <soap:address location="https://dummy-crm-crm-ext.oracle.com:443/appCmmnCompInteractions/InteractionService"/>
+            <wsa:EndpointReference xmlns:wsa="http://www.w3.org/2005/08/addressing">
+                <wsa:Address xmlns:wsa="http://www.w3.org/2005/08/addressing">https://dummy-crm-crm-ext.oracle.com:443/appCmmnCompInteractions/InteractionService</wsa:Address>
+                <wsid:Identity xmlns:wsid="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+                    <dsig:KeyInfo xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+                        <dsig:X509Data>
+                            <dsig:X509Certificate>MIICCzCCAXSgAwIBAgIEUgXqFzANBgkqhkiG9w0BAQUFADBKMRMwEQYKCZImiZPyLGQBGRYDY29tMSEwHwYKCZImiZPyLGQBGRYRb3JhY2xlb3V0c291cmNpbmcxEDAOBgNVBAMTB3NlcnZpY2UwHhcNMTMwODEwMDcyMTU5WhcNMTYwODEwMDcyMTU5WjBKMRMwEQYKCZImiZPyLGQBGRYDY29tMSEwHwYKCZImiZPyLGQBGRYRb3JhY2xlb3V0c291cmNpbmcxEDAOBgNVBAMTB3NlcnZpY2UwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAIwwJxN+lZcxofSpjLD83O4JqO4XW5MrJD/GyUr4MuEQ/K1xYLr8a3qD+p38ld/Bs1ydFr2toCALmJ/vH8vqrcf3+6WQUQwotOrRbctUirs37rF5EUNJS6mCy2LrJz2OjEIc50TCvz4T3krl8r9/AL9ZV4tfthz350Cgw1aU+V3HAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAM9f1nGbsHbO8iT5qgQpFvzX5Lreqk1D1fT7mI07LQ4YydjnIjCJQ8QY635iFW1+GrJeFFgae95N8c3chMdpH4EUnxmahfJMnoX0xAkijIXwvui6QVkKY/XcBwpFFoJVxA8gZRTIU7K9C2E7BBFJquANsPvpuPwEdet3qXj2Ai1g=</dsig:X509Certificate>
+                            <dsig:X509IssuerSerial>
+                                <dsig:X509IssuerName>CN=service, DC=oracleoutsourcing, DC=com</dsig:X509IssuerName>
+                                <dsig:X509SerialNumber>1376119319</dsig:X509SerialNumber>
+                            </dsig:X509IssuerSerial>
+                            <dsig:X509SubjectName>CN=service, DC=oracleoutsourcing, DC=com</dsig:X509SubjectName>
+                        </dsig:X509Data>
+                    </dsig:KeyInfo>
+                </wsid:Identity>
+            </wsa:EndpointReference>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

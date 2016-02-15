@@ -1,0 +1,5 @@
+Specification-Title: jax-rs
+Implementation-Title: jax-rs
+Specification-Version: 1.1
+Implementation-Version: 1.9
+Extension-Name: jax-rs

@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <TaskFlowCall
+      id="TaskFlowCall2">
+      <property
+         name="taskFlowId">validateUserTokenTF</property>
+      <property
+         name="activityId">validateUserTokenTF</property>
+      <property
+         name="documentReference">/WEB-INF/validateUserTokenTF.xml</property>
+      <property
+         name="start">false</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>validateUserTokenTF&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">190.83887</property>
+      <property
+         name="x">425.3545</property>
+   </TaskFlowCall>
+   <MethodCall
+      id="MethodCall3">
+      <property
+         name="activityId">loadFusionProperties</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>loadFusionProperties&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">190.23535</property>
+      <property
+         name="x">164.0</property>
+   </MethodCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="MethodCall3"
+      to="TaskFlowCall2">
+      <property
+         name="fromOutcome">goValidate</property>
+      <property
+         name="sdm:polyPoints">R50,205.0,189.88477,384.3545,190.48828,L50</property>
+   </ControlFlowCase>
+</SDM>

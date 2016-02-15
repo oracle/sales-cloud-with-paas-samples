@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PrescriptionMedicationView"
+  Version="11.1.1.65.57"
+  InheritPersonalization="true"
+  SelectList="PrescriptionMedication.PRESCRIPTION_MEDICATION_ID, 
+       PrescriptionMedication.PRESCRIPTION_ID, 
+       PrescriptionMedication.MEDICATION_ID, 
+       PrescriptionMedication.QUANTITY, 
+       PrescriptionMedication.REFILLS, 
+       PrescriptionMedication.DIRECTIONS_FOR_USE, 
+       PrescriptionMedication.EXPIRE_DATE, 
+       PrescriptionMedication.SENT_TO_PHARMACY_FL, 
+       PrescriptionMedication.SENT_TO_PHARMACY_DATE, 
+       PrescriptionMedication.ORDER_NUMBER, 
+       PrescriptionMedication.PHARMACY_ID, 
+       PrescriptionMedication.IS_READY_TO_PICKUP_FL"
+  FromList="PRESCRIPTION_MEDICATION PrescriptionMedication, PRESCRIPTION Prescription"
+  Where="PrescriptionMedication.PRESCRIPTION_ID = Prescription.PRESCRIPTION_ID"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  RowClass="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationViewRowImpl"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewAccessor
+    Name="MedicationView1"
+    ViewObjectName="com.oracle.ptsdemo.healthcare.model.vo.MedicationView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="PharmacyBySelectedMedicationView1"
+    ViewObjectName="com.oracle.ptsdemo.healthcare.model.vo.PharmacyBySelectedMedicationView">
+    <ParameterMap>
+      <PIMap Variable="p_medication_id">
+        <TransientExpression><![CDATA[MedicationId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAccessor
+    Name="PharmacyView1"
+    ViewObjectName="com.oracle.ptsdemo.healthcare.model.vo.PharmacyView"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_MedicationId"
+    ListVOName="MedicationView1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="MedicationId"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="MedicationId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_PharmacyId"
+    ListVOName="PharmacyBySelectedMedicationView1"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PharmacyId"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="PharmacyId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="PrescriptionMedication"
+    Entity="com.oracle.ptsdemo.healthcare.model.eo.PrescriptionMedication"/>
+  <EntityUsage
+    Name="Prescription"
+    Entity="com.oracle.ptsdemo.healthcare.model.eo.Prescription"
+    Association="com.oracle.ptsdemo.healthcare.model.eo.PrescriptionFkAssoc"
+    AssociationEnd="com.oracle.ptsdemo.healthcare.model.eo.PrescriptionFkAssoc.Prescription"
+    SourceUsage="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationView.PrescriptionMedication"
+    Reference="true"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_srcAttributes">
+        <Item
+          Value="com.oracle.ptsdemo.healthcare.model.eo.PrescriptionMedication.PrescriptionId"/>
+      </AttrArray>
+      <AttrArray Name="_dstAttributes">
+        <Item
+          Value="com.oracle.ptsdemo.healthcare.model.eo.Prescription.PrescriptionId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <ViewAttribute
+    Name="PrescriptionMedicationId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="PrescriptionMedicationId"
+    EntityUsage="PrescriptionMedication"
+    AliasName="PRESCRIPTION_MEDICATION_ID"/>
+  <ViewAttribute
+    Name="PrescriptionId"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="PrescriptionId"
+    EntityUsage="PrescriptionMedication"
+    AliasName="PRESCRIPTION_ID"/>
+  <ViewAttribute
+    Name="MedicationId"
+    LOVName="LOV_MedicationId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="MedicationId"
+    EntityUsage="PrescriptionMedication"
+    AliasName="MEDICATION_ID">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationView.MedicationId_LABEL"/>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Quantity"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Quantity"
+    EntityUsage="PrescriptionMedication"
+    AliasName="QUANTITY"/>
+  <ViewAttribute
+    Name="Refills"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Refills"
+    EntityUsage="PrescriptionMedication"
+    AliasName="REFILLS"/>
+  <ViewAttribute
+    Name="DirectionsForUse"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="DirectionsForUse"
+    EntityUsage="PrescriptionMedication"
+    AliasName="DIRECTIONS_FOR_USE">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationView.DirectionsForUse_LABEL"/>
+        <TOOLTIP
+          ResId="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationView.DirectionsForUse_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ExpireDate"
+    PrecisionRule="true"
+    EntityAttrName="ExpireDate"
+    EntityUsage="PrescriptionMedication"
+    AliasName="EXPIRE_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMAT
+          ResId="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationView.ExpireDate_FMT_FORMAT"/>
+        <LABEL
+          ResId="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationView.ExpireDate_LABEL"/>
+        <TOOLTIP
+          ResId="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationView.ExpireDate_TOOLTIP"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="SentToPharmacyFl"
+    IsNotNull="true"
+    PrecisionRule="true"
+    DefaultValue="F"
+    EntityAttrName="SentToPharmacyFl"
+    EntityUsage="PrescriptionMedication"
+    AliasName="SENT_TO_PHARMACY_FL"/>
+  <ViewAttribute
+    Name="SentToPharmacyDate"
+    PrecisionRule="true"
+    EntityAttrName="SentToPharmacyDate"
+    EntityUsage="PrescriptionMedication"
+    AliasName="SENT_TO_PHARMACY_DATE">
+    <Properties>
+      <SchemaBasedProperties>
+        <FMT_FORMATTER
+          ResId="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationView.SentToPharmacyDate_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationView.SentToPharmacyDate_FMT_FORMAT"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="OrderNumber"
+    PrecisionRule="true"
+    EntityAttrName="OrderNumber"
+    EntityUsage="PrescriptionMedication"
+    AliasName="ORDER_NUMBER"/>
+  <ViewAttribute
+    Name="PharmacyId"
+    LOVName="LOV_PharmacyId"
+    PrecisionRule="true"
+    EntityAttrName="PharmacyId"
+    EntityUsage="PrescriptionMedication"
+    AliasName="PHARMACY_ID">
+    <Dependencies>
+      <Item
+        Value="MedicationId"/>
+    </Dependencies>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationView.PharmacyId_LABEL"/>
+        <TOOLTIP
+          ResId="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationView.PharmacyId_TOOLTIP"/>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="IsReadyToPickupFl"
+    PrecisionRule="true"
+    DefaultValue="F"
+    EntityAttrName="IsReadyToPickupFl"
+    EntityUsage="PrescriptionMedication"
+    AliasName="IS_READY_TO_PICKUP_FL"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.oracle.ptsdemo.healthcare.model.HealthCarePrescriptionModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

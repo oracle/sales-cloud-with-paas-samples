@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.65.57" id="viewPrescriptionGanttPageDef"
+                Package="com.oracle.ptsdemo.healthcare.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="PrescriptionGanttView" RangeSize="-1"
+              DataControl="HealthCarePrescriptionModelAMDataControl"
+              id="PrescriptionGanttViewIterator"/>
+  </executables>
+  <bindings>
+    <gantt IterBinding="PrescriptionGanttViewIterator"
+           id="PrescriptionGanttView" xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <ganttDataMap>
+        <nodeDefinition DefName="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionGanttView"
+                        type="Resources">
+          <AttrNames>
+            <Item Value="PrescriptionId" type="resourceId"/>
+            <Item Value="PrescriptionDate" type="workingStartTime"/>
+            <Item Value="ExpireDate" type="workingEndTime"/>
+          </AttrNames>
+          <Accessors>
+            <Item Value="PrescriptionMedicationGanttView" type="tasks"/>
+          </Accessors>
+        </nodeDefinition>
+        <nodeDefinition type="Tasks"
+                        DefName="com.oracle.ptsdemo.healthcare.model.vo.PrescriptionMedicationGanttView">
+          <AttrNames>
+            <Item Value="PrescriptionMedicationId" type="taskId"/>
+            <Item Value="SentToPharmacyDate" type="startTime"/>
+            <Item Value="ExpireDate" type="endTime"/>
+            <Item Value="Name" type="label"/>
+          </AttrNames>
+        </nodeDefinition>
+        <nodeDefinition type="Dependents">
+          <AttrNames/>
+        </nodeDefinition>
+        <nodeDefinition type="SplitTasks">
+          <AttrNames/>
+        </nodeDefinition>
+        <nodeDefinition type="RecurringTasks">
+          <AttrNames/>
+        </nodeDefinition>
+        <nodeDefinition type="Subresources">
+          <AttrNames/>
+        </nodeDefinition>
+      </ganttDataMap>
+    </gantt>
+  </bindings>
+</pageDefinition>

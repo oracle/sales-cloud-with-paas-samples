@@ -1,0 +1,9 @@
+//External Link to Sales Account
+//App Composer -> Common -> Contact -> Pages -> Edit Page -> Thumbs up subtab
+//Patient History
+
+def urlParam = "?history=y&patientId="+PartyId
+def serverAddress = "my-oracle-jcs-server-hostname"
+def jwt =  (new oracle.apps.fnd.applcore.common.SecuredTokenBean().getTrustToken())
+def finalURL = "https://"+serverAddress+"/HealthCareView/faces/prescription"+urlParam+"&jwt=" +jwt
+return(finalURL)

@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:pageTemplate viewId="/WEB-INF/_Templates/fuse-popup.jspx" id="pt1">
+    <f:facet name="header-start">
+      <af:outputText value="Select: Primary Contact" id="ot1"
+                     styleClass="page-title"/>
+    </f:facet>
+    <f:facet name="header-end">
+      <af:group id="g2">
+        <af:commandButton text="OK" id="cb2"
+                          actionListener="#{LOVDataBean.processSelectedContact}"
+                          action="OK_AddContact"/>
+        <af:commandButton text="Cancel" id="cb4"
+                          actionListener="#{LOVDataBean.cancelButton}">
+        </af:commandButton>
+      </af:group>
+    </f:facet>
+    <f:facet name="body">
+      <af:group id="g1">
+        <af:outputText value="Enter a search term in a least one field."
+                       id="ot2"/>
+        <af:query headerText="Search" disclosed="true"
+                  value="#{LOVDataBean.listOfValuesModel.queryDescriptor}"
+                  model="#{LOVDataBean.listOfValuesModel.queryModel}"
+                  resultComponentId="::t1" saveQueryMode="hidden" maxColumns="2"
+                  rows="4" id="q1" modeChangeVisible="false"
+                  displayMode="design" binding="#{LOVDataBean.searchQuery}" type="default"
+                  styleClass="selectContact"/>
+        <af:panelGroupLayout id="pgl1" layout="vertical" halign="right">
+          <af:commandButton text="Search" id="cb1"
+                            actionListener="#{LOVDataBean.processQuery}"/>
+        </af:panelGroupLayout>
+        <af:panelBox text="Search Results" styleClass="" id="pb0"
+                     showDisclosure="false">
+          <f:facet name="toolbar">
+            <af:panelGroupLayout id="pgl2" layout="horizontal">
+              <af:spacer width="10" height="10" id="s1"/>
+              <af:commandButton text="Create Contact" id="cb3"/>
+            </af:panelGroupLayout>
+          </f:facet>
+          <af:table value="#{LOVDataBean.listOfValuesModel.tableModel.collectionModel}"
+                    var="row" rowBandingInterval="0"
+                    columnStretching="multiple" id="t1">
+            <af:column sortable="false" id="c3" width="15%" align="center">
+              <af:selectBooleanRadio label="Label 1" id="sbr1" simple="true"
+                                     group="RadioButtons"
+                                     valueChangeListener="#{LOVDataBean.selectValue}"
+                                     autoSubmit="true">
+                <af:clientAttribute name="EMPNO" value="#{row.empno}"/>
+              </af:selectBooleanRadio>
+            </af:column>
+            <af:column headerText="Name" id="c1" sortable="true" width="15%">
+              <af:outputText value="#{row.firstName} #{row.lastName}" id="ot3" styleClass="bold"></af:outputText>
+            </af:column>
+            <af:column id="c10" sortable="true" width="8%"
+                       headerText="Favourite">
+              <af:image source="#{row.favContactImage}" id="i1"
+                        shortDesc="No Image"/>
+            </af:column>
+            <af:column headerText="Account" id="c2" sortable="true" width="15%">
+              <af:outputText value="#{row.rowId}" id="ot4"></af:outputText>
+            </af:column>
+            <af:column headerText="Job Title" id="c4" sortable="true"
+                       width="15%">
+              <af:outputText value="#{row.job}" id="ot5"></af:outputText>
+            </af:column>
+            <af:column headerText="Phone" id="c9" sortable="true"
+                       width="15%">
+              <af:outputText value="#{row.phone}" id="ot10"></af:outputText>
+            </af:column>
+            <af:column headerText="E-mail" id="c5" sortable="true"
+                       width="10%">
+              <af:outputText value="#{row.email}" id="ot6"></af:outputText>
+            </af:column>
+            <af:column headerText="Salary" id="c6" sortable="true" width="10%"
+                       rendered="false">
+              <af:outputText value="#{row.sal}" id="ot7"></af:outputText>
+            </af:column>
+            <af:column headerText="Commision" id="c7" sortable="true"
+                       width="10%" rendered="false">
+              <af:outputText value="#{row.comm}" id="ot8"></af:outputText>
+            </af:column>
+            <af:column headerText="Dept. No" id="c8" sortable="true"
+                       width="10%" rendered="false">
+              <af:outputText value="#{row.deptno}" id="ot9"></af:outputText>
+            </af:column>
+          </af:table>
+        </af:panelBox>
+      </af:group>
+      <!--  <af:group id="g1">
+        <af:outputText value="Enter a search term in a least one field."
+                       id="ot2"/>
+        <af:panelFormLayout id="pfl1" maxColumns="2" rows="4"
+                            labelWidth="200px">
+          <af:inputText label="First Name" id="it1"/>
+          <af:inputText label="Last Name" id="it2"/>
+          <af:inputText label="Account" id="it3"/>
+          <af:inputText label="Job Title" id="it4"/>
+          <af:inputText label="Phone " id="it5"/>
+          <af:inputText label="E-Mail" id="it6"/>
+          <af:selectOneChoice label="Favorite Contact" id="soc1">
+            <f:selectItems value="" id="si1"/>
+          </af:selectOneChoice>
+        </af:panelFormLayout>
+        <af:panelGroupLayout id="pgl1" layout="vertical" halign="right">
+          <af:commandButton text="Search" id="cb1"/>
+        </af:panelGroupLayout>
+        <af:panelBox text="Search Results" styleClass="" id="pb0"
+                     showDisclosure="false">
+          <f:facet name="toolbar">
+            <af:commandButton text="Create Contact" id="cb3"/>
+          </f:facet>
+          <af:table var="row" rowBandingInterval="0" id="t1"
+                    columnResizing="disabled" columnStretching="multiple"
+                    fetchSize="5" autoHeightRows="0" partialTriggers="::cb3"
+                    value="#{DataSourceBean.contactList}">
+            <af:column sortable="false" id="c3" width="15%">
+              <af:selectBooleanRadio
+                                     label="Label 1" id="sbr1" simple="true"/>
+            </af:column>
+            <af:column sortable="true" headerText="Favorite" id="c4" width="25%">
+              <af:image source="/images/fuse-icon-favorite-on.png" id="i1"/>
+            </af:column>
+            <af:column sortable="false" headerText="Name" id="c5" width="15%">
+              <af:outputText value="#{row.name}" id="ot3" styleClass="bold"/>
+            </af:column>
+            <af:column sortable="false" headerText="Account" id="c1"
+                       width="15%">
+              <af:outputText id="ot4" value="#{row.account}"/>
+            </af:column>
+            <af:column sortable="false" headerText="Job Title" id="c2"
+                       width="15%">
+              <af:outputText id="ot5" value="#{row.jobTitle}"/>
+            </af:column>
+            <af:column sortable="false" headerText="Phone" id="c6"
+                       width="14%">
+              <af:outputText id="ot6" value="#{row.phoneNumber}"/>
+            </af:column>
+            <af:column sortable="false" headerText="E-Mail" id="c7" width="1%">
+              <af:outputText id="ot7" value="#{row.email}"/>
+            </af:column>
+          </af:table>
+        </af:panelBox>
+      </af:group> -->
+    </f:facet>
+    <f:facet name="hidden"/>
+  </af:pageTemplate>
+</jsp:root>

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:pageTemplate viewId="/WEB-INF/_Templates/fuse-page-1-column.jspx"
+                   id="pt1">
+    <f:facet name="header-start">
+      <af:panelGroupLayout id="pgl1">
+        <af:outputText value="Opportunities: #{empty pageFlowScope.selectedItem ? 'Quarter 4, 2013' : pageFlowScope.selectedItem}" id="ot2"
+                       styleClass="page-title" partialTriggers="soc1"/>
+        <af:spacer width="10" height="10" id="s1"/>
+        <af:selectOneChoice label="Label 1" id="soc1" styleClass="page-title"
+                            mode="compact" simple="true"
+                            value="Quarter 4, 2013" autoSubmit="true"
+                            valueChangeListener="#{pageFlowScope.OpportunitiesBean.selectQuaterListener}">
+          <af:selectItem label="Quarter 4, 2013" value="Quarter 4, 2013"
+                         id="si2"/>
+          <af:selectItem label="Quarter 3, 2013" value="Quarter 3, 2013"
+                         id="si1"/>
+          <af:selectItem label="Quarter 2, 2013" value="Quarter 2, 2013"
+                         id="si3"/>
+          <af:selectItem label="Quarter 1, 2013" value="Quarter 1, 2013"
+                         id="si5"/>
+          <af:selectItem label="Quarter 4, 2012" value="Quarter 4, 2012"
+                         id="si4"/>
+        </af:selectOneChoice>
+      </af:panelGroupLayout>
+    </f:facet>
+    <f:facet name="header-end"/>
+    <f:facet name="body">
+      <af:panelGroupLayout id="pgl2" layout="vertical">
+        <af:panelStretchLayout id="psl1" startWidth="auto" endWidth="auto"
+                               topHeight="0px" bottomHeight="0px"
+                               dimensionsFrom="auto">
+          <f:facet name="start">
+            <af:selectOneChoice label="Show" id="soc2"
+                                value="My Open Opportunities">
+              <af:selectItem label="My Open Opportunities"
+                             value="My Open Opportunities" id="si6"/>
+              <af:selectItem label="My Closed Opportunities" id="si7"
+                             value="My Closed Opportunities"/>
+              <af:selectItem label="My Team's Open Opportunities" id="si8"
+                             value="My Team's Open Opportunities"/>
+              <af:selectItem label="My Team's Closed Opportunities" id="si9"
+                             value="My Team's Closed Opportunities"/>
+            </af:selectOneChoice>
+          </f:facet>
+          <f:facet name="end">
+            <af:commandButton text="Create Opportunity" id="cb1">
+              <af:showPopupBehavior popupId="p1" triggerType="click"/>
+            </af:commandButton>
+          </f:facet>
+        </af:panelStretchLayout>
+        <af:table var="row" rowBandingInterval="0" id="t1"
+                  value="#{DataSourceBean.opportunitiesList}"
+                  columnStretching="multiple" fetchSize="10"
+                  contentDelivery="immediate" autoHeightRows="9"
+                  columnResizing="disabled" first="0">
+          <af:column sortable="false" headerText="Win %" id="c4" width="10%">
+            <af:outputText value="#{row.win} %" id="ot5"
+                           styleClass="fuse-percent-bubble #{row.winProbabilityStyle}"/>
+          </af:column>
+          <af:column sortable="false" headerText="Name" id="c3" width="30%">
+            <af:commandLink text="#{row.name}" id="cl1" styleClass="major-link">
+              <af:showPopupBehavior popupId="::p2" triggerType="click"/>
+            </af:commandLink>
+          </af:column>
+          <af:column sortable="false" headerText="Customer" id="c2" width="20%">
+            <af:commandLink text="#{row.customer}" id="cl2"
+                            styleClass="minor-link"/>
+          </af:column>
+          <af:column sortable="false" headerText="Revenue" id="c1" width="13%">
+            <af:outputText value="#{row.revenue}" id="ot3"/>
+          </af:column>
+          <af:column sortable="false" headerText="Close Date" id="c5"
+                     width="12%">
+            <af:outputText value="#{row.closeDate}" id="ot4"/>
+          </af:column>
+          <af:column sortable="false" headerText="Sales Stage" id="c6"
+                     width="15%">
+            <af:outputText value="#{row.salesStage}" id="ot7"/>
+          </af:column>
+        </af:table>
+      </af:panelGroupLayout>
+    </f:facet>
+    <f:facet name="footer-end"/>
+    <f:facet name="footer-start"/>
+    <f:facet name="hidden">
+      <af:group id="g1">
+        <af:popup id="p1" contentDelivery="lazyUncached">
+          <af:panelWindow id="pw1" closeIconVisible="false" modal="true"
+                          styleClass="fuse-popup">
+            <af:region value="#{bindings.opportunitiescreateTF1.regionModel}"
+                       id="r2"/>
+          </af:panelWindow>
+        </af:popup>
+        <af:popup id="p2" contentDelivery="lazyUncached">
+          <af:panelWindow id="pw2" closeIconVisible="false" modal="true"
+                          styleClass="fuse-popup">
+            <af:region value="#{bindings.opportunitieseditTF1.regionModel}"
+                       id="r3"/>
+          </af:panelWindow>
+        </af:popup>
+      </af:group>
+    </f:facet>
+    <f:facet name="side-panel">
+      <af:panelDrawer id="pd1" height="100%">
+        <af:showDetailItem text="Search" id="sdi1"
+                           icon="/images/fuse-side-panel-search.png">
+          <af:region value="#{bindings.opportunitiessearchTF1.regionModel}"
+                     id="r1"/>
+        </af:showDetailItem>
+        <af:showDetailItem text="Actions" id="sdi2"
+                           icon="/images/fuse-side-panel-actions.png"/>
+      </af:panelDrawer>
+    </f:facet>
+    <f:attribute name="Side-Panel" value="true"/>
+    <f:attribute name="Footer-Height" value="0px"/>
+  </af:pageTemplate>
+</jsp:root>

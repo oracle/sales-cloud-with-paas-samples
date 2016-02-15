@@ -1,0 +1,772 @@
+<schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/types/"
+     xmlns:ns0="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/" xmlns:ns1="http://xmlns.oracle.com/oracle/apps/marketing/leadMgmt/leads/leadService/"
+     xmlns:ns2="http://xmlns.oracle.com/adf/svc/types/" xmlns:tns="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/types/"
+     xmlns="http://www.w3.org/2001/XMLSchema">
+    <import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="BC4JService.xsd"/>
+    <import namespace="http://xmlns.oracle.com/oracle/apps/marketing/leadMgmt/leads/leadService/"
+         schemaLocation="MklLead.xsd"/>
+    <import namespace="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/"
+         schemaLocation="MklLeadResources.xsd"/>
+    <import namespace="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/"
+         schemaLocation="MklProdAssoc.xsd"/>
+    <import namespace="http://xmlns.oracle.com/apps/marketing/leadMgmt/leads/leadService/"
+         schemaLocation="MklLeadTcMembers.xsd"/>
+    <element name="getSalesLeadProduct">
+        <complexType>
+            <sequence>
+                <element name="leadProductId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadProductResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadProduct">
+        <complexType>
+            <sequence>
+                <element name="salesLeadProduct" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadProductResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadProduct">
+        <complexType>
+            <sequence>
+                <element name="salesLeadProduct" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadProductResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadProduct">
+        <complexType>
+            <sequence>
+                <element name="salesLeadProduct" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadProductResponse">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="findSalesLeadProduct">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns2:FindCriteria"/>
+                <element name="findControl" type="ns2:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSalesLeadProductResponse">
+        <complexType>
+            <sequence>
+                <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadResource">
+        <complexType>
+            <sequence>
+                <element name="leadResourceId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadResourceResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadResource">
+        <complexType>
+            <sequence>
+                <element name="salesLeadResource" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadResourceResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadResource">
+        <complexType>
+            <sequence>
+                <element name="salesLeadResource" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadResourceResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadResource">
+        <complexType>
+            <sequence>
+                <element name="salesLeadResource" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadResourceResponse">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="findSalesLeadResource">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns2:FindCriteria"/>
+                <element name="findControl" type="ns2:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSalesLeadResourceResponse">
+        <complexType>
+            <sequence>
+                <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadProductAsync">
+        <complexType>
+            <sequence>
+                <element name="leadProductId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadProductAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSalesLeadResourceAsync">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns2:FindCriteria"/>
+                <element name="findControl" type="ns2:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSalesLeadResourceAsyncResponse">
+        <complexType>
+            <sequence>
+                <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadProductAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLeadProduct" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadProductAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadProductAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLeadProduct" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadProductAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSalesLeadProductAsync">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns2:FindCriteria"/>
+                <element name="findControl" type="ns2:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSalesLeadProductAsyncResponse">
+        <complexType>
+            <sequence>
+                <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadProductAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLeadProduct" type="ns0:MklProdAssoc"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadProductAsyncResponse">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="createSalesLeadResourceAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLeadResource" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadResourceAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadResourceAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLeadResource" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadResourceAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadResourceAsync">
+        <complexType>
+            <sequence>
+                <element name="leadResourceId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadResourceAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadResourceAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLeadResource" type="ns0:MklLeadResources"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadResourceAsyncResponse">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="assignLead">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="assignLeadResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="convertLeadToOpportunity">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="convertLeadToOpportunityResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="qualifyLead">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="qualifyLeadResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="rankLead">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="rankLeadResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="scoreLead">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="scoreLeadResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="scoreLeadAsync">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="scoreLeadAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="convertLeadToOpportunityAsync">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="convertLeadToOpportunityAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="assignLeadAsync">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="assignLeadAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="rankLeadAsync">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="rankLeadAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="qualifyLeadAsync">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="qualifyLeadAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLead">
+        <complexType>
+            <sequence>
+                <element name="salesLead" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLead" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLead">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLead">
+        <complexType>
+            <sequence>
+                <element name="salesLead" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLead">
+        <complexType>
+            <sequence>
+                <element name="salesLead" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadResponse">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="findSalesLead">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns2:FindCriteria"/>
+                <element name="findControl" type="ns2:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSalesLeadResponse">
+        <complexType>
+            <sequence>
+                <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLead" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadAsyncResponse">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="getSalesLeadAsync">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLead" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSalesLeadAsync">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns2:FindCriteria"/>
+                <element name="findControl" type="ns2:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSalesLeadAsyncResponse">
+        <complexType>
+            <sequence>
+                <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns1:MklLead"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadContact">
+        <complexType>
+            <sequence>
+                <element name="leadMemberId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadContactResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadContact">
+        <complexType>
+            <sequence>
+                <element name="salesLeadContact" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadContactResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="submitDeal">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="submitDealResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="reassignLead">
+        <complexType>
+            <sequence>
+                <element name="mode" type="string"/>
+                <element name="leadId" type="long"/>
+                <element name="ownerId" type="long"/>
+                <element name="organizationId" type="long"/>
+                <element name="reason" type="string"/>
+                <element name="comment" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="reassignLeadResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadContact">
+        <complexType>
+            <sequence>
+                <element name="salesLeadContact" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadContactResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadContact">
+        <complexType>
+            <sequence>
+                <element name="salesLeadContact" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadContactResponse">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="findSalesLeadContact">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns2:FindCriteria"/>
+                <element name="findControl" type="ns2:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSalesLeadContactResponse">
+        <complexType>
+            <sequence>
+                <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadContactAsync">
+        <complexType>
+            <sequence>
+                <element name="leadMemberId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="getSalesLeadContactAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadContactAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLeadContact" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="updateSalesLeadContactAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="reassignLeadAsync">
+        <complexType>
+            <sequence>
+                <element name="mode" type="string"/>
+                <element name="leadId" type="long"/>
+                <element name="ownerId" type="long"/>
+                <element name="organizationId" type="long"/>
+                <element name="reason" type="string"/>
+                <element name="comment" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="reassignLeadAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="submitDealAsync">
+        <complexType>
+            <sequence>
+                <element name="leadId" type="long"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="submitDealAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="string"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadContactAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLeadContact" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="createSalesLeadContactAsyncResponse">
+        <complexType>
+            <sequence>
+                <element name="result" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadContactAsync">
+        <complexType>
+            <sequence>
+                <element name="salesLeadContact" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="deleteSalesLeadContactAsyncResponse">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="findSalesLeadContactAsync">
+        <complexType>
+            <sequence>
+                <element name="findCriteria" type="ns2:FindCriteria"/>
+                <element name="findControl" type="ns2:FindControl"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="findSalesLeadContactAsyncResponse">
+        <complexType>
+            <sequence>
+                <element maxOccurs="unbounded" minOccurs="0" name="result" type="ns0:MklLeadTcMembers"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
