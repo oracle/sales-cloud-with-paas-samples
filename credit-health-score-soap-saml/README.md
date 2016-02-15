@@ -8,7 +8,7 @@ Credit Health Score
 Jian Liang, Oracle A-Team
 
 ## Source Code Location
-* GitHub: [https://github.com/oracle/sales-cloud-with-paas.git](https://github.com/oracle/sales-cloud-with-paas.git)
+* GitHub: [https://github.com/oracle/sales-cloud-with-paas-samples](https://github.com/oracle/sales-cloud-with-paas-samples)
 * OTN: [http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html](http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html)
 
 ## Oracle Cloud Products Involved
