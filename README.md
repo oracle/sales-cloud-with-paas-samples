@@ -1,12 +1,12 @@
 Oracle Cloud on GitHub
 ============
-This is the top level repository of the Oracle Cloud related projects, tools, libraries, and code samples.
+This is the top level repository for Oracle Cloud related projects, tools, libraries, and code samples.
 
 # Code Samples Index
 Below an index of currently available samples on Oracle GitHub.
 
-## [Oracle Sales Cloud](https://github.com/oracle/sales-cloud-with-paas-samples)
-Samples that demonstrate how to leverage Oracle PaaS to extend or integrate with Oracle Sales Cloud. Improved security is the primary focus of these updated samples.
+## [Sales Cloud with PaaS samples](https://github.com/oracle/sales-cloud-with-paas-samples)
+Samples that demonstrate how to leverage Oracle PaaS to extend or integrate with Oracle Sales Cloud. Improved security is the primary focus of these samples.
 
 ## [Compute Cloud Service Demos](https://github.com/oracle/compute-cloud-service-demos)
 Chef automation samples for Oracle Compute Cloud Service.
