@@ -1,3 +1,0 @@
-PHARMACY_ID,NAME,WS_URL
-1,CVS,https://java2-jcs.java.us1.oraclecloudapps.com/Pharmacy/PharmacyWSPort?WSDL
-2,Walgreens,https://java2-jcs.java.us1.oraclecloudapps.com/Pharmacy/PharmacyWSPort?WSDL

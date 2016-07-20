@@ -1,4 +1,0 @@
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <system systemId="https://dummy-crm-crm-ext.oracle.com/foundationParties/LocationService?wsdl"
-          uri="../oracle/demo/pts/fusionproxy/location/LocationService.wsdl"/>
-</catalog>
