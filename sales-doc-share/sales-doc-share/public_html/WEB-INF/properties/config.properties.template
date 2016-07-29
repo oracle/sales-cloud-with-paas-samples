@@ -1,0 +1,9 @@
+#
+# Template config.properties file
+#
+docCloudUsername = <docCloud Username>	
+docCloudPassword = <docCloud Password>
+docCloudServerHostname = http://<docCloudHostname>
+docCloudServerRole = contributor
+salesCloudServerHostname = http://<salesCloudHostname>
+salesCloudIntegrationFolder = SALESCLOUDINTEGRATION
