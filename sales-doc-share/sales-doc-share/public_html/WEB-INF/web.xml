@@ -1,0 +1,30 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+  
+  <error-page>
+    <exception-type>javax.servlet.ServletException</exception-type>
+    <location>/servlet-error-page.jsp</location>
+  </error-page>
+  <servlet>
+    <servlet-name>DocCloudServlet</servlet-name>
+    <servlet-class>oracle.cloud.doccloud.servlet.DocCloudServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DocCloudServlet</servlet-name>
+    <url-pattern>/doccloud</url-pattern>
+  </servlet-mapping>
+ <security-constraint>
+        <display-name>DocCloudServlet-SecConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>DocCloudServlet-SecConstraint</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+  </security-constraint>
+  <login-config>
+    <auth-method>CLIENT-CERT</auth-method>
+    <realm-name>default</realm-name>
+  </login-config>
+ 
+</web-app>
