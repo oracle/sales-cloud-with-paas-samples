@@ -11,115 +11,120 @@
   <![endif]-->
 </head>
 <body>
-<h1 id="readme-for-oracle-cloud----saas-for-paas-sample">README for Oracle Cloud -- SaaS for PaaS Sample</h1>
-<h2 id="sample-name">Sample Name</h2>
+<h1>README for Oracle Cloud -- SaaS for PaaS Sample</h1>
+<h2>Sample Name</h2>
 <p>Dealer Feedback System</p>
-<h2 id="sample-name">Author</h2>
+<h2>Author</h2>
 <p>Jian Liang, Oracle A-Team</p>
-<h2 id="source-code-location">Source Code Location</h2>
+<h2>Source Code Location</h2>
 <ul>
 <li>GitHub: <a href="https://github.com/oracle/sales-cloud-with-paas-samples">https://github.com/oracle/sales-cloud-with-paas-samples</a></li>
-<li>OTN: <a href="http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html">http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html</a></li>
+<li>Oracle Technology Network: <a href="https://www.oracle.com/technetwork/indexes/samplecode/solutions-architectures-samples-5012412.html">https://www.oracle.com/technetwork/indexes/samplecode/solutions-architectures-samples-5012412.html</a></li>
 </ul>
-<h2 id="oracle-cloud-products-involved">Oracle Cloud Products Involved</h2>
+<h2>Oracle Cloud Products Involved</h2>
 <ul>
 <li>Oracle Java Cloud Service - SaaS Extension</li>
 <li>Oracle Sales Cloud</li>
 <li>Oracle Database Cloud Service (Database Schema)</li>
-<li>Oracle JDeveloper Cloud specific version (11.1.1.7.1 or higher) / Oracle Enterprise pack for Eclipse available at <a href="http://www.oracle.com/technetwork/topics/cloud/downloads/index.html">this</a> location on OTN</li>
+<li>Oracle JDeveloper Cloud-specific version (11.1.1.7.1 or 11.1.1.9.0) / Oracle Enterprise pack for Eclipse available at <a href="http://www.oracle.com/technetwork/topics/cloud/downloads/index.html">this</a> location on Oracle Technology Network</li>
 </ul>
-<h2 id="demonstrates">Demonstrates</h2>
+<h2>Demonstrates</h2>
 <p>This sample demonstrates the following aspects of Oracle Cloud integration:</p>
-<h3 id="primary-goals">Primary Goals</h3>
+<h3>Primary Goals</h3>
 <ul>
-<li>Demonstrate SSO and non-SSO based authentication. Users that have an Oracle SaaS Applications ID can choose to authenticate with a JCS - SaaS Extension application using a SSO-mechanism based on the Oracle Application ID. Other users can authenticate directly in JCS - SaaS Extension, using non-SSO-based authentication.</li>
+<li>Demonstrate SSO and non-SSO based authentication. Users that have an Oracle SaaS Applications ID can choose to authenticate with a Oracle Java Cloud Service - SaaS Extension application using a SSO-mechanism based on the Oracle Application ID. Other users can authenticate directly in Oracle Java Cloud Service - SaaS Extension, using non-SSO-based authentication.</li>
 <li>Embedding an external link in Oracle Sales Cloud</li>
-<li>Security Role-based access to the JCS - SaaS Extension application</li>
+<li>Security Role-based access to the Oracle Java Cloud Service - SaaS Extension application</li>
 </ul>
-<h3 id="secondary-goals">Secondary Goals</h3>
+<h3>Secondary Goals</h3>
 <ul>
-<li>Using AngularJS to build a web application deployed to JCS - SaaS Extension</li>
+<li>Using AngularJS to build a web application deployed to Oracle Java Cloud Service - SaaS Extension</li>
 <li>Exposing RESTful services in JSON format from Oracle Database Cloud Service (Database Schema)</li>
 </ul>
-<h2 id="functional-overview">Functional Overview</h2>
-<p>This sample requires using two users: one is the dealer manager who has access to both Oracle Sales Cloud and JCS - SaaS Extension, while the other is a dealer who has access to JCS - SaaS Extension only.</p>
-<p>The dealer manager works in Oracle Sales Cloud and wants to check the feedback received from all dealers. All of the feedback received is managed by the Dealer Feedback System deployed on JCS - SaaS Extension.</p>
-<p>The dealer manager authenticates to Oracle Sales Cloud, and can then click on the embedded link to list the feedback stored in the Dealer Feedback System. Oracle Sales Cloud uses SSO to allow the user to access the external Dealer Feedback System without having to also authenticate with JCS - SaaS Extension.</p>
+<h2>Functional Overview</h2>
+<p>This sample requires having two users: one is the dealer manager who has access to both Oracle Sales Cloud and Oracle Java Cloud Service - SaaS Extension, while the other is a dealer who has access to Oracle Java Cloud Service - SaaS Extension only.</p>
+<p>The dealer manager works in Oracle Sales Cloud and wants to check the feedback received from all dealers. All of the feedback received is managed by the Dealer Feedback System deployed on Oracle Java Cloud Service - SaaS Extension.</p>
+<p>The dealer manager authenticates to Oracle Sales Cloud, and can then click on the embedded link to list the feedback stored in the Dealer Feedback System. Oracle Sales Cloud uses SSO to allow the user to access the external Dealer Feedback System without having to also authenticate with Oracle Java Cloud Service - SaaS Extension.</p>
 <p>An individual dealer is only allowed to access the Dealer Feedback System and does not have credentials to log in to Sales Cloud. The dealer can only create his own feedback.</p>
-<p>Both dealer manager (from the embedded link in Oracle Sales Cloud) and dealer (direct from a browser) access the same URL on JCS - SaaS Extension. The Dealer Feedback Web Application will show different contents based on user role: the dealer manager will see a list of feedback received while an individual dealer will see a form to create his own feedback.</p>
-<h2 id="technical-overview">Technical Overview</h2>
-<p>The Dealer Feedback System is deployed to JCS - SaaS Extension. It uses an associated Oracle Database Cloud Service (Database Schema) instance to store dealer feedback items in a database table. The application is set up with two security roles: a dealer who can only create feedback and a dealer manager who can see all feedback. Elements of the application are protected by role. The dealer manager role has a federated login on an associated Oracle Sales Cloud instance, and while logged in to Oracle Sales Cloud can access the dealer feedback system using a menu link without being challenged again for user credentials.</p>
-<h2 id="disclaimer">Disclaimer</h2>
+<p>Both dealer manager (from the embedded link in Oracle Sales Cloud) and dealer (direct from a browser) access the same URL on Oracle Java Cloud Service - SaaS Extension. The Dealer Feedback Web Application will show different contents based on user role: the dealer manager will see a list of feedback received while an individual dealer will see a form to create his own feedback.</p>
+<h2>Technical Overview</h2>
+<p>The Dealer Feedback System is deployed to Oracle Java Cloud Service - SaaS Extension. It uses an associated Oracle Database Cloud Service (Database Schema) instance to store dealer feedback items in a database table. The application is set up with two security roles:  a dealer who can only create feedback and a dealer manager who can see all feedback.  Elements of the application are protected by role.  The dealer manager role has a federated login on an associated Oracle Sales Cloud instance, and while logged in to Oracle Sales Cloud can access the dealer feedback system using a menu link without being challenged again for user credentials.</p>
+<h2>Disclaimer</h2>
 <p>All sample code is provided by Oracle for illustrative purposes only. The objective of this sample is only to demonstrate the goals defined above and may not represent other best practices, functional or technical.These sample code examples have not been thoroughly tested under all conditions. Oracle, therefore, cannot guarantee or imply security, reliability, serviceability, or function of the sample code. All sample code contained herein are provided to you AS IS without any warranties of any kind. The implied warranties of non-infringement, merchantability and fitness for a particular purpose are expressly disclaimed.</p>
-<h2 id="user-and-role-setup">User and Role Setup</h2>
-<h3 id="setting-up-the-sample">Setting up the Sample</h3>
-<ol type="1">
-<li>The JCS - SaaS Extension and Oracle Sales Cloud instances should be associated. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-9C1BA413-EB5D-429C-AECA-4069995385EF">Getting a JCS - SaaS Extension Subscription</a> and <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-19C1D17A-195D-4CB3-AD04-0224F629165B">Security Strategies for JCS - SaaS Extension and Oracle Sales Cloud interactions</a> for more details.</li>
-<li>For JCS - SaaS Extension, a user with the <em>Java Administrator</em> Role to deploy an application to the JCS - SaaS Extension instance is required. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-9C1BA413-EB5D-429C-AECA-4069995385EF">Getting a JCS - SaaS Extension Subscription</a> for more details about the <em>Java Administrator</em> Role. Refer to Chapter 7, &quot;Managing Users and Roles&quot; in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=CSGSG166">Getting Started with Oracle Cloud</a> for more details on creating users.</li>
+<h2>User and Role Setup</h2>
+<h3>Setting up the Sample</h3>
+<ol>
+<li>The Oracle Java Cloud Service - SaaS Extension and Oracle Sales Cloud instances should be associated. Refer to <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions&amp;id=GCSSL">Learn About Signing Up for an Oracle Cloud Subscription</a> and <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions/call-java-cloud-soap-app-from-sales-cloud&amp;id=GUID-19C1D17A-195D-4CB3-AD04-0224F629165B">Learn About Authorization Strategies for Oracle Java Cloud Service - SaaS Extension and Oracle SaaS Interactions</a> for more details.</li>
+<li>For Oracle Java Cloud Service - SaaS Extension, a user with the <em>Java Administrator</em> Role to deploy an application to the Oracle Java Cloud Service - SaaS Extension instance is required. Refer to Chapter 7, &quot;Managing Users and Roles&quot; in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=CSGSG166">Getting Started with Oracle Cloud</a> for more details on creating users.</li>
 </ol>
-<h3 id="running-the-sample">Running the Sample</h3>
-<p>This sample aims to show the use of security roles in JCS-SaaS Extension. Creating two users, each of which with a different role, is a prerequisite of this sample application:</p>
+<h3>Running the Sample</h3>
+<p>This sample aims to show the use of security roles in Oracle Java Cloud Service - SaaS Extension. Creating two users, each of which with a different role, is a prerequisite of this sample application:</p>
 <ul>
-<li>A dealer manager to be created in both Oracle Sales Cloud and JCS - SaaS Extension.</li>
-<li>A dealer to be created in JCS - SaaS Extension only.</li>
+<li>A dealer manager to be created in both Oracle Sales Cloud and Oracle Java Cloud Service - SaaS Extension.</li>
+<li>A dealer to be created in Oracle Java Cloud Service - SaaS Extension only.</li>
 </ul>
 <p>The following steps illustrate how to set up users and roles for this sample:</p>
-<h4 id="jcs---saas-extension">JCS - SaaS Extension</h4>
+<h4>Oracle Java Cloud Service - SaaS Extension</h4>
 <p>For each of the following steps, refer to Chapter 7, &quot;Managing Users and Roles&quot; in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=CSGSG166">Getting Started with Oracle Cloud</a> for more details.</p>
-<ol type="1">
-<li>Create two Custom Roles in JCS - SaaS Extension. Note that the roles created here will be mapped to Application Role in weblogic.xml so it is critical to use these exact role names:
+<ol>
+<li>Create two Custom Roles in Oracle Java Cloud Service - SaaS Extension. Note that the roles created here will be mapped to Application Role in weblogic.xml so it is critical to use these exact role names:
 <ul>
 <li>Dealer Manager (rolename: DealerManager)</li>
-<li>Dealer (rolename: Dealer).</li>
-</ul></li>
-<li>Create Users in JCS - SaaS Extension. The names used below are suggestions only, but are referred to by example in the README:
+<li>Dealer (rolename: Dealer)</li>
+</ul>
+</li>
+<li>Create Users in Oracle Java Cloud Service - SaaS Extension. The names used below are suggestions only, but are referred to by example in the README:
 <ul>
 <li>dealer1</li>
 <li>dealermanager1</li>
-</ul></li>
+</ul>
+</li>
 <li>Assign the Custom Roles to users:
 <ul>
 <li>Assign the role &quot;Dealer&quot; to dealer1</li>
 <li>Assign the role &quot;Dealer Manager&quot; to dealermanager1</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h4 id="oracle-sales-cloud">Oracle Sales Cloud</h4>
-<p>In Oracle Sales Cloud, a user with an identical user ID as the dealer manager (e.g. dealermanager1) is needed to demonstrate SSO capability. <strong>Please note that the user ID for this user in Oracle Sales Cloud and in JCS - SaaS Extension must be identical.</strong> This user also requires access to development sandboxes. The easiest way to meet this requirement is to create a sample application test user who has the <em>Sales Administrator</em> role. See Chapter 5, &quot;About Oracle Sales Cloud Users&quot;, in <a href="http://docs.oracle.com/cloud/latest/salescs_gs/OSCUS/F1184828Ad1e6700a1310.htm#F1184828Ad1e6700a1310">Securing Oracle Sales Cloud</a> for more details on creating users with specific roles. This role is completely independent of the Custom role that we use in JCS - SaaS Extension. It is only used to manage the access to the corresponding resources in Oracle Sales Cloud. For example, a user can have the Sales Administrator role in Oracle Sales Cloud and also be assigned the dealer manager role in JCS - SaaS Extension.</p>
-<h2 id="install-instructions">Install Instructions</h2>
+<h4>Oracle Sales Cloud</h4>
+<p>In Oracle Sales Cloud, a user with an identical user ID as the dealer manager (e.g. dealermanager1) is needed to demonstrate SSO capability. <strong>Please note that the user ID for this user in Oracle Sales Cloud and in Oracle Java Cloud Service - SaaS Extension must be identical.</strong>  This user also requires access to development sandboxes. The easiest way to meet this requirement is to create a sample application test user who has the <em>Sales Administrator</em> role. See Chapter 5, &quot;About Oracle Sales Cloud Users&quot;, in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud132&amp;id=OSCUS1288015">Securing Oracle Sales Cloud</a> for more details on creating users with specific roles. This role is completely independent of the Custom role that we use in Oracle Java Cloud Service - SaaS Extension. It is only used to manage the access to the corresponding resources in Oracle Sales Cloud. For example, a user can have the Sales Administrator role in Oracle Sales Cloud and also be assigned the dealer manager role in Oracle Java Cloud Service - SaaS Extension.</p>
+<h2>Install Instructions</h2>
 <p>The steps below will assume that you are using git. However you can also download the code from OTN to your local working directory and follow the same steps below.</p>
-<h3 id="database-cloud-service-schema">Database Cloud Service (Schema)</h3>
-<ol type="1">
+<h3>Database Cloud Service (Schema)</h3>
+<ol>
 <li>Upload and Run <git-home>/dealer-feedback-sys-sso/DbCS/sql/DEALER_FEEDBACK_DDL.sql to Oracle Database Cloud Service (Database Schema).</li>
 <li>Import the RESTful Service Configuration from <git-home>/dealer-feedback-sys-sso/DbCS/sql/oracle_cloud_sampleapps_dealerfeedback.sql. See the documentation for details <link here>.</li>
-<li>It is possible, though not required, to secure the Oracle Database Cloud Service (Database Schema) RESTful services using OAUTH2. Refer to the &quot;Securing Rest Services&quot; section in <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-98B929AD-6843-4B96-82FD-3A5235B5A385">Manipulating Data in Oracle Database Cloud Service (Database Schema) Using REST Services</a> for more details.</li>
+<li>It is possible, though not required, to secure the Oracle Database Cloud Service (Database Schema) RESTful services using OAUTH2.  Refer to the &quot;Securing Rest Services&quot; section in <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions/link-java-cloud-saas-from-sales-cloud&amp;id=GUID-98B929AD-6843-4B96-82FD-3A5235B5A385">Manipulate Data in Oracle Database Cloud - Database Schema Service Using REST Services </a> for more details.</li>
 <li>Test</li>
 <li>Click the GET Handler under dealerfeedbacks/ Template.</li>
 <li>Click the &quot;Test&quot; button and you should be able to see the pre-populated record.</li>
 </ol>
-<h3 id="jcs---saas-extension-1">JCS - SaaS Extension</h3>
-<ol type="1">
-<li>Clone git repository to your local working directory</li>
+<h3>Oracle Java Cloud Service - SaaS Extension</h3>
+<ol>
+<li>Clone the git repository to your local working directory</li>
 <li>Open the application (.jws file) in JDeveloper or Eclipse. There is a need to make these changes to account for your specific data source:
-<ol type="1">
-<li>Open dealer-project/Web Content/WEB-INF/web.xml</li>
-<li>Change the value of the parameter &quot;dbcs-url&quot; context-param to the Oracle Database Cloud Service (Database Schema) URL. This parameter is ready by the java server pages to connect to the JCS - Saas Extension datasource.</li>
-<li>If action was taken to secure the Oracle Database Cloud Service (Database Schema) services, change the value of the parameter &quot;access-token&quot; context-param to the obtained access token</li>
-</ol></li>
-<li>Deploy the Angular application to a war file and deploy as documented in <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploying Applications Individually Using JCS - SaaS Extension Control</a>.</li>
-<li>Test the application by accessing the URL on JCS - SaaS Extension ( https://jcs-sx-url/dealer-feedback) as dealer1 to render the dealer feedback form.</li>
+<ol>
+<li>Open dealer-project/Web Content/WEB-INF/web.xml.</li>
+<li>Change the value of the parameter &quot;dbcs-url&quot; context-param to the Oracle Database Cloud Service (Database Schema) URL. This parameter is ready by the java server pages to connect to the Oracle Java Cloud Service - Saas Extension datasource.</li>
+<li>If action was taken to secure the Oracle Database Cloud Service (Database Schema) services, change the value of the parameter &quot;access-token&quot; context-param to the obtained access token.</li>
 </ol>
-<h3 id="oracle-sales-cloud-1">Oracle Sales Cloud</h3>
-<p><strong>NOTE</strong>: It is critical to perform all Oracle Sales Cloud development/customization work in an activated sandbox. Not only does this aid in testing and debugging, but it also greatly simplifies un-installing/rolling back sample application extensions when required. Given that all customizations will be isolated to a sandbox, it is necessary to communicate sandbox details to others so that they can interact with sample application customizations while acting in different roles.</p>
+</li>
+<li>Deploy the Angular application to a war file and deploy as documented in <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions/link-java-cloud-saas-from-sales-cloud&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploy Applications Individually Using Oracle Java Cloud Service - SaaS Extension Control</a>.</li>
+<li>Test the application by accessing the URL on Oracle Java Cloud Service - SaaS Extension (https://jcs-sx-url/dealer-feedback) as dealer1 to render the dealer feedback form.</li>
+</ol>
+<h3>Oracle Sales Cloud</h3>
+<p><strong>NOTE</strong>:  It is critical to perform all Oracle Sales Cloud development/customization work in an activated sandbox.  Not only does this aid in testing and debugging, but it also greatly simplifies un-installing/rolling back sample application extensions when required.  Given that all customizations will be isolated to a sandbox, it is necessary to communicate sandbox details to others so that they can interact with sample application customizations while acting in different roles.</p>
 <p>The steps involved in rolling back Oracle Sales Cloud customizations published from sandboxes to the main code line will not be documented here.</p>
-<p>Customize Oracle Sales Cloud to embed a URL link pointing to the Dealer Feedback System application deployed to JCS - SaaS Extension:</p>
-<ol type="1">
-<li>Log in as a customization user with access to Application Composer. Create or activate a sandbox as required. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-73F02E54-38FB-4081-BD9D-4570DD26CDBD">Understanding the Basics of Oracle Sales Cloud Customization and Integration Features</a> for details.</li>
-<li>Register dealer-feedback as a third party application. Refer to <a href="http://docs.oracle.com/cloud/latest/salescs_gs/OACEX/F1718276Ad1e56082a1310.htm#F1452121Ad1e60629a1310">Creating a Third Party Application</a> for more details:
+<p>Customize Oracle Sales Cloud to embed a URL link pointing to the Dealer Feedback System application deployed to Oracle Java Cloud Service - SaaS Extension:</p>
+<ol>
+<li>Log in as a customization user with access to Application Composer. Create or activate a sandbox as required.</li>
+<li>Register dealer-feedback as a third party application.  See: <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud132&amp;id=OACEX1683514">Creating a Third Party Application</a>:
 <ul>
 <li>Application Name: DealerFeedback</li>
 <li>Full URL: https://jcs-sx-url/dealer-feedback/</li>
-<li>Parter Name: Dealer Feedback</li>
-</ul></li>
+<li>Partner Name: Dealer Feedback</li>
+</ul>
+</li>
 <li>Go to Tools -&gt; Structure and create a Page Entry:
 <ul>
 <li>Name: Dealer Feedback</li>
@@ -128,50 +133,45 @@
 <li>Visible: Yes</li>
 <li>Link Type: Static</li>
 <li>Destination: #{EndPointProvider.externalEndpointByModuleShortName['DealerFeedback']}</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-<h2 id="running-the-sample-1">Running the Sample</h2>
+<h2>Running the Sample</h2>
 <p>To run the sample:</p>
-<ol type="1">
-<li>Login to Oracle Sales Cloud as dealermanager1</li>
+<ol>
+<li>Log in to Oracle Sales Cloud as dealermanager1.</li>
 <li>Go to Sales and click the Dealer Feedback icon.</li>
 <li>If a page shows up for authentication, click &quot;Sign in using Company&quot;, and you should be able to login into the Dealer Feedback System without authenticating again. Then, you should see the list of feedback without the need to authenticate again.</li>
 <li>You can update the &quot;Follow-up?&quot; and &quot;Follow-up by&quot; fields and Save.</li>
-<li>Open a new browser, connect to JCS - SaaS Extension (for example, https://jcs-sx-url/dealer-feedback), and authenticate as dealer1. You will be able to see a form to create a feedback.</li>
+<li>Open a new browser, connect to Oracle Java Cloud Service - SaaS Extension (for example, https://{jcs-sx-url}/dealer-feedback), and authenticate as dealer1. You will be able to see a form to create a feedback.</li>
 <li>Fill out the form and click Submit.</li>
 </ol>
 <p><strong>Note</strong>: Be aware of session-sharing behaviors across multiple tabs in browsers. You may need to use different browser sessions or private windows when testing with different users simultaneously.</p>
-<h2 id="additional-information">Additional information</h2>
-<p>For more details about this sample and other related samples refer to Oracle Cloud Solutions at <a href="https://cloud.oracle.com/developer/solutions">https://cloud.oracle.com/developer/solutions</a></p>
-<h2 id="uninstall-instructions">Uninstall Instructions</h2>
-<h3 id="oracle-database-cloud-service-database-schema">Oracle Database Cloud Service (Database Schema)</h3>
-<ol type="1">
+<h2>Additional information</h2>
+<p>For more details about this sample and other related samples refer to Oracle Cloud Solutions at <a href="https://docs.oracle.com/solutions">https://docs.oracle.com/solutions</a></p>
+<h2>Uninstall Instructions</h2>
+<h3>Oracle Database Cloud Service (Database Schema)</h3>
+<ol>
 <li>Drop the dealer_feedback table.</li>
 <li>Delete the scripts.</li>
 <li>Delete the oracle.cloud.sampleapps.dealerfeedback RESTful module.</li>
 <li>If action was taken to secure the Oracle Database Cloud Service (Database Schema) services, delete the registered client, privilege, etc.</li>
 </ol>
-<h3 id="jcs---saas-extension-2">JCS - SaaS Extension</h3>
-<p>Undeploy the application from JCS -SaaS Extension. Refer to the Undeploy section in <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploying Applications Individually to JCS - SaaS Extension</a> for more details.</p>
-<h3 id="oracle-sales-cloud-2">Oracle Sales Cloud</h3>
-<p>Deactivate and delete the sandbox. This will roll back all Oracle Sales Cloud customizations.</p>
-<h2 id="known-issues">Known Issues</h2>
+<h3>Oracle Java Cloud Service - SaaS Extension</h3>
+<p>Undeploy the application from Oracle Java Cloud Service - SaaS Extension. Refer to the Undeploy section in <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions/link-java-cloud-saas-from-sales-cloud&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploy Applications Individually Using Oracle Java Cloud Service - SaaS Extension Control</a> for more details.</p>
+<h3>Oracle Sales Cloud</h3>
+<p>Deactivate and delete the sandbox.  This will roll back all Oracle Sales Cloud customizations.</p>
+<h2>Documentation</h2>
+<p>To learn how to further extend this sample, explore other implementation options, or develop your own application, visit the Oracle Cloud Solutions page at <a href="https://docs.oracle.com/solutions">https://docs.oracle.com/solutions</a>.</p>
+<h2>Known Issues</h2>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: left;">#</th>
-<th style="text-align: left;">Issue</th>
-<th style="text-align: left;">Workaround</th>
-</tr>
+<tr><th>#</th><th>Issue</th><th>Workaround</th></tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">Some versions of Internet Explorer may display content incorrectly.</td>
-<td style="text-align: left;">Use Firefox or Chrome to continue the sample test.</td>
-</tr>
+<tr><td>1</td><td>Some versions of Internet Explorer may display content incorrectly.</td><td>Use Firefox or Chrome to continue the sample test.</td></tr>
 </tbody>
 </table>
-<p>Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved</p>
+<p>Copyright (c) 2015, 2018 Oracle and/or its affiliates. All rights reserved</p>
 </body>
 </html>

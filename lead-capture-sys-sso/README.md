@@ -3,13 +3,9 @@
 ## Sample Name
 Lead Capture with Single Sign On
 
-## Authors
-Ulrich Janke, Oracle A-Team
-Dolf Dijkstra, Oracle A-Team
-
 ## Source Code Location
 * GitHub: [https://github.com/oracle/sales-cloud-with-paas-samples](https://github.com/oracle/sales-cloud-with-paas-samples)
-* OTN: [http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html](http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html)
+* Oracle Technology Network: [https://www.oracle.com/technetwork/indexes/samplecode/solutions-architectures-samples-5012412.html](https://www.oracle.com/technetwork/indexes/samplecode/solutions-architectures-samples-5012412.html)
 
 ## Oracle Cloud Products Involved
 * Oracle Java Cloud Service - SaaS Extension
@@ -43,8 +39,8 @@ All sample code is provided by Oracle for illustrative purposes only. The object
 ## User and Role Setup:
 
 ### Setting up the Sample
-1. The Java Cloud Service - SaaS Extension and Oracle Sales Cloud instances should be associated. Refer to [Getting a JCS - SaaS Extension Subscription](http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&id=OCPSI-GUID-9C1BA413-EB5D-429C-AECA-4069995385EF) and [Security Strategies for JCS - SaaS Extension and Oracle Sales Cloud interactions](http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&id=OCPSI-GUID-19C1D17A-195D-4CB3-AD04-0224F629165B) for more details.
-2. For Java Cloud Service - SaaS Extension, a user with the *Java Administrator* Role to deploy an application to the Java Cloud Service - SaaS Extension instance is required. Refer to [Getting a JCS - SaaS Extension Subscription](http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&id=OCPSI-GUID-9C1BA413-EB5D-429C-AECA-4069995385EF) for more details about the *Java Administrator* Role.  Refer to Chapter 7, "Managing Users and Roles" in [Getting Started with Oracle Cloud](http://www.oracle.com/pls/topic/lookup?ctx=cloud&id=CSGSG166) for more details on creating users.
+1. The Oracle Java Cloud Service - SaaS Extension and Oracle Sales Cloud instances should be associated. Refer to [Learn About Signing Up for an Oracle Cloud Subscription](https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions&id=GCSSL) and [Learn About Authorization Strategies for Oracle Java Cloud Service - SaaS Extension and Oracle SaaS Interactions](https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions/call-java-cloud-soap-app-from-sales-cloud&id=GUID-19C1D17A-195D-4CB3-AD04-0224F629165B) for more details.
+2. For Oracle Java Cloud Service - SaaS Extension, a user with the *Java Administrator* Role to deploy an application to the Oracle Java Cloud Service - SaaS Extension instance is required. Refer to Chapter 7, "Managing Users and Roles" in [Getting Started with Oracle Cloud](http://www.oracle.com/pls/topic/lookup?ctx=cloud&id=CSGSG166) for more details on creating users.
 
 ## Running the Sample
 
@@ -59,7 +55,7 @@ All sample code is provided by Oracle for illustrative purposes only. The object
 Clone the Git repository locally. You can also download the code from OTN to your local working directory and follow the same steps below. However the remaining steps will assume that you are using git.
 
 ### Oracle Database Cloud Service (Database Schema)
-Run the SQL scripts included in the source code using the SQL command in Oracle Database Cloud Service (Database Schema). For more details about the steps to access the SQL command, refer to the SQL Script section of [Creating Data Models in Oracle Database Cloud Service - Database Schema](http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&id=OCPSI-GUID-0B2A2A62-BFB1-48C3-9398-23B7896E0E89). 
+Run the SQL scripts included in the source code using the SQL command in Oracle Database Cloud Service (Database Schema).  
 
 *git-home*/lead-capture-app-sso/DbCS/sql/crTable_LEAD_CAPTURE_SYS_SSO.sql
 
@@ -69,10 +65,9 @@ To confirm script execution, verify that the `LEAD_CAPTURE_SYS_SSO` table has be
 
 Use JDeveloper to build the ADF application EAR and deploy it to Java Cloud Service - SaaS Extension:
 
-1. Open the .jws in JDeveloper or Eclipse. Refer to [Configuring IDEs for Developing with JCS - SaaS Extension](http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&id=OCPSI-GUID-645953AE-3C6F-40DD-AF06-03D466DEFECE) for more details about configuring JDeveloper/Eclipse. Further steps in this readme will refer to JDeveloper although similar steps can be performed in Eclipse.
+1. Open the .jws in JDeveloper or Eclipse. Further steps in this readme will refer to JDeveloper although similar steps can be performed in Eclipse.
 2. Change in the IE or with an editor the values for the token *@@datasource-servicename@@* in the file JCS-SX/ModelLeadCaptureSys/src/oracle/cloud/sampleaapps/leadcapturesys/model/common/bc4j.xcfg and for token *@@your_sales_cloud_URL@@* in file JCS-SX/ViewLCS/public_html/LeadCapture.jspx. 
-3. Deploy the application to your Java Cloud Service - SaaS Extension instance. Refer to [Deploying Applications Individually Using JCS - SaaS 
-Extension Control](http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&id=OCPSI-GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339) for more details.
+3. Deploy the application to your Java Cloud Service - SaaS Extension instance. Refer to [Deploy Applications Individually Using Oracle Java Cloud Service - SaaS Extension Control](https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions/link-sales-cloud-from-java-cloud-saas&id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339) for more details.
 
 Create an application user for testing purposes.
 
@@ -104,7 +99,7 @@ To run the sample:
 
 ## Additional information
 
-For more details about this sample and other related samples, refer to Oracle Cloud Solutions at <https://cloud.oracle.com/developer/solutions>.
+For more details about this sample and other related samples, refer to Oracle Cloud Solutions at <https://docs.oracle.com/solutions>.
 
 ## Uninstall Instructions
 
@@ -112,7 +107,7 @@ For more details about this sample and other related samples, refer to Oracle Cl
 Drop the table and sequence from Oracle Database Cloud Service (Database Schema). You can borrow the two drop statements from the `crTable_LEAD_CAPTURE_SYS_SSO.sql` script.
 
 ### Java Cloud Service - SaaS Extension
-1.  Undeploy the application from Java Cloud Service - SaaS Extension. Refer to the Undeploy section in [Deploying Applications Individually Using JCS - SaaS Extension Control](http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&id=OCPSI-GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339) for more details. 
+1.  Undeploy the application from Java Cloud Service - SaaS Extension. Refer to the Undeploy section in [Deploy Applications Individually Using Oracle Java Cloud Service - SaaS Extension Control](https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions/link-sales-cloud-from-java-cloud-saas&id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339) for more details. 
 2.  Remove the application from JDeveloper.
 3.  Remove the files from your local file system.
 
@@ -121,7 +116,7 @@ Drop the table and sequence from Oracle Database Cloud Service (Database Schema)
 2. If necessary, delete the custom role that was created to support this application.
 
 ## Documentation
-To learn how to further extend this sample, explore other implementation options, or develop your own application following a similar implementation pattern, visit the [Lead Capture System Solutions page](https://cloud.oracle.com/developer/solutions?scenarioid=1431002916654) in the [Oracle Cloud Developer Portal](https://cloud.oracle.com/developer).
+To learn how to further extend this sample, explore other implementation options, or develop your own application, visit the Oracle Cloud Solutions page at <https://docs.oracle.com/solutions>.
 
 ## Known Issues
 
@@ -129,4 +124,4 @@ There are no known issues with the sample.
 
 
 
-Copyright (c) 2016, Oracle and/or its affiliates. All rights reserved
+Copyright (c) 2015, 2018 Oracle and/or its affiliates. All rights reserved

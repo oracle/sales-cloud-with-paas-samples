@@ -11,70 +11,70 @@
   <![endif]-->
 </head>
 <body>
-<h1 id="readme-for-oracle-cloud---paas-for-saas-sample">README for Oracle Cloud - PaaS for SaaS Sample</h1>
-<h2 id="sample-name">Sample Name</h2>
+<h1>README for Oracle Cloud - PaaS for SaaS Sample</h1>
+<h2>Sample Name</h2>
 <p>Credit Health Score</p>
-<h2 id="sample-name">Author</h2>
-<p>Jian Liang, Oracle A-Team</p>
-<h2 id="source-code-location">Source Code Location</h2>
+<h2>Author</h2>
+<p>Justin Liang, Oracle A-Team</p>
+<h2>Source Code Location</h2>
 <ul>
 <li>GitHub: <a href="https://github.com/oracle/sales-cloud-with-paas-samples">https://github.com/oracle/sales-cloud-with-paas-samples</a></li>
-<li>OTN: <a href="http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html">http://www.oracle.com/technetwork/indexes/samplecode/cloud-samples-2203466.html</a></li>
+<li>Oracle Technology Network: <a href="https://www.oracle.com/technetwork/indexes/samplecode/solutions-architectures-samples-5012412.html">https://www.oracle.com/technetwork/indexes/samplecode/solutions-architectures-samples-5012412.html</a></li>
 </ul>
-<h2 id="oracle-cloud-products-involved">Oracle Cloud Products Involved</h2>
+<h2>Oracle Cloud Products Involved</h2>
 <ul>
 <li>Oracle Java Cloud Service - SaaS Extension</li>
 <li>Oracle Sales Cloud</li>
-<li>Oracle JDeveloper Cloud specific version (11.1.1.7.1 or higher) / Oracle Enterprise pack for Eclipse available at <a href="http://www.oracle.com/technetwork/topics/cloud/downloads/index.html">this</a> location on OTN</li>
+<li>Oracle JDeveloper Cloud-specific version (11.1.1.7.1 or 11.1.1.9.0) / Oracle Enterprise pack for Eclipse available at <a href="http://www.oracle.com/technetwork/topics/cloud/downloads/index.html">this</a> location on Oracle Technology Network</li>
 </ul>
-<h2 id="demonstrates">Demonstrates</h2>
-<p>This sample demonstrates the following aspects of Oracle Cloud integration</p>
-<h4 id="primary-goals">Primary Goals</h4>
+<h2>Demonstrates</h2>
+<p>This sample demonstrates the following aspects of Oracle Cloud integration:</p>
+<h4>Primary Goals</h4>
 <ul>
-<li>Using SAML as an authentication mechanism when Oracle Sales Cloud invokes a SOAP web service deployed to JCS - SaaS extension. This sample demonstrates that no SAML setup is required for this interaction.</li>
+<li>Using SAML as an authentication mechanism when Oracle Sales Cloud invokes a SOAP web service deployed to Oracle Java Cloud Service - SaaS extension. This sample demonstrates that no SAML setup is required for this interaction.</li>
 </ul>
-<h4 id="secondary-goals">Secondary Goals</h4>
+<h4>Secondary Goals</h4>
 <ul>
 <li>Displaying the results of an external web service invocation in the Oracle Sales Cloud UI</li>
 </ul>
-<h2 id="functional-overview">Functional Overview</h2>
+<h2>Functional Overview</h2>
 <p>ABC Inc, attaches a Credit Health Score to every account/opportunity. This score ranges from 1 to 10 and is calculated based on a complex logic involving data from several internal and external systems. This score is used by the Sales Team, Service team, and Order Management team. The score logic is developed and maintained by a dedicated development team. In addition to providing the credit score for a given account, this application also logs each request to credit score. This logging mechanism is not implemented in this sample for the sake of simplicity.</p>
-<h2 id="technical-overview">Technical Overview</h2>
-<p>The Credit Health Score logic is exposed as a JAX-WS web service deployed on JCS - SaaS Extension. Oracle Sales Cloud invokes this web service by passing an account ID as an input parameter and getting back the credit score which is then displayed in the Oracle Sales Cloud UI. In a more realistic implementation, this ID will be used to fetch additional information from Oracle Sales Cloud prior to calculating the credit score. For the sake of simplicity this webservice is implemented with no real logic and simply returns a randomly generated credit score. The purpose of this sample is to demonstrate that no SAML set up is required between JCS - SaaS Extension and Oracle Sales Cloud for this web service interaction. The only pre-requisite is that the same user ID should exist in both JCS - SaaS Extension and Oracle Sales Cloud identity stores. Passwords are irrelevant.</p>
-<h2 id="disclaimer">Disclaimer</h2>
-<p>All sample code is provided by Oracle for illustrative purposes only. The objective of this sample is only to demonstrate the goals defined above and may not represent other best practices, functional or technical.These sample code examples have not been thoroughly tested under all conditions. Oracle, therefore, cannot guarantee or imply security, reliability, serviceability, or function of the sample code. All sample code contained herein are provided to you AS IS without any warranties of any kind. The implied warranties of non-infringement, merchantability and fitness for a particular purpose are expressly disclaimed.</p>
-<h2 id="user-and-role-setup">User and Role Setup</h2>
-<h3 id="setting-up-the-sample">Setting up the Sample</h3>
-<ol type="1">
-<li>The JCS - SaaS Extension and Oracle Sales Cloud instances should be associated. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-9C1BA413-EB5D-429C-AECA-4069995385EF">Getting a JCS - SaaS Extension Subscription</a> and <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-19C1D17A-195D-4CB3-AD04-0224F629165B">Security Strategies for JCS - SaaS Extension and Oracle Sales Cloud interactions</a> for more details.</li>
-<li>For JCS - SaaS Extension, a user with the <em>Java Administrator</em> Role to deploy an application to the JCS - SaaS Extension instance is required. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-9C1BA413-EB5D-429C-AECA-4069995385EF">Getting a JCS - SaaS Extension Subscription</a> for more details about the <em>Java Administrator</em> Role. Refer to Chapter 7, &quot;Managing Users and Roles&quot; in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=CSGSG166">Getting Started with Oracle Cloud</a> for more details on creating users.</li>
+<h2>Technical Overview</h2>
+<p>The Credit Health Score logic is exposed as a JAX-WS web service deployed on Oracle Java Cloud Service - SaaS Extension. Oracle Sales Cloud invokes this web service by passing an account ID as an input parameter and getting back the credit score which is then displayed in the Oracle Sales Cloud UI. In a more realistic implementation, this ID will be used to fetch additional information from Oracle Sales Cloud prior to calculating the credit score. For the sake of simplicity this web service is implemented with no real logic and simply returns a randomly generated credit score. The purpose of this sample is to demonstrate that no SAML set up is required between Oracle Java Cloud Service - SaaS Extension and Oracle Sales Cloud for this web service interaction. The only prerequisite is that the same user ID should exist in both Oracle Java Cloud Service - SaaS Extension and Oracle Sales Cloud identity stores. Because they are associated, Oracle Sales Cloud is automatically set up for SAML-based authentication with the Oracle Java Cloud Service - SaaS Extension instance, so there is no need to provide a user account password during the web service call.</p>
+<h2>Disclaimer</h2>
+<p>All sample code is provided by Oracle for illustrative purposes only. The objective of this sample is only to demonstrate the goals defined above and may not represent other best practices, functional or technical. These sample code examples have not been thoroughly tested under all conditions. Oracle, therefore, cannot guarantee or imply security, reliability, serviceability, or function of the sample code. All sample code contained herein are provided to you AS IS without any warranties of any kind. The implied warranties of non-infringement, merchantability and fitness for a particular purpose are expressly disclaimed.</p>
+<h2>User and Role Setup</h2>
+<h3>Setting up the Sample</h3>
+<ol>
+<li>The Oracle Java Cloud Service - SaaS Extension and Oracle Sales Cloud instances should be associated. Refer to <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions&amp;id=GCSSL">Learn About Signing Up for an Oracle Cloud Subscription</a> and <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions/call-java-cloud-soap-app-from-sales-cloud&amp;id=GUID-19C1D17A-195D-4CB3-AD04-0224F629165B">Learn About Authorization Strategies for Oracle Java Cloud Service - SaaS Extension and Oracle SaaS Interactions</a> for more details.</li>
+<li>For Oracle Java Cloud Service - SaaS Extension, a user with the <em>Java Administrator</em> Role to deploy an application to the Oracle Java Cloud Service - SaaS Extension instance is required. Refer to Chapter 7, &quot;Managing Users and Roles&quot; in <a href="http://www.oracle.com/pls/topic/lookup?ctx=cloud&amp;id=CSGSG166">Getting Started with Oracle Cloud</a> for more details on creating users.</li>
 </ol>
-<h3 id="running-the-sample">Running the Sample</h3>
-<p>Create a new user or use an existing user that exists in both Oracle Sales Cloud and JCS - SaaS Extension. The role of this user in Oracle Sales Cloud could be <em>Sales Administrator</em>. There is no role logic for the user in JCS - SaaS Extension in this sample.</p>
-<h2 id="install-instructions">Install Instructions</h2>
-<h3 id="jcs-saas-extension">JCS-SaaS Extension</h3>
-<ol type="1">
+<h3>Running the Sample</h3>
+<p>Create a new user or use an existing user that exists in both Oracle Sales Cloud and Oracle Java Cloud Service - SaaS Extension. The role of this user in Oracle Sales Cloud could be <em>Sales Administrator</em>. There is no role logic for the user in Oracle Java Cloud Service - SaaS Extension in this sample.</p>
+<h2>Install Instructions</h2>
+<h3>Oracle Java Cloud Service - SaaS Extension</h3>
+<ol>
 <li>Clone the git repository to your local working directory. You can also download the code from OTN to your local working directory and follow the same steps below. However the remaining steps will assume that you are using git. The steps below should be executed using a user as defined in User and Role Setup Setting up the Sample section above.</li>
-<li>Open the .jws in JDeveloper or Eclipse. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-645953AE-3C6F-40DD-AF06-03D466DEFECE">Configuring IDEs for Developing with JCS - SaaS Extension</a> for more details about configuring JDeveloper or Eclipse. Further steps in this readme will refer to JDeveloper although similar steps can be performed in Eclipse.</li>
-<li>Deploy the application (CHSApp-CHS.war) to your JCS - SaaS Extension instance. The way to deploy a WAR is identical to deploy an EAR. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploying Applications Individually Using JCS - SaaS Extension Control</a> for more details.</li>
+<li>Open the .jws in JDeveloper or Eclipse. Further steps in this readme will refer to JDeveloper although similar steps can be performed in Eclipse.</li>
+<li>Deploy the application (CHSApp-CHS.war) to your Oracle Java Cloud Service - SaaS Extension instance. Right click on <strong>Application Name</strong>, and then go to application properties and select <strong>Deployment</strong>, <strong>Edit</strong>, <strong>Application Assembly</strong>, and select everything. You can deploy a WAR using the same process as deploying an EAR. Refer to <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions/call-java-cloud-soap-app-from-sales-cloud&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploy Applications Individually Using Oracle Java Cloud Service - SaaS Extension Control</a> for more details.</li>
 <li>Obtain the WSDL endpoint of the deployed application. It should be of the format https://jcs-host/chs/CreditHealthScorePort?WSDL</li>
 </ol>
-<h3 id="sales-cloud">Sales Cloud</h3>
-<p><strong>NOTE</strong>: It is critical to perform all Oracle Sales Cloud development/customization work in an activated sandbox. Not only does this aid in testing and debugging, but it also greatly simplifies un-installing/rolling back sample application extensions when required. Given that all customizations will be isolated to a sandbox, it is necessary to communicate sandbox details to others so that they can interact with sample application customizations while acting in different roles.</p>
+<h3>Oracle Sales Cloud</h3>
+<p><strong>NOTE</strong>:  It is critical to perform all Oracle Sales Cloud development/customization work in an activated sandbox. Not only does this aid in testing and debugging, but it also greatly simplifies un-installing/rolling back sample application extensions when required. Given that all customizations will be isolated to a sandbox, it is necessary to communicate sandbox details to others so that they can interact with sample application customizations while acting in different roles.</p>
 <p>The steps involved in rolling back Oracle Sales Cloud customizations published from sandboxes to the main code line will not be documented here.</p>
-<ol type="1">
+<ol>
 <li>Create a few Accounts in case there are none existing.</li>
 <li>Log in as a user that has access to Application Composer.</li>
-<li>Create or activate a sandbox as required. Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-73F02E54-38FB-4081-BD9D-4570DD26CDBD">Understanding the Basics of Oracle Sales Cloud Customization and Integration Features</a> for details.</li>
+<li>Create or activate a sandbox as required.</li>
 <li>In the application composer, create a new web service with the following details.</li>
 </ol>
 <ul>
 <li><em>Name:</em> CHSSoapEndpoint</li>
-<li><em>WSDL URL:</em> https://jcs-host/chs/CreditHealthScorePort?WSDL (the WSDL endpoint obtained after the deployment in JCS-SaaS Extension)</li>
+<li><em>WSDL URL:</em> https://jcs-host/chs/CreditHealthScorePort?WSDL (the WSDL endpoint obtained after the deployment in Oracle Java Cloud Service - SaaS Extension)</li>
 <li><em>Security Policy:</em> Select the Invoke with current user credentials using SAML security scheme.</li>
-<li>Refer to <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-BB9C36B6-92E2-4BC3-91CD-026352F9EBF8">Consuming SOAP Web Services in Oracle Sales Cloud</a> for more details on executing this step.</li>
+<li>Refer to <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions/call-java-cloud-soap-app-from-sales-cloud&amp;id=GUID-BB9C36B6-92E2-4BC3-91CD-026352F9EBF8">Consume SOAP Web Services in Oracle Sales Cloud</a> for more details on executing this step.</li>
 </ul>
-<ol start="5" type="1">
+<ol start="5">
 <li>Create the custom CreditHealthScore field for the Account object.</li>
 <li>In Application Composer, expand the Standard Objects accordion, expand the Account object accordion, and click on the Fields link.</li>
 <li>Create a text field with the following attributes:</li>
@@ -86,28 +86,30 @@
 <li><em>Constraints:</em> Updateable. In addition, uncheck the checkbox &quot;Include in Service Payload&quot;</li>
 <li><em>Default Value:</em> Expression. Enter the Groovy script code (the code is located at <git-home>/credit-health-score-soap-saml/SalesCloud/common/Standard/Account/ServerScripts/Triggers/creditHealthScore.groovy)</li>
 </ul>
-<ol start="8" type="1">
-<li>Place the custom field on the Default Layout page.</li>
+<ol start="8">
+<li>To Place the custom field on the Default Layout page:</li>
 </ol>
 <ul>
-<li>Navigate to the pages area for the Account object (Standard Objects -&gt; Account -&gt; Pages), and select the Default Layout page in the Details Page Layouts section</li>
-<li>Select the Credit Health Score field and shuttle it over from the Available Fields list to the Selected Fields list.</li>
+<li>Navigate to the pages area for the Account object (Standard Objects, then Account, then Pages), and click the default Custom Layout page in the Details Page Layouts section. It will open the Default Custom Layout page.</li>
+<li>In the  Default Custom Layout Page, click Edit in the Account Overview Subtab. Now select the Credit Health Score field and shuttle it over from the Available Fields list to the Selected Fields list. Save and Close</li>
 </ul>
-<h2 id="running-the-sample-1">Running the Sample</h2>
-<ol type="1">
-<li>Login to Oracle Sales Cloud using a user that is available on both Oracle Sales Cloud and JCS - SaaS Extension</li>
-<li>Go to Accounts, and create a new account</li>
+<h2>Running the Sample</h2>
+<ol>
+<li>Log in to Oracle Sales Cloud using a user that is available on both Oracle Sales Cloud and Oracle Java Cloud Service - SaaS Extension.</li>
+<li>Go to Accounts, and create a new account.</li>
 <li>You should be able to see a new attribute on the default page called Credit Health Score with the number provided by the remote SOAP Web Service.</li>
 </ol>
-<h2 id="additional-information">Additional information</h2>
-<p>For more details about this sample and other related samples refer to Oracle Cloud Solutions at <a href="https://cloud.oracle.com/developer/solutions">https://cloud.oracle.com/developer/solutions</a></p>
-<h2 id="uninstall-instructions">Uninstall Instructions</h2>
-<h3 id="jcs---saas-extension">JCS - SaaS Extension</h3>
-<p>Undeploy the application from JCS - SaaS Extension. Refer to the Undeploy section in <a href="http://www.oracle.com/pls/topic/lookup?ctx=clouddevportal&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploying Applications Individually to JCS - SaaS Extension</a> for more details.</p>
-<h3 id="oracle-sales-cloud">Oracle Sales Cloud</h3>
+<h2>Additional information</h2>
+<p>For more details about this sample and other related samples refer to Oracle Cloud Solutions at <a href="https://docs.oracle.com/solutions">https://docs.oracle.com/solutions</a>.</p>
+<h2>Uninstall Instructions</h2>
+<h3>Oracle Java CLoud Service - SaaS Extension</h3>
+<p>Undeploy the application from Oracle Java Cloud Service - SaaS Extension. Refer to the Undeploy section in <a href="https://docs.oracle.com/pls/topic/lookup?ctx=en/solutions/call-java-cloud-soap-app-from-sales-cloud&amp;id=GUID-8C5519F9-FB34-4D13-B313-BF0C7230A339">Deploy Applications Individually Using Oracle Java Cloud Service - SaaS Extension Control</a> for more details.</p>
+<h3>Oracle Sales Cloud</h3>
 <p>Deactivate and delete the development sandbox. This will roll back all Oracle Sales Cloud customizations.</p>
-<h2 id="known-issues">Known Issues</h2>
+<h2>Documentation</h2>
+<p>To learn how to further extend this sample, explore other implementation options, or develop your own application, visit the Oracle Cloud Solutions page at <a href="https://docs.oracle.com/solutions">https://docs.oracle.com/solutions</a>.</p>
+<h2>Known Issues</h2>
 <p>None</p>
-<p>Copyright (c) 2015, Oracle and/or its affiliates. All rights reserved</p>
+<p>Copyright (c) 2015, 2018 Oracle and/or its affiliates. All rights reserved</p>
 </body>
 </html>
